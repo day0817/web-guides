@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>マークスマン（Marksman）Season 5 ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <a href="./index.html">Last Epoch</a>
+      <span aria-hidden="true">/</span>
+      <span>マークスマン</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
+      <h1 class="page-title">マークスマン（Marksman）完全ガイド</h1>
+      <p class="page-lead">純粋な弓射撃と矢筒・属性矢・距離ボーナスを駆使し、画面端からの圧倒的連射力と高機動力で敵を射抜くローグ上級職の Season 5 ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
+
+      <div class="callout">
+        <strong>Season 5 最新環境メモ：</strong> Season 5 でも跳弾性能に優れた <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/heartseeker" target="_blank" rel="noopener noreferrer">心臓狙い（Heartseeker）</a>（冷気／出血軸）がマークスマンの筆頭ビルドとして高評価を得ているほか、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYBYGYg" target="_blank" rel="noopener noreferrer">竜の歌</a>・<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsEYFYE4g" target="_blank" rel="noopener noreferrer">冬の統治</a>・<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA4FYg" target="_blank" rel="noopener noreferrer">ジェルコーの爆ぜナイフ</a> を用いた各属性ビルドも安定して周回・ボス戦をこなせます。
+      </div>
+
+      <nav class="toc-pills" aria-label="ページ内目次">
+        <a class="toc-pill" href="#sec-overview">1. 特徴・差別化</a>
+        <a class="toc-pill" href="#sec-ranking">2. 採用スキル順位</a>
+        <a class="toc-pill" href="#sec-mm-skills">3. 固有スキル</a>
+        <a class="toc-pill" href="#sec-rogue-skills">4. ローグスキル</a>
+        <a class="toc-pill" href="#sec-passives">5. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">6. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">7. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">8. 装備・アフィックス</a>
+      </nav>
+    </header>
+
+    <!-- 1. マスタリー特徴・差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 20L20 4M14 4h6v6"></path>
+        </svg>
+        1. マスタリーの特徴・他職との差別化・固有パッシブ
+      </h2>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <h3 class="skill-title">マークスマン固有パッシブ＆マスタリーボーナス（純弓射撃＋攻撃速度スタック）</h3>
+          <p class="skill-desc">ローグの基本パッシブに 20pt 投資してマークスマンを選択すると、固有スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/detonating_arrow" target="_blank" rel="noopener noreferrer"><strong>爆発の矢（Detonating Arrow）</strong></a> の解放ルートが開き、以下のマスタリー固有ボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス①</strong>: <strong>弓ダメージ +50%</strong> — 弓を用いたすべての射撃・トリガー火力を最初から底上げします。</li>
+            <li><strong>基礎ボーナス②</strong>: <strong>弓攻撃使用時に弓攻撃速度 +5% スタック（矢の嵐 / Bow Mastery 系）</strong> — 撃ち続けるほど攻撃速度と「援護射撃（白銀の衣）」や「完璧な狙い」のスタック恩恵が加速します。</li>
+            <li><strong>遠距離特化機構</strong>: パッシブ「シャープシューター」「遠来の死（2倍ダメージ確率）」「弓の達人（連射・爆発の矢追加強化）」「吸い取る矢（命中回復）」「盗賊の矢筒（弓ダメージ吸収）」により、遠距離カイトしながら超高速で敵を処理できるのが持ち味です。</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">ローグ 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・代表固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marksman/tree" target="_blank" rel="noopener noreferrer"><strong>マークスマン</strong><br><span class="skill-en">(Marksman)</span></a></td>
+              <td>弓ダメ +50%／弓攻撃時攻撃速度 +5% スタック<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/detonating_arrow" target="_blank" rel="noopener noreferrer">爆発の矢</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/heartseeker" target="_blank" rel="noopener noreferrer">心臓狙い</a></td>
+              <td><strong>直接弓射撃・跳弾・属性トリガー弓のスペシャリスト</strong>。プレイヤー自身の弓スキル火力と攻撃速度・遠距離安全圏での殲滅に特化。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./falconer.html"><strong>ファルコナー</strong><br><span class="skill-en">(Falconer)</span></a></td>
+              <td>基礎敏捷力 +12／総敏捷力 4 ごとに隼近接ダメ +1<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconry" target="_blank" rel="noopener noreferrer">隼狩り</a></td>
+              <td><strong>隼・罠・バリスタの自動設置ハイブリッド</strong>。罠やタレット＋隼に攻撃させたいならファルコナー、自らの弓で射抜くならマークスマン。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./bladedancer.html"><strong>ブレードダンサー</strong><br><span class="skill-en">(Bladedancer)</span></a></td>
+              <td>最大シャドウ +1／近接物理ダメ +15／回避値 +15%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dancing_strikes" target="_blank" rel="noopener noreferrer">ダンシングストライク</a></td>
+              <td><strong>近接二刀流・シャドウ複製・嵐刃アサシン</strong>。至近距離での剣舞と影連携がブレードダンサー、遠距離射撃がマークスマン。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Season 5 採用スキルランキング -->
+    <section class="section" id="sec-ranking" aria-labelledby="title-ranking">
+      <h2 class="section-title" id="title-ranking">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+          <path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"></path>
+        </svg>
+        2. Season 5 採用スキルランキング（必須スキル早見表）
+      </h2>
+      <p class="page-lead">Season 5 環境のマークスマン主力構成（心臓狙い跳弾型 / 爆発の矢型 / 竜の歌・連射＆矢の雨型）における必須度・採用順の整理です。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>順位 / 必須度</th>
+              <th>スキル名</th>
+              <th>区分</th>
+              <th>Season 5 環境での位置づけ・必須理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--accent">1位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer"><strong>スモークボム</strong><br><span class="skill-en">(Smoke Bomb)</span></a></td>
+              <td>ローグ</td>
+              <td><strong>ほぼ全ビルド固定の防御・矢バフ枠</strong>。Silver Shroud（確定回避＋ウォード）・敵盲目・物理/矢ダメバフを 1 枠で確保する。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">2位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer"><strong>縮地</strong><br><span class="skill-en">(Shift)</span></a></td>
+              <td>ローグ</td>
+              <td><strong>高速カイト・無敵回避・手裏剣自動展開枠</strong>。敵と距離を取りつつ移動速度バフや無敵フレームでボス技を躱す生命線。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">3位 / S5 主砲 (S-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/heartseeker" target="_blank" rel="noopener noreferrer"><strong>心臓狙い</strong><br><span class="skill-en">(Heartseeker)</span></a></td>
+              <td>マークスマン</td>
+              <td><strong>Season 5 マークスマンの大本命</strong>。自動追尾＆再発射（Recurve）により雑魚一掃と単体スタック蓄積を極めて高いテンポでこなす。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">4位 / 2大主力 (A+)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/detonating_arrow" target="_blank" rel="noopener noreferrer"><strong>爆発の矢</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue_multishot" target="_blank" rel="noopener noreferrer"><strong>連射</strong></a></td>
+              <td>マークスマン</td>
+              <td><strong>ジェルコー短剣での近接爆破型にも対応（爆発の矢）</strong>と、<strong><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsEYFYE4g" target="_blank" rel="noopener noreferrer">冬の統治</a>/<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYBYGYg" target="_blank" rel="noopener noreferrer">竜の歌</a> トリガーの広範囲扇射撃（連射）</strong>。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">5位 / 支援＆範囲 (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dark_quiver" target="_blank" rel="noopener noreferrer"><strong>闇の矢筒</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/hail_of_arrows" target="_blank" rel="noopener noreferrer"><strong>矢の雨</strong></a></td>
+              <td>マークスマン</td>
+              <td>拾うだけで次回射撃超強化＋防御バフの「闇の矢筒」と、広範囲継続 DoT・デバフの「矢の雨」。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">6位 / 0マナ・防御枠 (A-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/puncture" target="_blank" rel="noopener noreferrer"><strong>穿刺</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shurikens" target="_blank" rel="noopener noreferrer"><strong>手裏剣投げ</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flurry" target="_blank" rel="noopener noreferrer"><strong>疾風撃</strong></a></td>
+              <td>ローグ</td>
+              <td>マナ回復兼デバフの 0 マナ射撃（穿刺/疾風撃）、および縮地連動でアーマーを伸ばす「Blade Shield（手裏剣投げ）」。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">7位 / 選択枠 (B〜C)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/cinder_strike1" target="_blank" rel="noopener noreferrer">灰燼斬</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/decoy" target="_blank" rel="noopener noreferrer">デコイ</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acid_flask" target="_blank" rel="noopener noreferrer">強酸のフラスコ</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/umbral_blades" target="_blank" rel="noopener noreferrer">影身の刃</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_ballista" target="_blank" rel="noopener noreferrer">バリスタ</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bladestorm_throw" target="_blank" rel="noopener noreferrer">嵐刃</a>
+              </td>
+              <td>ローグ</td>
+              <td>火弓 Oil Coating（灰燼斬）、ヘイト分散（デコイ）、装甲寸断（強酸のフラスコ）等を構成に応じて差し替え。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <strong>基本 5 スロットの組み方目安：</strong> ①<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a> ＋ ②<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer">縮地</a> ＋ ③補助（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dark_quiver" target="_blank" rel="noopener noreferrer">闇の矢筒</a> or <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shurikens" target="_blank" rel="noopener noreferrer">手裏剣投げ</a>）を土台に、残り 2 枠へ「<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/heartseeker" target="_blank" rel="noopener noreferrer">心臓狙い</a>＋<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/puncture" target="_blank" rel="noopener noreferrer">穿刺</a>」または「<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/detonating_arrow" target="_blank" rel="noopener noreferrer">爆発の矢</a>＋<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/hail_of_arrows" target="_blank" rel="noopener noreferrer">矢の雨</a>」を組むのが定番です。
+      </div>
+    </section>
+
+    <!-- 3. マークスマン固有スキル＆重要ノード -->
+    <section class="section" id="sec-mm-skills" aria-labelledby="title-mm-skills">
+      <h2 class="section-title" id="title-mm-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7l3-7z"></path>
+        </svg>
+        3. マークスマン固有スキル＆重要ノード
+      </h2>
+      <p class="page-lead">マークスマンで解放される 5 つの固有スキルです。直接弓攻撃・自動追尾跳弾・属性爆破が揃っています。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/heartseeker" target="_blank" rel="noopener noreferrer">
+                  心臓狙い <span class="skill-en">(Heartseeker)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">Season 5 最有力弓主砲</span><span class="badge">自動追尾・Recurve 再射</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵を貫通したあとに再び戻って命中（Recurve）し、さらに高頻度で追加射撃や跳弾を行う現代マークスマンの主役スキル。冷気アイシクル型・出血型どちらでも極めて優秀です。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>冷気変換 / 出血特化ルート</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsEYFYE4g" target="_blank" rel="noopener noreferrer">冬の統治（Reign of Winter）</a> のアイシクル発動や <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsEYDYA4g" target="_blank" rel="noopener noreferrer">始祖の飛翔</a> での高スタック出血と抜群に噛み合います。</li>
+              <li><strong>再貫通＆シャドウ連動</strong>: 1 射で複数回判定が出るためヒット時回復やアーマー寸断・状態異常が一瞬で溜まります。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/detonating_arrow" target="_blank" rel="noopener noreferrer">
+                  爆発の矢 <span class="skill-en">(Detonating Arrow)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">象徴スキル・雷/火大爆発</span><span class="badge">ジェルコー短剣で近接化可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵へ突き刺さり、一拍置いて広範囲の電撃爆発を起こすスキル。<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA4FYg" target="_blank" rel="noopener noreferrer">ジェルコーの爆ぜナイフ</a> を装備すれば近接範囲爆発スキルへ変化し、弓型・短剣型の双方で遊ばれます。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>爆破遅延短縮＋雷連鎖（Rapid Detonation / Tendrils）</strong>: 着弾即爆発＋電撃触手で雑魚とボスを同時に焼き払います。</li>
+              <li><strong><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVgjATMDsQ" target="_blank" rel="noopener noreferrer">ケルサの爆ぜ薬</a> / ジェルコー連携</strong>: 爆発回数増・罠自動トリガー等とのシナジーが豊富です。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6M12 17l6-6-6-6"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/rogue_multishot" target="_blank" rel="noopener noreferrer">
+                  連射 <span class="skill-en">(Multishot)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">扇状多弾・トリガー母体</span><span class="badge">疾風撃連動可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">前方へ扇状に複数の矢を同時発射します。<em>疾風撃</em> からの自動発動や、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYBYGYg" target="_blank" rel="noopener noreferrer">竜の歌（Dragonsong）</a>／<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsEYFYE4g" target="_blank" rel="noopener noreferrer">冬の統治（Reign of Winter）</a> のヒット時効果を画面全体へばら撒く主力として活躍します。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Giant Slayer（単体多弾ヒット）</strong>: 通常 1 体につき 1 本しか当たらない矢を複数ヒットさせられるため、対ボス火力に必須級です。</li>
+              <li><strong>弓の達人（パッシブ）連動</strong>: 矢の本数がさらに増え、広範囲カバー力が向上します。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v12m-4-4l4 4 4-4M4 20h16"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/hail_of_arrows" target="_blank" rel="noopener noreferrer">
+                  矢の雨 <span class="skill-en">(Hail of Arrows)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">広範囲 DoT・出血/冷気/火</span><span class="badge">闇の矢筒連動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">指定エリアへ数秒間矢の雨を降らせ、継続的な物理／冷気／出血ダメージと減速を与えます。<em>闇の矢筒</em> の黒矢で威力を大幅強化してボス下へ敷き続ける運用が定番です。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>冷気/火変換＆出血特化</strong>: マークスマンの得意属性（物理出血・冷気・火）に合わせて継続ダメージ源として組めます。</li>
+              <li><strong>矢数・範囲拡大</strong>: 画面の広い範囲を覆い、移動しながらの安全ファームを支えます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 8h6M9 12h6"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/dark_quiver" target="_blank" rel="noopener noreferrer">
+                  闇の矢筒 <span class="skill-en">(Dark Quiver)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">黒矢バフ・マナ回復</span><span class="badge">縮地自動回収可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">地面に「黒い矢（Black Arrow）」を落とし、拾うと次の弓攻撃が大幅強化されるほか、マナ回復・ワード獲得・確定クリなど多彩なバフを得ます。縮地後に足元へ落とすノードが快適です。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Heavy Arrows / Dusk Shroud 付与</strong>: 黒矢取得時に攻撃倍率だけでなく夕闇の衣やワードも獲得し攻防一体のバフになります。</li>
+            </ul>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. 最終ビルドで使用されうるローグ基本スキル（個別記載） -->
+    <section class="section" id="sec-rogue-skills" aria-labelledby="title-rogue-skills">
+      <h2 class="section-title" id="title-rogue-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+        </svg>
+        4. 最終ビルドで使用されうるローグ基本スキル（個別解説）
+      </h2>
+      <p class="page-lead">マークスマンの最終ビルドで防御・カイト移動・マナ回収・トリガー母体として採用されうる全 11 のローグ基本スキルを個別に解説しています（共通回避 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue_evade" target="_blank" rel="noopener noreferrer">即時避け（Evade）</a> は除く）。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム <span class="skill-en">(Smoke Bomb)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">全構成必須防御</span><span class="badge">Silver Shroud・シャドウ生成</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">遠距離射撃が主体のマークスマンにとって、突進してくる敵を盲目にしつつ Silver Shroud・Dusk Shroud・アーマー寸断・矢ダメージ増加バフまで得られる必須防御枠です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer">縮地 <span class="skill-en">(Shift)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須カイト移動</span><span class="badge">無敵・手裏剣自動展開</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ボスとの距離管理と緊急無敵回避を担う移動スキル。移動時に「手裏剣投げ」を自動展開してアーマーを保ちつつ、マナ回復やシャドウ生成も兼ねられます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L20 4M15 4h5v5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/puncture" target="_blank" rel="noopener noreferrer">穿刺 <span class="skill-en">(Puncture)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">0マナ弓主力 / 回復エンジン</span><span class="badge">出血・貫通</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">弓装備でも撃てる 0 マナ貫通スキル。パッシブ「吸収攻撃」「マナの歪み」によるマナ補給役として機能するほか、3 撃目クリ・出血特化・<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsEYDYA4g" target="_blank" rel="noopener noreferrer">始祖の飛翔</a> 併用でメイン射撃にもなります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h6l3-8 4 16 3-8h2"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/flurry" target="_blank" rel="noopener noreferrer">疾風撃 <span class="skill-en">(Flurry)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">高速連射弓 / 連射自動発動</span><span class="badge">マナ回収</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">弓対応の超高速連射チャネリングスキル。ツリー内から「連射（Multishot）」を一定回数ごとに無料発動できるほか、高速ヒットで <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsEYFYE4g" target="_blank" rel="noopener noreferrer">冬の統治</a> や吸収攻撃・出血を連続発動できます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"></polygon></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shurikens" target="_blank" rel="noopener noreferrer">手裏剣投げ <span class="skill-en">(Shurikens)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">アーマー％バフ</span><span class="badge">Blade Shield</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">縮地とセットで運用する「Blade Shield」により、手裏剣を周囲にまとってアーマーを大幅に底上げできるため、打たれ弱くなりやすい弓ビルドの耐久を支えます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c2 4 6 6 6 11a6 6 0 1 1-12 0c0-3 1.5-5.5 3-7 0 2 1.5 3 3 3s2-1.5 0-7z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/cinder_strike1" target="_blank" rel="noopener noreferrer">灰燼斬 <span class="skill-en">(Cinder Strike)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">火弓主力・竜の歌連携</span><span class="badge">Oil Coating</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">弓射撃対応の 0 マナ火スキル。Oil Coating で回避と火ダメージを上げながら <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYBYGYg" target="_blank" rel="noopener noreferrer">竜の歌（Dragonsong）</a> の発火／ドラゴンの炎を誘発する火弓ビルドの有力候補です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="3"></circle><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/decoy" target="_blank" rel="noopener noreferrer">デコイ <span class="skill-en">(Decoy)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">ヘイト逸らし・安全射撃</span><span class="badge">爆発補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ボスやエリート群のターゲットをデコイへ引きつけ、「シャープシューター」が要求する理想の遠距離射撃ポジションを維持しやすくなります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v5l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/acid_flask" target="_blank" rel="noopener noreferrer">強酸のフラスコ <span class="skill-en">(Acid Flask)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">毒弓 / 装甲寸断</span><span class="badge">縮地自動投下可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">毒マークスマン（パッシブ「毒矢」活用）で装甲寸断や毒耐性低下を与える補助・トリガー用として使われます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/umbral_blades" target="_blank" rel="noopener noreferrer">影身の刃 <span class="skill-en">(Umbral Blades)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">投擲補助・出血連携</span><span class="badge">ミサイルマスタリー適用</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">パッシブ「ミサイルマスタリー」は弓だけでなく投擲攻撃も強化するため、遠距離投擲＋弓ハイブリッド型でのサブ範囲処理候補になります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M7 12h10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_ballista" target="_blank" rel="noopener noreferrer">バリスタ <span class="skill-en">(Ballista)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">弓攻撃継承タレット</span><span class="badge">アーマー寸断補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">本体火力が主力となるマークスマンでも、ボスへの自動追撃やデバフ維持用に 1〜2 基置いておく補助枠として採用余地があります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/bladestorm_throw" target="_blank" rel="noopener noreferrer">嵐刃 <span class="skill-en">(Bladestorm)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">投擲タグ共有（限定用途）</span><span class="badge">ヒット数補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">投擲スキルのため弓中心のマークスマンでは優先度低めですが、ミサイルマスタリーを共有できる投擲兼弓の変則構成では選択肢になります。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. パッシブツリー指針 -->
+    <section class="section" id="sec-passives" aria-labelledby="title-passives">
+      <h2 class="section-title" id="title-passives">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="6" r="3"></circle>
+          <circle cx="18" cy="18" r="3"></circle>
+          <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
+        </svg>
+        5. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue/tree" target="_blank" rel="noopener noreferrer">ローグ</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marksman/tree" target="_blank" rel="noopener noreferrer">マークスマン</a>）
+      </h2>
+      <p class="page-lead">ローグ前半 20pt で弓クリ率（致命の狙い）・回避・吸収攻撃・致死のステップを押さえ、マークスマン側で弓攻撃速度・2倍ダメージ確率・白銀の衣防御を徹底強化します。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>ツリー区分</th>
+              <th>注目パッシブ（LE Tools 日本語版）</th>
+              <th>主な効果・役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue/tree" target="_blank" rel="noopener noreferrer">ローグ</a></td>
+              <td>揺るがぬ手 / 致命の狙い / 身軽な暗殺者</td>
+              <td>弓装備時の高クリティカル率（12%/pt）・敏捷力・攻撃速度・物理基礎値を押さえる基盤。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue/tree" target="_blank" rel="noopener noreferrer">ローグ</a></td>
+              <td>吸収攻撃 / 盗賊の防衛術 / 身かわし</td>
+              <td>0 マナ時マナ回復、ヘルス＋かすり当たり回復、移動時被ダメ軽減の生存セット。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marksman/tree" target="_blank" rel="noopener noreferrer">マークスマン</a></td>
+              <td>ミサイルマスタリー / 暗殺者の矢筒 / 弓の達人</td>
+              <td>弓ダメージ・クリ率・アーマー寸断・連射/爆発の矢の範囲や矢数を引き上げる火力軸。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marksman/tree" target="_blank" rel="noopener noreferrer">マークスマン</a></td>
+              <td>矢の嵐 / 援護射撃 / 慎重な足取り</td>
+              <td>弓撃ちによる攻撃速度増＋白銀の衣（Silver Shroud）スタック獲得＋かすり当たり＆移動速度。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marksman/tree" target="_blank" rel="noopener noreferrer">マークスマン</a></td>
+              <td>シャープシューター / 遠来の死 / 苦痛の弾幕 / 完璧な狙い</td>
+              <td>遠距離維持で 2 倍ダメージ確率＋アーマー寸断、スタックごとのクリ倍率＆回復を獲得。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marksman/tree" target="_blank" rel="noopener noreferrer">マークスマン</a></td>
+              <td>盗賊の矢筒 / 吸い取る矢 / マナの歪み / 返し付きの矢</td>
+              <td>弓ダメージ吸収、ヒット時ヘルス回復、マナ補填、物理＆出血付与率をビルドに合わせて選択。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. シーズン 5 人気ビルド 3 選 -->
+    <section class="section" id="sec-builds" aria-labelledby="title-builds">
+      <h2 class="section-title" id="title-builds">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        </svg>
+        6. Season 5（Patch 1.5）人気ビルド 3 選
+      </h2>
+      <p class="page-lead">Season 5 で高評価を得ているマークスマンの代表 3 アーキタイプです。</p>
+
+      <div class="stack-list">
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/heartseeker" target="_blank" rel="noopener noreferrer">
+                ① 心臓狙い・跳弾マークスマン（Heartseeker / 冷気＆出血軸）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 最有力弓ビルド</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/heartseeker" target="_blank" rel="noopener noreferrer">心臓狙い</a> の跳弾＆再貫通（Recurve）を遠距離から高速連射し、冷気型なら <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsEYFYE4g" target="_blank" rel="noopener noreferrer">冬の統治</a> のアイシクル雨、出血型なら <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsEYDYA4g" target="_blank" rel="noopener noreferrer">始祖の飛翔</a> で超スタック出血を重ねます。</li>
+            <li><strong>強み</strong>: 自動追尾気味に矢が飛び回るためカイトしながらでも火力が途切れず、モノリス周回とボス双方を快適にこなせます。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/heartseeker" target="_blank" rel="noopener noreferrer">心臓狙い</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer">縮地</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dark_quiver" target="_blank" rel="noopener noreferrer">闇の矢筒</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/puncture" target="_blank" rel="noopener noreferrer">穿刺</a>（または手裏剣投げ）</li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/detonating_arrow" target="_blank" rel="noopener noreferrer">
+                ② 爆発の矢・雷トリガー / ジェルコー短剣型（Detonating Arrow）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge">電撃連鎖 / 近接変換可</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: 弓または <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA4FYg" target="_blank" rel="noopener noreferrer">ジェルコーの爆ぜナイフ</a> を装備し、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/detonating_arrow" target="_blank" rel="noopener noreferrer">爆発の矢</a> の電撃爆発＆連鎖触手で画面中の敵を一斉爆破します。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA4FYg" target="_blank" rel="noopener noreferrer">ジェルコーの爆ぜナイフ</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVgjATMDsQ" target="_blank" rel="noopener noreferrer">ケルサの爆ぜ薬</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMoFgDiA" target="_blank" rel="noopener noreferrer">アローガード</a>。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/detonating_arrow" target="_blank" rel="noopener noreferrer">爆発の矢</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer">縮地</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shurikens" target="_blank" rel="noopener noreferrer">手裏剣投げ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dark_quiver" target="_blank" rel="noopener noreferrer">闇の矢筒</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/rogue_multishot" target="_blank" rel="noopener noreferrer">
+                ③ 竜の歌・連射＆矢の雨 トリガー型（Dragonsong / Multishot）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge">広範囲マップ掃除</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYBYGYg" target="_blank" rel="noopener noreferrer">竜の歌（Dragonsong）</a> と <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue_multishot" target="_blank" rel="noopener noreferrer">連射</a>／<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flurry" target="_blank" rel="noopener noreferrer">疾風撃</a> の多段ヒットで火炎ブレスや <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/hail_of_arrows" target="_blank" rel="noopener noreferrer">矢の雨</a> を重ね、画面奥まで焼き払います。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flurry" target="_blank" rel="noopener noreferrer">疾風撃</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue_multishot" target="_blank" rel="noopener noreferrer">連射</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/hail_of_arrows" target="_blank" rel="noopener noreferrer">矢の雨</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer">縮地</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. 4 大メカニズム -->
+    <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
+      <h2 class="section-title" id="title-mechanics">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.85 1 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        7. 攻撃・防御・マナ・快適性のメカニズム
+      </h2>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <h3 class="mech-card-title">攻撃スケーリング</h3>
+          <ul>
+            <li><strong>弓攻撃速度＋2倍ダメ確率</strong>: 「矢の嵐」「アローシャワー」「遠来の死」により、手数そのものと 1 撃あたりの爆発期待値が同時に伸びます。</li>
+            <li><strong>弓クリ率 12%/pt の容易さ</strong>: ローグパッシブ「致命の狙い」が弓装備時はポイントあたり +12% クリ率となるため、確定クリ調整が非常に楽です。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">防御レイヤー（距離＋衣＋吸収）</h3>
+          <ul>
+            <li><strong>援護射撃＋スモークボム（白銀の衣）</strong>: 弓を撃つだけで白銀の衣（確定回避＋ワード）が更新され、回避値とかすり当たり率・移動時軽減（身かわし）で被弾を減らします。</li>
+            <li><strong>吸い取る矢＋盗賊の矢筒</strong>: 高速ヒットによる即時ヘルス回復と弓ダメージ吸収で立て直しも速いです。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">マナ維持の仕組み</h3>
+          <ul>
+            <li><strong>0マナ射撃（穿刺/灰燼斬）＋吸収攻撃/マナの歪み</strong>: 重い弓スキル（連射・爆発の矢等）の間へ 0 マナスキルや闇の矢筒の黒矢拾いを挟むことでマナを保てます。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">快適性（QoL）・周回テンポ</h3>
+          <ul>
+            <li><strong>画面端からの自動追尾一掃</strong>: 心臓狙いの自動追尾と縮地の高機動力により、敵陣へ飛び込まずに安全・高速にモノリスを周回できます。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 人気の装備・アフィックス -->
+    <section class="section" id="sec-gear" aria-labelledby="title-gear">
+      <h2 class="section-title" id="title-gear">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20 7l-8-4-8 4v10l8 4 8-4V7z"></path>
+          <path d="M12 21V11M12 11l8-4M12 11L4 7"></path>
+        </svg>
+        8. 人気ユニーク装備＆部位別アフィックス
+      </h2>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 12px;">主要ユニーク装備一覧（装備名から直接 LE Tools DB へ移動可能）</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>装備名（日 / 英）</th>
+              <th>部位</th>
+              <th>主な採用理由・効果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsEYFYE4g" target="_blank" rel="noopener noreferrer"><strong>冬の統治</strong><br><span class="skill-en">Reign of Winter</span></a></td>
+              <td>弓</td>
+              <td>弓ヒット時・クリ時に「アイシクル」を連続射出する冷気マークスマン（心臓狙い/連射）定番弓。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYBYGYg" target="_blank" rel="noopener noreferrer"><strong>竜の歌</strong><br><span class="skill-en">Dragonsong</span></a></td>
+              <td>弓</td>
+              <td>クリティカル発動時に強力な火炎ブレスを放つ火弓・連射ビルドの象徴ユニーク弓。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsEYDYA4g" target="_blank" rel="noopener noreferrer"><strong>始祖の飛翔</strong><br><span class="skill-en">Flight of the First</span></a></td>
+              <td>弓</td>
+              <td>高い基礎物理・クリティカル・出血シナジーを備え、物理/出血マークスマンで人気の弓。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA4FYg" target="_blank" rel="noopener noreferrer"><strong>ジェルコーの爆ぜナイフ</strong><br><span class="skill-en">Jelkhor's Blast Knife</span></a></td>
+              <td>短剣</td>
+              <td>「爆発の矢」を近接スキルへ変換し、マナコスト削減＆爆発火力を大きく引き上げる短剣。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMEYBYDYg" target="_blank" rel="noopener noreferrer"><strong>トロアカの歯</strong><br><span class="skill-en">Troaka's Teeth</span></a></td>
+              <td>矢筒</td>
+              <td>冷気弓・冷却/凍結関連や弓攻撃速度を伸ばすマークスマン定番ユニーク矢筒。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMoFgDiA" target="_blank" rel="noopener noreferrer"><strong>アローガード</strong><br><span class="skill-en">Arrowguard</span></a></td>
+              <td>矢筒</td>
+              <td>遠距離被ダメージ軽減や耐久・弓補助をバランスよく備える防御向け矢筒。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVgjATMDsQ" target="_blank" rel="noopener noreferrer"><strong>ケルサの爆ぜ薬</strong><br><span class="skill-en">Kelthan Blasting Agent</span></a></td>
+              <td>レリック</td>
+              <td>爆発系スキル・火炎/雷の爆発連動ビルドを底上げする専用レリック。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMYTiA" target="_blank" rel="noopener noreferrer"><strong>嘆きの霜</strong><br><span class="skill-en">Mourningfrost</span></a></td>
+              <td>靴</td>
+              <td>敏捷力（DEX）をそのまま大量の冷気フラットダメージへ変える冷気弓型の定番ブーツ。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMoVgNiA" target="_blank" rel="noopener noreferrer"><strong>山の峰</strong><br><span class="skill-en">Peak of the Mountain</span></a></td>
+              <td>兜</td>
+              <td>クリティカル率＋全能力値を大幅に稼ぎ、非吸収型クリ弓の装備基準を大きく楽にする兜。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
+              <td>指輪</td>
+              <td>全能力値＋ステータス条件で全耐性・被ダメ軽減を得るエンドゲーム最高峰リング。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 20px;">部位別おすすめアフィックス優先度</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>Prefix（弓速度・フラット・敏捷）</th>
+              <th>Suffix（回避・耐久・耐性）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>弓・矢筒</td>
+              <td><strong>弓攻撃速度（Bow Attack Speed）</strong>、フラット弓物理/属性ダメ、クリ倍率</td>
+              <td>アーマー寸断、虚弱付与、冷気/物理耐性寸断、かすり当たり率</td>
+            </tr>
+            <tr>
+              <td>兜・鎧</td>
+              <td><strong>敏捷力（Dexterity）</strong>、主力スキル Lv+、マナ（高コスト弓時）</td>
+              <td>ハイブリッドヘルス、回避値、不足耐性、クリ回避/軽減</td>
+            </tr>
+            <tr>
+              <td>手袋・ベルト</td>
+              <td>攻撃速度、弓ダメージ、出血確率（出血型）、クリ倍率</td>
+              <td>ハイブリッドヘルス、回避値、ポーション使用時ワード/ヘルス</td>
+            </tr>
+            <tr>
+              <td>靴</td>
+              <td>移動速度（最優先）、敏捷力（嘆きの霜不使用時）</td>
+              <td>ハイブリッドヘルス、回避値、不足耐性</td>
+            </tr>
+            <tr>
+              <td>アクセサリー</td>
+              <td>弓ダメージ、クリ倍率、属性ダメ、-3 スキルマナコスト</td>
+              <td>ヘルス、物理/虚無/冷気/毒耐性、回避値</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="page-footer-note">
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/build-guides/filter/cycle=rage-of-the-frostborn" target="_blank" rel="noopener noreferrer">Last Epoch Tools（Season 5 ビルドガイド）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+    </p>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html">Last Epoch ガイド</a></li>
+      <li><a class="nav-link" href="./falconer.html">ファルコナー（Season 5）</a></li>
+      <li><a class="nav-link" href="./bladedancer.html">ブレードダンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./marksman.html" aria-current="page">マークスマン（Season 5）</a></li>
+      <li><a class="nav-link" href="./paladin.html">パラディン（Season 5）</a></li>
+      <li><a class="nav-link" href="./void-knight.html">ヴォイドナイト（Season 5）</a></li>
+      <li><a class="nav-link" href="./forge-guard.html">フォージガード（Season 5）</a></li>
+      <li><a class="nav-link" href="./sorcerer.html">ソーサラー（Season 5）</a></li>
+      <li><a class="nav-link" href="./spellblade.html">スペルブレード（Season 5）</a></li>
+      <li><a class="nav-link" href="./runemaster.html">ルーンマスター（Season 5）</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

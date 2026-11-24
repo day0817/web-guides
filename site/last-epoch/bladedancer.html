@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>ブレードダンサー（Bladedancer）Season 5 ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <a href="./index.html">Last Epoch</a>
+      <span aria-hidden="true">/</span>
+      <span>ブレードダンサー</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
+      <h1 class="page-title">ブレードダンサー（Bladedancer）完全ガイド</h1>
+      <p class="page-lead">高速の近接二刀流と「シャドウ（影）」によるスキル同時複製、そして回避・かすり当たり・低ヘルス耐久を武器に戦うローグ上級職の Season 5 ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
+
+      <div class="callout">
+        <strong>Season 5 最新環境メモ：</strong> Season 5 では、ローグ基本スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bladestorm_throw" target="_blank" rel="noopener noreferrer">嵐刃（Bladestorm）</a> の冷気変換＋敏捷力積み（<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMYTiA" target="_blank" rel="noopener noreferrer">嘆きの霜</a>／低ヘルス型 <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAs4DiA" target="_blank" rel="noopener noreferrer">アストラルの血の構築者</a>）が 1,500+ コラプション帯でも高い実績を挙げているほか、定番のシャドウカスケード型も健在です。
+      </div>
+
+      <nav class="toc-pills" aria-label="ページ内目次">
+        <a class="toc-pill" href="#sec-overview">1. 特徴・差別化</a>
+        <a class="toc-pill" href="#sec-ranking">2. 採用スキル順位</a>
+        <a class="toc-pill" href="#sec-bd-skills">3. 固有スキル</a>
+        <a class="toc-pill" href="#sec-rogue-skills">4. ローグスキル</a>
+        <a class="toc-pill" href="#sec-passives">5. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">6. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">7. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">8. 装備・アフィックス</a>
+      </nav>
+    </header>
+
+    <!-- 1. マスタリー特徴・差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4"></path>
+        </svg>
+        1. マスタリーの特徴・他職との差別化・固有パッシブ
+      </h2>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <h3 class="skill-title">ブレードダンサー固有パッシブ＆マスタリーボーナス（シャドウ分身＋近接回避）</h3>
+          <p class="skill-desc">ローグの基本パッシブに 20pt 投資してブレードダンサーを選択すると、象徴スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dancing_strikes" target="_blank" rel="noopener noreferrer"><strong>ダンシングストライク（Dancing Strikes）</strong></a> の解放ルートが開き、以下のマスタリー固有ボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス①</strong>: <strong>最大シャドウ数 +1</strong> — 自身の近接・投擲スキルを同時にコピー発動する分身「シャドウ（影）」の上限が増えます。</li>
+            <li><strong>基礎ボーナス②</strong>: <strong>近接物理ダメージ +15 / 回避値 +15%</strong> — 近接火力の基礎値と回避防御を最初から底上げします。</li>
+            <li><strong>独自防御＆攻撃ギミック</strong>: パッシブ「好みの武器（二刀流組み合わせボーナス）」「影身統合（シャドウ生成時回復＋シャドウ火力増）」「背教（回避率の 2 倍をかすり当たり率へ変換）」「死の扉（低ヘルス時被ダメ減＋クリ倍率）」により、超高速移動しながら分身と共闘できるのが強みです。</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">ローグ 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・代表固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bladedancer/tree" target="_blank" rel="noopener noreferrer"><strong>ブレードダンサー</strong><br><span class="skill-en">(Bladedancer)</span></a></td>
+              <td>最大シャドウ +1／近接物理ダメ +15／回避値 +15%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dancing_strikes" target="_blank" rel="noopener noreferrer">ダンシングストライク</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shadow_cascade" target="_blank" rel="noopener noreferrer">シャドウカスケード</a></td>
+              <td><strong>近接二刀流・シャドウ同時発動・嵐刃（Bladestorm）アサシン</strong>。インファイトの機動力と影複製バーストが持ち味。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./falconer.html"><strong>ファルコナー</strong><br><span class="skill-en">(Falconer)</span></a></td>
+              <td>基礎敏捷力 +12／総敏捷力 4 ごとに隼近接ダメ +1<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconry" target="_blank" rel="noopener noreferrer">隼狩り</a></td>
+              <td><strong>無敵の隼＋罠＋バリスタによる遠距離・設置型</strong>。本体が離れて戦いたいならファルコナー、自ら斬り込むならブレードダンサー。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./marksman.html"><strong>マークスマン</strong><br><span class="skill-en">(Marksman)</span></a></td>
+              <td>弓ダメ +50%／弓攻撃時速度 +5% スタック<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/detonating_arrow" target="_blank" rel="noopener noreferrer">爆発の矢</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/heartseeker" target="_blank" rel="noopener noreferrer">心臓狙い</a></td>
+              <td><strong>純弓スキル＆矢筒の遠距離射撃スペシャリスト</strong>。弓メインならマークスマン、近接・投擲ブレード主体ならブレードダンサー。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Season 5 採用スキルランキング -->
+    <section class="section" id="sec-ranking" aria-labelledby="title-ranking">
+      <h2 class="section-title" id="title-ranking">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+          <path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"></path>
+        </svg>
+        2. Season 5 採用スキルランキング（必須スキル早見表）
+      </h2>
+      <p class="page-lead">Season 5 環境のブレードダンサー主力構成（冷気・嵐刃型 / シャドウカスケード＆シンクロストライク型 / 出血・ダンシングストライク型）での必須度・採用順位整理です。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>順位 / 必須度</th>
+              <th>スキル名</th>
+              <th>区分</th>
+              <th>Season 5 環境での位置づけ・必須理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--accent">1位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer"><strong>スモークボム</strong><br><span class="skill-en">(Smoke Bomb)</span></a></td>
+              <td>ローグ</td>
+              <td><strong>ほぼ全ビルド固定の防御・影生成枠</strong>。Silver Shroud（確定回避＋ウォード）・Dusk Shroud・シャドウ自動生成を一手に担う。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">2位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer"><strong>縮地</strong><br><span class="skill-en">(Shift)</span></a></td>
+              <td>ローグ</td>
+              <td><strong>高速移動・無敵回避・自動トリガーの核</strong>。シャドウ残置、手裏剣自動展開、<em>シャドウカスケード</em> 自動発動、パッシブバフ起動を兼ねる。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">3位 / 準必須 (S-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shurikens" target="_blank" rel="noopener noreferrer"><strong>手裏剣投げ</strong><br><span class="skill-en">(Shurikens)</span></a></td>
+              <td>ローグ</td>
+              <td><strong>Blade Shield によるアーマー倍増バフ枠</strong>。縮地使用時に自周囲へ手裏剣バリアを自動展開して耐久を引き上げるのが定番。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">4位 / S5 筆頭火力 (A+)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bladestorm_throw" target="_blank" rel="noopener noreferrer"><strong>嵐刃</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shadow_cascade" target="_blank" rel="noopener noreferrer"><strong>シャドウカスケード</strong></a></td>
+              <td>ロ / ブレ</td>
+              <td><strong>Season 5 高コラプション筆頭（冷気・嵐刃）</strong>と、<strong>影の同時大爆発で画面を薙ぐ王道主力（シャドウカスケード）</strong>。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">5位 / 連携＆特化 (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/synchronized_strikes" target="_blank" rel="noopener noreferrer"><strong>シンクロストライク</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/umbral_blades" target="_blank" rel="noopener noreferrer"><strong>影身の刃</strong></a></td>
+              <td>ブレ / ロ</td>
+              <td>シャドウを一斉召喚する相棒（シンクロストライク）、および <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shadow_daggers_finisher" target="_blank" rel="noopener noreferrer">シャドウダガー</a>／ブレードデトネーション連動（影身の刃）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">6位 / 固有・選択 (B〜C)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dancing_strikes" target="_blank" rel="noopener noreferrer">ダンシングストライク</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lethal_mirage" target="_blank" rel="noopener noreferrer">リーサルミラージュ</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/puncture" target="_blank" rel="noopener noreferrer">穿刺</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flurry" target="_blank" rel="noopener noreferrer">疾風撃</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/cinder_strike1" target="_blank" rel="noopener noreferrer">灰燼斬</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acid_flask" target="_blank" rel="noopener noreferrer">強酸のフラスコ</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/decoy" target="_blank" rel="noopener noreferrer">デコイ</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_ballista" target="_blank" rel="noopener noreferrer">バリスタ</a>
+              </td>
+              <td>ブレ / ロ</td>
+              <td>0 マナ連舞＋影発動（ダンシングストライク）、無敵多段斬り（リーサルミラージュ）、出血・マナ回復用（穿刺/疾風撃）等。（※嵐刃型で <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/explosive_trap" target="_blank" rel="noopener noreferrer">爆破罠</a> を取り込む派生もあり）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <strong>基本 5 スロットの組み方目安：</strong> ①<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a> ＋ ②<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer">縮地</a> ＋ ③<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shurikens" target="_blank" rel="noopener noreferrer">手裏剣投げ</a>（自動 Blade Shield 用）を防御基盤にし、残り 2 枠へ「<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bladestorm_throw" target="_blank" rel="noopener noreferrer">嵐刃</a>＋<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/umbral_blades" target="_blank" rel="noopener noreferrer">影身の刃</a>」または「<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/synchronized_strikes" target="_blank" rel="noopener noreferrer">シンクロストライク</a>＋<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shadow_cascade" target="_blank" rel="noopener noreferrer">シャドウカスケード</a>」を入れるのが定番です。
+      </div>
+    </section>
+
+    <!-- 3. ブレードダンサー固有スキル＆重要ノード -->
+    <section class="section" id="sec-bd-skills" aria-labelledby="title-bd-skills">
+      <h2 class="section-title" id="title-bd-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7l3-7z"></path>
+        </svg>
+        3. ブレードダンサー固有スキル＆重要ノード
+      </h2>
+      <p class="page-lead">ブレードダンサーで解放される 4 つの固有スキルです。いずれもシャドウ生成や「シャドウダガー」「フロー」と密接に連動します。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"></polygon></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shadow_cascade" target="_blank" rel="noopener noreferrer">
+                  シャドウカスケード <span class="skill-en">(Shadow Cascade)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">影同時発動の王道主力</span><span class="badge">シャドウダガー / 縮地連動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">自身と場にいるすべての「シャドウ」が一斉に円形の刃嵐を放つ大火力スキル。縮地やシンクロストライク、ダンシングストライクからの自動発動でも多用されます。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>シャドウダガー連動（Dagger Dance 等）</strong>: 1 回の発動で複数のシャドウが重なるため、確定クリの「シャドウダガー」を高速起爆できます。</li>
+              <li><strong>マナ回収 / フロー連動</strong>: 消費マナが重くなりやすいため、消費軽減や Sapping Strikes・シャドウ消費マナ還元との併用が重要です。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6M12 17l6-6-6-6"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/synchronized_strikes" target="_blank" rel="noopener noreferrer">
+                  シンクロストライク <span class="skill-en">(Synchronized Strikes)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">最大シャドウ一斉召喚</span><span class="badge">シャドウカスケード相棒</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵を斬りつけながら自周囲へ最大 4〜5 体の「シャドウ」を一気に配置する連携スキル。直後に <em>シャドウカスケード</em> や <em>影身の刃</em> を撃つと全シャドウが同時攻撃し、瞬間火力が数倍に跳ね上がります。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>影最大数増加＋マナ最適化</strong>: 生成されるシャドウ数を増やしつつ、重いマナコストを装備やパッシブと相談して調整します。</li>
+              <li><strong>Darkest Blades / 影強化</strong>: 召喚したシャドウ自体の攻撃倍率を高められます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/dancing_strikes" target="_blank" rel="noopener noreferrer">
+                  ダンシングストライク <span class="skill-en">(Dancing Strikes)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">象徴スキル・0マナ連舞</span><span class="badge">自動シャドウ＆カスケード</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ステップを踏みながら前後左右へ連撃を繰り出す 0 マナ近接舞踏スキル。移動しつつシャドウを生成したり、特定リズムで「シャドウカスケード」や「手裏剣」を自動発動させたりする快適構成が可能です。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Shadow Infusion / Shadow Cascade 誘発</strong>: 踊りながらシャドウ召喚＆自動シャドウカスケードを起こし、0 マナで継続火力を出せます。</li>
+              <li><strong>回避・被ダメ軽減バフ</strong>: 連舞中に回避率や被ダメ軽減を維持でき、インファイト適性が高いです。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 12l10 10 10-10L12 2z"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/lethal_mirage" target="_blank" rel="noopener noreferrer">
+                  リーサルミラージュ <span class="skill-en">(Lethal Mirage)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">無敵多段斬り</span><span class="badge">大ダメージ回避・出血/冷気</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">発動中その場から姿を消して無敵になり、指定範囲の敵へ複数の分身が連続斬りを叩き込む回避兼バーストスキル。敵のギミックを無敵でやり過ごしながら火力を出したい際に採用されます。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>斬撃回数追加＋シャドウ連動</strong>: 場のシャドウを巻き込んで斬撃数を増やし、単体ボスへ集中大ダメージを与えます。</li>
+            </ul>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. 最終ビルドで使用されうるローグ基本スキル（個別記載） -->
+    <section class="section" id="sec-rogue-skills" aria-labelledby="title-rogue-skills">
+      <h2 class="section-title" id="title-rogue-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+        </svg>
+        4. 最終ビルドで使用されうるローグ基本スキル（個別解説）
+      </h2>
+      <p class="page-lead">ブレードダンサーの最終ビルドで主力攻撃・回避防御・バフとして組み込まれる全 11 のローグ基本スキルを個別に解説しています（共通回避 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue_evade" target="_blank" rel="noopener noreferrer">即時避け（Evade）</a> は除く）。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/bladestorm_throw" target="_blank" rel="noopener noreferrer">嵐刃 <span class="skill-en">(Bladestorm)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">Season 5 Sティア主砲</span><span class="badge">冷気変換・ブレードデトネーション</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">Season 5 ブレードダンサー最強格ビルドの主軸。<em>Frostblade</em> ノードで冷気変換して敏捷力＋<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMYTiA" target="_blank" rel="noopener noreferrer">嘆きの霜</a> で莫大なフラット冷気ダメージを乗せ、さらにブレードデトネーション（爆発連動）で 1,500+ コラプションを制圧します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム <span class="skill-en">(Smoke Bomb)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">全構成必須防御</span><span class="badge">Silver Shroud・シャドウ生成</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">Silver Shroud・Dusk Shroud・敵への盲目・シャドウ生成を 1 枠で賄う全ローグ必須スキル。ブレードダンサーの「外套の死神」「シャドウマスター」とも相性抜群です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer">縮地 <span class="skill-en">(Shift)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須移動・自動連携</span><span class="badge">無敵・手裏剣/カスケード発動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">無敵ダッシュ＋手裏剣自動展開＋シャドウ残置＋移動直後シャドウカスケード自動発動をこなすブレードダンサーの機動エンジン。<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwiMGYDYg" target="_blank" rel="noopener noreferrer">煙の織り手</a> との連携も強力です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"></polygon></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shurikens" target="_blank" rel="noopener noreferrer">手裏剣投げ <span class="skill-en">(Shurikens)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">アーマー大幅増バフ</span><span class="badge">縮地自動展開</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">「Blade Shield」により縮地で動くたびに自身の周囲へ回転手裏剣を纏い、大量の増加アーマーを得ることでかすり当たり以外の被弾耐久を大幅に高めます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/umbral_blades" target="_blank" rel="noopener noreferrer">影身の刃 <span class="skill-en">(Umbral Blades)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">嵐刃/シャドウダガー連携</span><span class="badge">シャドウ追撃</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">S5 の嵐刃ビルドでの相棒、または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shadow_daggers_finisher" target="_blank" rel="noopener noreferrer">シャドウダガー</a> の起爆軸として非常に強力な投擲スキル。シャドウも同時に刃を投げるため範囲殲滅が極めて速いです。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L20 4M15 4h5v5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/puncture" target="_blank" rel="noopener noreferrer">穿刺 <span class="skill-en">(Puncture)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">0マナ出血主力 / 吸収攻撃</span><span class="badge">シャドウ付与可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">マナ回復ノード「吸収攻撃（Sapping Strikes）」の起動や、出血ブレードダンサーの 0 マナ高速スタック積み・範囲出血起爆（Bloodthirst 等）のメインとして使えます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h6l3-8 4 16 3-8h2"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/flurry" target="_blank" rel="noopener noreferrer">疾風撃 <span class="skill-en">(Flurry)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">超高速連撃</span><span class="badge">出血/毒・マナ回収</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">手数が極めて多い近接連撃。出血ブレードダンサーや「完全無欠」スタック高速維持、チャネリングによるマナ回復役として採用されます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c2 4 6 6 6 11a6 6 0 1 1-12 0c0-3 1.5-5.5 3-7 0 2 1.5 3 3 3s2-1.5 0-7z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/cinder_strike1" target="_blank" rel="noopener noreferrer">灰燼斬 <span class="skill-en">(Cinder Strike)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">0マナ火/近接バフ</span><span class="badge">Oil Coating</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">火近接／炎上型ブレードダンサーで Oil Coating バフ（回避値・火耐性・火ダメ増）を維持しつつ 0 マナで振るえる基本攻撃です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v5l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/acid_flask" target="_blank" rel="noopener noreferrer">強酸のフラスコ <span class="skill-en">(Acid Flask)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">デバフ・毒補助</span><span class="badge">装甲寸断</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">投擲毒瓶による装甲寸断・毒スタック枠。縮地からの自動ドロップや毒型ブレードダンサーの補助として組み込めます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="3"></circle><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/decoy" target="_blank" rel="noopener noreferrer">デコイ <span class="skill-en">(Decoy)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">挑発・安全時間確保</span><span class="badge">低ヘルス防御補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵のヘイトを引き受けて爆発するおとり。高コラプションの危険な敵集団からターゲットを逸らし、近接安全圏を作るのに役立ちます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M7 12h10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_ballista" target="_blank" rel="noopener noreferrer">バリスタ <span class="skill-en">(Ballista)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">設置サブ火力（限定用途）</span><span class="badge">ミニオン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ファルコナーと違いブレードダンサーにはミニオン継承の強みが少ないため通常は優先度低めですが、自動デバフ・出血補助として設置することは可能です。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. パッシブツリー指針 -->
+    <section class="section" id="sec-passives" aria-labelledby="title-passives">
+      <h2 class="section-title" id="title-passives">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="6" r="3"></circle>
+          <circle cx="18" cy="18" r="3"></circle>
+          <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
+        </svg>
+        5. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue/tree" target="_blank" rel="noopener noreferrer">ローグ</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bladedancer/tree" target="_blank" rel="noopener noreferrer">ブレードダンサー</a>）
+      </h2>
+      <p class="page-lead">ローグ基本ツリーに 20pt 振って二刀流・回避・吸収攻撃を押さえ、ブレードダンサー側でシャドウ連動・かすり当たり・敏捷力・低ヘルス耐久（または出血）を伸ばします。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>ツリー区分</th>
+              <th>注目パッシブ（LE Tools 日本語版）</th>
+              <th>主な効果・役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue/tree" target="_blank" rel="noopener noreferrer">ローグ</a></td>
+              <td>二刀流 / デュエリスト / 揺るがぬ手</td>
+              <td>武器二刀流（攻撃/詠唱速度+20%）＋回避値＋敏捷力＆ヘルスを揃える序盤 20pt 基盤。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue/tree" target="_blank" rel="noopener noreferrer">ローグ</a></td>
+              <td>吸収攻撃 / 盗賊の防衛術 / 身かわし</td>
+              <td>0 マナヒットのマナ＆ヘルス回復（吸収攻撃）、移動時ダメ減＋かすり当たり回復。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bladedancer/tree" target="_blank" rel="noopener noreferrer">ブレードダンサー</a></td>
+              <td>背教 / 影の外套 / マスターフォーム</td>
+              <td>回避率の 2 倍をかすり当たり（被ダメ35%軽減）へ変換する要（背教）と敏捷力大幅強化。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bladedancer/tree" target="_blank" rel="noopener noreferrer">ブレードダンサー</a></td>
+              <td>死の扉 / 外套の死神 / 根性 / 耐性</td>
+              <td>低ヘルス時の被ダメ軽減＋クリ倍率（死の扉）、衣スタック回復、ヘルス・耐性・クリ回避補強。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bladedancer/tree" target="_blank" rel="noopener noreferrer">ブレードダンサー</a></td>
+              <td>シャドウマスター / 影身統合 / 夜のヴェール</td>
+              <td>シャドウ発動ダメ増・生成時回復・夕闇の衣獲得・近接/投擲速度増を一挙に確保。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bladedancer/tree" target="_blank" rel="noopener noreferrer">ブレードダンサー</a></td>
+              <td>好みの武器 / フック付きの刃 / 深紅の奔流 / ブラッドダンス</td>
+              <td>二刀武器別ボーナス、アーマー寸断・出血・継続ダメ吸収をビルドに合わせて取得。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. シーズン 5 人気ビルド 3 選 -->
+    <section class="section" id="sec-builds" aria-labelledby="title-builds">
+      <h2 class="section-title" id="title-builds">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        </svg>
+        6. Season 5（Patch 1.5）人気ビルド 3 選
+      </h2>
+      <p class="page-lead">Season 5 環境で活躍するブレードダンサーの代表 3 アーキタイプです。</p>
+
+      <div class="stack-list">
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/bladestorm_throw" target="_blank" rel="noopener noreferrer">
+                ① 冷気・嵐刃＆ブレードデトネーション（Cold Bladestorm）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 Sティア / 1500+ コラプション</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: 冷気変換した <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bladestorm_throw" target="_blank" rel="noopener noreferrer">嵐刃</a> と <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/umbral_blades" target="_blank" rel="noopener noreferrer">影身の刃</a> を組み合わせ、大量の敏捷力（DEX）と <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMYTiA" target="_blank" rel="noopener noreferrer">嘆きの霜</a>、さらに「死の扉」＋低ヘルス（ワード）機構で攻防を極めます。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMYTiA" target="_blank" rel="noopener noreferrer">嘆きの霜</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAs4DiA" target="_blank" rel="noopener noreferrer">アストラルの血の構築者</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer">アトラリアの赤い指輪</a> 等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bladestorm_throw" target="_blank" rel="noopener noreferrer">嵐刃</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/umbral_blades" target="_blank" rel="noopener noreferrer">影身の刃</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shurikens" target="_blank" rel="noopener noreferrer">手裏剣投げ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/explosive_trap" target="_blank" rel="noopener noreferrer">爆破罠</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer">縮地</a>）</li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shadow_cascade" target="_blank" rel="noopener noreferrer">
+                ② シンクロストライク＆シャドウカスケード（Shadow Cascade）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">超高速マップ周回 / シャドウダガー</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/synchronized_strikes" target="_blank" rel="noopener noreferrer">シンクロストライク</a> で最大 5 体の影を即座に展開し、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shadow_cascade" target="_blank" rel="noopener noreferrer">シャドウカスケード</a> で全影同時斬撃＋確定クリの「シャドウダガー」を一斉爆発させます。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwiMGYDYg" target="_blank" rel="noopener noreferrer">煙の織り手</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMoFgJiA" target="_blank" rel="noopener noreferrer">裏切り者の舌</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYDZyA" target="_blank" rel="noopener noreferrer">星の半影</a>。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/synchronized_strikes" target="_blank" rel="noopener noreferrer">シンクロストライク</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shadow_cascade" target="_blank" rel="noopener noreferrer">シャドウカスケード</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer">縮地</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shurikens" target="_blank" rel="noopener noreferrer">手裏剣投げ</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/dancing_strikes" target="_blank" rel="noopener noreferrer">
+                ③ ダンシングストライク＆出血 / 無敵ミラージュ型
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge">マナフリー / 安定継続</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: 0 マナの <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dancing_strikes" target="_blank" rel="noopener noreferrer">ダンシングストライク</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/puncture" target="_blank" rel="noopener noreferrer">穿刺</a>）と出血スタックを積みつつ、危険なボス攻撃を <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lethal_mirage" target="_blank" rel="noopener noreferrer">リーサルミラージュ</a> の無敵フレームで躱して反撃します。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcEYA4HYg" target="_blank" rel="noopener noreferrer">傷口に塩</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAswdgRiA" target="_blank" rel="noopener noreferrer">ヴァルディルの杯</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMwVgo" target="_blank" rel="noopener noreferrer">流血の心臓</a>。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dancing_strikes" target="_blank" rel="noopener noreferrer">ダンシングストライク</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shadow_cascade" target="_blank" rel="noopener noreferrer">シャドウカスケード</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lethal_mirage" target="_blank" rel="noopener noreferrer">リーサルミラージュ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer">縮地</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. 4 大メカニズム -->
+    <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
+      <h2 class="section-title" id="title-mechanics">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.85 1 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        7. 攻撃・防御・マナ・快適性のメカニズム
+      </h2>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <h3 class="mech-card-title">攻撃スケーリング</h3>
+          <ul>
+            <li><strong>シャドウの同時発動倍率</strong>: シャドウ最大数（基礎+1＋スキル追加）を並べることで、シャドウカスケードや影身の刃のヒット数を何倍にも増やせます。</li>
+            <li><strong>DEX 積み＋嘆きの霜 / 好みの武器</strong>: 二刀流パッシブの武器別ボーナスと敏捷力フラット加算が近接＆冷気嵐刃で爆発します。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">防御レイヤー（かすり＋低ヘルスワード）</h3>
+          <ul>
+            <li><strong>背教（100%かすり当たり）＋衣スタック</strong>: 「背教」で回避を常時発動のかすり当たり（35%軽減）へ変換するか、高回避＋Silver Shroud＋Blade Shield アーマーを重ねます。</li>
+            <li><strong>死の扉＋低ヘルス型</strong>: 低ヘルス状態で被ダメ低下とワード維持を両立し、ワンパン耐性を高めます。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">マナ維持の仕組み</h3>
+          <ul>
+            <li><strong>吸収攻撃（0マナ回復）＋自動発動</strong>: シンクロストライクや嵐刃で減ったマナは、0 マナ攻撃の「吸収攻撃」や指輪の -3 マナコスト／マナ自動回復で補います。</li>
+            <li><strong>ダンシングストライク運用</strong>: 0 マナ起点スキルならマナ切れ自体が起きません。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">快適性（QoL）・周回テンポ</h3>
+          <ul>
+            <li><strong>縮地中心の超高速テンポ</strong>: 縮地を移動に使うだけで手裏剣バリア・シャドウ・自動カスケードが発動するため、走り抜けるだけで雑魚が消えます。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 人気の装備・アフィックス -->
+    <section class="section" id="sec-gear" aria-labelledby="title-gear">
+      <h2 class="section-title" id="title-gear">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20 7l-8-4-8 4v10l8 4 8-4V7z"></path>
+          <path d="M12 21V11M12 11l8-4M12 11L4 7"></path>
+        </svg>
+        8. 人気ユニーク装備＆部位別アフィックス
+      </h2>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 12px;">主要ユニーク装備一覧（装備名から直接 LE Tools DB へ移動可能）</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>装備名（日 / 英）</th>
+              <th>部位</th>
+              <th>主な採用理由・効果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMYTiA" target="_blank" rel="noopener noreferrer"><strong>嘆きの霜</strong><br><span class="skill-en">Mourningfrost</span></a></td>
+              <td>靴</td>
+              <td>敏捷力（DEX）1 ごとに冷気フラットダメを加算する S5 冷気嵐刃型の核ブーツ。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAs4DiA" target="_blank" rel="noopener noreferrer"><strong>アストラルの血の構築者</strong><br><span class="skill-en">Architects of Astral Blood</span></a></td>
+              <td>鎧</td>
+              <td>低ヘルス（Low-Life）＋庇護・被ダメ軽減・「死の扉」と噛み合う S5 注目ユニーク胴鎧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwiMGYDYg" target="_blank" rel="noopener noreferrer"><strong>煙の織り手</strong><br><span class="skill-en">Smoke Weaver</span></a></td>
+              <td>短剣</td>
+              <td>縮地のクールダウン大幅短縮と回避値・攻撃速度を備える二刀短剣の定番。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMoFgJiA" target="_blank" rel="noopener noreferrer"><strong>裏切り者の舌</strong><br><span class="skill-en">Traitor's Tongue</span></a></td>
+              <td>短剣</td>
+              <td>高い基礎クリ率とクリ倍率を備え、クリティカル二刀型で愛用される短剣。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYDZyA" target="_blank" rel="noopener noreferrer"><strong>星の半影</strong><br><span class="skill-en">Penumbra</span></a></td>
+              <td>指輪</td>
+              <td>影（シャドウ）使用スキルのダメージ増加・シャドウダガー物理貫通・クリ倍率を備える専用リング。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcEYA4HYg" target="_blank" rel="noopener noreferrer"><strong>傷口に塩</strong><br><span class="skill-en">Salt the Wound</span></a></td>
+              <td>グローブ</td>
+              <td>出血型ブレードダンサーで出血ダメ＆クリ倍率を伸ばす定番ガントレット。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAswdgRiA" target="_blank" rel="noopener noreferrer"><strong>ヴァルディルの杯</strong><br><span class="skill-en">Valdyr's Chalice</span></a></td>
+              <td>レリック</td>
+              <td>出血確率・出血ダメ・ヘルス吸収を同時に得る出血型定番レリック。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMwRgo" target="_blank" rel="noopener noreferrer"><strong>血が足りぬ</strong><br><span class="skill-en">Exsanguinous</span></a></td>
+              <td>鎧</td>
+              <td>減少ヘルスから毎秒大量の庇護を生成する低ヘルス（Low-Life）運用の定番鎧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
+              <td>指輪</td>
+              <td>全能力値＋ステータス条件で全耐性・被ダメ軽減を得るエンドゲーム最終リング。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 20px;">部位別おすすめアフィックス優先度</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>Prefix（敏捷・武器ダメ・速度）</th>
+              <th>Suffix（回避・耐久・耐性）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器（短剣 / 剣）</td>
+              <td>攻撃速度、フラット近接物理/冷気ダメ、クリ倍率</td>
+              <td>アーマー寸断、虚弱付与、冷気/物理耐性寸断</td>
+            </tr>
+            <tr>
+              <td>兜・鎧</td>
+              <td><strong>敏捷力（Dexterity）</strong>、主力スキル Lv+</td>
+              <td>ハイブリッドヘルス、回避値、各種不足耐性、クリ回避/軽減</td>
+            </tr>
+            <tr>
+              <td>手袋・ベルト</td>
+              <td>近接/投擲攻撃速度、クリ倍率、冷気/物理ダメ</td>
+              <td>ハイブリッドヘルス、回避値、ポーション使用時ワード/ヘルス</td>
+            </tr>
+            <tr>
+              <td>靴</td>
+              <td>移動速度（最優先）、敏捷力（嘆きの霜併用時は不要）</td>
+              <td>ハイブリッドヘルス、回避値、不足耐性（冷気型は物理耐性等）</td>
+            </tr>
+            <tr>
+              <td>アクセサリー</td>
+              <td>近接/投擲ダメ、クリ倍率、-3 投擲/スキルマナコスト</td>
+              <td>ヘルス、物理/虚無/冷気/毒耐性（嘆きの霜採用時は特に冷気耐性・物理耐性確保）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="page-footer-note">
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/build-guides/filter/cycle=rage-of-the-frostborn" target="_blank" rel="noopener noreferrer">Last Epoch Tools（Season 5 ビルドガイド）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+    </p>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html">Last Epoch ガイド</a></li>
+      <li><a class="nav-link" href="./falconer.html">ファルコナー（Season 5）</a></li>
+      <li><a class="nav-link" href="./bladedancer.html" aria-current="page">ブレードダンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./marksman.html">マークスマン（Season 5）</a></li>
+      <li><a class="nav-link" href="./paladin.html">パラディン（Season 5）</a></li>
+      <li><a class="nav-link" href="./void-knight.html">ヴォイドナイト（Season 5）</a></li>
+      <li><a class="nav-link" href="./forge-guard.html">フォージガード（Season 5）</a></li>
+      <li><a class="nav-link" href="./sorcerer.html">ソーサラー（Season 5）</a></li>
+      <li><a class="nav-link" href="./spellblade.html">スペルブレード（Season 5）</a></li>
+      <li><a class="nav-link" href="./runemaster.html">ルーンマスター（Season 5）</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
