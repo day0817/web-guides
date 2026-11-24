@@ -56,4 +56,11 @@
 - [x] RG1: LE Tools 日本語版からブレードダンサー・マークスマンの全スキル・パッシブノード・Season 5 ビルド情報を収集
 - [x] RG2: `site/last-epoch/bladedancer.html` 制作
 - [x] RG3: `site/last-epoch/marksman.html` 制作およびハブ・全ページ導線更新
-- [/] RG4: 全外部リンク監査・スマホ検証・公開前機密チェック・承認後 push ＆ 実 URL 確認
+- [x] RG4: 全外部リンク監査・スマホ検証・公開前機密チェック・承認後 push ＆ 実 URL 確認
+
+## アコライト 3 マスタリー制作フェーズ（`lich.html`, `necromancer.html`, `warlock.html`）
+- [x] AC1: LE Tools 日本語版からアコライト＆3マスタリー全スキル・パッシブノード・Season 5 ビルド情報を収集
+- [x] AC2: `site/last-epoch/lich.html` 制作
+- [x] AC3: `site/last-epoch/necromancer.html` 制作
+- [x] AC4: `site/last-epoch/warlock.html` 制作
+- [/] AC5: ハブ・全ページ導線更新・全リンク監査・スマホ検証・承認後 push ＆ 実 URL 確認

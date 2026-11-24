@@ -301,6 +301,10 @@ a.card:hover {
   left: 16px;
   bottom: max(74px, calc(env(safe-area-inset-bottom) + 64px));
   max-width: 420px;
+  max-height: calc(100vh - 96px);
+  max-height: calc(100dvh - 96px);
+  display: flex;
+  flex-direction: column;
   margin-left: auto;
   z-index: 50;
   padding: 16px;
@@ -321,6 +325,7 @@ a.card:hover {
 }
 
 .nav-drawer-header {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -358,6 +363,9 @@ a.card:hover {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .nav-link {

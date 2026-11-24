@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>リッチ（Lich）Season 5 ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <a href="./index.html">Last Epoch</a>
+      <span aria-hidden="true">/</span>
+      <span>リッチ</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
+      <h1 class="page-title">リッチ（Lich）完全ガイド</h1>
+      <p class="page-lead">自らのヘルスを代償にスペルと近接攻撃を極限まで強化し、「リーパー形態」の第二の命と圧倒的なヘルス吸収で敵陣を蹂躙するアコライト上級職の Season 5 ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
+
+      <div class="callout">
+        <strong>Season 5 最新環境メモ：</strong> Season 5 環境のアコライト筆頭マスタリーとして注目されており、新固有スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flay" target="_blank" rel="noopener noreferrer">皮剥ぎ（Flay）</a> を軸としたマナ積みハイブリッド型（<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcBYCZiA" target="_blank" rel="noopener noreferrer">処刑人の十分の一税</a>／<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgzALA7ArEA" target="_blank" rel="noopener noreferrer">貪欲なる知識</a>）、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rip_blood" target="_blank" rel="noopener noreferrer">血液抽出（Rip Blood）</a>＆<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marrow_shards" target="_blank" rel="noopener noreferrer">骨髄の破片（Marrow Shards）</a> クリティカル型、および <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgrAzATAHEA" target="_blank" rel="noopener noreferrer">冥府の石炭（Stygian Coal）</a> 採用型がエンドゲーム・高コラプションで活躍しています。
+      </div>
+
+      <nav class="toc-pills" aria-label="ページ内目次">
+        <a class="toc-pill" href="#sec-overview">1. 特徴・差別化</a>
+        <a class="toc-pill" href="#sec-ranking">2. 採用スキル順位</a>
+        <a class="toc-pill" href="#sec-lich-skills">3. 固有スキル</a>
+        <a class="toc-pill" href="#sec-acolyte-skills">4. アコライトスキル</a>
+        <a class="toc-pill" href="#sec-passives">5. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">6. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">7. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">8. 装備・アフィックス</a>
+      </nav>
+    </header>
+
+    <!-- 1. マスタリー特徴・差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2L4 7v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V7l-8-5z"></path>
+          <path d="M9 12l2 2 4-4"></path>
+        </svg>
+        1. マスタリーの特徴・他職との差別化・固有パッシブ
+      </h2>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <h3 class="skill-title">リッチ固有パッシブ＆マスタリーボーナス（血の代償＋ヘルス吸収）</h3>
+          <p class="skill-desc">アコライトの基本パッシブに 20pt 投資してリッチを選択すると、象徴スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/reaper_form" target="_blank" rel="noopener noreferrer"><strong>リーパー形態（Reaper Form）</strong></a> の解放ルートが開き、以下のマスタリー固有ボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス①</strong>: <strong>与ダメージの 1% をヘルスとして吸収（Health Leech）</strong> — ヒット・継続ダメージを問わず攻撃する限り回復し続けます。</li>
+            <li><strong>基礎ボーナス②</strong>: <strong>減少ヘルス割合に応じたスペル＆近接ダメージ増加</strong> — ヘルスが減るほど攻撃性能が跳ね上がり、低ヘルス固定（腐敗の形成 / 死の封印）と抜群に噛み合います。</li>
+            <li><strong>血と死神の独自機構</strong>: リーパー形態による致死ダメージ肩代わり＆移動スキル「刈り取り」、パッシブ「虚ろなリッチ（吸収1%ごとにダメ増）」「処刑人（斧/短剣二刀解禁＋速度+20%）」「身体に勝る精神（ヘルス消費を庇護へ変換）」により、攻撃即回復・攻防一体の高速戦闘を実現します。</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">アコライト 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・代表固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lich/tree" target="_blank" rel="noopener noreferrer"><strong>リッチ</strong><br><span class="skill-en">(Lich)</span></a></td>
+              <td>与ダメ 1% ヘルス吸収／減少ヘルス割合ダメ増加<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/reaper_form" target="_blank" rel="noopener noreferrer">リーパー形態</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flay" target="_blank" rel="noopener noreferrer">皮剥ぎ</a></td>
+              <td><strong>自己ヘルス代償型キャスター＆近接二刀リーパー</strong>。リーパー形態の第2ヘルスゲージと超高速の吸血・低ヘルス火力変換が持ち味。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./necromancer.html"><strong>ネクロマンサー</strong><br><span class="skill-en">(Necromancer)</span></a></td>
+              <td>最大スケルトン +1／最大スケルトンメイジ +1／ミニオンダメ +50%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_mage" target="_blank" rel="noopener noreferrer">スケルトンメイジ召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_wraith" target="_blank" rel="noopener noreferrer">レイス召喚</a></td>
+              <td><strong>アンデッド軍団・単体巨大ミニオン指揮官</strong>。仲間を召喚・強化・生贄にして戦わせるならネクロマンサー、本体火力特化ならリッチ。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./warlock.html"><strong>ウォーロック</strong><br><span class="skill-en">(Warlock)</span></a></td>
+              <td>火・死霊耐性 +35%／敵の呪い 1 つごとに与ダメ +4%（more）<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chthonic_fissure" target="_blank" rel="noopener noreferrer">地獄亀裂</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chaos_bolts" target="_blank" rel="noopener noreferrer">カオスボルト</a></td>
+              <td><strong>多重呪い・苦悩 DoT・地獄炎キャスター</strong>。亀裂設置と呪い連鎖で広範囲を焼くならウォーロック、肉弾＆高速リーパーならリッチ。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Season 5 採用スキルランキング -->
+    <section class="section" id="sec-ranking" aria-labelledby="title-ranking">
+      <h2 class="section-title" id="title-ranking">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+          <path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"></path>
+        </svg>
+        2. Season 5 採用スキルランキング（必須スキル早見表）
+      </h2>
+      <p class="page-lead">Season 5 環境のリッチ主要構成（皮剥ぎマナ積み型 / 血液抽出＆骨髄の破片型 / 冥府の石炭・生命吸収型）での必須度・採用順位整理です。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>順位 / 必須度</th>
+              <th>スキル名</th>
+              <th>区分</th>
+              <th>Season 5 環境での位置づけ・必須理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--accent">1位 / ほぼ全軸必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/reaper_form" target="_blank" rel="noopener noreferrer"><strong>リーパー形態</strong><br><span class="skill-en">(Reaper Form)</span></a></td>
+              <td>リッチ</td>
+              <td><strong>リッチのアイデンティティそのもの</strong>。変身中の専用スキル「刈り取り（Reap）」による高速移動＋攻撃速度・ダメージ増＋致死回避保険を備える。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">2位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/death_seal" target="_blank" rel="noopener noreferrer"><strong>死の封印</strong><br><span class="skill-en">(Death Seal)</span></a></td>
+              <td>リッチ</td>
+              <td><strong>低ヘルス化＆防御・火力ブースター</strong>。HP 上限固定で「死神とのダンス」やマスタリーボーナスを常時最大発揮し、アーマー・耐久・耐性寸断を得る。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">3位 / 移動＆バフ必須 (S-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer"><strong>肉体交換</strong><br><span class="skill-en">(Transplant)</span></a></td>
+              <td>アコライト</td>
+              <td><strong>瞬時ブリンク＋ボーンアーマー＋バフ起動枠</strong>。敵弾回避や周回加速に加え、着地時に骨の呪いやバフを起動できる不可欠の移動技。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">4位 / 2大主力 (A+)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flay" target="_blank" rel="noopener noreferrer"><strong>皮剥ぎ</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rip_blood" target="_blank" rel="noopener noreferrer"><strong>血液抽出</strong></a></td>
+              <td>リ / ア</td>
+              <td><strong>Season 5 看板の近接トリガー主力（皮剥ぎ）</strong>と、<strong><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marrow_shards" target="_blank" rel="noopener noreferrer">骨髄の破片</a> 連鎖や回復を一手に担う遠距離主砲（血液抽出）</strong>。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">5位 / 連携＆オーラ (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bone_curse" target="_blank" rel="noopener noreferrer"><strong>骨の呪い</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/aura_of_decay" target="_blank" rel="noopener noreferrer"><strong>腐敗のオーラ</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/harvest" target="_blank" rel="noopener noreferrer"><strong>刈り取り</strong></a></td>
+              <td>ア / リ / ア</td>
+              <td>確定ダメージ加算＆死の刻印（骨の呪い）、常時物理/毒オーラ＋耐久補助（腐敗のオーラ）、処刑人の十分の一税採用時のマナ即時補充（刈り取り）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">6位 / ビルド軸・選択 (B〜C)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/drain_life" target="_blank" rel="noopener noreferrer">生命吸収</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marrow_shards" target="_blank" rel="noopener noreferrer">骨髄の破片</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/wandering_spirits" target="_blank" rel="noopener noreferrer">さまよえる霊魂</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/spirit_plague" target="_blank" rel="noopener noreferrer">魂の悪疫</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/hungering_souls" target="_blank" rel="noopener noreferrer">飢える魂</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/infernal_shade" target="_blank" rel="noopener noreferrer">獄炎のシェード</a> /
+                その他召喚系
+              </td>
+              <td>リ / ア</td>
+              <td>冥府の石炭型の核（生命吸収）、クリティカル射出本体（骨髄の破片）、自動追尾・デバフ補充用の汎用アコライト枠。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. リッチ固有スキル（5種） -->
+    <section class="section" id="sec-lich-skills" aria-labelledby="title-lich-skills">
+      <h2 class="section-title" id="title-lich-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2c4 4 6 7 6 11a6 6 0 1 1-12 0c0-4 2-7 6-11z"></path>
+        </svg>
+        3. リッチ固有スキル＆重要ノード（5種）
+      </h2>
+      <p class="page-lead">スキル名・サブ見出しをクリックすると Last Epoch Tools 日本語版のスキルツリー詳細が開きます。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/reaper_form" target="_blank" rel="noopener noreferrer">リーパー形態 <span class="skill-en">(Reaper Form)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須</span><span class="badge">変身 / 第二のヘルス</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">死神の姿へ変身して独立したリーパーヘルスを得るリッチの象徴。ヘルスが時間経過で減衰し続けますが、変身中に 0 になっても本体は即死せず人間の姿に戻る安全弁となり、発動中は高速移動攻撃「刈り取り（Reap）」を使用可能です。</p>
+          <details class="node-details">
+            <summary>重要ノード＆Season 5 運用ポイント</summary>
+            <ul class="node-list">
+              <li>ヘルス吸収・キル時回復やスキル内の減衰緩和ノードを取ることで、マップ 1 周どころかボス戦通してリーパー形態を途切れず維持可能。</li>
+              <li>詠唱速度・移動速度・死霊/全体ダメージ倍率を大幅に引き上げるため、ほぼすべてのリッチ構成で最優先採用されます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M8 12h8M12 8v8"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/death_seal" target="_blank" rel="noopener noreferrer">死の封印 <span class="skill-en">(Death Seal)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須</span><span class="badge">低ヘルス固定 / 被ダメ軽減</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">発動中、自身のヘルスを最大ヘルスの 33% 上限へ強制封印する代わりに、強大な耐久力（アーマー・耐久ボーナス）と攻撃バフ、解除時・持続中の波動攻撃を得るリッチの攻防スイッチです。</p>
+          <details class="node-details">
+            <summary>重要ノード＆Season 5 運用ポイント</summary>
+            <ul class="node-list">
+              <li>低ヘルス（Low-Life）状態へ強制移行するため、マスタリーの減少ヘルス火力増とパッシブ「死神とのダンス（3倍化）」を意図的に常時発動させられます。</li>
+              <li>持続時間中は耐久力（Endurance）との噛み合いが極めて良く、死の波動や呪い/耐性寸断ノードでボス戦の総合 DPS も引き上げます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/flay" target="_blank" rel="noopener noreferrer">皮剥ぎ <span class="skill-en">(Flay)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 主力</span><span class="badge">近接物理・死霊 / 自動トリガー</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵を切り裂きつつ対象へ高速移動や血の爆発を起こすリッチの新規主力近接スキル。Season 5 でも最大マナ積みと組み合わせて他のスペル（骨髄の破片やカオスボルト等）を連鎖起動する「Mana Flay」エンジンとしてトップクラスの評価を得ています。</p>
+          <details class="node-details">
+            <summary>重要ノード＆Season 5 運用ポイント</summary>
+            <ul class="node-list">
+              <li>最大マナ増加・マナ消費比例ダメージ強化ノードや、攻撃命中時にスペルを自動発動するノードにより、殴るだけで画面を制圧可能。</li>
+              <li>物理型・冷気変換・出血爆発など派生が多く、二刀流パッシブ「処刑人」＋「処刑人の十分の一税」と組み合わせる構築が鉄板です。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M12 7v5l3 3"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/aura_of_decay" target="_blank" rel="noopener noreferrer">腐敗のオーラ <span class="skill-en">(Aura of Decay)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">常時オン型オーラ</span><span class="badge">毒 / 出血・耐性寸断</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">オン／オフ切り替えで周囲の敵に毎秒毒を撒き続けるオーラスキル。自身にも毒が入るリスクと引き換えに、毒耐性低下・アーマー寸断・欠損ヘルス回復・物理出血変換など多彩な攻防ユーティリティを提供します。</p>
+          <details class="node-details">
+            <summary>重要ノード＆Season 5 運用ポイント</summary>
+            <ul class="node-list">
+              <li>Season 5 では物理変換（出血オーラ）や冷気/死霊サポート兼、欠損ヘルス割合に応じた自動回復・被ダメ軽減バフ装置としても重宝されます。</li>
+              <li>パッシブ「朽ちゆく姿」と合わせることで自己毒ダメージを抑えつつ恩恵のみを享受できます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/drain_life" target="_blank" rel="noopener noreferrer">生命吸収 <span class="skill-en">(Drain Life)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">チャネリング / 設置化可</span><span class="badge">マナ回復・死霊 DoT</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵の生命力を吸い取り自身のヘルス・マナを急速回復するチャネリング魔法。接地型への変換や、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgrAzATAHEA" target="_blank" rel="noopener noreferrer">冥府の石炭（Stygian Coal）</a> 装備時の「三途の光（Stygian Beam）」一斉掃射ビルドの核として使われます。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. アコライト基本スキル（12種個別記載） -->
+    <section class="section" id="sec-acolyte-skills" aria-labelledby="title-acolyte-skills">
+      <h2 class="section-title" id="title-acolyte-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+          <path d="M9 9h6v6H9z"></path>
+        </svg>
+        4. 最終ビルドで採用されうるアコライト基本スキル（全12種個別解説）
+      </h2>
+      <p class="page-lead">アコライトの基本スキル 12 種（＋共通移動 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acolyte_evade" target="_blank" rel="noopener noreferrer">即時避け</a>）は、リッチのどのビルド軸でも連携パーツや主砲候補になるため 1 つずつ役割を整理します。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer">肉体交換 <span class="skill-en">(Transplant)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須移動枠</span><span class="badge">ボーンアーマー＋バフ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ヘルスをわずかに消費して指定地点へ肉体を転移させる瞬間移動スキル。移動直後のアーマー大幅増加（ボーンアーマー）、恐怖・俊足付与、着地時の「骨の呪い」または爆破トリガーにより、アコライト全職で最優先の防御・快適枠です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/rip_blood" target="_blank" rel="noopener noreferrer">血液抽出 <span class="skill-en">(Rip Blood)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 大人気主砲</span><span class="badge">0マナ軸 / 骨髄トリガー</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵から血液球を吸い上げて自身を回復する遠距離スペル。0 マナ連射化でき、ツリー内で「血の飛沫」の範囲化や、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marrow_shards" target="_blank" rel="noopener noreferrer">骨髄の破片（Marrow Shards）</a> の自動同時発射を設定すると Season 5 S ティアの「Rip Blood リッチ」が完成します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/marrow_shards" target="_blank" rel="noopener noreferrer">骨髄の破片 <span class="skill-en">(Marrow Shards)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">高クリ主砲 / トリガー先</span><span class="badge">物理・冷気変換</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">現在ヘルスの一部を捧げて高基礎クリティカル・貫通骨槍を放つスペル。冷気変換ビルドや、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rip_blood" target="_blank" rel="noopener noreferrer">血液抽出</a>／<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flay" target="_blank" rel="noopener noreferrer">皮剥ぎ</a> からの無料トリガー火力として非常に優秀です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M9 10h6M10 15h4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/bone_curse" target="_blank" rel="noopener noreferrer">骨の呪い <span class="skill-en">(Bone Curse)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須級火力バフ</span><span class="badge">ヒット時確定追加ダメ＋死の刻印</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵を呪い、攻撃ヒットごとに物理追加ダメージと「死の刻印（Marked for Death）」・アーマー寸断・出血などを誘発させる補助の王様。オーラ化ノード（苦悶の印 / Signet of Agony）で維持の手間をゼロにできます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L20 4M15 4h5v5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/harvest" target="_blank" rel="noopener noreferrer">刈り取り <span class="skill-en">(Harvest)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">近接薙ぎ払い</span><span class="badge">マナ回復 / クリ連動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">巨大な鎌の弧で前方すべてを薙ぐ近接スキル。皮剥ぎマナ積みビルドでは、ユニーク斧 <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcBYCZiA" target="_blank" rel="noopener noreferrer">処刑人の十分の一税</a> とのシナジーによりマナを瞬時に満タンへ戻し、バースト枠を開くエンジンとして採用されます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M7 12h10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/wandering_spirits" target="_blank" rel="noopener noreferrer">さまよえる霊魂 <span class="skill-en">(Wandering Spirits)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">自動展開サブ火力</span><span class="badge">マナ回復・恐怖/毒</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">周囲に無数の霊魂を展開して敵を自動追跡させるスキル。毒/死霊 DoT の維持、または敵接触時のマナ回復・恐怖付与サポートとしてオートキャスターや移行期ビルドに組み込まれます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4 7l8 5 8-5-8-5zM4 17l8 5 8-5M4 12l8 5 8-5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/spirit_plague" target="_blank" rel="noopener noreferrer">魂の悪疫 <span class="skill-en">(Spirit Plague)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">呪い感染 DoT</span><span class="badge">出血/クリ率/寸断補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">感染拡散する死霊の呪い。リッチ側で継続ダメージ・呪いカウントを稼ぐだけでなく、パッシブ「死の神髄」型や毒・DoT 軸で耐性寸断・クリ率バフ源として活用できます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/hungering_souls" target="_blank" rel="noopener noreferrer">飢える魂 <span class="skill-en">(Hungering Souls)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">誘導弾スペル</span><span class="badge">単体集中/火変換可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵を追尾して「取り憑き（Possess）」DoT を与える死霊弾。単体フォーカスノードでボス用 DoT 源にするほか、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcEYKA" target="_blank" rel="noopener noreferrer">マリナの失くした魂</a> 等で火力を伸ばせます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c3 3 5 6 5 10a5 5 0 1 1-10 0c0-4 2-7 5-10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/infernal_shade" target="_blank" rel="noopener noreferrer">獄炎のシェード <span class="skill-en">(Infernal Shade)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">付着 DoT / 自爆可</span><span class="badge">攻撃/詠唱速度バフ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵や自分自身（味方）に取り憑き、周囲を焼き払う火炎呪文。低ヘルス/吸血リッチでは自分に貼って攻撃速度＋火ダメを増やすか、爆破 DoT トリガーとして利用します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_volatile_zombie" target="_blank" rel="noopener noreferrer">爆発ゾンビ召喚 <span class="skill-en">(Summon Volatile Zombie)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">自爆/ヘルス玉供給</span><span class="badge">限定補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵に突撃して自爆するゾンビ。ミニオン中心のネクロマンサーほど主力にはなりにくいものの、死んだ際にヘルスオーブやゾンビ嘔吐（毒）を落として本体補助に回すことも可能です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l4 7-4 13-4-13 4-7z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_skeleton" target="_blank" rel="noopener noreferrer">スケルトン召喚 <span class="skill-en">(Summon Skeleton)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">盾役・生贄餌（限定用途）</span><span class="badge">ミニオン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">リッチ本体軸では必須枠に入りませんが、肉体交換で生成したり、パッシブ「荒廃」で自動召喚されるスケルトンヴァンガードと合わせて囮・アーマー寸断役に機能します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 10h6M9 14h6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_bone_golem" target="_blank" rel="noopener noreferrer">骨のゴーレム召喚 <span class="skill-en">(Summon Bone Golem)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">ヘイト誘導・吸血壁（限定用途）</span><span class="badge">ミニオン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">挑発持ちの高耐久ゴーレム。通常は本体スキル 5 枠で完結しますが、Blood Golem 化による継続回復や低装備時のターゲット分散用タンクとして機能します。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. パッシブツリー指針 -->
+    <section class="section" id="sec-passives" aria-labelledby="title-passives">
+      <h2 class="section-title" id="title-passives">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="6" r="3"></circle>
+          <circle cx="18" cy="18" r="3"></circle>
+          <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
+        </svg>
+        5. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acolyte/tree" target="_blank" rel="noopener noreferrer">アコライト</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lich/tree" target="_blank" rel="noopener noreferrer">リッチ</a>）
+      </h2>
+      <p class="page-lead">アコライト基本に 20pt 振って生命力・知力・全ダメを押さえ、リッチツリーで「処刑人」「死神とのダンス」「デスブリンガー」「外典」「身体に勝る精神」をビルド軸に合わせて伸ばします。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>ツリー区分</th>
+              <th>注目パッシブ（LE Tools 日本語版）</th>
+              <th>主な効果・役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acolyte/tree" target="_blank" rel="noopener noreferrer">アコライト</a></td>
+              <td>禁じられし知識 / 盗まれた生命力 / 血のオーラ</td>
+              <td>知力・死霊耐性・生命力・全ダメージ増加を揃える基本 20pt の要。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acolyte/tree" target="_blank" rel="noopener noreferrer">アコライト</a></td>
+              <td>破滅の眼差し / 力の血脈 / 骨のオーラ</td>
+              <td>死霊ダメ＋呪詛付与、物理ダメ増、アーマー値を必要に応じて補強。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lich/tree" target="_blank" rel="noopener noreferrer">リッチ</a></td>
+              <td>デスブリンガー / 千里眼 / 不老の修道者</td>
+              <td>クリティカル率＋攻/詠唱速度＋クリ倍率＋クリ時庇護を一挙に得る攻撃基盤。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lich/tree" target="_blank" rel="noopener noreferrer">リッチ</a></td>
+              <td>死神とのダンス / 虚ろなリッチ / 残酷なる者の生存</td>
+              <td>低ヘルス時に効果 3 倍になるダメージ増、吸収率 1% ごとのダメ変換、スペル吸収。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lich/tree" target="_blank" rel="noopener noreferrer">リッチ</a></td>
+              <td>処刑人 / 戦没者の杖 / 外典 / 精神的不快音</td>
+              <td>斧/短剣二刀解禁＋速度+20%（処刑人）、知力・マナ・アーマー変換・庇護維持力。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lich/tree" target="_blank" rel="noopener noreferrer">リッチ</a></td>
+              <td>身体に勝る精神 / 腐敗の形成 / 衝撃の庇護 / 分光の傷</td>
+              <td>ヘルス消費→庇護変換、常時低ヘルス＆耐久しきい値変換、被継続ダメ/レアダメ軽減。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. シーズン 5 人気ビルド 3 選 -->
+    <section class="section" id="sec-builds" aria-labelledby="title-builds">
+      <h2 class="section-title" id="title-builds">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        </svg>
+        6. Season 5（Patch 1.5）人気ビルド 3 選
+      </h2>
+      <p class="page-lead">Season 5 で高評価を得ているリッチの代表 3 アーキタイプです。</p>
+
+      <div class="stack-list">
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/build-guides/allies-mana-stacking-flay-lich" target="_blank" rel="noopener noreferrer">
+                ① 皮剥ぎ・マナ積みハイブリッド（Mana Stacking Flay Lich）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 主役・高単体＋快適周回</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flay" target="_blank" rel="noopener noreferrer">皮剥ぎ（Flay）</a> を連打して骨髄の破片／カオスボルト等を連続トリガーし、マナが減ったら <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/harvest" target="_blank" rel="noopener noreferrer">刈り取り</a> で一瞬でマナ全快させる「マナ・チェーンソー」循環型。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcBYCZiA" target="_blank" rel="noopener noreferrer">処刑人の十分の一税</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMoFgJiA" target="_blank" rel="noopener noreferrer">裏切り者の舌</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgzALA7ArEA" target="_blank" rel="noopener noreferrer">貪欲なる知識（Devoured Knowledge）</a> 等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flay" target="_blank" rel="noopener noreferrer">皮剥ぎ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/harvest" target="_blank" rel="noopener noreferrer">刈り取り</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/reaper_form" target="_blank" rel="noopener noreferrer">リーパー形態</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/death_seal" target="_blank" rel="noopener noreferrer">死の封印</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marrow_shards" target="_blank" rel="noopener noreferrer">骨髄の破片</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer">肉体交換</a>）</li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/build-guides/cold-crit-marrow-shard-lich" target="_blank" rel="noopener noreferrer">
+                ② 血液抽出＆骨髄の破片・クリ型（Rip Blood / Marrow Shards Lich）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 Sティア万能型</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rip_blood" target="_blank" rel="noopener noreferrer">血液抽出</a> を連射しながら <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marrow_shards" target="_blank" rel="noopener noreferrer">骨髄の破片</a> を自動/交互発射し、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/aura_of_decay" target="_blank" rel="noopener noreferrer">腐敗のオーラ</a>＋<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bone_curse" target="_blank" rel="noopener noreferrer">骨の呪い</a> で攻防を極めます。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcBYDYE4g" target="_blank" rel="noopener noreferrer">エクスリス（Exulis）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVgHATAjAbEA" target="_blank" rel="noopener noreferrer">アーケイロスのねじれた心臓</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer">アトラリアの赤い指輪</a>。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rip_blood" target="_blank" rel="noopener noreferrer">血液抽出</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marrow_shards" target="_blank" rel="noopener noreferrer">骨髄の破片</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bone_curse" target="_blank" rel="noopener noreferrer">骨の呪い</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/reaper_form" target="_blank" rel="noopener noreferrer">リーパー形態</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/death_seal" target="_blank" rel="noopener noreferrer">死の封印</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/aura_of_decay" target="_blank" rel="noopener noreferrer">腐敗のオーラ</a>）</li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgrAzATAHEA" target="_blank" rel="noopener noreferrer">
+                ③ 冥府の石炭・三途の光ビーム型（Stygian Coal Drain Life Lich）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge">ユニーク触媒軸 / 知力・マナ参照</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgrAzATAHEA" target="_blank" rel="noopener noreferrer">冥府の石炭（Stygian Coal）</a> の効果で <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/drain_life" target="_blank" rel="noopener noreferrer">生命吸収</a> を発動するたびに周囲へ「三途の光（Stygian Beam）」を自動連射し、知力と現在マナ量で火力を伸ばします。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgrAzATAHEA" target="_blank" rel="noopener noreferrer">冥府の石炭</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGYCYEYg" target="_blank" rel="noopener noreferrer">狂える錬金術師の柄杓</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgTAjKQ" target="_blank" rel="noopener noreferrer">暗き帳</a> 等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/drain_life" target="_blank" rel="noopener noreferrer">生命吸収</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/reaper_form" target="_blank" rel="noopener noreferrer">リーパー形態</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/death_seal" target="_blank" rel="noopener noreferrer">死の封印</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer">肉体交換</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/wandering_spirits" target="_blank" rel="noopener noreferrer">さまよえる霊魂</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. 4大メカニズム -->
+    <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
+      <h2 class="section-title" id="title-mechanics">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.77 1 1.51 1H21a2 2 0 0 1 0 4h-.09c-.74 0-1.25.4-1.51 1z"></path>
+        </svg>
+        7. リッチの強さを支える 4 大メカニズム
+      </h2>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <h3>① 攻撃メカニズム：欠損ヘルス＆マナ二重スケール</h3>
+          <p>「死の封印」や「腐敗の形成」で低ヘルス帯を維持すると、マスタリーボーナス＋「死神とのダンス（3倍）」が常時最大出力になります。さらに「皮剥ぎ」や「冥府の石炭」では最大/現在マナも同時に火力係数へ乗るため、異次元の倍率に達します。</p>
+        </div>
+        <div class="mech-card">
+          <h3>② 防御メカニズム：リーパー形態＋耐久＋庇護変換</h3>
+          <p>変身中の「第二のヘルス」が致死一撃を受け止めてくれるうえ、低ヘルス状態の恩恵を受ける「耐久（Endurance）」60%＋「千里眼／身体に勝る精神／ねじれた心臓」による庇護生成が重なり、一撃死しにくい硬さを誇ります。</p>
+        </div>
+        <div class="mech-card">
+          <h3>③ マナ・吸収メカニズム：即時補充と過剰吸血</h3>
+          <p>マナ消費の激しい皮剥ぎ軸は「処刑人の十分の一税」採用下の刈り取りで一瞬でマナを回復し、スペル軸は「血液抽出」「呪われた宴」やマスタリー吸収 1% ＋スキル吸収によって継続ダメージを含む全与ダメから膨大な生命力を吸収します。</p>
+        </div>
+        <div class="mech-card">
+          <h3>④ 快適性：二段ブリンクと高速リーパー巡回</h3>
+          <p>「肉体交換」と「リーパー形態」の固有移動技「刈り取り」、さらに「皮剥ぎ」自体の踏み込み機動が揃うため、エコー周回時の移動ストレスが少なくノンストップで走り抜けられます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 人気ユニーク装備・アフィックス表 -->
+    <section class="section" id="sec-gear" aria-labelledby="title-gear">
+      <h2 class="section-title" id="title-gear">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"></path>
+        </svg>
+        8. 主要ユニーク装備・部位別アフィックス優先度
+      </h2>
+      <p class="page-lead">Season 5 のリッチ各軸で採用されるユニーク装備（名称クリックで LE Tools DB 詳細へ）とアフィックス指針です。</p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>ユニーク名</th>
+              <th>部位</th>
+              <th>主な採用理由・効果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcBYCZiA" target="_blank" rel="noopener noreferrer"><strong>処刑人の十分の一税</strong><br><span class="skill-en">Executioner's Tithe</span></a></td>
+              <td>片手斧</td>
+              <td>二刀流対応＋近接ダメをトリガースペルへ変換＋刈り取りをマナ全快エンジン化する皮剥ぎ軸の核。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgzALA7ArEA" target="_blank" rel="noopener noreferrer"><strong>貪欲なる知識</strong><br><span class="skill-en">Devoured Knowledge</span></a></td>
+              <td>鎧</td>
+              <td>生命力（Vitality）に応じた最大マナ増加とマナ／庇護／耐久しきい値による被ダメ吸収を備えた S5 注目鎧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMoFgJiA" target="_blank" rel="noopener noreferrer"><strong>裏切り者の舌</strong><br><span class="skill-en">Traitor's Tongue</span></a></td>
+              <td>短剣</td>
+              <td>高基礎クリ率＆クリ倍率を備え、パッシブ「処刑人」の二刀オフハンド枠として大活躍。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgrAzATAHEA" target="_blank" rel="noopener noreferrer"><strong>冥府の石炭</strong><br><span class="skill-en">Stygian Coal</span></a></td>
+              <td>触媒</td>
+              <td>生命吸収発動時に「三途の光」ビームを周囲へ放ち、知力・現在マナで火力を大きく伸ばす専用オフハンド。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGYCYEYg" target="_blank" rel="noopener noreferrer"><strong>狂える錬金術師の柄杓</strong><br><span class="skill-en">Mad Alchemist's Ladle</span></a></td>
+              <td>ワンド</td>
+              <td>敵の状態異常種数に応じてスペル火力が爆増し、知力＆詠唱速度も稼げるキャスター定番ワンド。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVgHATAjAbEA" target="_blank" rel="noopener noreferrer"><strong>アーケイロスのねじれた心臓</strong><br><span class="skill-en">Twisted Heart of Uhkeiros</span></a></td>
+              <td>レリック</td>
+              <td>スペル発動時に現在ヘルスを消費して大量の庇護を獲得し、低ヘルス防御と生命力スケーリングを両立。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcBYDYE4g" target="_blank" rel="noopener noreferrer"><strong>エクスリス</strong><br><span class="skill-en">Exulis</span></a></td>
+              <td>アミュレット</td>
+              <td>スキル Lv+2 や特殊属性変換ロールを持ち、Rip Blood 等 S5 最上位帯の火力・耐久を底上げ。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMwRgo" target="_blank" rel="noopener noreferrer"><strong>血が足りぬ</strong><br><span class="skill-en">Exsanguinous</span></a></td>
+              <td>鎧</td>
+              <td>失われたヘルス量に応じた毎秒庇護獲得をもたらす低ヘルス（Low-Life）運用の伝統的定番鎧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
+              <td>指輪</td>
+              <td>全能力値＋条件達成による全耐性＆被ダメージ軽減を備えたエンドゲーム最高峰リング。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 20px;">部位別おすすめアフィックス優先度</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>Prefix（知力・マナ・クリ・速度）</th>
+              <th>Suffix（ヘルス・耐久・耐性）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器 / 触媒</td>
+              <td>フラットスペル/近接ダメ、詠唱/攻撃速度、クリティカル倍率</td>
+              <td>アーマー寸断、死霊/物理耐性寸断、虚弱付与</td>
+            </tr>
+            <tr>
+              <td>兜・鎧</td>
+              <td><strong>知力（Intelligence） / 生命力（Vitality）</strong>、主力スキル Lv+</td>
+              <td>ハイブリッドヘルス、増加ヘルス、アーマー、クリ回避/軽減</td>
+            </tr>
+            <tr>
+              <td>手袋・ベルト</td>
+              <td>攻撃/詠唱速度、クリ倍率、スペル/継続ダメ</td>
+              <td>ハイブリッドヘルス、ポーション使用時実験的庇護、アーマー</td>
+            </tr>
+            <tr>
+              <td>靴</td>
+              <td>移動速度（最優先）、知力、最大マナ（マナ積み型）</td>
+              <td>ハイブリッドヘルス、不足耐性、耐久力/アーマー</td>
+            </tr>
+            <tr>
+              <td>アクセサリー</td>
+              <td><strong>最大マナ / 増加マナ（マナ軸）</strong>、クリ倍率、知力、詠唱速度</td>
+              <td>耐久力（60%上限調整）、ヘルス、物理/虚無/冷気/死霊耐性</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="page-footer-note">
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/build-guides/filter/cycle=rage-of-the-frostborn" target="_blank" rel="noopener noreferrer">Last Epoch Tools（Season 5 ビルドガイド）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+    </p>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html">Last Epoch ガイド</a></li>
+      <li><a class="nav-link" href="./falconer.html">ファルコナー（Season 5）</a></li>
+      <li><a class="nav-link" href="./bladedancer.html">ブレードダンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./marksman.html">マークスマン（Season 5）</a></li>
+      <li><a class="nav-link" href="./paladin.html">パラディン（Season 5）</a></li>
+      <li><a class="nav-link" href="./void-knight.html">ヴォイドナイト（Season 5）</a></li>
+      <li><a class="nav-link" href="./forge-guard.html">フォージガード（Season 5）</a></li>
+      <li><a class="nav-link" href="./sorcerer.html">ソーサラー（Season 5）</a></li>
+      <li><a class="nav-link" href="./spellblade.html">スペルブレード（Season 5）</a></li>
+      <li><a class="nav-link" href="./runemaster.html">ルーンマスター（Season 5）</a></li>
+      <li><a class="nav-link" href="./lich.html" aria-current="page">リッチ（Season 5）</a></li>
+      <li><a class="nav-link" href="./necromancer.html">ネクロマンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./warlock.html">ウォーロック（Season 5）</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

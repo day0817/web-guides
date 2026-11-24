@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>ウォーロック（Warlock）Season 5 ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <a href="./index.html">Last Epoch</a>
+      <span aria-hidden="true">/</span>
+      <span>ウォーロック</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
+      <h1 class="page-title">ウォーロック（Warlock）完全ガイド</h1>
+      <p class="page-lead">地を裂く「地獄亀裂」と自動追尾スペル「カオスボルト」、多重の呪い・苦悩（Torment）・魔炎（Witchfire）を連鎖させて画面全体を制圧するアコライト上級職の Season 5 ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
+
+      <div class="callout">
+        <strong>Season 5 最新環境メモ：</strong> Season 5 環境のアコライト内ではリッチが最強帯を占める一方、ウォーロックは依然として <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chthonic_fissure" target="_blank" rel="noopener noreferrer">地獄亀裂（Chthonic Fissure）</a> による快適な広範囲自動処理や、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/profane_veil" target="_blank" rel="noopener noreferrer">冒涜のベール（Profane Veil）</a> 連動のオーブ／無敵運用、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGZ2I" target="_blank" rel="noopener noreferrer">マラトロスの背骨</a> による火炎鞭ビルドなど高い快適性と安定性を誇ります。
+      </div>
+
+      <nav class="toc-pills" aria-label="ページ内目次">
+        <a class="toc-pill" href="#sec-overview">1. 特徴・差別化</a>
+        <a class="toc-pill" href="#sec-ranking">2. 採用スキル順位</a>
+        <a class="toc-pill" href="#sec-warlock-skills">3. 固有スキル</a>
+        <a class="toc-pill" href="#sec-acolyte-skills">4. アコライトスキル</a>
+        <a class="toc-pill" href="#sec-passives">5. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">6. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">7. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">8. 装備・アフィックス</a>
+      </nav>
+    </header>
+
+    <!-- 1. マスタリー特徴・差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2c4 4 6 7 6 11a6 6 0 1 1-12 0c0-4 2-7 6-11z"></path>
+        </svg>
+        1. マスタリーの特徴・他職との差別化・固有パッシブ
+      </h2>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <h3 class="skill-title">ウォーロック固有パッシブ＆マスタリーボーナス（耐性確保＋呪い数乗算）</h3>
+          <p class="skill-desc">アコライトの基本パッシブに 20pt 投資してウォーロックを選択すると、象徴スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chthonic_fissure" target="_blank" rel="noopener noreferrer"><strong>地獄亀裂（Chthonic Fissure）</strong></a> の解放ルートが開き、以下のマスタリー固有ボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス①</strong>: <strong>火耐性 +35% ＆ 死霊耐性 +35%</strong> — 装備厳選を大幅に楽にしつつ、死霊耐性参照ギミック（苦悩・骨響のバルビュータ）の土台になります。</li>
+            <li><strong>基礎ボーナス②</strong>: <strong>敵に付与された呪い（Curse）1 つにつき与ダメージ +4%（more）</strong> — 骨の呪い・魂の悪疫・苦悩・衰弱などの呪いを重ねるほど乗算で火力が伸びます。</li>
+            <li><strong>自動連鎖と耐性変換</strong>: 地獄亀裂が自動で「苦悩（Torment）」を撒きつつ「カオスボルト」を誘発し、さらに「悪心の保護（知力比例庇護）」「グリムヒルドの領域（魔炎）」によって少ないクリックで広範囲を制圧できます。</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">アコライト 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・代表固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warlock/tree" target="_blank" rel="noopener noreferrer"><strong>ウォーロック</strong><br><span class="skill-en">(Warlock)</span></a></td>
+              <td>火・死霊耐性 +35%／呪い 1 つにつき与ダメ +4%（more）<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chthonic_fissure" target="_blank" rel="noopener noreferrer">地獄亀裂</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chaos_bolts" target="_blank" rel="noopener noreferrer">カオスボルト</a></td>
+              <td><strong>多重呪い・自動連鎖亀裂・火＆死霊 DoT／チャネリングキャスター</strong>。広範囲の快適自動掃射と高い庇護耐久が魅力。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./lich.html"><strong>リッチ</strong><br><span class="skill-en">(Lich)</span></a></td>
+              <td>与ダメ 1% ヘルス吸収／減少ヘルス割合ダメ増加<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/reaper_form" target="_blank" rel="noopener noreferrer">リーパー形態</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flay" target="_blank" rel="noopener noreferrer">皮剥ぎ</a></td>
+              <td><strong>自己ヘルス代償型キャスター＆近接二刀リーパー</strong>。Season 5 最高峰の単体/周回火力とリーパー変身を狙うならリッチ、亀裂＆呪いならウォーロック。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./necromancer.html"><strong>ネクロマンサー</strong><br><span class="skill-en">(Necromancer)</span></a></td>
+              <td>最大スケルトン +1／最大スケルトンメイジ +1／ミニオンダメ +50%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_mage" target="_blank" rel="noopener noreferrer">スケルトンメイジ召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_wraith" target="_blank" rel="noopener noreferrer">レイス召喚</a></td>
+              <td><strong>アンデッド軍団・レイスロード・単体融合指揮官</strong>。ミニオン主体ならネクロマンサー、本体魔法の継続火力ならウォーロック。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Season 5 採用スキルランキング -->
+    <section class="section" id="sec-ranking" aria-labelledby="title-ranking">
+      <h2 class="section-title" id="title-ranking">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+          <path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"></path>
+        </svg>
+        2. Season 5 採用スキルランキング（必須スキル早見表）
+      </h2>
+      <p class="page-lead">Season 5 環境のウォーロック主力構成（苦悩・地獄亀裂型 / 火炎鞭（Spine of Malatros）型 / 冒涜のベール＆死霊の炎型）での必須度・採用順位整理です。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>順位 / 必須度</th>
+              <th>スキル名</th>
+              <th>区分</th>
+              <th>Season 5 環境での位置づけ・必須理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--accent">1位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chthonic_fissure" target="_blank" rel="noopener noreferrer"><strong>地獄亀裂</strong><br><span class="skill-en">(Chthonic Fissure)</span></a></td>
+              <td>ウォーロック</td>
+              <td><strong>ほぼ全ウォーロックの核となる設置型主力</strong>。1 度敷くだけで霊を放って苦悩を与え、カオスボルトの自動発射台にもなる。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">2位 / 防御＆攻撃兼任 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/profane_veil" target="_blank" rel="noopener noreferrer"><strong>冒涜のベール</strong><br><span class="skill-en">(Profane Veil)</span></a></td>
+              <td>ウォーロック</td>
+              <td><strong>無敵回避＋大量庇護＋オーブ反撃の生命線</strong>。ボス大技回避や庇護維持に加え、専用型では主砲としても運用可能。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">3位 / 移動＆バフ必須 (S-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer"><strong>肉体交換</strong><br><span class="skill-en">(Transplant)</span></a></td>
+              <td>アコライト</td>
+              <td><strong>瞬時ブリンク＋ボーンアーマー＋着地呪い枠</strong>。機動力確保とデバフ/マナ回転の起点として外れにくい。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">4位 / 連動主砲 (A+)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chaos_bolts" target="_blank" rel="noopener noreferrer"><strong>カオスボルト</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bone_curse" target="_blank" rel="noopener noreferrer"><strong>骨の呪い</strong></a></td>
+              <td>ウ / ア</td>
+              <td>地獄亀裂や直接詠唱で飛び交い、他の呪い（血液抽出・骨の呪い）まで自動誘発する連鎖エンジン（カオスボルト＆骨の呪い）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">5位 / 呪い・回収 (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/spirit_plague" target="_blank" rel="noopener noreferrer"><strong>魂の悪疫</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/soul_feast" target="_blank" rel="noopener noreferrer"><strong>魂の宴</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rip_blood" target="_blank" rel="noopener noreferrer"><strong>血液抽出</strong></a></td>
+              <td>ア / ウ / ア</td>
+              <td>呪いカウント＆死霊デバフ（魂の悪疫）、呪われた敵から大量庇護＋ダメージを奪う（魂の宴）、カオスボルト連動回収（血液抽出）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">6位 / チャネリング・選択 (B〜C)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/ghostflame" target="_blank" rel="noopener noreferrer">死霊の炎</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/wandering_spirits" target="_blank" rel="noopener noreferrer">さまよえる霊魂</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/infernal_shade" target="_blank" rel="noopener noreferrer">獄炎のシェード</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/hungering_souls" target="_blank" rel="noopener noreferrer">飢える魂</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_volatile_zombie" target="_blank" rel="noopener noreferrer">爆発ゾンビ召喚</a> /
+                他召喚・近接
+              </td>
+              <td>ウ / ア</td>
+              <td>高速移動チャネリング型（死霊の炎）、恐怖＆DoT補助（さまよえる霊魂）、火炎付与・移動/爆破トリガー用パーツ。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. ウォーロック固有スキル（5種） -->
+    <section class="section" id="sec-warlock-skills" aria-labelledby="title-warlock-skills">
+      <h2 class="section-title" id="title-warlock-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2L4 7v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V7l-8-5z"></path>
+        </svg>
+        3. ウォーロック固有スキル＆重要ノード（5種）
+      </h2>
+      <p class="page-lead">スキル名クリックで Last Epoch Tools 日本語版のスキル詳細・ノードツリーが開きます。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L10 10l4 4 6-10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/chthonic_fissure" target="_blank" rel="noopener noreferrer">地獄亀裂 <span class="skill-en">(Chthonic Fissure)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須主砲</span><span class="badge">設置亀裂＋苦悩＋ボルト誘発</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">地面を引き裂く緑/炎の亀裂を開き、中の敵を焼きながら霊を放出して「苦悩（Torment：鈍足＋継続死霊ダメ）」を感染させ続けるウォーロックの要です。</p>
+          <details class="node-details">
+            <summary>重要ノード＆Season 5 運用ポイント</summary>
+            <ul class="node-list">
+              <li><strong>苦悩のクリティカル・死霊耐性スケール</strong>: Acid Skin / Acidbane 等と死霊耐性積みを組み合わせることで継続 DoT に高クリティカルが乗ります。</li>
+              <li><strong>自動カオスボルト＆火炎鞭</strong>: 亀裂から自動発射される <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chaos_bolts" target="_blank" rel="noopener noreferrer">カオスボルト</a> や、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGZ2I" target="_blank" rel="noopener noreferrer">マラトロスの背骨</a> による火炎鞭化で単体火力も大幅に補えます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/chaos_bolts" target="_blank" rel="noopener noreferrer">カオスボルト <span class="skill-en">(Chaos Bolts)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">連鎖トリガーエンジン</span><span class="badge">火・死霊 / 血液・骨の呪い誘発</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">螺旋を描いて飛ぶ複数の混沌弾を放つ火＋死霊スペル。自前詠唱でも地獄亀裂からの自動誘発でも強く、「確率で血液抽出・骨の呪いを自動発動」するノードによって画面内の敵を一斉に呪い・爆破します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/profane_veil" target="_blank" rel="noopener noreferrer">冒涜のベール <span class="skill-en">(Profane Veil)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">無敵回避＋チャネリング主砲可</span><span class="badge">庇護生成＋Profane Orb</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">短時間、異界の影へ変貌して敵のヒットを回避しながら移動・反撃できる攻防一体の切り札。Season 5 でも「Hex Flurry / Profane Orb」の攻撃軸として使う専用ビルドのほか、全ウォーロックの緊急防御＆庇護稼ぎに使われます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c3 3 5 6 5 10a5 5 0 1 1-10 0c0-4 2-7 5-10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/ghostflame" target="_blank" rel="noopener noreferrer">死霊の炎 <span class="skill-en">(Ghostflame)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">チャネリング / 移動放射可</span><span class="badge">庇護＋炎上・死霊 DoT</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">前方へ青白い魂炎を吹き続けるチャネリング魔法。「移動しながらチャネリング（Fluidity）」ノードを取れば滑るように敵を焼きながら高速周回でき、「悪心の保護」「ドゥームヘラルド」による被ダメ軽減＋庇護生成も同時に起動します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M8 12h8M12 8v8"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/soul_feast" target="_blank" rel="noopener noreferrer">魂の宴 <span class="skill-en">(Soul Feast)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">呪い敵から庇護＋魔力回収</span><span class="badge">広範囲死霊スペル</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">呪われた敵から魂の欠片を引き抜き、多大な庇護（ワード）と死霊爆発を起こすスペル。<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgLAzATBQ" target="_blank" rel="noopener noreferrer">苦悩の輪</a> 型や高コラプション帯の対集団戦における庇護補給手段として優秀です。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. アコライト基本スキル（12種個別記載） -->
+    <section class="section" id="sec-acolyte-skills" aria-labelledby="title-acolyte-skills">
+      <h2 class="section-title" id="title-acolyte-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+          <path d="M9 9h6v6H9z"></path>
+        </svg>
+        4. 最終ビルドで採用されうるアコライト基本スキル（全12種個別解説）
+      </h2>
+      <p class="page-lead">アコライトの基本スキル 12 種（＋共通移動 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acolyte_evade" target="_blank" rel="noopener noreferrer">即時避け</a>）は呪い付与や自動トリガー連携が多いため 1 つずつ整理します。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer">肉体交換 <span class="skill-en">(Transplant)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須移動枠</span><span class="badge">ボーンアーマー＋ヘイスト</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">瞬間移動しつつアーマーバフ・俊足（Haste）を確保し、着地時に骨の呪いや恐怖を自動発動してマスタリー乗算を補助します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M9 10h6M10 15h4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/bone_curse" target="_blank" rel="noopener noreferrer">骨の呪い <span class="skill-en">(Bone Curse)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">呪いカウント＋自動発動</span><span class="badge">死の刻印 / イルージョン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵上の呪い数を +1（さらに「死の刻印」併用で実質 2 枠以上の乗算貢献）しながら、カオスボルトによるヒット連鎖時に大ダメージを叩き込む定番の呪文です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4 7l8 5 8-5-8-5zM4 17l8 5 8-5M4 12l8 5 8-5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/spirit_plague" target="_blank" rel="noopener noreferrer">魂の悪疫 <span class="skill-en">(Spirit Plague)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">伝播する呪い＆耐性低下</span><span class="badge">死霊 DoT</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵を倒すと自動で近くへ伝染し、「疫病（Plague）」・呪い数増加・詠唱速度増加・死霊被ダメ上昇を供給し続ける非常に便利な呪い枠です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/rip_blood" target="_blank" rel="noopener noreferrer">血液抽出 <span class="skill-en">(Rip Blood)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">ボルト連動自動発動／回復</span><span class="badge">マナ/庇護供給</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">「カオスボルト」から自動発動させることで、一切の手動クリックなしに大量の血液球からマナとヘルス・庇護（血生臭い暴食等）を補給し続けます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M7 12h10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/wandering_spirits" target="_blank" rel="noopener noreferrer">さまよえる霊魂 <span class="skill-en">(Wandering Spirits)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">恐怖付与／霊歩回避</span><span class="badge">DoT 補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">パッシブや装備シナジーに合わせて自動霊魂を周囲に維持し、毒・死霊・炎上付与数（柄杓用）やマナ回収量を底上げします。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c3 3 5 6 5 10a5 5 0 1 1-10 0c0-4 2-7 5-10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/infernal_shade" target="_blank" rel="noopener noreferrer">獄炎のシェード <span class="skill-en">(Infernal Shade)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">炎上＆魔炎付与加速</span><span class="badge">持続火ダメ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">炎上・火炎鞭型でボスに張り付けて火ダメージと詠唱速度を伸ばしたり、状態異常種数を増やすサブスキルとして採用可能です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/hungering_souls" target="_blank" rel="noopener noreferrer">飢える魂 <span class="skill-en">(Hungering Souls)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">取り憑き DoT／マリナ杖対応</span><span class="badge">育成・特化</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ウォーロックのマナ・死霊貫通とも相性が良く、ワンド <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcEYKA" target="_blank" rel="noopener noreferrer">マリナの失くした魂</a> と組んで「取り憑き」DoT の貫通率を大きく上げられます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L20 4M15 4h5v5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/harvest" target="_blank" rel="noopener noreferrer">刈り取り <span class="skill-en">(Harvest)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">状態異常起爆・カオス連鎖</span><span class="badge">近接ハイブリッド</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">基本的には純スペルで戦うため優先度低めですが、カオスボルトの近接連動や死の刻印・マナ回収用の限定ビルドでは使われます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/marrow_shards" target="_blank" rel="noopener noreferrer">骨髄の破片 <span class="skill-en">(Marrow Shards)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">自傷状態トリガー（限定用途）</span><span class="badge">物理スペル</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">リッチほど低ヘルス・出血軸と噛み合いませんが、貫通クリスペルの単発差し込みや「死の神髄」向けの自傷管理で使われることがあります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_volatile_zombie" target="_blank" rel="noopener noreferrer">爆発ゾンビ召喚 <span class="skill-en">(Summon Volatile Zombie)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">自爆ゾンビ特化用（限定用途）</span><span class="badge">カオスゾンビ型</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">パッシブ「カオスフレイム」の火＆死霊ボーナスや冒涜のベールでミニオン捕食（庇護増）を行う「Zombie Warlock」変則型で起用されます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 10h6M9 14h6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_bone_golem" target="_blank" rel="noopener noreferrer">骨のゴーレム召喚 <span class="skill-en">(Summon Bone Golem)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">ベール生贄用/壁（限定用途）</span><span class="badge">ミニオン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">通常はスキル枠の都合で入りませんが、冒涜のベールで高ヘルスミニオンを吸収して大庇護を作る耐久特化セットアップで検討されます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l4 7-4 13-4-13 4-7z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_skeleton" target="_blank" rel="noopener noreferrer">スケルトン召喚 <span class="skill-en">(Summon Skeleton)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">冒涜のベール捕食用（限定用途）</span><span class="badge">ミニオン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ミニオン職でないウォーロックでは主に冒涜のベール発動中に仲間を食べて攻撃力／庇護を伸ばすための特殊枠として扱われます。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. パッシブツリー指針 -->
+    <section class="section" id="sec-passives" aria-labelledby="title-passives">
+      <h2 class="section-title" id="title-passives">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="6" r="3"></circle>
+          <circle cx="18" cy="18" r="3"></circle>
+          <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
+        </svg>
+        5. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acolyte/tree" target="_blank" rel="noopener noreferrer">アコライト</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warlock/tree" target="_blank" rel="noopener noreferrer">ウォーロック</a>）
+      </h2>
+      <p class="page-lead">アコライト側で知力・死霊/毒耐性・血のオーラを確保し、ウォーロック側で呪い・炎上＆呪詛付与率・魔炎・庇護保護（悪心の保護 / ドゥームヘラルド）を一気に固めます。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>ツリー区分</th>
+              <th>注目パッシブ（LE Tools 日本語版）</th>
+              <th>主な効果・役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acolyte/tree" target="_blank" rel="noopener noreferrer">アコライト</a></td>
+              <td>禁じられし知識 / 破滅の眼差し / 血のオーラ</td>
+              <td>知力・死霊耐性・死霊ダメ＋呪詛付与・全ダメージ増加を得る序盤 20pt 基盤。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acolyte/tree" target="_blank" rel="noopener noreferrer">アコライト</a></td>
+              <td>死への熱狂 / 超常の防御 / 血生臭い暴食</td>
+              <td>庇護減衰しきい値・維持力・敵死時の庇護供給、必要に応じ低ヘルス型でヘルス→庇護変換。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warlock/tree" target="_blank" rel="noopener noreferrer">ウォーロック</a></td>
+              <td>カオスフレイム / 悪魔の鞭 / 破滅の鎖 / 灰色の者</td>
+              <td>火＆死霊ダメと炎上/呪詛（Damned）付与率を爆発的に伸ばす中核火力ライン。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warlock/tree" target="_blank" rel="noopener noreferrer">ウォーロック</a></td>
+              <td>グリムヒルドの領域 / 混沌の器 / 朽ちゆく悪意</td>
+              <td>炎上＋呪詛オーバーロードによる強力 DoT「魔炎（Witchfire）」拡散と継続ダメ増。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warlock/tree" target="_blank" rel="noopener noreferrer">ウォーロック</a></td>
+              <td>ドゥームヘラルド / 悪心の保護 / 呪いの千里眼</td>
+              <td>チャネリング中の被ダメ低下＆庇護生成（知力3毎）、詠唱＆呪い詠唱速度増加。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warlock/tree" target="_blank" rel="noopener noreferrer">ウォーロック</a></td>
+              <td>マレフィックボディ / 死の神髄 / カオスストライク / 腐敗した調合薬</td>
+              <td>知力＋生命力増、自己負状態異常ごとのダメ増、呪い数比例の2倍ダメ確率、ポーションマナ＆庇護。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. シーズン 5 人気ビルド 3 選 -->
+    <section class="section" id="sec-builds" aria-labelledby="title-builds">
+      <h2 class="section-title" id="title-builds">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        </svg>
+        6. Season 5（Patch 1.5）人気ビルド 3 選
+      </h2>
+      <p class="page-lead">Season 5 でも定番周回・高耐久で人気のウォーロック代表 3 アーキタイプです。</p>
+
+      <div class="stack-list">
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/chthonic_fissure" target="_blank" rel="noopener noreferrer">
+                ① 苦悩・地獄亀裂＆カオスボルト自動連鎖型（Torment Warlock）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">快適エコー周回・死霊耐性スケール</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chthonic_fissure" target="_blank" rel="noopener noreferrer">地獄亀裂</a> を置きながら走るだけで周囲へ「苦悩（Torment）」をばら撒き、同時に <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chaos_bolts" target="_blank" rel="noopener noreferrer">カオスボルト</a> と <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bone_curse" target="_blank" rel="noopener noreferrer">骨の呪い</a>／<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rip_blood" target="_blank" rel="noopener noreferrer">血液抽出</a> が全自動で連鎖爆発します。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsNI" target="_blank" rel="noopener noreferrer">骨響のバルビュータ</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgLAzATBQ" target="_blank" rel="noopener noreferrer">苦悩の輪</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGYCYEYg" target="_blank" rel="noopener noreferrer">狂える錬金術師の柄杓</a>）、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCM4JiA" target="_blank" rel="noopener noreferrer">魂縒りの紐</a>。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chthonic_fissure" target="_blank" rel="noopener noreferrer">地獄亀裂</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chaos_bolts" target="_blank" rel="noopener noreferrer">カオスボルト</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/profane_veil" target="_blank" rel="noopener noreferrer">冒涜のベール</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bone_curse" target="_blank" rel="noopener noreferrer">骨の呪い</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer">肉体交換</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGZ2I" target="_blank" rel="noopener noreferrer">
+                ② マラトロス・火炎鞭ウォーロック（Flame Whip Warlock）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">両手剣軸・高単体火ダメージ</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGZ2I" target="_blank" rel="noopener noreferrer">マラトロスの背骨（Spine of Malatros）</a> で地獄亀裂から凄まじい威力の火炎鞭（Flame Whip）を生成し、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chaos_bolts" target="_blank" rel="noopener noreferrer">カオスボルト</a>・魔炎と合わせてボスを一気に焼き切ります。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGZ2I" target="_blank" rel="noopener noreferrer">マラトロスの背骨</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsNI" target="_blank" rel="noopener noreferrer">骨響のバルビュータ</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMwRgo" target="_blank" rel="noopener noreferrer">血が足りぬ</a>／<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcEZwViA" target="_blank" rel="noopener noreferrer">生者の最期の歩み</a> 等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chthonic_fissure" target="_blank" rel="noopener noreferrer">地獄亀裂</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chaos_bolts" target="_blank" rel="noopener noreferrer">カオスボルト</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/soul_feast" target="_blank" rel="noopener noreferrer">魂の宴</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/profane_veil" target="_blank" rel="noopener noreferrer">冒涜のベール</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer">肉体交換</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/profane_veil" target="_blank" rel="noopener noreferrer">
+                ③ 冒涜のベール＆死霊の炎チャネリング型（Profane Veil / Ghostflame）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge">要塞庇護＋無敵オーブ連打</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: クールダウン短縮を極めた <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/profane_veil" target="_blank" rel="noopener noreferrer">冒涜のベール</a> で高頻度オーブ発射と無敵を回し、合間に <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/ghostflame" target="_blank" rel="noopener noreferrer">死霊の炎</a> や <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chthonic_fissure" target="_blank" rel="noopener noreferrer">地獄亀裂</a> でチャネリング保護を常時維持します。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcGYEZiA" target="_blank" rel="noopener noreferrer">誤ったワープ</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsNI" target="_blank" rel="noopener noreferrer">骨響のバルビュータ</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer">アトラリアの赤い指輪</a>。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/profane_veil" target="_blank" rel="noopener noreferrer">冒涜のベール</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/ghostflame" target="_blank" rel="noopener noreferrer">死霊の炎</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chthonic_fissure" target="_blank" rel="noopener noreferrer">地獄亀裂</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/spirit_plague" target="_blank" rel="noopener noreferrer">魂の悪疫</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer">肉体交換</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. 4大メカニズム -->
+    <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
+      <h2 class="section-title" id="title-mechanics">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.77 1 1.51 1H21a2 2 0 0 1 0 4h-.09c-.74 0-1.25.4-1.51 1z"></path>
+        </svg>
+        7. ウォーロックの強さを支える 4 大メカニズム
+      </h2>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <h3>① 攻撃メカニズム：多重呪い乗算＋死霊耐性スケール</h3>
+          <p>「苦悩」「骨の呪い」「魂の悪疫」「死の刻印」等を同時付与してマスタリーの呪い 1 つにつき +4% 乗算を稼ぎつつ、上限超過の死霊耐性とクリ倍率（Acidbane 経由の苦悩クリ化）で DoT 火力を限界突破させます。</p>
+        </div>
+        <div class="mech-card">
+          <h3>② 防御メカニズム：死霊耐性→庇護＆チャネリング軽減</h3>
+          <p>「骨響のバルビュータ（上限超過含む死霊耐性 3% ごとに毎秒庇護 +1）」「冒涜のベール」「悪心の保護／ドゥームヘラルド」「死への熱狂」の組み合わせにより、数千〜万単位の庇護（ワード）を自動で張り直します。</p>
+        </div>
+        <div class="mech-card">
+          <h3>③ マナ・回転：呪い数還元＆無詠唱トリガー</h3>
+          <p>カオスボルトを地獄亀裂から自動発動させるとコストの大部分を節約でき、さらに地獄亀裂の呪い維持中マナ還元（Soul Stealer 等）やアイドル・ベルトの庇護／マナ再生で快適な連射を維持できます。</p>
+        </div>
+        <div class="mech-card">
+          <h3>④ 快適性：自動索敵亀裂と緊急無敵ベール</h3>
+          <p>敵の進行ルートへ地獄亀裂を 1 つ落とすだけで後方の雑魚を漏れなく掃除しつつ、ボスの致命的な詠唱が見えたら「冒涜のベール」または「肉体交換」で安全にやり過ごせるためストレスが極めて小さいです。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 人気ユニーク装備・アフィックス表 -->
+    <section class="section" id="sec-gear" aria-labelledby="title-gear">
+      <h2 class="section-title" id="title-gear">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"></path>
+        </svg>
+        8. 主要ユニーク装備・部位別アフィックス優先度
+      </h2>
+      <p class="page-lead">Season 5 のウォーロック各軸で採用されるユニーク装備（名称クリックで LE Tools DB 詳細へ）とアフィックス指針です。</p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>ユニーク名</th>
+              <th>部位</th>
+              <th>主な採用理由・効果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsNI" target="_blank" rel="noopener noreferrer"><strong>骨響のバルビュータ</strong><br><span class="skill-en">Boneclamor Barbute</span></a></td>
+              <td>兜</td>
+              <td>死霊耐性（上限超過含む）3% ごとに毎秒庇護 +1 を生む、苦悩／庇護型ウォーロック定番の最強防具。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGZ2I" target="_blank" rel="noopener noreferrer"><strong>マラトロスの背骨</strong><br><span class="skill-en">Spine of Malatros</span></a></td>
+              <td>両手剣</td>
+              <td>地獄亀裂を凄まじい威力の火炎鞭（Flame Whip）主砲へ変貌させ、火＆詠唱構築を支える象徴武器。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgLAzATBQ" target="_blank" rel="noopener noreferrer"><strong>苦悩の輪</strong><br><span class="skill-en">Wheel of Torment</span></a></td>
+              <td>両手杖</td>
+              <td>レア/ボス命中時に地獄亀裂を自動発動させ、魂の宴・カオスボルト連携を高速化する専用スタッフ。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGYCYEYg" target="_blank" rel="noopener noreferrer"><strong>狂える錬金術師の柄杓</strong><br><span class="skill-en">Mad Alchemist's Ladle</span></a></td>
+              <td>ワンド</td>
+              <td>敵に付与した状態異常種数に比例してスペル火力を伸ばす、多呪い・多状態異常型定番のワンド。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcEYKA" target="_blank" rel="noopener noreferrer"><strong>マリナの失くした魂</strong><br><span class="skill-en">Marina's Lost Soul</span></a></td>
+              <td>ワンド</td>
+              <td>自身への呪詛（Damned）スタックを条件に「取り憑き（Possess）」の死霊貫通を大幅に稼ぐ専用杖。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcGYEZiA" target="_blank" rel="noopener noreferrer"><strong>誤ったワープ</strong><br><span class="skill-en">Wrongwarp</span></a></td>
+              <td>ワンド</td>
+              <td>肉体交換着地時のタイムロック＋俊足（Haste）＋移動速度比例スペルダメージ増で快適周回に最適。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCM4JiA" target="_blank" rel="noopener noreferrer"><strong>魂縒りの紐</strong><br><span class="skill-en">Strands of Souls</span></a></td>
+              <td>ベルト</td>
+              <td>知力・死霊耐性・庇護維持などウォーロックが必要とする基礎防御ステータスを綺麗に揃えるベルト。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMwRgo" target="_blank" rel="noopener noreferrer"><strong>血が足りぬ</strong><br><span class="skill-en">Exsanguinous</span></a></td>
+              <td>鎧</td>
+              <td>減少ヘルスから毎秒大量の庇護を獲得し、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcEZwViA" target="_blank" rel="noopener noreferrer">生者の最期の歩み</a> と合わせて低ヘルス要塞を作る鎧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
+              <td>指輪</td>
+              <td>全能力値＋条件達成による全耐性＆被ダメ軽減を備えたエンドゲーム最高峰リング。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 20px;">部位別おすすめアフィックス優先度</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>Prefix（知力・DoT/呪いダメ・詠唱速度）</th>
+              <th>Suffix（死霊耐性・ヘルス・庇護）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器 / 触媒</td>
+              <td>死霊/火スペルダメ、継続ダメージ（DoT）、詠唱速度、クリ倍率</td>
+              <td>死霊耐性寸断、虚弱付与、アーマー寸断</td>
+            </tr>
+            <tr>
+              <td>兜・鎧</td>
+              <td><strong>知力（Intelligence）</strong>、地獄亀裂/冒涜のベール Lv+</td>
+              <td>ハイブリッドヘルス、<strong>死霊耐性（75%超過分も有効）</strong>、クリ回避/軽減</td>
+            </tr>
+            <tr>
+              <td>手袋・ベルト</td>
+              <td>詠唱速度、継続ダメ、クリ倍率、クールダウン回復速度</td>
+              <td>ハイブリッドヘルス、実験的ポーション時庇護、不足耐性</td>
+            </tr>
+            <tr>
+              <td>靴</td>
+              <td>移動速度（最優先）、知力、クールダウン回復</td>
+              <td>ハイブリッドヘルス、実験的ワード獲得、不足耐性</td>
+            </tr>
+            <tr>
+              <td>アクセサリー</td>
+              <td><strong>呪いダメ / 死霊ダメ / DoT ダメ</strong>、詠唱速度、知力</td>
+              <td><strong>死霊耐性</strong>、クリ倍率、ヘルス、物理/虚無/冷気耐性</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="page-footer-note">
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/build-guides/filter/cycle=rage-of-the-frostborn" target="_blank" rel="noopener noreferrer">Last Epoch Tools（Season 5 ビルドガイド）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+    </p>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html">Last Epoch ガイド</a></li>
+      <li><a class="nav-link" href="./falconer.html">ファルコナー（Season 5）</a></li>
+      <li><a class="nav-link" href="./bladedancer.html">ブレードダンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./marksman.html">マークスマン（Season 5）</a></li>
+      <li><a class="nav-link" href="./paladin.html">パラディン（Season 5）</a></li>
+      <li><a class="nav-link" href="./void-knight.html">ヴォイドナイト（Season 5）</a></li>
+      <li><a class="nav-link" href="./forge-guard.html">フォージガード（Season 5）</a></li>
+      <li><a class="nav-link" href="./sorcerer.html">ソーサラー（Season 5）</a></li>
+      <li><a class="nav-link" href="./spellblade.html">スペルブレード（Season 5）</a></li>
+      <li><a class="nav-link" href="./runemaster.html">ルーンマスター（Season 5）</a></li>
+      <li><a class="nav-link" href="./lich.html">リッチ（Season 5）</a></li>
+      <li><a class="nav-link" href="./necromancer.html">ネクロマンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./warlock.html" aria-current="page">ウォーロック（Season 5）</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

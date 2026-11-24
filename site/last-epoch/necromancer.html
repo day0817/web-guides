@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>ネクロマンサー（Necromancer）Season 5 ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <a href="./index.html">Last Epoch</a>
+      <span aria-hidden="true">/</span>
+      <span>ネクロマンサー</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
+      <h1 class="page-title">ネクロマンサー（Necromancer）完全ガイド</h1>
+      <p class="page-lead">スケルトン軍団・炎レイス・巨大単体融合体「忌まわしきもの」・自爆ゾンビ＆生贄など、多彩なアンデッドを自在に統率する純正召喚士アコライト上級職の Season 5 ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
+
+      <div class="callout">
+        <strong>Season 5 最新環境メモ：</strong> Season 5 でも <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgLAzBCsQ" target="_blank" rel="noopener noreferrer">レイスロードの隠れ家（Wraithlord's Harbour）</a> 軸や炎レイス召喚、高火力ボス特化の <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/assemble_abomination" target="_blank" rel="noopener noreferrer">忌まわしきもの構築（Abomination）</a>・スケルトンローグ大軍型に加え、マナを大量に積んで <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_mage" target="_blank" rel="noopener noreferrer">スケルトンメイジ</a> が仲間を爆破する爆破メイジ型も人気を集めています。
+      </div>
+
+      <nav class="toc-pills" aria-label="ページ内目次">
+        <a class="toc-pill" href="#sec-overview">1. 特徴・差別化</a>
+        <a class="toc-pill" href="#sec-ranking">2. 採用スキル順位</a>
+        <a class="toc-pill" href="#sec-necro-skills">3. 固有スキル</a>
+        <a class="toc-pill" href="#sec-acolyte-skills">4. アコライトスキル</a>
+        <a class="toc-pill" href="#sec-passives">5. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">6. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">7. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">8. 装備・アフィックス</a>
+      </nav>
+    </header>
+
+    <!-- 1. マスタリー特徴・差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="8" r="5"></circle>
+          <path d="M5 20a7 7 0 0 1 14 0"></path>
+        </svg>
+        1. マスタリーの特徴・他職との差別化・固有パッシブ
+      </h2>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <h3 class="skill-title">ネクロマンサー固有パッシブ＆マスタリーボーナス（アンデッド上限増＋ミニオン強化）</h3>
+          <p class="skill-desc">アコライトの基本パッシブに 20pt 投資してネクロマンサーを選択すると、固有スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_mage" target="_blank" rel="noopener noreferrer"><strong>スケルトンメイジ召喚（Summon Skeleton Mage）</strong></a> の解放ルートが開き、以下のマスタリー固有ボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス①</strong>: <strong>最大スケルトン数 +1 ＆ 最大スケルトンメイジ数 +1</strong> — 召喚枠の上限が最初から増え、軍団規模を押し上げます。</li>
+            <li><strong>基礎ボーナス②</strong>: <strong>ミニオンダメージ +50%</strong> — すべての配下アンデッドの攻撃性能を底上げします。</li>
+            <li><strong>多彩な統率アプローチ</strong>: 15体以上の「大群型（スケルトン・メイジ・レイス）」、1体に全力を集中する「単体エリート型（レイスロード / 忌まわしきもの）」、さらには「爆破・生贄ループ型」まで、同じ召喚職の中で全く異なる 3 系統を使い分けられるのが強みです。</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">アコライト 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・代表固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/necromancer/tree" target="_blank" rel="noopener noreferrer"><strong>ネクロマンサー</strong><br><span class="skill-en">(Necromancer)</span></a></td>
+              <td>最大スケルトン +1／最大スケルトンメイジ +1／ミニオンダメ +50%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_mage" target="_blank" rel="noopener noreferrer">スケルトンメイジ召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dread_shade" target="_blank" rel="noopener noreferrer">恐怖のシェード</a></td>
+              <td><strong>正統派アンデッド大軍・レイスロード・単体融合・自爆ミニオン指揮官</strong>。本体は安全な位置から指示・バフしつつ配下に殲滅させる安定感が魅力。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./lich.html"><strong>リッチ</strong><br><span class="skill-en">(Lich)</span></a></td>
+              <td>与ダメ 1% ヘルス吸収／減少ヘルス割合ダメ増加<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/reaper_form" target="_blank" rel="noopener noreferrer">リーパー形態</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flay" target="_blank" rel="noopener noreferrer">皮剥ぎ</a></td>
+              <td><strong>自己ヘルス代償・リーパー形態の本体火力職</strong>。自分が先頭に立って高速で斬り込み＆スペル吸血したいならリッチ、召喚で戦うならネクロマンサー。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./warlock.html"><strong>ウォーロック</strong><br><span class="skill-en">(Warlock)</span></a></td>
+              <td>火・死霊耐性 +35%／敵の呪い 1 つごとに与ダメ +4%（more）<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chthonic_fissure" target="_blank" rel="noopener noreferrer">地獄亀裂</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/chaos_bolts" target="_blank" rel="noopener noreferrer">カオスボルト</a></td>
+              <td><strong>呪い・亀裂・継続ダメージ（苦悩）の詠唱者</strong>。亀裂＆自動呪文でフィールドを制圧するならウォーロック、不死軍団の指揮官ならネクロマンサー。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Season 5 採用スキルランキング -->
+    <section class="section" id="sec-ranking" aria-labelledby="title-ranking">
+      <h2 class="section-title" id="title-ranking">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+          <path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"></path>
+        </svg>
+        2. Season 5 採用スキルランキング（必須スキル早見表）
+      </h2>
+      <p class="page-lead">Season 5 環境のネクロマンサー主力構成（レイスロード/炎レイス型 / 忌まわしきもの・血戦型 / 大軍＆メイジ爆破型）での必須度・採用順位整理です。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>順位 / 必須度</th>
+              <th>スキル名</th>
+              <th>区分</th>
+              <th>Season 5 環境での位置づけ・必須理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--accent">1位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dread_shade" target="_blank" rel="noopener noreferrer"><strong>恐怖のシェード</strong><br><span class="skill-en">(Dread Shade)</span></a></td>
+              <td>ネクロ</td>
+              <td><strong>ほぼ全ビルド必須の超強力ミニオンバフ</strong>。確定クリティカル、膨大なダメージ＆攻/詠唱速度バフを主力ミニオンへ付与し続ける要。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">2位 / 移動＆バフ必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer"><strong>肉体交換</strong><br><span class="skill-en">(Transplant)</span></a></td>
+              <td>アコライト</td>
+              <td><strong>瞬時回避＋ボーンアーマー＋着地バフ／ゾンビ展開枠</strong>。本体が脆くなりやすい召喚士が危険を躱しつつミニオン強化を維持する命綱。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">3位 / 核心召喚 (S-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_wraith" target="_blank" rel="noopener noreferrer"><strong>レイス召喚</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/assemble_abomination" target="_blank" rel="noopener noreferrer"><strong>忌まわしきもの構築</strong></a></td>
+              <td>ネクロ</td>
+              <td><strong><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgLAzBCsQ" target="_blank" rel="noopener noreferrer">レイスロードの隠れ家</a> 軸（レイス召喚）</strong>と、<strong>Season 5 高コラプション／ウバー討伐筆頭の巨大融合体（忌まわしきもの）</strong>。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">4位 / 軍団＆爆破 (A+)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_mage" target="_blank" rel="noopener noreferrer"><strong>スケルトンメイジ召喚</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_skeleton" target="_blank" rel="noopener noreferrer"><strong>スケルトン召喚</strong></a></td>
+              <td>ネ / ア</td>
+              <td>メイジにスケルトンを爆破させる「Demolition Mages」型、またはローグ/アーチャー軍団＋毒・出血・融合素材としての不動の基盤。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">5位 / 補助＆タンク (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_bone_golem" target="_blank" rel="noopener noreferrer"><strong>骨のゴーレム召喚</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/infernal_shade" target="_blank" rel="noopener noreferrer"><strong>獄炎のシェード</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bone_curse" target="_blank" rel="noopener noreferrer"><strong>骨の呪い</strong></a></td>
+              <td>アコライト</td>
+              <td>挑発・壁役・レイスロードの餌（ゴーレム）、味方への爆速攻撃バフ付与（獄炎のシェード）、ミニオンヒット連動デバフ（骨の呪い）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">6位 / 爆破・選択枠 (B〜C)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_volatile_zombie" target="_blank" rel="noopener noreferrer">爆発ゾンビ召喚</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sacrifice" target="_blank" rel="noopener noreferrer">生贄</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rip_blood" target="_blank" rel="noopener noreferrer">血液抽出</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/wandering_spirits" target="_blank" rel="noopener noreferrer">さまよえる霊魂</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/spirit_plague" target="_blank" rel="noopener noreferrer">魂の悪疫</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/harvest" target="_blank" rel="noopener noreferrer">刈り取り</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marrow_shards" target="_blank" rel="noopener noreferrer">骨髄の破片</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/hungering_souls" target="_blank" rel="noopener noreferrer">飢える魂</a>
+              </td>
+              <td>ネ / ア</td>
+              <td>炎上ゾンビ自爆＆生贄コンボ型、または味方ミニオンへのバフ付与／自キャラ補助用パーツ（召喚士が敵を処刑・回復するサポート用途）。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. ネクロマンサー固有スキル（5種） -->
+    <section class="section" id="sec-necro-skills" aria-labelledby="title-necro-skills">
+      <h2 class="section-title" id="title-necro-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2L4 7v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V7l-8-5z"></path>
+        </svg>
+        3. ネクロマンサー固有スキル＆重要ノード（5種）
+      </h2>
+      <p class="page-lead">スキル名クリックで Last Epoch Tools 日本語版のスキル詳細・ノードツリーが開きます。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4l2 2"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/dread_shade" target="_blank" rel="noopener noreferrer">恐怖のシェード <span class="skill-en">(Dread Shade)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">全軸必須</span><span class="badge">ミニオンオーラ・確定クリ化</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">指定したミニオンに影を憑依させ、その周囲の味方（あるいは対象単体）へ絶大なフラット攻撃力・攻撃/詠唱速度・ダメージ倍率を与えるネクロマンサー最強のオーラです。</p>
+          <details class="node-details">
+            <summary>重要ノード＆運用ポイント</summary>
+            <ul class="node-list">
+              <li>対象のヘルスが毎秒減衰する代わりに、「Lone Watcher（対象が 1 体になる代わり効果倍増＋確定クリ化）」または広範囲共有オーラ型へ分岐できます。</li>
+              <li>レイスロード型や忌まわしきもの単体軸では減衰に負けないよう回復・吸収や長持ち化を組み合わせ、常にバフを維持します。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.2L18.5 21 12 16.8 5.5 21l2-7.8L2 9h7l3-7z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_wraith" target="_blank" rel="noopener noreferrer">レイス召喚 <span class="skill-en">(Summon Wraith)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 大本命主砲</span><span class="badge">炎レイス / レイスロード / 出血</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">時間制限付きの攻撃的レイスを多数召喚して圧倒するネクロマンサーのエース。固定遠距離砲台「炎レイス（Flame Wraith）」、単体究極化ユニーク <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgLAzBCsQ" target="_blank" rel="noopener noreferrer">レイスロードの隠れ家</a> による「レイスロード」、または出血レイス群など複数の S/A ティア型を持ちます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"></rect><path d="M9 12h6M12 9v6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/assemble_abomination" target="_blank" rel="noopener noreferrer">忌まわしきもの構築 <span class="skill-en">(Assemble Abomination)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">高コラプション・ボス特化</span><span class="badge">ミニオン吸収融合</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">展開済みの自分のミニオンすべてを吸収して 1 体の巨大な融合怪物を作り出します。吸収したスケルトン／メイジ／ゴーレム等の種類と数に応じて攻撃手段（近接叩きつけ、跳弾矢、踏付など）と圧倒的な攻撃力・耐久を獲得します。</p>
+          <details class="node-details">
+            <summary>重要ノード＆Season 5 運用ポイント</summary>
+            <ul class="node-list">
+              <li>「スケルトンやゴーレムのみ吸収して時間減衰を無効化する」ノードを取る永続 1 体運用が Season 5 でもウバーボス討伐等で極めて強力。</li>
+              <li>「Eternal Arrow」跳弾・出血連動やブラッドスペクター併用など、S5 で複数バリエーションが 2,000 コラプションに到達しています。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_mage" target="_blank" rel="noopener noreferrer">スケルトンメイジ召喚 <span class="skill-en">(Summon Skeleton Mage)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">遠距離魔法＆自爆起爆</span><span class="badge">属性変換・テレポート</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">遠距離スペルで敵を砲撃するスケルトン魔術師を召喚します。冷気（クライオマンサー）・火炎（パイロマンサー）・死霊の属性変換に加え、「スケルトンを生贄に大爆発を起こす（Profane Oblation / Demolition Mages）」ビルドや「テレポート連動（移動スキル追従）」など用途が多岐にわたります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c4 4 6 7 6 11a6 6 0 1 1-12 0c0-4 2-7 6-11z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/sacrifice" target="_blank" rel="noopener noreferrer">生贄 <span class="skill-en">(Sacrifice)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">ミニオン爆破スペル</span><span class="badge">連鎖起爆・自傷バフ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">自分のミニオンを指定位置で即座に爆破し、特大の物理／炎上（ブラッドスペクター誘発等）の範囲ダメージを与えるスペルです。ゾンビ自動召喚やスケルトン量産と組み合わせた爆破型で使われます。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. アコライト基本スキル（12種個別記載） -->
+    <section class="section" id="sec-acolyte-skills" aria-labelledby="title-acolyte-skills">
+      <h2 class="section-title" id="title-acolyte-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+          <path d="M9 9h6v6H9z"></path>
+        </svg>
+        4. 最終ビルドで採用されうるアコライト基本スキル（全12種個別解説）
+      </h2>
+      <p class="page-lead">アコライトの基本スキル 12 種（＋共通移動 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acolyte_evade" target="_blank" rel="noopener noreferrer">即時避け</a>）のネクロマンサー目線での採用価値を 1 つずつ整理します。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer">肉体交換 <span class="skill-en">(Transplant)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須移動枠</span><span class="badge">アーマー＋ミニオン自動召喚</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">高速移動＋ボーンアーマー確保に加え、スケルトン自動召喚やゾンビ誘発、ミニオン追従用リポジションまで担うネクロマンサー定番の生命線です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l4 7-4 13-4-13 4-7z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_skeleton" target="_blank" rel="noopener noreferrer">スケルトン召喚 <span class="skill-en">(Summon Skeleton)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">大軍・爆破・融合の母体</span><span class="badge">戦士 / 弓 / ローグ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">戦士・アーチャー・ローグを切り替えて召喚できる基本軍団スキル。毒／出血ローグ編成、爆破メイジや生贄の弾薬供給、あるいは忌まわしきもの融合素材としてほぼあらゆる軸で使われます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 10h6M9 14h6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_bone_golem" target="_blank" rel="noopener noreferrer">骨のゴーレム召喚 <span class="skill-en">(Summon Bone Golem)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">タンク / 融合素材</span><span class="badge">挑発＆ヘルス供給</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">味方を守るヘイト吸収壁。火炎ゴーレムやアーロンの意志による複数化、あるいは「恐怖のシェードの張り先＋ボーンアーマー壁」、レイスロード/アボミの吸収素材として重宝します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_volatile_zombie" target="_blank" rel="noopener noreferrer">爆発ゾンビ召喚 <span class="skill-en">(Summon Volatile Zombie)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">爆発 / 炎上嘔吐 / 再召喚ループ</span><span class="badge">ミニオン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵に向かって走り自爆・炎上/毒嘔吐を浴びせるゾンビ。Season 5 でも Ignite Vomit Zombies ビルドや <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcGZnI" target="_blank" rel="noopener noreferrer">腐敗の循環</a> を使った自己蘇生チェーンの主役になります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c3 3 5 6 5 10a5 5 0 1 1-10 0c0-4 2-7 5-10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/infernal_shade" target="_blank" rel="noopener noreferrer">獄炎のシェード <span class="skill-en">(Infernal Shade)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">ミニオン超強化バフ</span><span class="badge">攻撃/詠唱速度＋火ダメ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">味方ミニオンに貼り付けると周囲を焼きつつ、対象ミニオンの攻撃/詠唱速度を大きく引き上げる強力なバフに化けます。レイスや忌まわしきものへの二重シェード掛けが定番です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M9 10h6M10 15h4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/bone_curse" target="_blank" rel="noopener noreferrer">骨の呪い <span class="skill-en">(Bone Curse)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">ヒット連動追加ダメ</span><span class="badge">死の刻印 / アーマー寸断</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">「自分のミニオンのヒットでも発動する」ノードを取ることで、多数のスケルトン／レイスの連撃すべてに物理追加ダメージ＆アーマー寸断を乗せる最高効率のデバフ呪文になります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/rip_blood" target="_blank" rel="noopener noreferrer">血液抽出 <span class="skill-en">(Rip Blood)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">ミニオン回復・ブラッドスプラッター</span><span class="badge">補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">自分のミニオンに向けて撃って血を吸わせたり、味方ミニオンの回復・狂乱バフおよび「血の饗宴」による本体＋配下回復役として使われます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L20 4M15 4h5v5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/harvest" target="_blank" rel="noopener noreferrer">刈り取り <span class="skill-en">(Harvest)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">味方バフ／処刑トリガー</span><span class="badge">限定補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">近接斬りでミニオンへの狂乱付与やスケルトン/ゾンビ召喚トリガー、または 0 マナ帯の回復・死の刻印補助に使われる近接パーツです。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M7 12h10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/wandering_spirits" target="_blank" rel="noopener noreferrer">さまよえる霊魂 <span class="skill-en">(Wandering Spirits)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">霊魂展開 / マナ回収</span><span class="badge">恐怖付与</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">霊魂の数が増えるほど周辺敵を恐怖で牽制し、マナ回収や毒/死霊スタックをばら撒く自動防御スキル。足止めとマナ循環の補助に適します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4 7l8 5 8-5-8-5zM4 17l8 5 8-5M4 12l8 5 8-5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/spirit_plague" target="_blank" rel="noopener noreferrer">魂の悪疫 <span class="skill-en">(Spirit Plague)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">毒/呪い伝播</span><span class="badge">限定補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">毒ミニオン構築やゾンビ軸で、被毒増加・毒耐性低下・出血付与や「敵死亡時に別の敵へ飛び火して自動デバフ」をかけるサポートに利用されます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/marrow_shards" target="_blank" rel="noopener noreferrer">骨髄の破片 <span class="skill-en">(Marrow Shards)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">本体遠距離射撃（限定用途）</span><span class="badge">骨系補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">通常はリッチ側で真価を発揮しますが、味方スケルトンやボーンプリズン生成連動などの特殊ギミック用に入れ替える選択肢は存在します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/hungering_souls" target="_blank" rel="noopener noreferrer">飢える魂 <span class="skill-en">(Hungering Souls)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">育成用 / 追尾デバフ（限定用途）</span><span class="badge">呪文</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">レベリング序盤の道中雑魚処理として快適です。エンドゲーム移行後は恐怖のシェードやミニオン増強枠に席を譲るのが一般的です。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. パッシブツリー指針 -->
+    <section class="section" id="sec-passives" aria-labelledby="title-passives">
+      <h2 class="section-title" id="title-passives">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="6" r="3"></circle>
+          <circle cx="18" cy="18" r="3"></circle>
+          <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
+        </svg>
+        5. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acolyte/tree" target="_blank" rel="noopener noreferrer">アコライト</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/necromancer/tree" target="_blank" rel="noopener noreferrer">ネクロマンサー</a>）
+      </h2>
+      <p class="page-lead">アコライト側で知力・生命力・ミニオン耐性/アーマーを取り、ネクロマンサー側で攻撃/詠唱速度・スケルトン/メイジ枠・貫通・庇護＆耐久（ソウルコンジット / 形代 / タワーリングデス）を重ねます。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>ツリー区分</th>
+              <th>注目パッシブ（LE Tools 日本語版）</th>
+              <th>主な効果・役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acolyte/tree" target="_blank" rel="noopener noreferrer">アコライト</a></td>
+              <td>禁じられし知識 / 闇の儀式 / 盗まれた生命力</td>
+              <td>知力＋死霊耐性、ミニオン＆自身の攻/詠唱速度（闇の儀式）、ミニオン最大ヘルス。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acolyte/tree" target="_blank" rel="noopener noreferrer">アコライト</a></td>
+              <td>骨のオーラ / 魂のイージス / 血のオーラ</td>
+              <td>自身＆ミニオンへのレベル比例アーマー付与と共有全ダメージ増加。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/necromancer/tree" target="_blank" rel="noopener noreferrer">ネクロマンサー</a></td>
+              <td>蘇る軍勢 / 半狂乱の召喚術 / 不死の儀式</td>
+              <td>ミニオンダメ＆速度増、さらに限界超過耐性に応じた死霊・元素貫通（不死の儀式）を得る。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/necromancer/tree" target="_blank" rel="noopener noreferrer">ネクロマンサー</a></td>
+              <td>暴君の軍勢 / 果てなき死霊術 / 死霊術の門弟</td>
+              <td>スケルトン最大数 +2、物理/毒貫通、再召喚率、およびメイジ最大数 +1・スペルダメ増。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/necromancer/tree" target="_blank" rel="noopener noreferrer">ネクロマンサー</a></td>
+              <td>ソウルコンジット / タワーリングデス / 形代 / 死の鎖</td>
+              <td>配下数に応じた毎秒庇護生成、ミニオンスタン無効＆被クリ軽減、ダメージ肩代わり、耐久力。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/necromancer/tree" target="_blank" rel="noopener noreferrer">ネクロマンサー</a></td>
+              <td>呪われし血 / 月光の葬火 / 神盾崩し / 血の宴</td>
+              <td>ミニオン死亡時死の刻印付与、炎/死霊強化、アーマー寸断＋ヴァンガード召喚、吸収回復。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. シーズン 5 人気ビルド 3 選 -->
+    <section class="section" id="sec-builds" aria-labelledby="title-builds">
+      <h2 class="section-title" id="title-builds">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        </svg>
+        6. Season 5（Patch 1.5）人気ビルド 3 選
+      </h2>
+      <p class="page-lead">Season 5 で高コラプション周回・ボス攻略に実績のある代表 3 アーキタイプです。</p>
+
+      <div class="stack-list">
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_wraith" target="_blank" rel="noopener noreferrer">
+                ① レイスロード＆炎レイス遠距離殲滅型（Wraithlord / Flame Wraiths）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 最定番ミニオン砲台</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgLAzBCsQ" target="_blank" rel="noopener noreferrer">レイスロードの隠れ家</a> による超強力レイスロード単騎（配下を食べて自己強化＋配下自動召喚）、または固定炎レイス群に <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dread_shade" target="_blank" rel="noopener noreferrer">恐怖のシェード</a>＆<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/infernal_shade" target="_blank" rel="noopener noreferrer">獄炎のシェード</a> を掛けて敵を焼き払います。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgLAzBCsQ" target="_blank" rel="noopener noreferrer">レイスロードの隠れ家</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAswVgTiA" target="_blank" rel="noopener noreferrer">死神の鈴</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwjMBYA4g" target="_blank" rel="noopener noreferrer">幻影の一握</a> 等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_wraith" target="_blank" rel="noopener noreferrer">レイス召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dread_shade" target="_blank" rel="noopener noreferrer">恐怖のシェード</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/infernal_shade" target="_blank" rel="noopener noreferrer">獄炎のシェード</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer">肉体交換</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_bone_golem" target="_blank" rel="noopener noreferrer">骨のゴーレム召喚</a>（餌/壁）</li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/assemble_abomination" target="_blank" rel="noopener noreferrer">
+                ② 忌まわしきもの永続融合 / スケルトン大軍型（Abomination &amp; Army）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">S5 高コラプション・ウバー討伐実績</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: 大量のスケルトン・メイジを召喚後に <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/assemble_abomination" target="_blank" rel="noopener noreferrer">忌まわしきもの構築</a> で永続巨大化させて単体ボスを瞬殺する型、またはポイズン/出血・火炎スケルトン大軍を全開にして押し切る軍団型。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcGYFZKA" target="_blank" rel="noopener noreferrer">アベロスの下知</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwjMBYA4g" target="_blank" rel="noopener noreferrer">幻影の一握</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgTAjKQ" target="_blank" rel="noopener noreferrer">暗き帳</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgzALATBQ" target="_blank" rel="noopener noreferrer">暴君の髑髏</a> 等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/assemble_abomination" target="_blank" rel="noopener noreferrer">忌まわしきもの構築</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_skeleton" target="_blank" rel="noopener noreferrer">スケルトン召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dread_shade" target="_blank" rel="noopener noreferrer">恐怖のシェード</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bone_curse" target="_blank" rel="noopener noreferrer">骨の呪い</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer">肉体交換</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/build-guides/ignite-vomit-zombies-necromancer" target="_blank" rel="noopener noreferrer">
+                ③ 爆発メイジ（Demolition Mages）/ 炎上ゾンビ連鎖型
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge">自爆連鎖・マナスケール軸</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: 敵集団へ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_skeleton" target="_blank" rel="noopener noreferrer">スケルトン</a> や <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_volatile_zombie" target="_blank" rel="noopener noreferrer">爆発ゾンビ</a> を叩き込み、スケルトンメイジ（Profane Oblation）やゾンビ自己蘇生・生贄によって連環爆発を起こします。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcGZnI" target="_blank" rel="noopener noreferrer">腐敗の循環（Cycle of Putrescence）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgrATA7BQ" target="_blank" rel="noopener noreferrer">アーロンの意志</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsNI" target="_blank" rel="noopener noreferrer">骨響のバルビュータ</a>。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_mage" target="_blank" rel="noopener noreferrer">スケルトンメイジ召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_skeleton" target="_blank" rel="noopener noreferrer">スケルトン召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_volatile_zombie" target="_blank" rel="noopener noreferrer">爆発ゾンビ召喚</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sacrifice" target="_blank" rel="noopener noreferrer">生贄</a>） / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dread_shade" target="_blank" rel="noopener noreferrer">恐怖のシェード</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/transplant" target="_blank" rel="noopener noreferrer">肉体交換</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. 4大メカニズム -->
+    <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
+      <h2 class="section-title" id="title-mechanics">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.77 1 1.51 1H21a2 2 0 0 1 0 4h-.09c-.74 0-1.25.4-1.51 1z"></path>
+        </svg>
+        7. ネクロマンサーの強さを支える 4 大メカニズム
+      </h2>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <h3>① 攻撃メカニズム：恐怖のシェード＋確定クリ／貫通</h3>
+          <p>「恐怖のシェード」が与える莫大な加算ダメージ＋確定クリティカル率に、パッシブ「不死の儀式」（超過死霊耐性からのミニオン貫通変換）や「幻影の一握」を組み合わせることで、配下火力が幾何級数的に跳ね上がります。</p>
+        </div>
+        <div class="mech-card">
+          <h3>② 防御メカニズム：庇護生成＋肩代わり＋ミニオン壁</h3>
+          <p>大量の配下が前線で敵ヘイトを吸い、本体への直撃を遮断するうえ、「ソウルコンジット」「形代（ダメージ肩代わり）」「骨響のバルビュータ（死霊耐性→庇護）」により高い実効耐久力を確保できます。</p>
+        </div>
+        <div class="mech-card">
+          <h3>③ 召喚維持・マナ：シェード減衰制御と再召喚</h3>
+          <p>永続型の忌まわしきものやレイスロードは「闇への吸収」「恐怖のシェード」の維持時間管理が肝となり、逆に爆発ゾンビ型や爆破メイジ型は「腐敗の循環」「高い最大マナ・マナ回復」で連続供給ラインを切らさない設計が重要です。</p>
+        </div>
+        <div class="mech-card">
+          <h3>④ 快適性：自動索敵＆移動追従テレポート</h3>
+          <p>プレイヤーが肉体交換や徒歩で先へ進むだけで遠距離レイスやテレポート追従型メイジが一緒に移動し、敵を見つけた瞬間自動で掃射してくれるため、操作負荷が少なく周回しやすいのが最大の魅力です。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 人気ユニーク装備・アフィックス表 -->
+    <section class="section" id="sec-gear" aria-labelledby="title-gear">
+      <h2 class="section-title" id="title-gear">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"></path>
+        </svg>
+        8. 主要ユニーク装備・部位別アフィックス優先度
+      </h2>
+      <p class="page-lead">Season 5 のネクロマンサー各軸で採用されるユニーク装備（名称クリックで LE Tools DB 詳細へ）とアフィックス指針です。</p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>ユニーク名</th>
+              <th>部位</th>
+              <th>主な採用理由・効果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgLAzBCsQ" target="_blank" rel="noopener noreferrer"><strong>レイスロードの隠れ家</strong><br><span class="skill-en">Wraithlord's Harbour</span></a></td>
+              <td>兜</td>
+              <td>レイス召喚を 1 体の強力な「レイスロード」へ変質させ、配下を捕食・強化する王道ビルドの絶対的核。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgrATA7BQ" target="_blank" rel="noopener noreferrer"><strong>アーロンの意志</strong><br><span class="skill-en">Aaron's Will</span></a></td>
+              <td>鎧</td>
+              <td>スケルトン/メイジ枠をゴーレム枠へ変換し複数体のゴーレムを並べることも可能な召喚変化アーマー。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcGZnI" target="_blank" rel="noopener noreferrer"><strong>腐敗の循環</strong><br><span class="skill-en">Cycle of Putrescence</span></a></td>
+              <td>指輪</td>
+              <td>爆発ゾンビ死亡後に確率で自動蘇生させ、2 個装備で無限自爆・嘔吐ループを作る専用リング。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwjMBYA4g" target="_blank" rel="noopener noreferrer"><strong>幻影の一握</strong><br><span class="skill-en">Phantom Grip</span></a></td>
+              <td>指輪</td>
+              <td>ミニオンクリティカル率加算＋ミニオンクリ倍率・知力を伸ばし、ほぼ全ミニオン型で採用される指輪。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAswVgTiA" target="_blank" rel="noopener noreferrer"><strong>死神の鈴</strong><br><span class="skill-en">Death Rattle</span></a></td>
+              <td>アミュレット</td>
+              <td>スケルトン・レイスのクリティカル倍率を大きく伸ばし、クリ型召喚火力を跳ね上げる定番首飾り。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgzALATBQ" target="_blank" rel="noopener noreferrer"><strong>暴君の髑髏</strong><br><span class="skill-en">Tyrant's Skull</span></a></td>
+              <td>レリック（Primordial）</td>
+              <td>ティラノサウルス召喚＋ミニオンスキル Lv+2〜3 ＆味方全体への大幅物理ダメ共有バフを持つ高希少レリック。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcGYFZKA" target="_blank" rel="noopener noreferrer"><strong>アベロスの下知</strong><br><span class="skill-en">Aberroth's Command</span></a></td>
+              <td>セプター</td>
+              <td>スケルトン＆忌まわしきもの軸や高エンドゲーム帯のミニオン物理・死霊ダメ底上げで評価が高い武器。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsNI" target="_blank" rel="noopener noreferrer"><strong>骨響のバルビュータ</strong><br><span class="skill-en">Boneclamor Barbute</span></a></td>
+              <td>兜</td>
+              <td>上限超過含む死霊耐性 3% ごとに毎秒庇護 +1 を生み、召喚士本体の耐久を大幅に底上げする兜。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
+              <td>指輪</td>
+              <td>全能力値＋条件達成による全耐性＆被ダメ軽減で本体生存力を極めるエンドゲーム最高峰リング。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 20px;">部位別おすすめアフィックス優先度</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>Prefix（知力・ミニオン火力・スキルLv）</th>
+              <th>Suffix（本体耐久・ミニオン生存・耐性）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器 / 触媒</td>
+              <td>フラットミニオンスペル/近接ダメ、ミニオンクリ倍率</td>
+              <td>ミニオンヘルス、アーマー、ミニオン回避/状態異常付与</td>
+            </tr>
+            <tr>
+              <td>兜・鎧</td>
+              <td><strong>知力（Intelligence）</strong>、主力召喚スキル Lv+、マナ</td>
+              <td>ハイブリッドヘルス、死霊耐性（75%超過枠）、クリ回避/軽減</td>
+            </tr>
+            <tr>
+              <td>手袋・ベルト</td>
+              <td><strong>実験的アフィックス：移動スキル時ミニオンテレポート</strong>、ミニオンダメ</td>
+              <td>ハイブリッドヘルス、ミニオンヘルス/吸収、アーマー</td>
+            </tr>
+            <tr>
+              <td>靴</td>
+              <td>移動速度（最優先）、知力、実験的ワード獲得</td>
+              <td>ハイブリッドヘルス、不足耐性、耐久力/アーマー</td>
+            </tr>
+            <tr>
+              <td>アクセサリー</td>
+              <td>知力、ミニオンダメ/継続ダメ、最大マナ（爆破メイジ型）</td>
+              <td><strong>死霊/物理/元素耐性</strong>、ヘルス、耐久力</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="page-footer-note">
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/build-guides/filter/cycle=rage-of-the-frostborn" target="_blank" rel="noopener noreferrer">Last Epoch Tools（Season 5 ビルドガイド）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+    </p>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html">Last Epoch ガイド</a></li>
+      <li><a class="nav-link" href="./falconer.html">ファルコナー（Season 5）</a></li>
+      <li><a class="nav-link" href="./bladedancer.html">ブレードダンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./marksman.html">マークスマン（Season 5）</a></li>
+      <li><a class="nav-link" href="./paladin.html">パラディン（Season 5）</a></li>
+      <li><a class="nav-link" href="./void-knight.html">ヴォイドナイト（Season 5）</a></li>
+      <li><a class="nav-link" href="./forge-guard.html">フォージガード（Season 5）</a></li>
+      <li><a class="nav-link" href="./sorcerer.html">ソーサラー（Season 5）</a></li>
+      <li><a class="nav-link" href="./spellblade.html">スペルブレード（Season 5）</a></li>
+      <li><a class="nav-link" href="./runemaster.html">ルーンマスター（Season 5）</a></li>
+      <li><a class="nav-link" href="./lich.html">リッチ（Season 5）</a></li>
+      <li><a class="nav-link" href="./necromancer.html" aria-current="page">ネクロマンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./warlock.html">ウォーロック（Season 5）</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
