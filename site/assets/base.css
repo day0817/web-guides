@@ -440,7 +440,30 @@ a.card:hover {
   color: var(--accent-strong);
 }
 
-/* External LE Tools link pill */
+/* External direct text/title link (no standalone link-only buttons) */
+.ext-title-link,
+.ext-inline-link {
+  color: var(--accent-strong);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.ext-title-link:hover,
+.ext-inline-link:hover {
+  text-decoration: underline;
+}
+
+.ext-icon {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  opacity: 0.75;
+  align-self: center;
+}
+
 .le-link {
   display: inline-flex;
   align-items: center;

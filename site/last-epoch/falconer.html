@@ -21,136 +21,84 @@
     <header class="page-header">
       <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
       <h1 class="page-title">ファルコナー（Falconer）完全ガイド</h1>
-      <p class="page-lead">相棒の隼と罠・バリスタ・影（シャドウ）を連携させて高機動で制圧するローグ上級職の Season 5 最新ガイドです。スキル・アイテム名称は Last Epoch Tools 日本語版に準拠し、英語原名を併記しています。</p>
+      <p class="page-lead">相棒の「隼（ファルコン）」と罠・バリスタ・影（シャドウ）を連携させて戦うローグ上級職の Season 5 ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
 
       <div class="callout">
-        <strong>アイコン・最新パッチ注記：</strong> Last Epoch Tools のスキル／アイテム画像は保護仕様により外部直リンク不可（HTTP 403）のため、本ページでは軽量な種別 SVG アイコンと LE Tools 詳細リンク（日本語版）を併設しています。なお Season 5（1.5〜1.5.2）ではファルコナー本体スキルへの大規模リワークはなく、従来の S ティア軸に Season 5 新ユニーク <strong>エターナルフォント（Eternal Font）</strong> 等を組み合わせる構成が主流です。
+        <strong>アイコン・最新パッチ注記：</strong> Last Epoch Tools の画像アセットは保護仕様により外部サイトからの直リンク不可（HTTP 403）のため、本ガイドでは種別ごとの軽量 SVG アイコンを表示し、スキル名・装備名から直接 LE Tools 詳細ページを開ける構成としています。なお Season 5（Patch 1.5〜1.5.2）ではファルコナー本体スキルへの大規模リワークはなく、従来の S ティア構成に Season 5 新ユニーク <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmBYHYGYg" target="_blank" rel="noopener noreferrer">エターナルフォント（Eternal Font）</a> 等を組み込む構成が主流です。
       </div>
 
       <nav class="toc-pills" aria-label="ページ内目次">
-        <a class="toc-pill" href="#sec-rogue">1. ローグ前半</a>
-        <a class="toc-pill" href="#sec-skills">2. スキル＆ノード</a>
-        <a class="toc-pill" href="#sec-passives">3. パッシブ指針</a>
-        <a class="toc-pill" href="#sec-builds">4. S5 人気ビルド</a>
-        <a class="toc-pill" href="#sec-mechanics">5. 4大メカニズム</a>
-        <a class="toc-pill" href="#sec-gear">6. 装備・アフィックス</a>
+        <a class="toc-pill" href="#sec-overview">1. マスタリー特徴・比較</a>
+        <a class="toc-pill" href="#sec-falconer-skills">2. ファルコナー固有スキル</a>
+        <a class="toc-pill" href="#sec-rogue-skills">3. ビルド用ローグスキル</a>
+        <a class="toc-pill" href="#sec-passives">4. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">5. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">6. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">7. 装備・アフィックス</a>
       </nav>
     </header>
 
-    <!-- 1. ローグ前半（ベーススキル・育成導線） -->
-    <section class="section" id="sec-rogue" aria-labelledby="title-rogue">
-      <h2 class="section-title" id="title-rogue">
+    <!-- 1. マスタリー特徴・同クラス他マスタリーとの差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          <path d="M21 4L12 13M12 13L3 4M12 13v8"></path>
         </svg>
-        1. 前半のローグ（育成＆ベーススキル）
+        1. マスタリーの特徴・他職との差別化・固有パッシブ（隼）
       </h2>
-      <p class="page-lead">マスタリー到達前（Lv1〜20 前後）および終盤まで併用するローグ基本スキルです。</p>
 
       <div class="stack-list">
         <article class="skill-card">
-          <div class="skill-card-head">
-            <div class="skill-icon-box" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14.5 17.5L3 6V3h3l11.5 11.5"></path>
-                <path d="M13 19l6-6"></path>
-                <path d="M16 16l4 4"></path>
-              </svg>
-            </div>
-            <div class="skill-head-body">
-              <h3 class="skill-title">影身の刃 <span class="skill-en">(Umbral Blades)</span></h3>
-              <div class="badge-row">
-                <span class="badge badge--accent">育成主力・投擲</span>
-                <span class="badge">終盤主力可</span>
-              </div>
-            </div>
-          </div>
-          <p class="skill-desc">地面に突き刺さり再起動・回収時に炸裂する投擲刃を放ちます。前半のレベリングから、終盤の影（シャドウ）連携・Razorfall 構成まで幅広く中核を担います。</p>
-          <div class="skill-actions">
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/umbral_blades" target="_blank" rel="noopener noreferrer">LE Tools（影身の刃）</a>
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/shadow_daggers_finisher" target="_blank" rel="noopener noreferrer">LE Tools（シャドウダガー）</a>
-          </div>
-          <details class="node-details">
-            <summary>序盤〜終盤の注目要素を見る</summary>
-            <ul class="node-list">
-              <li><strong>育成運用</strong>: 「手裏剣投げ（Shurikens）」や「疾風撃（Flurry）」・「灰燼斬（Cinder Strike）」と比べ広範囲の雑魚処理に優れ、マナ効率も良好です。</li>
-              <li><strong>終盤シナジー</strong>: 回避・移動スキルで生成したシャドウと連携し、シャドウダガー（Shadow Daggers）を誘発して自動クリティカルを狙えます。</li>
-            </ul>
-          </details>
+          <h3 class="skill-title">ファルコナー固有パッシブ＆マスタリーボーナス（隼システム）</h3>
+          <p class="skill-desc">ローグの基本パッシブに 20pt 投資してマスタリーを選択すると、固有スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconry" target="_blank" rel="noopener noreferrer"><strong>隼狩り（Falconry）</strong></a> が解放されて無敵の相棒「隼」が常時同行し、以下のマスタリー固有ボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス</strong>: <strong>基礎敏捷力（Dexterity）+12</strong>、および <strong>総敏捷力 4 ポイントごとに隼の近接ダメージ +1</strong>。</li>
+            <li><strong>完全無敵の自動相棒</strong>: 隼は敵の攻撃対象にならず死亡しないため、ミニオン耐久への投資を一切せずに高コラプションでも安定したダメージ源・デバフ役として機能します。</li>
+            <li><strong>本体ステータスの継承（ハイブリッド設計）</strong>: 通常の召喚職（ネクロマンサー等）と異なり、プレイヤー自身の近接・投擲・弓・クリティカル・状態異常付与率・移動速度をパッシブやスキルノード経由で隼やバリスタへ変換できるため、本体と相棒が同時にスケールします。</li>
+          </ul>
         </article>
+      </div>
 
-        <article class="skill-card">
-          <div class="skill-card-head">
-            <div class="skill-icon-box" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="9"></circle>
-                <path d="M12 7v10M7 12h10"></path>
-              </svg>
-            </div>
-            <div class="skill-head-body">
-              <h3 class="skill-title">バリスタ <span class="skill-en">(Ballista)</span></h3>
-              <div class="badge-row">
-                <span class="badge badge--accent">ローグ基本・ミニオン</span>
-                <span class="badge">S5 メタ主力</span>
-              </div>
-            </div>
-          </div>
-          <p class="skill-desc">自動射撃タレットを設置します。ファルコナー側の「エアリアルアサルト」や弓ユニークと組み合わせることで、Season 5 でも高コラプション上位を席巻する爆発バリスタ軸の核になります。</p>
-          <div class="skill-actions">
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/summon_ballista" target="_blank" rel="noopener noreferrer">LE Tools（バリスタ）</a>
-          </div>
-          <details class="node-details">
-            <summary>重要ノードの方向性を見る</summary>
-            <ul class="node-list">
-              <li><strong>Armed Construction</strong>: バリスタの消滅・再設置時に爆発を起こし、<strong>敏捷力（Dexterity）</strong>に応じて爆発ダメージと範囲が乗算スケールします。</li>
-              <li><strong>最大設置数＋共有強化</strong>: 最大設置数増加ノードと「Shared Enhancements」「Practicality」等により、プレイヤー自身のクリティカル率・倍率や状態異常をタレットへ継承します。</li>
-            </ul>
-          </details>
-        </article>
-
-        <article class="skill-card">
-          <div class="skill-card-head">
-            <div class="skill-icon-box" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              </svg>
-            </div>
-            <div class="skill-head-body">
-              <h3 class="skill-title">スモークボム <span class="skill-en">(Smoke Bomb)</span> ＆ 縮地 <span class="skill-en">(Shift)</span></h3>
-              <div class="badge-row">
-                <span class="badge badge--accent">防御・シャドウ生成</span>
-                <span class="badge">移動・快適性</span>
-              </div>
-            </div>
-          </div>
-          <p class="skill-desc"><strong>スモークボム</strong>は煙幕内で無敵ウィンドウ・Silver Shroud（シルバースラウド）・Dusk Shroud（ダスクスラウド）・シャドウ生成を同時に稼ぐ最重要防御スキル。<strong>縮地</strong>は序盤の高速移動や即時緊急回避を担います。</p>
-          <div class="skill-actions">
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">LE Tools（スモークボム）</a>
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer">LE Tools（縮地）</a>
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/rogue_evade" target="_blank" rel="noopener noreferrer">LE Tools（即時避け）</a>
-          </div>
-          <details class="node-details">
-            <summary>その他のローグ前半スキル一覧（リンク）</summary>
-            <ul class="node-list">
-              <li><a href="https://www.lastepochtools.com/skills/ja/acid_flask" target="_blank" rel="noopener noreferrer">強酸のフラスコ（Acid Flask）</a> — 消費マナ 10。隼と連携して毒・冷気・装甲粉砕をばらまく用途でも活躍。</li>
-              <li><a href="https://www.lastepochtools.com/skills/ja/decoy" target="_blank" rel="noopener noreferrer">デコイ（Decoy）</a> — 敵のヘイトを引きつけて被弾を抑える防御・爆発補助スキル。</li>
-              <li><a href="https://www.lastepochtools.com/skills/ja/puncture" target="_blank" rel="noopener noreferrer">穿刺（Puncture）</a> / <a href="https://www.lastepochtools.com/skills/ja/cinder_strike1" target="_blank" rel="noopener noreferrer">灰燼斬（Cinder Strike）</a> / <a href="https://www.lastepochtools.com/skills/ja/flurry" target="_blank" rel="noopener noreferrer">疾風撃（Flurry）</a> — マナ消費 0 の基本攻撃枠（パッシブ「Sapping Strikes」との併用や序盤育成に有効）。</li>
-              <li><a href="https://www.lastepochtools.com/skills/ja/shurikens" target="_blank" rel="noopener noreferrer">手裏剣投げ（Shurikens）</a> / <a href="https://www.lastepochtools.com/skills/ja/bladestorm_throw" target="_blank" rel="noopener noreferrer">嵐刃（Bladestorm）</a> — 投擲・出血・手数系の選択肢。</li>
-            </ul>
-          </details>
-        </article>
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">ローグ 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconer/tree" target="_blank" rel="noopener noreferrer"><strong>ファルコナー</strong><br><span class="skill-en">(Falconer)</span></a></td>
+              <td>基礎敏捷力 +12／総敏捷力 4 ごとに隼近接ダメ +1<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconry" target="_blank" rel="noopener noreferrer">隼狩り</a></td>
+              <td><strong>隼＋罠＋バリスタの戦術・設置ハイブリッド型</strong>。本体ステータスをミニオンへ乗算継承でき、遠距離安全圏からの殲滅力・高コラプション適性に優れる。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/bladedancer/tree" target="_blank" rel="noopener noreferrer"><strong>ブレードダンサー</strong><br><span class="skill-en">(Bladedancer)</span></a></td>
+              <td>最大シャドウ +1／近接物理ダメ +15／回避値 +15%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dancing_strikes" target="_blank" rel="noopener noreferrer">ダンシングストライク</a></td>
+              <td><strong>近接・二刀流・シャドウ分身特化アサシン</strong>。近接手数と影の同時攻撃に長け、Season 5 では新スキル等を用いた近接・回避ビルドが主軸。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/marksman/tree" target="_blank" rel="noopener noreferrer"><strong>マークスマン</strong><br><span class="skill-en">(Marksman)</span></a></td>
+              <td>弓ダメージ +50%／弓攻撃時に攻撃速度 +5% スタック<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/detonating_arrow" target="_blank" rel="noopener noreferrer">爆発の矢</a></td>
+              <td><strong>弓と矢筒による直接射撃・属性矢スペシャリスト</strong>。プレイヤー自身の弓スキル火力・遠距離カイトに特化し、ミニオンや罠の自動連携はファルコナーに譲る。</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <!-- 2. ファルコナー固有スキル＆重要ノード -->
-    <section class="section" id="sec-skills" aria-labelledby="title-skills">
-      <h2 class="section-title" id="title-skills">
+    <section class="section" id="sec-falconer-skills" aria-labelledby="title-falconer-skills">
+      <h2 class="section-title" id="title-falconer-skills">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7l3-7z"></path>
         </svg>
         2. ファルコナー固有スキル＆重要ノード
       </h2>
-      <p class="page-lead">マスタリー選択後に解放される 5 つの固有スキルです。全ノード網羅ではなく、実戦で軸になる重要ノードを折りたたみにまとめています。</p>
+      <p class="page-lead">ファルコナーで解放される 5 つの固有スキルです。スキル名をクリックすると Last Epoch Tools 日本語版が開きます。</p>
 
       <div class="stack-list">
         <article class="skill-card">
@@ -161,7 +109,12 @@
               </svg>
             </div>
             <div class="skill-head-body">
-              <h3 class="skill-title">隼狩り <span class="skill-en">(Falconry)</span></h3>
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/falconry" target="_blank" rel="noopener noreferrer">
+                  隼狩り <span class="skill-en">(Falconry)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
               <div class="badge-row">
                 <span class="badge badge--accent">ミニオン・コンパニオン</span>
                 <span class="badge">マナ 48 / CD 0s</span>
@@ -169,21 +122,18 @@
               </div>
             </div>
           </div>
-          <p class="skill-desc">無敵でターゲット不可の隼を常時召喚し、発動時にターゲット範囲へ高速連撃「ファルコンストライク（Falcon Strikes）」を命じます。敏捷力 1 ごとに隼のダメージが 4% 増加（隼召喚ノード）し、全ファルコナーの基盤になります。</p>
-          <div class="skill-actions">
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/falconry" target="_blank" rel="noopener noreferrer">LE Tools（隼狩り）</a>
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/falcon_strikes" target="_blank" rel="noopener noreferrer">LE Tools（ファルコンストライク）</a>
-          </div>
+          <p class="skill-desc">無敵の隼を召喚し、使用時にターゲット範囲へ高速連撃「<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falcon_strikes" target="_blank" rel="noopener noreferrer">ファルコンストライク（Falcon Strikes）</a>」を放ちます。敏捷力 1 ごとに隼ダメージ +4%（隼召喚ノード）を得る全ファルコナーの基盤です。</p>
           <details class="node-details">
-            <summary>重要ノード一覧（日本語版準拠）を見る</summary>
+            <summary>重要ノード一覧（LE Tools 日本語版準拠）</summary>
             <ul class="node-list">
-              <li><strong>手練れのハンター (1pt)</strong>: プレイヤーの近接・投擲・弓の増加ダメージのうち最高値の 50% を隼に適用する超重要ブリッジノード。</li>
+              <li><strong>手練れのハンター (1pt)</strong>: プレイヤーの近接・投擲・弓の増加ダメージのうち最高値の 50% を隼に適用する最優先ブリッジノード。</li>
               <li><strong>ファルコナージャーニー (1pt)</strong>: 隼のグローバルダメージが、プレイヤーのレベルと敏捷力 1 ごとに 1% 上昇。</li>
-              <li><strong>眼を狙え! (1pt)</strong> / <strong>見え透いた弱点 (1pt)</strong>: プレイヤーの追加クリティカル率の 50%（眼を狙え!）と、クリティカル乗数の 25%（見え透いた弱点）を隼へ継承。</li>
-              <li><strong>引き裂く爪 (4pt)</strong>: プレイヤーの出血・毒・各種寸断・鈍足付与率の 15%/pt を隼にも適用。</li>
-              <li><strong>ファルコナーの印 (3pt)</strong> / <strong>疾風のファルコン (1pt)</strong>: 印付きの敵へのダメージ増加＋印消費でファルコンストライクの CD 即時回復（マナコスト+40）。</li>
-              <li><strong>狩りの成果 (1pt)</strong>: 隼のキルまたはボスヒット時にヘルスとマナを回復（3 秒上限）。</li>
+              <li><strong>眼を狙え! (1pt)</strong> / <strong>見え透いた弱点 (1pt)</strong>: プレイヤーの追加クリティカル率の 50%、および攻撃タイプに応じたクリティカル乗数の 25%（10秒）を隼へ継承。</li>
+              <li><strong>引き裂く爪 (4pt)</strong>: プレイヤーの出血・毒・各種寸断・鈍足付与率の 15%/pt を隼の攻撃にも適用。</li>
+              <li><strong>ファルコナーの印 (3pt)</strong> / <strong>疾風のファルコン (1pt)</strong>: 印付きの敵へのダメージ増加＋印消費でファルコンストライクの CD 即時回復（マナコスト +40）。</li>
+              <li><strong>狩りの成果 (1pt)</strong>: 隼のキルまたはボスヒット時に総能力値に応じてヘルスとマナを回復（3秒上限）。</li>
               <li><strong>鳥類の精力 (4pt)</strong> / <strong>隣り合わせ (3pt)</strong>: 連撃回数 +1/pt と攻撃速度上昇、プレイヤー攻撃ヒット時の残り CD 3%/pt 短縮。</li>
+              <li><strong>毒の雨 (1pt)</strong> / <strong>フラスコ貯蔵 (4pt)</strong>: 隼が <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/acid_flask" target="_blank" rel="noopener noreferrer">強酸のフラスコ</a> を自動投擲（CD6秒・元マナ75%）。</li>
             </ul>
           </details>
         </article>
@@ -196,7 +146,12 @@
               </svg>
             </div>
             <div class="skill-head-body">
-              <h3 class="skill-title">ダイブボム <span class="skill-en">(Dive Bomb)</span></h3>
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/dive_bomb" target="_blank" rel="noopener noreferrer">
+                  ダイブボム <span class="skill-en">(Dive Bomb)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
               <div class="badge-row">
                 <span class="badge badge--accent">主力範囲バースト</span>
                 <span class="badge">マナ 20 / CD 5s</span>
@@ -204,17 +159,14 @@
               </div>
             </div>
           </div>
-          <p class="skill-desc">隼が空高く舞い上がり指定地点へ急降下して大爆発を起こす必殺技です。着地前に中断された場合はマナと CD の 70% が返還されます。</p>
-          <div class="skill-actions">
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/dive_bomb" target="_blank" rel="noopener noreferrer">LE Tools（ダイブボム）</a>
-          </div>
+          <p class="skill-desc">隼が上空から指定地点へ急降下して大爆発を起こす必殺スキルです。着地前に中断された場合はマナコストとクールダウンの 70% が回復します。</p>
           <details class="node-details">
-            <summary>重要ノードの役割を見る</summary>
+            <summary>重要ノードとシナジー</summary>
             <ul class="node-list">
-              <li><strong>On Wings of Shadow</strong>: スモークボム等で生成したローグのシャドウ位置にも影の隼（Shadow Falcons）を降らせ、同時多段バースト化します。</li>
-              <li><strong>Rush of the Hunt</strong>: ダイブボムのクールダウン回復速度を大幅に引き上げ、回転率を改善します。</li>
-              <li><strong>Cloud Gatherer</strong>: スモークボムの範囲内に着地すると煙幕持続時間が延長（+40% 相当）され、防御バフ維持に貢献します。</li>
-              <li><strong>Featherfall / 出血・状態異常消費ルート</strong>: 着地後の追撃強化や、蓄積した出血スタックを一撃で起爆する軸へ派生可能です。</li>
+              <li><strong>On Wings of Shadow</strong>: スモークボム等で生成したシャドウ位置にも影の隼（Shadow Falcons）を降らせ、多段範囲バースト化します。</li>
+              <li><strong>Rush of the Hunt</strong>: クールダウン回復速度を大幅に伸ばし、連打頻度を上げます。</li>
+              <li><strong>Cloud Gatherer</strong>: スモークボム範囲内に着地すると煙幕持続時間が延長され、防御・シャドウ供給を維持します。</li>
+              <li><strong>出血消費／Featherfall 派生</strong>: 蓄積した出血スタックを一撃で起爆する DoT バーストや、着地追撃強化への分岐が可能です。</li>
             </ul>
           </details>
         </article>
@@ -228,23 +180,25 @@
               </svg>
             </div>
             <div class="skill-head-body">
-              <h3 class="skill-title">エアリアルアサルト <span class="skill-en">(Aerial Assault)</span></h3>
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/aerial_assault" target="_blank" rel="noopener noreferrer">
+                  エアリアルアサルト <span class="skill-en">(Aerial Assault)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
               <div class="badge-row">
-                <span class="badge badge--accent">トラバーサル移動・連携</span>
+                <span class="badge badge--accent">トラバーサル移動・バフ</span>
                 <span class="badge">ウィングバースト</span>
               </div>
             </div>
           </div>
-          <p class="skill-desc">隼に運ばれて目標地点へ飛び込み、着地時にウィングバースト（Wing Burst）を放つ高速移動兼攻撃スキル。バリスタ型ではバフ兼位置調整、Razorfall 型では「影身の刃」自動展開のトリガーになります。</p>
-          <div class="skill-actions">
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/aerial_assault" target="_blank" rel="noopener noreferrer">LE Tools（エアリアルアサルト）</a>
-          </div>
+          <p class="skill-desc">隼に運ばれて目標地点へ飛翔し、着地時にウィングバーストを放つ主力移動兼シナジー発動スキル。バリスタ型のバフ起点、および <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmGZwdiA" target="_blank" rel="noopener noreferrer">レザーフォール（Razorfall）</a> 型の自動攻撃トリガーとして必須級です。</p>
           <details class="node-details">
-            <summary>重要ノードの役割を見る</summary>
+            <summary>重要ノードとシナジー</summary>
             <ul class="node-list">
-              <li><strong>Tactician</strong>: 着地後、展開中のすべての<strong>バリスタ</strong>のターゲットを着地地点周囲へ集中させ、攻撃速度を大幅強化し、プレイヤーの<strong>知力（Intelligence）</strong>に応じた乗算ダメージを付与します。</li>
-              <li><strong>Skyward Swoop / Aerial Prowess</strong>: 隼ヒット時の CD 回復や移動・着地バフにより、高速周回のテンポを支えます。</li>
-              <li><strong>Razorfall（ユニーク靴）連携</strong>: 着地時のフェザーバーストに敏捷力 20 ごとに「影身の刃」を 1 本追加する構成が強力です。</li>
+              <li><strong>Tactician</strong>: 着地後、展開中の全バリスタの標的を着地地点周辺へ集中させ、攻撃速度増＋<strong>知力（Intelligence）</strong>に応じた乗算ダメージを付与します。</li>
+              <li><strong>Skyward Swoop / Aerial Prowess</strong>: 隼ヒット時の CD 回復と移動・攻撃テンポを底上げします。</li>
+              <li><strong>羽爆風と影身の刃連携</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmGZwdiA" target="_blank" rel="noopener noreferrer">レザーフォール</a> 装備時は、敏捷力 20 ごとに <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/umbral_blades" target="_blank" rel="noopener noreferrer">影身の刃</a> を追加発射します。</li>
             </ul>
           </details>
         </article>
@@ -254,27 +208,29 @@
             <div class="skill-icon-box" aria-hidden="true">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="4"></circle>
-                <path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M19.1 4.9l-2.8 2.8M7.7 16.3l-2.8 2.8"></path>
+                <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
               </svg>
             </div>
             <div class="skill-head-body">
-              <h3 class="skill-title">爆破罠 <span class="skill-en">(Explosive Trap)</span></h3>
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/explosive_trap" target="_blank" rel="noopener noreferrer">
+                  爆破罠 <span class="skill-en">(Explosive Trap)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
               <div class="badge-row">
                 <span class="badge badge--accent">罠・CD短縮エンジン</span>
                 <span class="badge">弓/投擲変換可</span>
               </div>
             </div>
           </div>
-          <p class="skill-desc">爆発する罠を投擲・設置します。単なる罠火力にとどまらず、ダイブボムのクールダウンを爆速で短縮し、各種耐性低下・スラウド生成を担うエンジンです。</p>
-          <div class="skill-actions">
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/explosive_trap" target="_blank" rel="noopener noreferrer">LE Tools（爆破罠）</a>
-          </div>
+          <p class="skill-desc">爆発する罠を設置・投擲します。ダイブボムのクールダウンを高速回復させつつ、デバフやスラウド生成、冷気変換などを同時にこなすエンジン役です。</p>
           <details class="node-details">
-            <summary>重要ノードの役割を見る</summary>
+            <summary>重要ノードとシナジー</summary>
             <ul class="node-list">
-              <li><strong>Free Lofting Bird</strong>: 爆破罠が起爆するたびに隼スキル（ダイブボム等）の残り CD を回復し、連続起爆を可能にします。</li>
-              <li><strong>Blast Rain</strong>: スキルを弓タグへ変換し、弓の攻撃速度で空から罠を降らせる定番ノード。</li>
-              <li><strong>Trap Sprinkler / Automated Bombardment / Ash Compartment</strong>: 起爆時の追加罠ドロップと火炎耐性低下を重ねます。</li>
+              <li><strong>Free Lofting Bird</strong>: 爆破罠が起爆するたびに隼スキル（ダイブボム等）の残り CD を回復し、高頻度発動を可能にします。</li>
+              <li><strong>Blast Rain</strong>: 弓スキルへ変換し、弓の攻撃速度で空から罠を降らせます。</li>
+              <li><strong>Trap Sprinkler / Automated Bombardment / Ash Compartment</strong>: 起爆時の追加罠ドロップと耐性低下を重ねます。</li>
             </ul>
           </details>
         </article>
@@ -288,23 +244,255 @@
               </svg>
             </div>
             <div class="skill-head-body">
-              <h3 class="skill-title">ネット <span class="skill-en">(Net)</span></h3>
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/net" target="_blank" rel="noopener noreferrer">
+                  ネット <span class="skill-en">(Net)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
               <div class="badge-row">
-                <span class="badge">足止め・デバフ・移動</span>
-                <span class="badge">ネットトラップ派生</span>
+                <span class="badge">拘束・デバフ・移動派生</span>
               </div>
             </div>
           </div>
-          <p class="skill-desc">前方に網を投げて敵を拘束・鈍足化し、被ダメージ増加デバフや出血・トラップ派生を与えるユーティリティスキルです。状況に応じて後方跳躍移動やトラップ自動発動としても使えます。</p>
-          <div class="skill-actions">
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/net" target="_blank" rel="noopener noreferrer">LE Tools（ネット）</a>
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/net_trap" target="_blank" rel="noopener noreferrer">LE Tools（ネットトラップ）</a>
-          </div>
+          <p class="skill-desc">敵を拘束・鈍足化する網を投げます。ボスやレア敵への被ダメージ増加・出血補助のほか、後方跳躍による緊急回避や <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/net_trap" target="_blank" rel="noopener noreferrer">ネットトラップ（Net Trap）</a> による罠自動発動としても活用されます。</p>
         </article>
       </div>
     </section>
 
-    <!-- 3. パッシブツリー指針 -->
+    <!-- 3. 最終ビルドで使用されうるローグ基本スキル（個別記載） -->
+    <section class="section" id="sec-rogue-skills" aria-labelledby="title-rogue-skills">
+      <h2 class="section-title" id="title-rogue-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+        </svg>
+        3. 最終ビルドで使用されうるローグ基本スキル（個別解説）
+      </h2>
+      <p class="page-lead">育成だけでなく、エンドゲームの最終ビルドでメイン火力・防御レイヤー・機動・マナ回復枠として採用される全 11 のローグ基本スキルを個別に整理しています（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue_evade" target="_blank" rel="noopener noreferrer">即時避け（Evade）</a> は共通回避枠のため省略）。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M7 12h10"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_ballista" target="_blank" rel="noopener noreferrer">
+                  バリスタ <span class="skill-en">(Ballista)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">最終主力（S5 最有力）</span><span class="badge">ミニオン・タレット</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">自動射撃タレットを設置します。ファルコナーの「エアリアルアサルト（Tactician）」や弓ユニーク <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMoZgdiA" target="_blank" rel="noopener noreferrer">エスリンの抵抗（Uethrin's Stand）</a> と組むことで Season 5 屈指の高コラプション火力を発揮します。</p>
+          <details class="node-details">
+            <summary>最終ビルドでの採用ノード・役割</summary>
+            <ul class="node-list">
+              <li><strong>Armed Construction</strong>: 消滅・再設置時に爆発を起こし、<strong>敏捷力（Dexterity）</strong>に応じてダメージと爆発範囲が伸びます。</li>
+              <li><strong>最大設置数増加 ＋ Shared Enhancements / Practicality</strong>: 設置上限（6基以上）を増やし、プレイヤー自身のクリティカルや状態異常をタレットへ継承させます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">
+                  スモークボム <span class="skill-en">(Smoke Bomb)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">全ビルド共通の必須防御</span><span class="badge">Silver Shroud / 影生成</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">煙幕を展開し、範囲内で <em>Silver Shroud</em>（確定回避＋ウォード）、<em>Dusk Shroud</em>、敵への盲目、さらにローグの「シャドウ（影）」生成を一手に担います。ZHP 型から耐久型までほぼ全ビルドで採用されます。</p>
+          <details class="node-details">
+            <summary>最終ビルドでの採用ノード・役割</summary>
+            <ul class="node-list">
+              <li><strong>Silver Shroud / Dusk Shroud 獲得ノード</strong>: 高コラプションの一撃死を防ぐ核心防御レイヤー。</li>
+              <li><strong>シャドウ生成 ＋ ダイブボム連携</strong>: 煙幕内の影が「ダイブボム（On Wings of Shadow）」や「影身の刃」の同時発火トリガーになります。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer">
+                  縮地 <span class="skill-en">(Shift)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">高速移動・無敵回避</span><span class="badge">影生成・手裏剣/フラスコ連携</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">指定方向へ瞬時にダッシュし、通過・開始地点の操作や無敵時間を得られる基本トラバーサルスキル。短剣 <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwiMGYDYg" target="_blank" rel="noopener noreferrer">煙の織り手（Smoke Weaver）</a> やシャドウ生成・手裏剣自動展開と組む構成で採用されます。</p>
+          <details class="node-details">
+            <summary>最終ビルドでの採用ノード・役割</summary>
+            <ul class="node-list">
+              <li><strong>無敵ウィンドウ＋状態異常解除</strong>: 危険なボス攻撃のすり抜けとデバフ解除に有効。</li>
+              <li><strong>移動時自動トリガー</strong>: 移動中に「手裏剣投げ」や「強酸のフラスコ」・シャドウを自動展開し、移動＝バフ/攻撃化できます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/umbral_blades" target="_blank" rel="noopener noreferrer">
+                  影身の刃 <span class="skill-en">(Umbral Blades)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">最終主力（Razorfall/影軸）</span><span class="badge">投擲・刃爆発</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">刃を投擲して地面へ設置・回転・爆発させる投擲スキル。靴 <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmGZwdiA" target="_blank" rel="noopener noreferrer">レザーフォール（Razorfall）</a> 採用時はエアリアルアサルトから自動展開され、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shadow_daggers_finisher" target="_blank" rel="noopener noreferrer">シャドウダガー（Shadow Daggers）</a> の主軸にもなります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v5l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/acid_flask" target="_blank" rel="noopener noreferrer">
+                  強酸のフラスコ <span class="skill-en">(Acid Flask)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">フラスコ連携・デバフ</span><span class="badge">マナ 10 / 投擲</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">毒瓶を投擲して範囲ダメージと毒・装甲粉砕を付与します。隼狩りの「毒の雨」「フラスコ貯蔵」を取ると隼自身がフラスコを投擲するようになるため、自身で連打せずとも自動発動させる専用構成が組めます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="3"></circle><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/decoy" target="_blank" rel="noopener noreferrer">
+                  デコイ <span class="skill-en">(Decoy)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">挑発・ヘイト分散</span><span class="badge">爆発補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵を引きつけて爆破するおとりを設置します。高コラプションの ZHP バリスタ型やボス戦で敵のタゲを逸らし、安全な設置・攻撃時間を作る防御ユーティリティとして採用枠に入ります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"></polygon></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shurikens" target="_blank" rel="noopener noreferrer">
+                  手裏剣投げ <span class="skill-en">(Shurikens)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">アーマー％バフ</span><span class="badge">周囲回転・自動展開</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">投擲手裏剣を放ちます。最終ビルドでは「Blade Shield」ノードにより手裏剣を自身の周囲に周回させて<strong>アーマー大幅増加</strong>を得る防御バフ枠や、縮地トリガーによる自動ヒット源として使われます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L20 4M15 4h5v5"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/puncture" target="_blank" rel="noopener noreferrer">
+                  穿刺 <span class="skill-en">(Puncture)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">0マナ枠・出血付与</span><span class="badge">Sapping Strikes 連携</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">マナ消費 0 の直線貫通攻撃（弓・近接両対応）。出血ファルコナーでの高速出血スタック付与や、パッシブ <em>Sapping Strikes</em> によるヘルス＆マナ回収エンジン、さらには弓型での <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcGZwJiA" target="_blank" rel="noopener noreferrer">血のねぐら</a> 連携で活躍します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c2 4 6 6 6 11a6 6 0 1 1-12 0c0-3 1.5-5.5 3-7 0 2 1.5 3 3 3s2-1.5 0-7z"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/cinder_strike1" target="_blank" rel="noopener noreferrer">
+                  灰燼斬 <span class="skill-en">(Cinder Strike)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">0マナ枠・Oil Coating</span><span class="badge">素手/弓バフ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">火属性を含む基本攻撃スキル。<em>Oil Coating</em> スタックによる火ダメ・回避値・火耐性バフ目的や、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCsGZKA" target="_blank" rel="noopener noreferrer">ファルコンフィスト（Falcon Fists）</a> を用いた素手型・0マナ連打型の主力として使われます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h6l3-8 4 16 3-8h2"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/flurry" target="_blank" rel="noopener noreferrer">
+                  疾風撃 <span class="skill-en">(Flurry)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">超高速連撃</span><span class="badge">ヒット数トリガー</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">高速連続ヒットを叩き込む基本攻撃。ヒット数に応じてクールダウンを短縮する「隣り合わせ（隼狩り）」やマナ回収・出血スタック稼ぎを発動させるトリガー役として機能します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/bladestorm_throw" target="_blank" rel="noopener noreferrer">
+                  嵐刃 <span class="skill-en">(Bladestorm)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">投擲・持続ヒット</span><span class="badge">デバフ/出血補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">回転する刃を投げて持続的な多段ヒットを発生させるスキル。投擲タグを持つためファルコナーの投擲パッシブと噛み合い、継続的なヒット数稼ぎ・状態異常付与の補助枠として採用余地があります。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. パッシブツリー指針 -->
     <section class="section" id="sec-passives" aria-labelledby="title-passives">
       <h2 class="section-title" id="title-passives">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -313,14 +501,9 @@
           <circle cx="18" cy="18" r="3"></circle>
           <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
         </svg>
-        3. パッシブツリー指針（ローグ前半 ＋ ファルコナー）
+        4. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue/tree" target="_blank" rel="noopener noreferrer">ローグ</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconer/tree" target="_blank" rel="noopener noreferrer">ファルコナー</a>）
       </h2>
-      <p class="page-lead">ローグ基本ツリーに最低 20pt を振ってマスタリーを開放し、残りをファルコナー主体＋他マスタリー前半（ブレードダンサーの回避・敏捷系など）へ配分します。</p>
-
-      <div class="skill-actions">
-        <a class="le-link" href="https://www.lastepochtools.com/skills/ja/rogue/tree" target="_blank" rel="noopener noreferrer">LE Tools（ローグ パッシブツリー）</a>
-        <a class="le-link" href="https://www.lastepochtools.com/skills/ja/falconer/tree" target="_blank" rel="noopener noreferrer">LE Tools（ファルコナー パッシブツリー）</a>
-      </div>
+      <p class="page-lead">ローグ基本ツリーへ最低 20pt 配分してマスタリーを解放し、主力をファルコナーツリーへ投資します（回避や敏捷・移動速度をさらに伸ばす場合はブレードダンサー前半へも一部投資します）。</p>
 
       <div class="table-scroll" style="margin-top: 12px;">
         <table>
@@ -333,52 +516,52 @@
           </thead>
           <tbody>
             <tr>
-              <td>ローグ前半</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue/tree" target="_blank" rel="noopener noreferrer">ローグ基本</a></td>
               <td>Guile（最大 8pt）</td>
-              <td>固定回避値（Dodge Rating）と毒耐性を確保する序盤の鉄板ノード。</td>
+              <td>固定回避値（Dodge Rating）と毒耐性を確保する序盤〜終盤の鉄板ノード。</td>
             </tr>
             <tr>
-              <td>ローグ前半</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue/tree" target="_blank" rel="noopener noreferrer">ローグ基本</a></td>
               <td>Evasion（最大 5pt）</td>
               <td>移動中の被ダメージ減少＋回避値増加。常に動き回る立ち回りと好相性。</td>
             </tr>
             <tr>
-              <td>ローグ前半</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue/tree" target="_blank" rel="noopener noreferrer">ローグ基本</a></td>
               <td>Agility（最大 5pt）</td>
               <td>ヒット時 Haste 獲得＋移動速度 1% ごとに増加ダメージを獲得。</td>
             </tr>
             <tr>
-              <td>ローグ前半</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue/tree" target="_blank" rel="noopener noreferrer">ローグ基本</a></td>
               <td>Swift Assassin（最大 8pt）</td>
-              <td>攻撃速度と追加物理ダメージを伸ばす序盤火力の起点。</td>
+              <td>攻撃速度と追加物理ダメージを伸ばす起点ノード。</td>
             </tr>
             <tr>
-              <td>ローグ前半</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rogue/tree" target="_blank" rel="noopener noreferrer">ローグ基本</a></td>
               <td>Sapping Strikes（最大 4pt）</td>
               <td>マナ消費 0 スキル命中時にヘルス（+4/pt）とマナ（+2/pt）を回復。</td>
             </tr>
             <tr>
-              <td>ファルコナー</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconer/tree" target="_blank" rel="noopener noreferrer">ファルコナー</a></td>
               <td>Wilderness Scout</td>
               <td>基礎ヘルスと回避値を底上げする序盤耐久ノード。</td>
             </tr>
             <tr>
-              <td>ファルコナー</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconer/tree" target="_blank" rel="noopener noreferrer">ファルコナー</a></td>
               <td>Handler / Tactician</td>
               <td>隼のミニオンダメージ・基礎クリティカル率・近接/投擲基礎値を直接強化。</td>
             </tr>
             <tr>
-              <td>ファルコナー</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconer/tree" target="_blank" rel="noopener noreferrer">ファルコナー</a></td>
               <td>Agile Hunt / Avian Arsenal</td>
               <td>敏捷力（Dex）確保と、プレイヤー側の投擲/弓ダメージの隼・タレット変換。</td>
             </tr>
             <tr>
-              <td>ファルコナー</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconer/tree" target="_blank" rel="noopener noreferrer">ファルコナー</a></td>
               <td>Finesse Them</td>
-              <td>クリティカル回避を上げつつ、上限超過分のクリティカル回避を隼のクリ倍率へ変換（防御を火力化）。</td>
+              <td>クリティカル回避を上げつつ、上限超過分のクリティカル回避を隼のクリ倍率へ変換。</td>
             </tr>
             <tr>
-              <td>ファルコナー</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconer/tree" target="_blank" rel="noopener noreferrer">ファルコナー</a></td>
               <td>Coordinated Fade / Tailwind / Poise</td>
               <td>Silver Shroud 獲得・移動速度＆被ダメ軽減・Glancing Blow 率など生存の要。</td>
             </tr>
@@ -387,87 +570,90 @@
       </div>
     </section>
 
-    <!-- 4. シーズン 5 人気ビルド紹介 -->
+    <!-- 5. シーズン 5 人気ビルド紹介 -->
     <section class="section" id="sec-builds" aria-labelledby="title-builds">
       <h2 class="section-title" id="title-builds">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M12 20V10M18 20V4M6 20v-4"></path>
         </svg>
-        4. Season 5（Patch 1.5）人気ビルド 3 選
+        5. Season 5（Patch 1.5）人気ビルド 3 選
       </h2>
       <p class="page-lead">Last Epoch Tools 上で確認された Patch 1.5 / 1.5.2 対応プランナーおよび Season 5 メタ傾向に基づく代表 3 アーキタイプです。</p>
 
       <div class="stack-list">
         <article class="build-card">
           <div class="build-card-header">
-            <h3 class="build-title">① 爆発バリスタ・ファルコナー（Explosive Ballista）</h3>
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/planner/ja/om65kwa1" target="_blank" rel="noopener noreferrer">
+                ① 爆発バリスタ・ファルコナー（Patch 1.5.2 Planner）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
             <span class="badge badge--accent">S ティア / 高コラプション</span>
           </div>
           <ul class="build-points">
-            <li><strong>戦い方</strong>: 「バリスタ（Ballista）」の <em>Armed Construction</em> でタレット爆発を連発し、「エアリアルアサルト」の <em>Tactician</em> で着地先へ火力を集中。「スモークボム」で無敵と Silver Shroud を回します。</li>
-            <li><strong>S5 注目ポイント</strong>: 敏捷力（Dex）＋知力（Int）を極限まで盛る ZHP（ゼロヘルス・回避特化）構成が高コラプション（1,000+）で猛威。Season 5 新ユニーク <strong>エターナルフォント（Eternal Font）</strong> による自動ポーション起動ループ派生も注目されています。</li>
-            <li><strong>主力スキル</strong>: バリスタ / エアリアルアサルト / スモークボム / 爆破罠 / 隼狩り（またはデコイ）</li>
-            <li><strong>核装備</strong>: エスリンの抵抗（Uethrin's Stand）、エターナルフォント（Eternal Font）、実験的「移動スキルでミニオン同行」靴</li>
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_ballista" target="_blank" rel="noopener noreferrer">バリスタ</a> の <em>Armed Construction</em> でタレット爆発を連発し、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/aerial_assault" target="_blank" rel="noopener noreferrer">エアリアルアサルト</a> の <em>Tactician</em> で着地先へ火力を集中。<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a> で無敵と Silver Shroud を回します。</li>
+            <li><strong>S5 注目点</strong>: 敏捷力＋知力を極限まで積む ZHP 構成や、Season 5 新ユニーク <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmBYHYGYg" target="_blank" rel="noopener noreferrer">エターナルフォント（Eternal Font）</a> で自動ポーション起動ループを組む <a class="ext-inline-link" href="https://www.lastepochtools.com/planner/ja/QnaRaEda" target="_blank" rel="noopener noreferrer">Patch 1.5 派生プランナー</a> が人気です。</li>
+            <li><strong>採用スキル</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_ballista" target="_blank" rel="noopener noreferrer">バリスタ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/aerial_assault" target="_blank" rel="noopener noreferrer">エアリアルアサルト</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/explosive_trap" target="_blank" rel="noopener noreferrer">爆破罠</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/decoy" target="_blank" rel="noopener noreferrer">デコイ</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconry" target="_blank" rel="noopener noreferrer">隼狩り</a>）</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMoZgdiA" target="_blank" rel="noopener noreferrer">エスリンの抵抗（Uethrin's Stand）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmBYHYGYg" target="_blank" rel="noopener noreferrer">エターナルフォント（Eternal Font）</a>、実験的「移動スキルでミニオン同行」靴</li>
           </ul>
-          <div class="skill-actions">
-            <a class="le-link" href="https://www.lastepochtools.com/planner/ja/om65kwa1" target="_blank" rel="noopener noreferrer">LE プランナー (1.5.2 / om65kwa1)</a>
-            <a class="le-link" href="https://www.lastepochtools.com/planner/ja/QnaRaEda" target="_blank" rel="noopener noreferrer">Eternal Font 型 (1.5 / QnaRaEda)</a>
-          </div>
         </article>
 
         <article class="build-card">
           <div class="build-card-header">
-            <h3 class="build-title">② ダイブボム＆爆破罠ファルコナー（Dive Bomb / Trap）</h3>
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/builds/filter/mastery=falconer" target="_blank" rel="noopener noreferrer">
+                ② ダイブボム＆爆破罠ファルコナー（LE Tools ビルド一覧）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
             <span class="badge badge--accent">範囲殲滅＋単体ボス</span>
           </div>
           <ul class="build-points">
-            <li><strong>戦い方</strong>: 「スモークボム」でシャドウをばら撒き、「爆破罠（Blast Rain＋Free Lofting Bird）」の連続起爆で CD を即座に短縮して「ダイブボム（On Wings of Shadow）」を連打します。</li>
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a> でシャドウをばら撒き、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/explosive_trap" target="_blank" rel="noopener noreferrer">爆破罠</a>（Blast Rain＋Free Lofting Bird）の連続起爆で CD を短縮して <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dive_bomb" target="_blank" rel="noopener noreferrer">ダイブボム</a>（On Wings of Shadow）を連打します。</li>
             <li><strong>強み</strong>: 隼自身がプレイヤーのクリティカル・投擲ダメージを継承するため装備が組みやすく、出血起爆型にも直撃クリティカル型にも寄せられます。</li>
-            <li><strong>主力スキル</strong>: ダイブボム / 隼狩り / 爆破罠 / スモークボム / エアリアルアサルト</li>
-            <li><strong>核装備</strong>: タロンズ・オブ・ヴァラー（Talons of Valor）、ピーク・オブ・ザ・マウンテン（Peak of the Mountain）</li>
+            <li><strong>採用スキル</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dive_bomb" target="_blank" rel="noopener noreferrer">ダイブボム</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconry" target="_blank" rel="noopener noreferrer">隼狩り</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/explosive_trap" target="_blank" rel="noopener noreferrer">爆破罠</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/aerial_assault" target="_blank" rel="noopener noreferrer">エアリアルアサルト</a></li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsGZwFiA" target="_blank" rel="noopener noreferrer">勇気の鉤爪（Talons of Valor）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMoVgNiA" target="_blank" rel="noopener noreferrer">山の峰（Peak of the Mountain）</a></li>
           </ul>
-          <div class="skill-actions">
-            <a class="le-link" href="https://www.lastepochtools.com/skills/ja/dive_bomb" target="_blank" rel="noopener noreferrer">LE Tools（ダイブボム）</a>
-            <a class="le-link" href="https://www.lastepochtools.com/builds/filter/mastery=falconer" target="_blank" rel="noopener noreferrer">LE Tools ビルド検索（Falconer）</a>
-          </div>
         </article>
 
         <article class="build-card">
           <div class="build-card-header">
-            <h3 class="build-title">③ 影身の刃・Razorfall 高速周回型（Razorfall / Umbral）</h3>
-            <span class="badge badge--accent">高速ファーム / 1.5 プランナーあり</span>
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/planner/ja/QdzvrNZe" target="_blank" rel="noopener noreferrer">
+                ③ レザーフォール／影身の刃 高速周回型（Patch 1.5 Planner）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">高速ファーム / S5 プランナーあり</span>
           </div>
           <ul class="build-points">
-            <li><strong>戦い方</strong>: ユニーク靴 <strong>Razorfall</strong> により「エアリアルアサルト」で飛び込むたびに敏捷力 20 ごとに「影身の刃（Umbral Blades）」を自動展開し、雑魚集団を一瞬で薙ぎ払います。</li>
-            <li><strong>強み</strong>: 移動＝攻撃になるためモノリス周回やシーズン要素（Rage of Morditas）の高速クリア適性が非常に高く、操作も快適です。</li>
-            <li><strong>主力スキル</strong>: 影身の刃 / エアリアルアサルト / ダイブボム / 隼狩り / スモークボム（または縮地）</li>
-            <li><strong>核装備</strong>: Razorfall（靴）、スモークウィーバー（Smoke Weaver）、モーニングフロスト（Mourningfrost 採用型も可）</li>
+            <li><strong>戦い方</strong>: ユニーク靴 <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmGZwdiA" target="_blank" rel="noopener noreferrer">レザーフォール（Razorfall）</a> により <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/aerial_assault" target="_blank" rel="noopener noreferrer">エアリアルアサルト</a> で飛び込むたびに <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/umbral_blades" target="_blank" rel="noopener noreferrer">影身の刃</a> を自動展開し、雑魚集団を一瞬で薙ぎ払います（<a class="ext-inline-link" href="https://www.lastepochtools.com/planner/ja/AKgx22aZ" target="_blank" rel="noopener noreferrer">Patch 1.5 別バリエーション</a>）。</li>
+            <li><strong>強み</strong>: 移動そのものが広範囲攻撃になるため、モノリス高速周回やシーズン要素の消化に極めて快適です。</li>
+            <li><strong>採用スキル</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/umbral_blades" target="_blank" rel="noopener noreferrer">影身の刃</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/aerial_assault" target="_blank" rel="noopener noreferrer">エアリアルアサルト</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/dive_bomb" target="_blank" rel="noopener noreferrer">ダイブボム</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconry" target="_blank" rel="noopener noreferrer">隼狩り</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shift" target="_blank" rel="noopener noreferrer">縮地</a>）</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmGZwdiA" target="_blank" rel="noopener noreferrer">レザーフォール（Razorfall）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwiMGYDYg" target="_blank" rel="noopener noreferrer">煙の織り手（Smoke Weaver）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMYTiA" target="_blank" rel="noopener noreferrer">嘆きの霜（Mourningfrost）</a></li>
           </ul>
-          <div class="skill-actions">
-            <a class="le-link" href="https://www.lastepochtools.com/planner/ja/QdzvrNZe" target="_blank" rel="noopener noreferrer">LE プランナー (1.5 / QdzvrNZe)</a>
-            <a class="le-link" href="https://www.lastepochtools.com/planner/ja/AKgx22aZ" target="_blank" rel="noopener noreferrer">LE プランナー (1.5 / AKgx22aZ)</a>
-          </div>
         </article>
       </div>
     </section>
 
-    <!-- 5. 4 大メカニズム -->
+    <!-- 6. 4 大メカニズム -->
     <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
       <h2 class="section-title" id="title-mechanics">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <circle cx="12" cy="12" r="3"></circle>
           <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.85 1 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
         </svg>
-        5. 攻撃・防御・マナ・快適性のメカニズム
+        6. 攻撃・防御・マナ・快適性のメカニズム
       </h2>
 
       <div class="mech-grid">
         <div class="mech-card">
           <h3 class="mech-card-title">攻撃スケーリング</h3>
           <ul>
-            <li><strong>敏捷力（Dexterity）が万能軸</strong>: 隼狩り（+4%/pt）、ファルコナージャーニー、バリスタ（Armed Construction）、Razorfall すべてが Dex で乗算的に伸びます。</li>
-            <li><strong>本人ステータスの継承</strong>: 「手練れのハンター」「眼を狙え!」「Finesse Them」「Shared Enhancements」等により、プレイヤー側のクリティカル率・クリ倍率・投擲/弓ダメージがそのまま隼やバリスタに乗ります。</li>
-            <li><strong>シャドウ多重ヒット</strong>: スモークボム等で影を複数配置し、ダイブボムや影身の刃で同時発火させることで単体火力も跳ね上がります。</li>
+            <li><strong>敏捷力（Dexterity）が万能軸</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/falconry" target="_blank" rel="noopener noreferrer">隼狩り</a>（+4%/pt）、ファルコナージャーニー、バリスタ（Armed Construction）、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmGZwdiA" target="_blank" rel="noopener noreferrer">レザーフォール</a> すべてが Dex で乗算的に伸びます。</li>
+            <li><strong>本人ステータスの継承</strong>: 「手練れのハンター」「眼を狙え!」「Finesse Them」「Shared Enhancements」等により、プレイヤー側のクリティカル率・倍率・投擲/弓ダメージが隼やバリスタへそのまま乗ります。</li>
+            <li><strong>シャドウ多重ヒット</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smoke_bomb" target="_blank" rel="noopener noreferrer">スモークボム</a> 等で影を複数配置し、ダイブボムや影身の刃で同時発火させることで単体火力も跳ね上がります。</li>
           </ul>
         </div>
 
@@ -475,16 +661,16 @@
           <h3 class="mech-card-title">防御レイヤー</h3>
           <ul>
             <li><strong>Silver Shroud ＆ Dodge（回避）</strong>: Dex による高回避率に加え、スモークボムやパッシブ（Coordinated Fade）で <em>Silver Shroud</em> を維持し、確定回避＋ウォードで一撃死を防ぎます。</li>
-            <li><strong>Glancing Blow ＆ 移動時軽減</strong>: <em>Poise</em>（Glancing Blow）と <em>Evasion</em>（移動中ダメ軽減）により、止まらず動き続けることで耐久が上がります。</li>
-            <li><strong>ZHP 特化時の注意</strong>: 高コラプション特化の ZHP 型はヘルス・耐性を切る代わりに「スモークボム無敵＋手動回避」前提となるため、通常プレイではヘルス・耐性75%・クリ回避も確保推奨です。</li>
+            <li><strong>Glancing Blow ＆ 移動時軽減</strong>: <em>Poise</em>（Glancing Blow）と <em>Evasion</em>（移動中ダメ軽減）、さらに手裏剣の <em>Blade Shield</em>（アーマー増）を組み合わせます。</li>
+            <li><strong>ZHP 特化時の注意</strong>: 高コラプション特化の ZHP 型はヘルス・耐性を切る代わりに「スモークボム無敵＋手動回避」前提となるため、通常プレイではヘルス・耐性75%・クリ回避を確保します。</li>
           </ul>
         </div>
 
         <div class="mech-card">
           <h3 class="mech-card-title">マナ維持の仕組み</h3>
           <ul>
-            <li><strong>消費の重いスキル群</strong>: バリスタ連打や爆破罠・疾風のファルコン（+40 マナ）はマナ負荷が高い点に注意が必要です。</li>
-            <li><strong>Season 5 エターナルフォント軸</strong>: アミュレット「エターナルフォント（Eternal Font）」が毎秒自動でポーション使用を発動し、ベルトの実験的アフィックス「ポーション使用時マナ回復」で半永久ループを組めます。</li>
+            <li><strong>消費の重いスキル群</strong>: バリスタ連打や爆破罠・疾風のファルコン（+40 マナ）はマナ消費が重いため供給手段が必須です。</li>
+            <li><strong>Season 5 エターナルフォント軸</strong>: アミュレット <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmBYHYGYg" target="_blank" rel="noopener noreferrer">エターナルフォント（Eternal Font）</a> が毎秒自動でポーション使用を発動し、ベルトの実験的アフィックス「ポーション使用時マナ回復」で半永久ループを組めます。</li>
             <li><strong>通常構築での回復手段</strong>: 隼狩りの「狩りの成果」、ローグ「Sapping Strikes（0マナスキル命中時回復）」、ベルトのポーション回復、指輪/アミュレットのマナ回復速度で補います。</li>
           </ul>
         </div>
@@ -492,7 +678,7 @@
         <div class="mech-card">
           <h3 class="mech-card-title">快適性（QoL）・周回テンポ</h3>
           <ul>
-            <li><strong>ミニオン同行（実験的靴アフィックス）</strong>: 「移動スキル使用時にミニオンを同行させる（Minions Transported with Traversal Skills）」靴により、エアリアルアサルトで着地した場所へバリスタを瞬間移動させられます。</li>
+            <li><strong>ミニオン同行（実験的靴アフィックス）</strong>: 「移動スキル使用時にミニオンを同行させる（Minions Transported with Traversal Skills）」靴により、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/aerial_assault" target="_blank" rel="noopener noreferrer">エアリアルアサルト</a> で着地した場所へバリスタを瞬間移動させられます。</li>
             <li><strong>常時 Haste（迅速）</strong>: 「Agility」「Raptor's Wings」「目覚めの翼」等で攻撃・移動速度バフが途切れず、走破性が極めて快適です。</li>
             <li><strong>CD 短縮の噛み合わせ</strong>: クールダウン回復速度（CDR）と <em>Free Lofting Bird</em>（罠起爆で隼 CD 短縮）を積むことで待ち時間ストレスが消えます。</li>
           </ul>
@@ -500,17 +686,17 @@
       </div>
     </section>
 
-    <!-- 6. 人気の装備・アフィックス -->
+    <!-- 7. 人気の装備・アフィックス -->
     <section class="section" id="sec-gear" aria-labelledby="title-gear">
       <h2 class="section-title" id="title-gear">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M20 7l-8-4-8 4v10l8 4 8-4V7z"></path>
           <path d="M12 21V11M12 11l8-4M12 11L4 7"></path>
         </svg>
-        6. 人気ユニーク装備＆部位別アフィックス
+        7. 人気ユニーク装備＆部位別アフィックス
       </h2>
 
-      <h3 class="section-title" style="font-size: 1rem; margin-top: 12px;">主要ユニーク装備一覧（LE Tools DB リンク付き）</h3>
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 12px;">主要ユニーク装備一覧（装備名から直接 LE Tools DB へ移動可能）</h3>
       <div class="table-scroll">
         <table>
           <thead>
@@ -518,69 +704,68 @@
               <th>装備名（日 / 英）</th>
               <th>部位</th>
               <th>主な採用理由・効果</th>
-              <th>LE Tools</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>エスリンの抵抗</strong><br><span class="skill-en">Uethrin's Stand</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMoZgdiA" target="_blank" rel="noopener noreferrer"><strong>エスリンの抵抗</strong><br><span class="skill-en">Uethrin's Stand</span></a></td>
               <td>弓</td>
-              <td>バリスタ型の中核弓。最大バリスタ数と攻撃性能を伸ばし、LP 品へミニオン・物理貫通等を合成。</td>
-              <td><a href="https://www.lastepochtools.com/db/ja/items/UAzCMoZgdiA" target="_blank" rel="noopener noreferrer">DB を見る</a></td>
+              <td>バリスタ型の中核弓。最大バリスタ数と攻撃性能を伸ばし、LP 品へミニオンダメや物理貫通を合成。</td>
             </tr>
             <tr>
-              <td><strong>エターナルフォント</strong><br><span class="skill-en">Eternal Font</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmBYHYGYg" target="_blank" rel="noopener noreferrer"><strong>エターナルフォント</strong><br><span class="skill-en">Eternal Font</span></a></td>
               <td>アミュレット</td>
               <td>Season 5 注目のチェイスユニーク。ポーション有無に関わらず毎秒ポーション効果を発動し、マナ・ウォード自動ループを実現。</td>
-              <td><a href="https://www.lastepochtools.com/db/ja/items/UAwRmBYHYGYg" target="_blank" rel="noopener noreferrer">DB を見る</a></td>
             </tr>
             <tr>
-              <td><strong>タロンズ・オブ・ヴァラー</strong><br><span class="skill-en">Talons of Valor</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsGZwFiA" target="_blank" rel="noopener noreferrer"><strong>勇気の鉤爪</strong><br><span class="skill-en">Talons of Valor</span></a></td>
               <td>長弓</td>
-              <td>ダイブボム型の最高峰。隼狩り/ダイブボム/エアリアルアサルトのスキル Lv+1〜4 と、クリティカル時の隼 CD 25% 回復が破格。</td>
-              <td><a href="https://www.lastepochtools.com/db/ja/items/unique-weapons" target="_blank" rel="noopener noreferrer">武器 DB</a></td>
+              <td>ダイブボム型の最高峰。隼狩り/ダイブボム/エアリアルアサルト Lv+1〜4 と、クリティカル時の隼 CD 25% 回復が破格。</td>
             </tr>
             <tr>
-              <td><strong>Razorfall</strong></td>
-              <td>靴</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmGZwdiA" target="_blank" rel="noopener noreferrer"><strong>レザーフォール</strong><br><span class="skill-en">Razorfall</span></a></td>
+              <td>ブーツ</td>
               <td>移動速度＋投擲スキル Lv+1〜2＋Dex＋Haste 効果増。エアリアルアサルトの羽爆風ごとに影身の刃を生成。</td>
-              <td><a href="https://www.lastepochtools.com/db/ja/items/unique-armour" target="_blank" rel="noopener noreferrer">防具 DB</a></td>
             </tr>
             <tr>
-              <td><strong>モーニングフロスト</strong><br><span class="skill-en">Mourningfrost</span></td>
-              <td>靴</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMYTiA" target="_blank" rel="noopener noreferrer"><strong>嘆きの霜</strong><br><span class="skill-en">Mourningfrost</span></a></td>
+              <td>ブーツ</td>
               <td>Dex スタック分の冷気フラットダメージを付与する超火力靴（物理/冷気耐性低下を他部位で補う必要あり）。</td>
-              <td><a href="https://www.lastepochtools.com/db/ja/items/unique-armour" target="_blank" rel="noopener noreferrer">防具 DB</a></td>
             </tr>
             <tr>
-              <td><strong>ピーク・オブ・ザ・マウンテン</strong><br><span class="skill-en">Peak of the Mountain</span></td>
-              <td>兜</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMoVgNiA" target="_blank" rel="noopener noreferrer"><strong>山の峰</strong><br><span class="skill-en">Peak of the Mountain</span></a></td>
+              <td>ヘルメット</td>
               <td>クリティカル率を劇的に引き上げる定番兜（クリ時リーチ無効のため、他手段で回復を確保）。</td>
-              <td><a href="https://www.lastepochtools.com/db/ja/items/unique-armour" target="_blank" rel="noopener noreferrer">防具 DB</a></td>
             </tr>
             <tr>
-              <td><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMoVgZiA" target="_blank" rel="noopener noreferrer"><strong>山の裾</strong><br><span class="skill-en">Foot of the Mountain</span></a></td>
+              <td>ブーツ</td>
+              <td>静止時に回避値を耐久閾値へ変換し、ボス戦の耐久底上げに採用されるダンジョンユニーク。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
               <td>指輪</td>
               <td>全能力値＋合計ステータス条件で全耐性・被ダメ軽減を得る終盤最高峰の汎用防御リング。</td>
-              <td><a href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer">DB を見る</a></td>
             </tr>
             <tr>
-              <td><strong>Blood Roost</strong></td>
-              <td>手袋</td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcGZwJiA" target="_blank" rel="noopener noreferrer"><strong>血のねぐら</strong><br><span class="skill-en">Blood Roost</span></a></td>
+              <td>グローブ</td>
               <td>プレイヤーの出血付与率を隼へ継承＋ミニオン移動速度＋Dex を補う出血ファルコナー向け手袋。</td>
-              <td><a href="https://www.lastepochtools.com/db/ja/items/UAzCcGZwJiA" target="_blank" rel="noopener noreferrer">DB を見る</a></td>
             </tr>
             <tr>
-              <td><strong>スモークウィーバー</strong><br><span class="skill-en">Smoke Weaver</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCsGZKA" target="_blank" rel="noopener noreferrer"><strong>ファルコンフィスト</strong><br><span class="skill-en">Falcon Fists</span></a></td>
+              <td>グローブ</td>
+              <td>素手制限と引き換えに高い近接速度とフラット火/物理ダメを与え、灰燼斬＋縮地型で使われる手袋。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwiMGYDYg" target="_blank" rel="noopener noreferrer"><strong>煙の織り手</strong><br><span class="skill-en">Smoke Weaver</span></a></td>
               <td>短剣</td>
               <td>「縮地（Shift）」の CD 短縮と回避値を大きく伸ばす高機動短剣。高速ファーム向け。</td>
-              <td><a href="https://www.lastepochtools.com/db/ja/items/unique-weapons" target="_blank" rel="noopener noreferrer">武器 DB</a></td>
             </tr>
             <tr>
-              <td><strong>スローン・オブ・アンビション</strong><br><span class="skill-en">Throne of Ambition</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCsCYEZKA" target="_blank" rel="noopener noreferrer"><strong>野望満ちる王座</strong><br><span class="skill-en">Throne of Ambition</span></a></td>
               <td>アイドル (2x2)</td>
               <td>ボス・レア命中時に火/冷気ダメとアーマーが最大 20 スタック乗算する定番ユニークアイドル。</td>
-              <td><a href="https://www.lastepochtools.com/db/ja/items/unique-idols" target="_blank" rel="noopener noreferrer">アイドル DB</a></td>
             </tr>
           </tbody>
         </table>
@@ -628,7 +813,7 @@
     </section>
 
     <p class="page-footer-note">
-      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語アイテム DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
     </p>
   </main>
 

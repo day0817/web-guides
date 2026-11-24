@@ -21,3 +21,9 @@
 - [x] ステップ3: `site/last-epoch/falconer.html` の制作および `site/last-epoch/index.html`・`site/index.html` 導線更新
 - [x] ステップ4: ローカルサーバーでのスマホ幅（390x844 等）表示確認・リンク疎通確認
 - [x] ステップ5: 公開前チェック・ユーザー承認後の GitHub push ＆ 実 URL 確認
+
+## 改修フェーズ（11/24 ユーザーフィードバック反映）
+- [x] 改修1: 既存 `falconer.html` の全 LE Tools リンク実機監査＆ローグ基本スキル一覧・マスタリー固有パッシブ・ユニーク個別 DB ID の確定
+- [x] 改修2: `docs/マスタリーガイド作成ルール.md` と `site/assets/base.css` の更新（リンク専用ボタン廃止、冒頭差別化・固有パッシブ節の追加）
+- [x] 改修3: `site/last-epoch/falconer.html` の全面改訂（冒頭差別化＋隼パッシブ、最終ビルド用ローグスキル個別掲載、名称直接リンク化）
+- [x] 改修4: 全リンク切れ監査・スマホ幅（390x844）検証・承認後 push ＆ 実 URL 確認
