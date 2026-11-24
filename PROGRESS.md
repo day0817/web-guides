@@ -45,4 +45,9 @@
 ## ヴォイドナイト制作フェーズ（`site/last-epoch/void-knight.html`）
 - [x] VK1: LE Tools 日本語版からヴォイドナイト＆センチネル全スキル・パッシブノード・Season 5 ビルド情報を収集
 - [x] VK2: `site/last-epoch/void-knight.html` 制作およびハブ・全ページ導線更新
-- [/] VK3: 全外部リンク監査・スマホ検証・公開前機密チェック・承認後 push ＆ 実 URL 確認
+- [x] VK3: 全外部リンク監査・スマホ検証・公開前機密チェック・承認後 push ＆ 実 URL 確認
+
+## フォージガード制作フェーズ（`site/last-epoch/forge-guard.html`）
+- [x] FG1: LE Tools 日本語版からフォージガード全スキル（5種）・パッシブノード・Season 5 ビルド情報を収集
+- [x] FG2: `site/last-epoch/forge-guard.html` 制作およびハブ・全ページ導線更新
+- [/] FG3: 全外部リンク監査・スマホ検証・公開前機密チェック・承認後 push ＆ 実 URL 確認

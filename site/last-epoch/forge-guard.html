@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>フォージガード（Forge Guard）Season 5 ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <a href="./index.html">Last Epoch</a>
+      <span aria-hidden="true">/</span>
+      <span>フォージガード</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
+      <h1 class="page-title">フォージガード（Forge Guard）完全ガイド</h1>
+      <p class="page-lead">圧倒的なアーマー・盾ブロックと、自身の装備能力をコピーする <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/manifest_armor" target="_blank" rel="noopener noreferrer">顕現する鎧（Manifest Armor）</a> や鍛造武器ミニオン・跳弾する盾投げで戦うセンチネル上級職の Season 5 ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
+
+      <div class="callout">
+        <strong>Season 5 最新環境メモ：</strong> Season 5 の LE Tools では、両手斧と盾を組み合わせて溶岩爆発を起こす <a class="ext-inline-link" href="https://www.lastepochtools.com/build-guides/lavaguard---spell-shield-throw-forge-guard" target="_blank" rel="noopener noreferrer">Lavaguard（Spell Shield Throw）</a> ガイドや、重装甲で 2,000 コラプション超え・Uber アベロス撃破を狙う「顕現する鎧・出血型」、多数の鍛造武器を召喚する「フォージストライク型」が活躍しています。
+      </div>
+
+      <nav class="toc-pills" aria-label="ページ内目次">
+        <a class="toc-pill" href="#sec-overview">1. 特徴・差別化</a>
+        <a class="toc-pill" href="#sec-ranking">2. 採用スキル順位</a>
+        <a class="toc-pill" href="#sec-fg-skills">3. 固有スキル</a>
+        <a class="toc-pill" href="#sec-sentinel-skills">4. センチネルスキル</a>
+        <a class="toc-pill" href="#sec-passives">5. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">6. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">7. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">8. 装備・アフィックス</a>
+      </nav>
+    </header>
+
+    <!-- 1. マスタリー特徴・差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        1. マスタリーの特徴・他職との差別化・固有パッシブ
+      </h2>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <h3 class="skill-title">フォージガード固有パッシブ＆マスタリーボーナス（重装甲・盾・鍛造ミニオン）</h3>
+          <p class="skill-desc">センチネルの基本パッシブに 20pt 投資してフォージガードを選択すると、象徴スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_strike" target="_blank" rel="noopener noreferrer"><strong>フォージストライク（Forge Strike）</strong></a> の解放ルートが開き、以下のマスタリー固有ボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス①</strong>: <strong>火耐性 +35%</strong> — エンドゲームで重要な火耐性の装備負担を大幅に軽減します。</li>
+            <li><strong>基礎ボーナス②</strong>: <strong>物理耐性 +35%</strong> — アーマーと合わせて物理系の大ダメージに対する安定感を高めます。</li>
+            <li><strong>重装＆鍛造の独自性</strong>: パッシブツリーの「叩き上げ」「太陽の壁」「完璧なる守護者」「反発のブロック」「盾鍛冶師」により全職トップクラスのアーマー・ブロック防御を築けるうえ、装備武器の性能を参照する「フォージドウェポン」や装備 4 部位をコピーする「顕現する鎧」によるミニオン運用が可能です。</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">センチネル 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・代表固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_guard/tree" target="_blank" rel="noopener noreferrer"><strong>フォージガード</strong><br><span class="skill-en">(Forge Guard)</span></a></td>
+              <td>火耐性 +35%／物理耐性 +35%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_strike" target="_blank" rel="noopener noreferrer">フォージストライク</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/manifest_armor" target="_blank" rel="noopener noreferrer">顕現する鎧</a> 等</td>
+              <td><strong>重装甲・盾ブロック・鍛造ミニオン・物理/火/出血特化</strong>。鉄壁の物理軽減と装備連動ミニオン、跳弾するシールドスローが強み。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./paladin.html"><strong>パラディン</strong><br><span class="skill-en">(Paladin)</span></a></td>
+              <td>残ヘルス割合ダメ最大 +100%／調和力 1 につき回復効果 +1%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/holy_aura" target="_blank" rel="noopener noreferrer">聖なるオーラ</a> 等</td>
+              <td><strong>光・火スペル・回復変換・反射型</strong>。元素耐性・回復・ワード重視ならパラディン、物理/火＋ミニオン/盾投擲ならフォージガード。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./void-knight.html"><strong>ヴォイドナイト</strong><br><span class="skill-en">(Void Knight)</span></a></td>
+              <td>近接虚無ダメ +75%／エコー発生率 10%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/erasing_strike" target="_blank" rel="noopener noreferrer">消滅波</a> 等</td>
+              <td><strong>虚無属性・エコー複製・瞬間バースト＆老廃軸</strong>。ブロック不要の両手一撃火力はヴォイドナイト、盾＆重装甲戦術はフォージガード。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Season 5 採用スキルランキング -->
+    <section class="section" id="sec-ranking" aria-labelledby="title-ranking">
+      <h2 class="section-title" id="title-ranking">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+          <path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"></path>
+        </svg>
+        2. Season 5 採用スキルランキング（必須スキル早見表）
+      </h2>
+      <p class="page-lead">Season 5 のフォージガード主力構成（<a class="ext-inline-link" href="https://www.lastepochtools.com/build-guides/lavaguard---spell-shield-throw-forge-guard" target="_blank" rel="noopener noreferrer">Lavaguard</a>・顕現する鎧出血型・鍛造武器フォージストライク型）での必須度早見表です。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>順位 / 必須度</th>
+              <th>スキル名</th>
+              <th>区分</th>
+              <th>Season 5 環境での位置づけ・必須理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--accent">1位 / 必須級 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/ring_of_shields" target="_blank" rel="noopener noreferrer"><strong>リングオブシールド</strong><br><span class="skill-en">(Ring of Shields)</span></a></td>
+              <td>フォージ</td>
+              <td><strong>攻防両面の定番盾バリア枠</strong>。パッシブ「盾鍛冶師」による被ブロック時自動発動に加え、周囲へ回転盾を展開して被ダメ減・回復・火力補助を行う。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">2位 / 主力相棒 (S-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/manifest_armor" target="_blank" rel="noopener noreferrer"><strong>顕現する鎧</strong><br><span class="skill-en">(Manifest Armor)</span></a></td>
+              <td>フォージ</td>
+              <td><strong>S5 2000 コラプション対応ミニオン主役</strong>。自身の鎧・兜・手袋・靴・武器性能を引き継いで戦い、シールドスローの跳弾対象としても活躍。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">3位 / 2大主砲 (A+)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shield_throw" target="_blank" rel="noopener noreferrer"><strong>シールドスロー</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_strike" target="_blank" rel="noopener noreferrer"><strong>フォージストライク</strong></a></td>
+              <td>フォージ</td>
+              <td><strong>投擲・溶岩爆発型（シールドスロー）</strong>と、<strong>金床落下＋鍛造武器召喚（フォージストライク）</strong>の 2 大メインスキル。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">4位 / 近接・トリガー (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/multistrike" target="_blank" rel="noopener noreferrer"><strong>マルチストライク</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer"><strong>聖なる炎</strong></a></td>
+              <td>センチネル</td>
+              <td>鍛造武器召喚・顕現する鎧バフ・出血重ね（マルチストライク）、および Lavaguard 等のスペル連携＆回復（聖なる炎）で高採用率。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">5位 / 移動＆回復 (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lunge" target="_blank" rel="noopener noreferrer"><strong>突進</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shield_rush" target="_blank" rel="noopener noreferrer"><strong>シールドチャージ</strong></a></td>
+              <td>センチネル</td>
+              <td>高速移動と敵陣飛び込み（突進）、または盾装備時の高速踏破（シールドチャージ）。パラディン前半の <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a> を採用する型も多い。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">6位 / 補助・特化 (B〜C)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smelters_wrath" target="_blank" rel="noopener noreferrer">精錬工の憤怒</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warpath" target="_blank" rel="noopener noreferrer">旋風刃</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/vengeance" target="_blank" rel="noopener noreferrer">仇討ち</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rive1" target="_blank" rel="noopener noreferrer">斬り捌き</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shield_bash" target="_blank" rel="noopener noreferrer">シールドバッシュ</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rebuke" target="_blank" rel="noopener noreferrer">弾劾の護り</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/hammer_throw" target="_blank" rel="noopener noreferrer">ハンマースロー</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/javelin" target="_blank" rel="noopener noreferrer">ジャベリン</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_cleave" target="_blank" rel="noopener noreferrer">ヴォイドクリーヴ</a>
+              </td>
+              <td>フォ / センチ</td>
+              <td>一撃チャネリング（精錬工の憤怒）、鍛造武器自動生成スピン（旋風刃）、ブロック・被ダメ軽減補助（仇討ち・弾劾の護り・シールドバッシュ）等を選択。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <strong>基本 5 スロットの組み方目安：</strong> ①<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/ring_of_shields" target="_blank" rel="noopener noreferrer">リングオブシールド</a> ＋ ②<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/manifest_armor" target="_blank" rel="noopener noreferrer">顕現する鎧</a> ＋ ③移動枠（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lunge" target="_blank" rel="noopener noreferrer">突進</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shield_rush" target="_blank" rel="noopener noreferrer">シールドチャージ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a>）を土台に、残り 2 枠へ「<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shield_throw" target="_blank" rel="noopener noreferrer">シールドスロー</a>＋<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_strike" target="_blank" rel="noopener noreferrer">フォージストライク</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎</a>）」あるいは「<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/multistrike" target="_blank" rel="noopener noreferrer">マルチストライク</a>＋<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_strike" target="_blank" rel="noopener noreferrer">フォージストライク</a>」を入れるのが定番です。
+      </div>
+    </section>
+
+    <!-- 3. フォージガード固有スキル＆重要ノード -->
+    <section class="section" id="sec-fg-skills" aria-labelledby="title-fg-skills">
+      <h2 class="section-title" id="title-fg-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7l3-7z"></path>
+        </svg>
+        3. フォージガード固有スキル＆重要ノード
+      </h2>
+      <p class="page-lead">フォージガードで解放される 5 つの固有スキルです。盾装備・ミニオン召喚・溶岩爆発など重厚な戦闘ギミックが揃っています。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v12m-4-4l4 4 4-4M4 20h16"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/forge_strike" target="_blank" rel="noopener noreferrer">
+                  フォージストライク <span class="skill-en">(Forge Strike)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">象徴スキル・鍛造武器召喚</span><span class="badge">出血/火・両手/盾両対応</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">巨大な金床を叩き落として範囲近接攻撃を行い、同時に装備武器のステータスを参照するミニオン「フォージドウェポン（鍛造武器）」を召喚する主力スキルです。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Forged Weapons（最大召喚数＆持続強化）</strong>: 最大 6 体以上の鍛造武器を並べてボスへ集中出血／物理／火炎攻撃を行わせます。</li>
+              <li><strong>盾シナジー / 0〜重マナ調整</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/multistrike" target="_blank" rel="noopener noreferrer">マルチストライク</a> 側からも鍛造武器を自動召喚できるため、併用すると召喚維持が極めて楽になります。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/manifest_armor" target="_blank" rel="noopener noreferrer">
+                  顕現する鎧 <span class="skill-en">(Manifest Armor)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 最強格ミニオン軸</span><span class="badge">装備コピー・跳弾経由点</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">プレイヤーが装備している兜・鎧・手袋・靴（およびノードにより武器/盾）のステータスをコピーして戦う重装ミニオンを召喚します。Season 5 でも 2,000 コラプションを狙える強靭さを持ちます。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>装備ステータス反映（手袋/靴/兜/鎧/武器）</strong>: プレイヤー自身の「手袋」の出血率や「靴」の移動速度・アーマー等がそのまま顕現する鎧を激強化します。</li>
+              <li><strong>シールドスロー跳弾コンボ</strong>: 顕現する鎧へ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shield_throw" target="_blank" rel="noopener noreferrer">シールドスロー</a> をぶつけて跳弾させ、周囲へ溶岩爆発や追加打撃を発生させる運用も鉄板です。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v8M8 12h8"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shield_throw" target="_blank" rel="noopener noreferrer">
+                  シールドスロー <span class="skill-en">(Shield Throw)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 Lavaguard 主砲</span><span class="badge">多段跳弾・溶岩爆発</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">盾を投げ、敵や味方（顕現する鎧・リングオブシールド）の間を次々と跳弾（Ricochet）させて攻撃する投擲スキル。Season 5 の Lavaguard ビルドでは跳弾ごとに溶岩爆発（Lava Burst）を発生させるスペル型としても活躍します。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Lava Burst（溶岩爆発）/ Fork Idol 連携</strong>: アイドル「最初の跳弾で分岐（Fork）」と組み合わせることで、画面中に大量の溶岩火柱を発生させます。</li>
+              <li><strong>Aegis / 味方バウンス</strong>: 顕現する鎧やリングオブシールドへバウンドさせることで、単体ボス戦でも跳弾回数を維持して高火力が出せます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 3v3M12 18v3M3 12h3M18 12h3"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/ring_of_shields" target="_blank" rel="noopener noreferrer">
+                  リングオブシールド <span class="skill-en">(Ring of Shields)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">必須防御バリア</span><span class="badge">被ブロック時自動発動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">自身の周囲に複数のミニオン盾を展開し、投射物ブロック・被ダメ軽減・回復（ヘルス自動回復／割合回復）をもたらす防御スキル。パッシブ「盾鍛冶師」でブロックするたびに自動召喚できるのが強みです。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Phalanx / ヘルス回復・耐性ノード</strong>: 盾がヒットを受けるたび、あるいは終了時にプレイヤーを継続回復し耐久力を激増させます。</li>
+              <li><strong>シールドスロー跳弾媒体</strong>: プレイヤー周囲を回る盾をシールドスローのターゲットにして火力を跳ね上げることも可能です。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c2 5 6 7 6 12a6 6 0 1 1-12 0c0-3 2-5 3-7 0 2 1.5 3 3 3V2z"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/smelters_wrath" target="_blank" rel="noopener noreferrer">
+                  精錬工の憤怒 <span class="skill-en">(Smelter's Wrath)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">チャージ解放・特大一撃</span><span class="badge">火/物理変換</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">構えて力を溜めた後に前方広範囲へ一撃必殺の火炎爆砕を放つチャネリング解放スキル。最大チャージ時のロマン火力が高く、確定クリティカルや炎上特化での一撃ビルドで使われます。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>チャージ速度上昇＆確定クリティカル</strong>: チャネリング中の隙を減らしつつ、1 撃でボスのゲージを大きく削る爆発力を伸ばせます。</li>
+              <li><strong>溶鉱炉ダメージ軽減</strong>: 構え中の被ダメージ軽減を取得することで、ボス前で足を止めるリスクを抑えます。</li>
+            </ul>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. 最終ビルドで使用されうるセンチネル基本スキル（個別記載） -->
+    <section class="section" id="sec-sentinel-skills" aria-labelledby="title-sentinel-skills">
+      <h2 class="section-title" id="title-sentinel-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4"></path>
+        </svg>
+        4. 最終ビルドで使用されうるセンチネル基本スキル（個別解説）
+      </h2>
+      <p class="page-lead">フォージガードの最終ビルドでミニオン召喚母体・出血蓄積・高速移動・防御補助として使われる全 12 のセンチネル基本スキルを個別に解説しています（共通回避 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel_evade" target="_blank" rel="noopener noreferrer">即時避け（Evade）</a> は除く）。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6M12 17l6-6-6-6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/multistrike" target="_blank" rel="noopener noreferrer">マルチストライク <span class="skill-en">(Multistrike)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">鍛造武器召喚・顕現する鎧連携</span><span class="badge">0マナ近接</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">追撃剣で手数を稼ぐ 0 マナ近接攻撃。フォージガードではツリー内の自動「フォージストライク（鍛造武器召喚）」誘発や、出血スタック・Armament バフによる顕現する鎧の強化母体として非常に採用率が高いスキルです。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v12m-4-4l4 4 4-4M4 20h16"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎 <span class="skill-en">(Smite)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">Lavaguard / 投擲トリガー</span><span class="badge">ミニオン回復・スペル火力</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">味方やミニオン（顕現する鎧・鍛造武器）を回復しつつ攻撃できる汎用スペル。Season 5 の Lavaguard（Spell Shield Throw）ガイドではアイドルによる投擲トリガー＋高火炎スペル火力の補助として活躍します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/lunge" target="_blank" rel="noopener noreferrer">突進 <span class="skill-en">(Lunge)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">高速トラバーサル</span><span class="badge">無敵・ミニオン移動連携</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵への高速飛び込みスキル。発動無敵とクールダウン短縮により、フォージストライクや顕現する鎧と一緒に敵パックの中心へ切り込む移動枠の筆頭候補です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M8 12h8"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shield_rush" target="_blank" rel="noopener noreferrer">シールドチャージ <span class="skill-en">(Shield Rush)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">盾型高速移動</span><span class="badge">無ターゲット突進</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">盾を常備するフォージガードと相性抜群の無ターゲット突進スキル。モノリスのエコー高速クリアや、移動しながらの火炎/物理の軌跡攻撃としても使えます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/warpath" target="_blank" rel="noopener noreferrer">旋風刃 <span class="skill-en">(Warpath)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">自動鍛造武器スピン</span><span class="badge">物理/火・出血</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">回転移動するだけで一定間隔ごとに鍛造武器を自動召喚（Forged in Fire / Quenched Steel 系）できるため、完全ハンズフリー気味の鍛造武器＆スピンビルドを組めます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="4" width="14" height="16" rx="4"></rect><path d="M9 12h6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shield_bash" target="_blank" rel="noopener noreferrer">シールドバッシュ <span class="skill-en">(Shield Bash)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">Lavaguard 候補・スタン＆防御</span><span class="badge">盾要求</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ブロック効力に応じて火力が伸び、敵へ強烈なスタンとアーマー粉砕・炎上を与える盾専用近接スキル。盾型フォージガードで近接バーストや移動代替として活躍します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/vengeance" target="_blank" rel="noopener noreferrer">仇討ち <span class="skill-en">(Vengeance)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">被ダメ軽減＋反撃</span><span class="badge">0マナ近接</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">命中時の Bolster バフで被ダメージを減らし、反撃（Riposte）で追加物理/出血ダメを与える 0 マナ近接スキル。重装甲タンク型でさらに硬さを突き詰める枠です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/rive1" target="_blank" rel="noopener noreferrer">斬り捌き <span class="skill-en">(Rive)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">0マナ連撃・引き寄せ</span><span class="badge">物理/火・出血</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">引き寄せ（Pull）や確定クリティカル、時と信仰によるマナ回収を備えた 0 マナ近接。両手武器型の通常振りや、フォージストライク間のマナ回復用として使えます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/rebuke" target="_blank" rel="noopener noreferrer">弾劾の護り <span class="skill-en">(Rebuke)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">超高軽減・回復</span><span class="badge">大技受け</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">チャネリング中の被ダメ劇減と終了時反撃を持つ鉄壁スキル。Uber ボスの回避困難な攻撃を受け止めたい場合やマナ戻しの緊急手段として採用できます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v8M8 12h8"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/hammer_throw" target="_blank" rel="noopener noreferrer">ハンマースロー <span class="skill-en">(Hammer Throw)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">投擲パッシブ活用</span><span class="badge">出血/物理・火</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">フォージガードパッシブの「ペルタスト（投擲ダメ＋投擲速度）」「包囲攻撃の司令官」をそのまま活かせる遠距離投擲スキルです（通常はシールドスローが優先されます）。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L20 4M14 4h6v6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/javelin" target="_blank" rel="noopener noreferrer">ジャベリン <span class="skill-en">(Javelin)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">戦旗バフ＋投擲</span><span class="badge">物理/火・出血</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">戦旗（Battle Standard）を設置して自身とミニオン（顕現する鎧・鍛造武器）に耐久・火力バフを配る用途や、投擲型フォージガードの選択肢になります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M5 10l7-7 7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/void_cleave" target="_blank" rel="noopener noreferrer">ヴォイドクリーヴ <span class="skill-en">(Void Cleave)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">火変換・トラバーサル補助</span><span class="badge">両手武器向け</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">火属性へ変換して「次の攻撃を確定クリティカル化」するノードを持ち、両手武器を持ったフォージストライクや精錬工の憤怒の起動役として機能します。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. パッシブツリー指針 -->
+    <section class="section" id="sec-passives" aria-labelledby="title-passives">
+      <h2 class="section-title" id="title-passives">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="6" r="3"></circle>
+          <circle cx="18" cy="18" r="3"></circle>
+          <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
+        </svg>
+        5. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel/tree" target="_blank" rel="noopener noreferrer">センチネル</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_guard/tree" target="_blank" rel="noopener noreferrer">フォージガード</a>）
+      </h2>
+      <p class="page-lead">センチネル前半でアーマー・ブロック率・筋力・時と信仰を押さえ、フォージガード側で盾ブロック連動・アーマー倍増・ミニオン＆状態異常強化を積み上げます。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>ツリー区分</th>
+              <th>注目パッシブ（LE Tools 日本語版）</th>
+              <th>主な効果・役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel/tree" target="_blank" rel="noopener noreferrer">センチネル</a></td>
+              <td>巨大な力 / 装甲硬化 / 剛堅 / 再生のイージス</td>
+              <td>筋力・周囲からの被ダメ減・ブロック率＆ブロック時回復を揃える 20pt 基盤。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel/tree" target="_blank" rel="noopener noreferrer">センチネル</a></td>
+              <td>時と信仰 / 圧倒的存在</td>
+              <td>近接＆スマイトの安定マナ回収と近接物理ベース補強。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_guard/tree" target="_blank" rel="noopener noreferrer">フォージガード</a></td>
+              <td>叩き上げ / 完璧なる守護者 / 太陽の壁 / 溶鉄</td>
+              <td>物理耐性・盾装備時アーマー・ブロック率 50% 以上で効果 2 倍の被ダメ軽減を得る鉄壁ライン。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_guard/tree" target="_blank" rel="noopener noreferrer">フォージガード</a></td>
+              <td>盾鍛冶師 / 反発のブロック</td>
+              <td>ブロック時に確率で「リングオブシールド」自動発動＋ブロック回数ごとのアーマー/火力上昇。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_guard/tree" target="_blank" rel="noopener noreferrer">フォージガード</a></td>
+              <td>ペルタスト / 包囲攻撃の司令官 / シールドブレイカー</td>
+              <td>投擲速度・投擲ダメ・盾ブロック効力・物理/火耐性寸断を伸ばすシールドスロー系の要。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_guard/tree" target="_blank" rel="noopener noreferrer">フォージガード</a></td>
+              <td>折り返し鍛錬 / 指揮官 / 精錬工の力 / 金槌と金床</td>
+              <td>顕現する鎧と鍛造武器の追加物理ダメ・持続延長・出血/炎上付与・アーマー寸断を底上げ。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_guard/tree" target="_blank" rel="noopener noreferrer">フォージガード</a></td>
+              <td>武器マスター / 武器使いの達人 / 炎と激情 / 強烈な一撃</td>
+              <td>筋力・武器種別ボーナス（両手武器＋盾併用等）・出血/炎上持続・マナコスト比例ダメ加算。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. シーズン 5 人気ビルド 3 選 -->
+    <section class="section" id="sec-builds" aria-labelledby="title-builds">
+      <h2 class="section-title" id="title-builds">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        </svg>
+        6. Season 5（Patch 1.5）人気ビルド 3 選
+      </h2>
+      <p class="page-lead">Season 5 で高評価を得ているフォージガードの代表 3 アーキタイプ（LE Tools 掲載 S5 公式ガイド＋メタ構成）です。</p>
+
+      <div class="stack-list">
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/build-guides/lavaguard---spell-shield-throw-forge-guard" target="_blank" rel="noopener noreferrer">
+                ① ラヴァガード（Lavaguard / スペル・シールドスロー型）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 ビルドガイド掲載 / 高コラプション周回</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: 両手斧と盾を同時装備し、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shield_throw" target="_blank" rel="noopener noreferrer">シールドスロー</a> の跳弾＆分岐ごとに溶岩爆発（Lava Burst）のスペル火力を大量発生させる S5 注目のハイブリッド型（<a class="ext-inline-link" href="https://www.lastepochtools.com/planner/ja/oR6ePvyL" target="_blank" rel="noopener noreferrer">LE プランナー</a>）。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGZ2I" target="_blank" rel="noopener noreferrer">マラトロスの背骨</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsGYCYE4g" target="_blank" rel="noopener noreferrer">サイゲオンの報復</a> 等（<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRg7CCcAcQ" target="_blank" rel="noopener noreferrer">栄誉の要塞</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcBYGYHYg" target="_blank" rel="noopener noreferrer">原始の律動</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgzATArAnEA" target="_blank" rel="noopener noreferrer">災難の葬火</a> 活用）。</li>
+            <li><strong>採用スキル</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shield_throw" target="_blank" rel="noopener noreferrer">シールドスロー</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/manifest_armor" target="_blank" rel="noopener noreferrer">顕現する鎧</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/ring_of_shields" target="_blank" rel="noopener noreferrer">リングオブシールド</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_strike" target="_blank" rel="noopener noreferrer">フォージストライク</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/manifest_armor" target="_blank" rel="noopener noreferrer">
+                ② 顕現する鎧・出血ジャガーノート型（Manifest Armor Bleed）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 2000+ コラプション / Uber 対応</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: 自キャラを極限まで重装甲化し、その防具・武器・手袋（出血付与率）をコピーした <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/manifest_armor" target="_blank" rel="noopener noreferrer">顕現する鎧</a> と自身が連携してボスへ大量の出血スタックを叩き込みます。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwjMBYA4g" target="_blank" rel="noopener noreferrer">幻影の一握（Phantom Grip）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcEYA4HYg" target="_blank" rel="noopener noreferrer">傷口に塩（Salt the Wound）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAswdgRiA" target="_blank" rel="noopener noreferrer">ヴァルディルの杯（Valdyr's Chalice）</a> 等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/manifest_armor" target="_blank" rel="noopener noreferrer">顕現する鎧</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/multistrike" target="_blank" rel="noopener noreferrer">マルチストライク</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_strike" target="_blank" rel="noopener noreferrer">フォージストライク</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/ring_of_shields" target="_blank" rel="noopener noreferrer">リングオブシールド</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a>（または突進/シールドチャージ）</li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/forge_strike" target="_blank" rel="noopener noreferrer">
+                ③ 鍛造武器＆フォージストライク出血型（Forged Weapons）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge">ミニオン軍団 / 安定ボス削り</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_strike" target="_blank" rel="noopener noreferrer">フォージストライク</a> と <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/multistrike" target="_blank" rel="noopener noreferrer">マルチストライク</a>（または旋風刃）から武器参照の鍛造武器ミニオンを多数展開し、プレイヤー本体の回避中も自動攻撃と出血・炎上で敵を削り続けます。</li>
+            <li><strong>核装備</strong>: 陽光のセット（<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCswDlI" target="_blank" rel="noopener noreferrer">陽光のハンマー</a>・<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwZgnMAcBsQ" target="_blank" rel="noopener noreferrer">陽光の鎧</a>）、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwjMBYA4g" target="_blank" rel="noopener noreferrer">幻影の一握</a> 等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_strike" target="_blank" rel="noopener noreferrer">フォージストライク</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/manifest_armor" target="_blank" rel="noopener noreferrer">顕現する鎧</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/multistrike" target="_blank" rel="noopener noreferrer">マルチストライク</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/ring_of_shields" target="_blank" rel="noopener noreferrer">リングオブシールド</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lunge" target="_blank" rel="noopener noreferrer">突進</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. 4 大メカニズム -->
+    <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
+      <h2 class="section-title" id="title-mechanics">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.85 1 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        7. 攻撃・防御・マナ・快適性のメカニズム
+      </h2>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <h3 class="mech-card-title">攻撃スケーリング</h3>
+          <ul>
+            <li><strong>装備コピー＋ミニオン共存</strong>: 顕現する鎧と鍛造武器は自身の装備や筋力/調和力/出血率を参照するため、自己強化＝ミニオン火力の同時強化になります。</li>
+            <li><strong>盾跳弾＆両手斧＋盾</strong>: パッシブや Lavaguard 構成では両手斧の超高基礎ダメージを盾投擲・溶岩爆発へ持ち込めます。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">防御レイヤー（超高アーマー＋ブロック）</h3>
+          <ul>
+            <li><strong>常時ブロック＋自動リングオブシールド</strong>: 高いブロック率・ブロック効力を維持しながら被弾ごとに盾バリアを張り直し、全クラス屈指の物理軽減を得ます。</li>
+            <li><strong>「太陽の壁」＋ポーション「溶鉄」</strong>: ブロック率 50% 以上で常時被ダメ減が倍化し、ポーション併用で継続ダメージまで大幅に抑えます。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">マナ維持の仕組み</h3>
+          <ul>
+            <li><strong>0マナ起点＆自動召喚</strong>: <em>マルチストライク</em> の 0 マナ連打でフォージストライクや鍛造武器を自動展開でき、マナ消費をほぼ気にせず戦えます。</li>
+            <li><strong>シールドスロー＆強烈な一撃</strong>: 投擲コストを調整しつつマナ自動回復と「時と信仰」を組み合わせれば息切れしません。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">快適性（QoL）・周回テンポ</h3>
+          <ul>
+            <li><strong>盾バリアの自動維持</strong>: パッシブ「盾鍛冶師」によりリングオブシールドを手動更新する手間が省けます。</li>
+            <li><strong>ミニオンの自動追従＋跳弾雑魚処理</strong>: シールドスローの多段跳弾と顕現する鎧の突進により、硬さと周回スピードを両立できます。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 人気の装備・アフィックス -->
+    <section class="section" id="sec-gear" aria-labelledby="title-gear">
+      <h2 class="section-title" id="title-gear">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20 7l-8-4-8 4v10l8 4 8-4V7z"></path>
+          <path d="M12 21V11M12 11l8-4M12 11L4 7"></path>
+        </svg>
+        8. 人気ユニーク装備＆部位別アフィックス
+      </h2>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 12px;">主要ユニーク装備一覧（装備名から直接 LE Tools DB へ移動可能）</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>装備名（日 / 英）</th>
+              <th>部位</th>
+              <th>主な採用理由・効果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsGYCYE4g" target="_blank" rel="noopener noreferrer"><strong>サイゲオンの報復</strong><br><span class="skill-en">Sigeon's Reprisal</span></a></td>
+              <td>盾</td>
+              <td>「シールドスロー」の跳弾数やブロック反射を強化するシールドスロー型の定番盾。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRg7CCcAcQ" target="_blank" rel="noopener noreferrer"><strong>栄誉の要塞</strong><br><span class="skill-en">Bastion of Honour</span></a></td>
+              <td>盾</td>
+              <td>近距離の敵に対するブロック率を 100% 付近まで押し上げる超堅牢ユニーク盾。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwjMBYA4g" target="_blank" rel="noopener noreferrer"><strong>幻影の一握</strong><br><span class="skill-en">Phantom Grip</span></a></td>
+              <td>指輪</td>
+              <td>フラットクリ率とミニオン関連の強力な補正を同時に得られる顕現する鎧/鍛造武器の必須級指輪。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcEYA4HYg" target="_blank" rel="noopener noreferrer"><strong>傷口に塩</strong><br><span class="skill-en">Salt the Wound</span></a></td>
+              <td>グローブ</td>
+              <td>出血スタックを大量に出血ダメージ/クリ倍率系へ繋ぐ出血型（顕現する鎧含む）の定番手袋。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAswdgRiA" target="_blank" rel="noopener noreferrer"><strong>ヴァルディルの杯</strong><br><span class="skill-en">Valdyr's Chalice</span></a></td>
+              <td>レリック</td>
+              <td>高い出血付与率と出血ダメージ・敵出血時のヘルス吸収を提供する出血型必須レリック。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsEYFYGYg" target="_blank" rel="noopener noreferrer"><strong>アルジェントゥスの翼</strong><br><span class="skill-en">Wings of Argentus</span></a></td>
+              <td>鎧</td>
+              <td>移動中の被ダメージ大幅軽減と移動速度・ヘイスト効果を得る高速周回・高耐久アーマー。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCswDlI" target="_blank" rel="noopener noreferrer"><strong>陽光のハンマー</strong><br><span class="skill-en">Sunforged Hammer</span></a></td>
+              <td>両手槌</td>
+              <td>「フォージストライク」「鍛造武器」向けセット両手武器。陽光の鎧/兜と合わせて火・物理鍛造を強化。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwZgnMAcBsQ" target="_blank" rel="noopener noreferrer"><strong>陽光の鎧</strong><br><span class="skill-en">Sunforged Cuirass</span></a></td>
+              <td>鎧</td>
+              <td>セット効果と高いアーマー・鍛造武器/フォージストライク補正を持つフォージガード専用鎧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcBYGYHYg" target="_blank" rel="noopener noreferrer"><strong>原始の律動</strong><br><span class="skill-en">Primal Cadence</span></a></td>
+              <td>両手斧</td>
+              <td>S5 Lavaguard ガイドの両手斧＋盾構成の選択肢として採用されるユニーク両手斧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgzATArAnEA" target="_blank" rel="noopener noreferrer"><strong>災難の葬火</strong><br><span class="skill-en">Pyre of Affliction</span></a></td>
+              <td>両手斧</td>
+              <td>Lavaguard 等の火炎・継続ダメ・両手斧＋盾構成で火力を伸ばすユニーク両手斧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgbATArALEA" target="_blank" rel="noopener noreferrer"><strong>山の肌</strong><br><span class="skill-en">Face of the Mountain</span></a></td>
+              <td>盾</td>
+              <td>ブロック時の耐久閾値・スタン無効化等をもたらす高ブロック盾の選択肢。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
+              <td>指輪</td>
+              <td>全能力値＋ステータス条件で全耐性・被ダメ軽減を得るエンドゲーム最高峰の汎用防御リング。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 20px;">部位別おすすめアフィックス優先度</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>Prefix（攻撃・ミニオン・投擲）</th>
+              <th>Suffix（ブロック・アーマー・耐久）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器・盾</td>
+              <td>攻撃/投擲速度、物理/火/ミニオンダメ、スペルダメ（Lavaguard）</td>
+              <td><strong>ブロック率・ブロック効力</strong>、アーマー、アーマー寸断</td>
+            </tr>
+            <tr>
+              <td>兜・鎧</td>
+              <td><strong>筋力（Strength）</strong>、顕現する鎧/主力スキル Lv+、調和力</td>
+              <td>増加アーマー（顕現する鎧にも反映）、ハイブリッドヘルス、不足耐性</td>
+            </tr>
+            <tr>
+              <td>手袋・ベルト</td>
+              <td>近接/投擲攻撃速度、出血付与率（手袋は顕現する鎧へ反映）、火/物理ダメ</td>
+              <td>アーマー、ハイブリッドヘルス、ポーション使用時耐久/ヘルス</td>
+            </tr>
+            <tr>
+              <td>靴</td>
+              <td>移動速度（最優先・顕現する鎧にも反映）、筋力、生命力</td>
+              <td>アーマー、ハイブリッドヘルス、クリ回避/軽減</td>
+            </tr>
+            <tr>
+              <td>アクセサリー</td>
+              <td>投擲/スペル/ミニオンダメ、攻撃/詠唱速度、物理/火貫通・継続ダメ</td>
+              <td>ヘルス、虚無/冷気/雷/毒耐性（火・物理耐性は固有ボーナスで稼ぎやすいため他耐性優先）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="page-footer-note">
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/build-guides/filter/cycle=rage-of-the-frostborn" target="_blank" rel="noopener noreferrer">Last Epoch Tools（Season 5 ビルドガイド）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+    </p>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html">Last Epoch ガイド</a></li>
+      <li><a class="nav-link" href="./falconer.html">ファルコナー（Season 5）</a></li>
+      <li><a class="nav-link" href="./paladin.html">パラディン（Season 5）</a></li>
+      <li><a class="nav-link" href="./void-knight.html">ヴォイドナイト（Season 5）</a></li>
+      <li><a class="nav-link" href="./forge-guard.html" aria-current="page">フォージガード（Season 5）</a></li>
+      <li><a class="nav-link" href="./sorcerer.html">ソーサラー（Season 5）</a></li>
+      <li><a class="nav-link" href="./spellblade.html">スペルブレード（Season 5）</a></li>
+      <li><a class="nav-link" href="./runemaster.html">ルーンマスター（Season 5）</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
