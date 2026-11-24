@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>シャーマン（Shaman）Season 5 ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <a href="./index.html">Last Epoch</a>
+      <span aria-hidden="true">/</span>
+      <span>シャーマン</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
+      <h1 class="page-title">シャーマン（Shaman）完全ガイド</h1>
+      <p class="page-lead">トーテム召喚を起点に元素耐性・近接＆スペル倍率・マナ回復を一気に引き出し、「大雪崩」「大竜巻」「大地震」や Season 5 新召喚「潮のエレメンタル」で嵐を呼ぶプライマリスト上級職の Season 5 ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
+
+      <div class="callout">
+        <strong>Season 5 最新環境メモ：</strong> Season 5（Patch 1.5）では、新専用スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist_summon_elemental" target="_blank" rel="noopener noreferrer">潮のエレメンタル召喚（Summon Tide Elemental）</a> や新両手剣 <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsBYHYCYg" target="_blank" rel="noopener noreferrer">ヘオロットの休息（Heorot's Repose）</a> により、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/avalanche" target="_blank" rel="noopener noreferrer">大雪崩（Avalanche）</a> トリガー／集中力マナ回復軸や <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/tornado" target="_blank" rel="noopener noreferrer">大竜巻（Tornado）</a> 雷嵐軸の選択肢が大きく広がっています。
+      </div>
+
+      <nav class="toc-pills" aria-label="ページ内目次">
+        <a class="toc-pill" href="#sec-overview">1. 特徴・差別化</a>
+        <a class="toc-pill" href="#sec-ranking">2. 採用スキル順位</a>
+        <a class="toc-pill" href="#sec-shaman-skills">3. 固有スキル</a>
+        <a class="toc-pill" href="#sec-primal-skills">4. プライマリストスキル</a>
+        <a class="toc-pill" href="#sec-passives">5. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">6. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">7. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">8. 装備・アフィックス</a>
+      </nav>
+    </header>
+
+    <!-- 1. マスタリー特徴・差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path>
+        </svg>
+        1. マスタリーの特徴・他職との差別化・固有パッシブ
+      </h2>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <h3 class="skill-title">シャーマン固有パッシブ＆マスタリーボーナス（集中力＋トーテム維持恩恵）</h3>
+          <p class="skill-desc">プライマリストの基本パッシブに 20pt 投資してシャーマンを選択すると、固有スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/tornado" target="_blank" rel="noopener noreferrer"><strong>大竜巻（Tornado）</strong></a> の解放ルートが開き、以下のマスタリー固有ボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス①</strong>: <strong>トーテムのマナコスト -5 ＆ 集中力（Attunement）+10</strong> — 各種トーテム設置が非常に軽くなり、スペル火力・マナ基盤となる集中力も最初から底上げされます。</li>
+            <li><strong>基礎ボーナス②</strong>: <strong>トーテムを制御している間、元素耐性 +50%</strong> — パッシブ「守りの円陣」「沈黙の守り手」「昇天の円陣」「ストームブレード」と合わさり、トーテムが 1 本立つだけで攻防耐性が劇的に完成します。</li>
+            <li><strong>天災トリガーと集中力スケール</strong>: 近接/スペルに連動する「ストームボルト（サンダーストライク／ラゴンの返答）」や、集中力比例の貫通＆マナ再生（「呪術師の注入」「精霊の祠」「雷の化身」）により、冷気と雷を自在に操れます。</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">プライマリスト 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・代表固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shaman/tree" target="_blank" rel="noopener noreferrer"><strong>シャーマン</strong><br><span class="skill-en">(Shaman)</span></a></td>
+              <td>トーテムコスト -5／集中力 +10／トーテム中元素耐性 +50%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/avalanche" target="_blank" rel="noopener noreferrer">大雪崩</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/tornado" target="_blank" rel="noopener noreferrer">大竜巻</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist_summon_elemental" target="_blank" rel="noopener noreferrer">潮のエレメンタル</a></td>
+              <td><strong>冷気/雷元素スペル・トーテム・嵐＆大地トリガーキャスター</strong>。人間形態のまま耐性を楽に確保し広範囲魔法で押す職。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./beastmaster.html"><strong>ビーストマスター</strong><br><span class="skill-en">(Beastmaster)</span></a></td>
+              <td>最大コンパニオン +1／本体＆ミニオン近接ダメ +50%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_bear" target="_blank" rel="noopener noreferrer">熊召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_sabertooth" target="_blank" rel="noopener noreferrer">サーベルタイガー</a></td>
+              <td><strong>野獣コンパニオン共闘＆神髄物理/冷気殴り</strong>。仲間を多数率いたいならビーストマスター、トーテム＋嵐スペルならシャーマン。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./druid.html"><strong>ドルイド</strong><br><span class="skill-en">(Druid)</span></a></td>
+              <td>変身解除後 2 秒間被ダメ 70% 軽減／ヘルス＆マナ +20%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/werebear_form" target="_blank" rel="noopener noreferrer">ウェアベア形態</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swarmblade_form" target="_blank" rel="noopener noreferrer">スウォームブレード</a></td>
+              <td><strong>獣/精霊変身＋レイジリソース戦術</strong>。変身スキルで戦うならドルイド、人間形態のトーテム支援＋元素呪文ならシャーマン。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Season 5 採用スキルランキング -->
+    <section class="section" id="sec-ranking" aria-labelledby="title-ranking">
+      <h2 class="section-title" id="title-ranking">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+          <path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"></path>
+        </svg>
+        2. Season 5 採用スキルランキング（必須スキル早見表）
+      </h2>
+      <p class="page-lead">Season 5 環境のシャーマン主力構成（大雪崩型 / 大竜巻＆迫りくる嵐型 / トーテム＆潮のエレメンタル型）での必須度整理です。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>順位 / 必須度</th>
+              <th>スキル名</th>
+              <th>区分</th>
+              <th>Season 5 環境での位置づけ・必須理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--accent">1位 / ほぼ必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_thorn_totem" target="_blank" rel="noopener noreferrer"><strong>棘のトーテム</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_totem" target="_blank" rel="noopener noreferrer"><strong>嵐のトーテム</strong></a></td>
+              <td>プ / シ</td>
+              <td><strong>シャーマンの「トーテム発動中バフ」すべての起動装置</strong>。0〜低コストで置くだけで耐性+50%・アーマー・速度・スペル乗算が全て有効化。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">2位 / 移動＆シャウト必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/fury_leap" target="_blank" rel="noopener noreferrer"><strong>憤怒の跳躍</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer"><strong>雄叫び</strong></a></td>
+              <td>プライマ</td>
+              <td>無敵＋状態異常解除＋冷気/トーテムバフ（雄叫び）、および跳躍回避＋自動トーテム/大渦展開（憤怒の跳躍）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">3位 / S5 二大主砲 (A+)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/avalanche" target="_blank" rel="noopener noreferrer"><strong>大雪崩</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/tornado" target="_blank" rel="noopener noreferrer"><strong>大竜巻</strong></a></td>
+              <td>シャーマン</td>
+              <td><strong>Season 5 注目の冷気落石雨（大雪崩）</strong>と、<strong>自動追尾＋ストームボルト/大渦を生み続ける移動快適枠（大竜巻）</strong>。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">4位 / 連携＆マナ軸 (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/gathering_storm" target="_blank" rel="noopener noreferrer"><strong>迫りくる嵐</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/maelstrom" target="_blank" rel="noopener noreferrer"><strong>大渦</strong></a></td>
+              <td>プライマ</td>
+              <td>0 マナでストームボルト＋マナ回収＋大雪崩/嵐トリガーを回す「迫りくる嵐」、俊足＆狂乱常時維持の「大渦」。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">5位 / S5 新要素＆剛剣 (A-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist_summon_elemental" target="_blank" rel="noopener noreferrer"><strong>潮のエレメンタル召喚</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/earthquake_slam" target="_blank" rel="noopener noreferrer"><strong>大地震</strong></a></td>
+              <td>シャーマン</td>
+              <td>Season 5 追加の集中力＆水/冷気エレメンタル召喚、およびバルダーの憤激や高スタック余震を使う範囲粉砕「大地震」。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">6位 / 相性・選択枠 (B〜C)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/tempest_strike" target="_blank" rel="noopener noreferrer">嵐撃</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_crow" target="_blank" rel="noopener noreferrer">ストームクロウ召喚</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/eterras_blessing" target="_blank" rel="noopener noreferrer">エテラの祝福</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/upheaval" target="_blank" rel="noopener noreferrer">地走り</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swipe" target="_blank" rel="noopener noreferrer">なぎ払い</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_wolf" target="_blank" rel="noopener noreferrer">狼召喚</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/serpent_strike" target="_blank" rel="noopener noreferrer">毒蛇の一撃</a>
+              </td>
+              <td>プライマ</td>
+              <td>0マナ・マナ回復トリガー（嵐撃）、元素ミニオン並走（クロウ/狼）、大雪崩トリガー剣時の近接媒介（地走り/なぎ払い）。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. シャーマン固有スキル（5種） -->
+    <section class="section" id="sec-shaman-skills" aria-labelledby="title-shaman-skills">
+      <h2 class="section-title" id="title-shaman-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2L4 7v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V7l-8-5z"></path>
+        </svg>
+        3. シャーマン固有スキル＆重要ノード（5種）
+      </h2>
+      <p class="page-lead">スキル名クリックで Last Epoch Tools 日本語版のスキル詳細・ノードツリーが開きます。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c4 4 6 7 6 11a6 6 0 1 1-12 0c0-4 2-7 6-11z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/avalanche" target="_blank" rel="noopener noreferrer">大雪崩 <span class="skill-en">(Avalanche)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 大注目主砲</span><span class="badge">チャネリング / トリガー冷気落石</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">大量の巨大氷塊と雪崩を降らせる広範囲冷気＆物理スペル。Season 5 ではチャネリング化や集中力マナ回復軸、さらに新両手剣 <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsBYHYCYg" target="_blank" rel="noopener noreferrer">ヘオロットの休息</a> による近接ヒット連動の無料落石が大人気です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M12 7v5l3 3"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/tornado" target="_blank" rel="noopener noreferrer">大竜巻 <span class="skill-en">(Tornado)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">周回快適・自動追尾嵐</span><span class="badge">ストームオーブ / バフ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵を追いかけたり自分の周囲を旋回させたりできる暴風魔法。移動速度＆攻撃/詠唱速度バフの付与、周囲への自動「ストームボルト」射出により歩きながらマップを制圧する要になります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M7 12h10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_totem" target="_blank" rel="noopener noreferrer">嵐のトーテム召喚 <span class="skill-en">(Summon Storm Totem)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">雷トーテム主砲＆バフ鍵</span><span class="badge">ストームオーブ召喚</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">自動追尾の連鎖雷やブリザード（冷気変換）を放つ上位トーテム。「大竜巻を吸収して強化」「自身の耐性＋スペル乗算バフの常時維持」として本体型・トーテム型双方で重宝されます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L10 10l4 4 6-10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/earthquake_slam" target="_blank" rel="noopener noreferrer">大地震 <span class="skill-en">(Earthquake)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">高コスト特大余震スラム</span><span class="badge">物理 / 火 / 雷変換</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">地面を叩き割って余震（Aftershocks）を連続発生させる重撃。雷スペル余震型やバルダーの憤激（跳躍連動無料発動）型の高単体火力源として根強い人気を持ちます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/primalist_summon_elemental" target="_blank" rel="noopener noreferrer">潮のエレメンタル召喚 <span class="skill-en">(Summon Tide Elemental)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">Season 5 新規追加スキル</span><span class="badge">冷気・水ミニオン＋治癒支援</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">Season 5（Patch 1.5）で加わった元素精霊召喚。高い汎用元素＆冷気性能により、「ストームクロウ」やトーテム群と組むシャーマン元素召喚ハイブリッドに新風を吹き込んでいます。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. プライマリスト基本スキル（12種個別記載） -->
+    <section class="section" id="sec-primal-skills" aria-labelledby="title-primal-skills">
+      <h2 class="section-title" id="title-primal-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+          <path d="M9 9h6v6H9z"></path>
+        </svg>
+        4. 最終ビルドで採用されうるプライマリスト基本スキル（全12種個別解説）
+      </h2>
+      <p class="page-lead">プライマリストの基本スキル 12 種（＋共通回避 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist_evade" target="_blank" rel="noopener noreferrer">即時避け</a>）のシャーマン視点での役割を 1 つずつ整理します。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M7 12h10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_thorn_totem" target="_blank" rel="noopener noreferrer">棘のトーテム召喚 <span class="skill-en">(Summon Thorn Totem)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須級トーテムエンジン</span><span class="badge">耐性/スペル乗算トリガー＋回復</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">マスタリーの「-5 マナコスト」でほぼ無料召喚できる基盤トーテム。1 本置くだけで「元素耐性+50%」「守りの円陣」「昇天の円陣（スペル乗算）」を起動でき、複数設置で治癒＆マナ回収もこなします。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/gathering_storm" target="_blank" rel="noopener noreferrer">迫りくる嵐 <span class="skill-en">(Gathering Storm)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">0マナ主砲/起動器</span><span class="badge">ストームボルト＋マナ回収</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">パッシブ「大嵐の構え」によるヒット時マナ回復と相性抜群の 0 マナ嵐攻撃。殴るだけで大量の「ストームボルト」と「ヘオロットの休息」による大雪崩が降り注ぎ、大雪崩用のマナも一気に回収できます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer">雄叫び <span class="skill-en">(Warcry)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須シャウト</span><span class="badge">冷気変換・無敵・状態異常クリア</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">「冷気波（凍結）」「トーテムヘイスト・激昂」「大渦自動獲得」と、防御（1 秒無敵・状態異常解除）を 1 ボタンで担う最強の攻防シャウトです。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/fury_leap" target="_blank" rel="noopener noreferrer">憤怒の跳躍 <span class="skill-en">(Fury Leap)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須移動枠</span><span class="badge">着地大渦/棘トーテム生成</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">高速移動しつつ着地地点に棘のトーテムを自動召喚したり、大渦スタックを獲得したりできるため、トーテムバフ維持と回避を同時に解決します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M12 7v5l3 3"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/maelstrom" target="_blank" rel="noopener noreferrer">大渦 <span class="skill-en">(Maelstrom)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">俊足・狂乱・冷気源</span><span class="badge">自動維持</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">「移動中自動発動」やシャウト/跳躍/大竜巻との連動により、常に 6〜10 スタックを保って移動速度＋詠唱速度＋周囲冷却＆「凍傷」スタックを重ねます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M12 4v16"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/tempest_strike" target="_blank" rel="noopener noreferrer">嵐撃 <span class="skill-en">(Tempest Strike)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">元素近接＋マナ回復/精霊召喚</span><span class="badge">呑みこむ嵐対応</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ヒットごとに雷・冷気・物理スペルを誘発するか、逆にスペル発動を切って「ヒット時大容量マナ回復」に特化できる近接兼トリガー技です。<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBswZgRiA" target="_blank" rel="noopener noreferrer">呑みこむ嵐</a> と組む嵐精霊軸でも活躍。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_crow" target="_blank" rel="noopener noreferrer">ストームクロウ召喚 <span class="skill-en">(Summon Storm Crow)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">S5 潮エレメンタル並走</span><span class="badge">雷/冷気エレメンタル砲台</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">シャーマンの高い集中力＋元素ミニオンパッシブ（「雷の化身」「嵐の長老」「氷砕の天」）の恩恵を丸ごと受け、潮のエレメンタルと並んで弾幕を張れます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/eterras_blessing" target="_blank" rel="noopener noreferrer">エテラの祝福 <span class="skill-en">(Eterra's Blessing)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">トーテム/精霊維持＋バフ</span><span class="badge">治癒</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">トーテムや潮のエレメンタルのヘルスを保ちつつ攻撃/詠唱速度バフを配るサポート枠。元素ミニオン軸で採用余地があります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/upheaval" target="_blank" rel="noopener noreferrer">地走り <span class="skill-en">(Upheaval)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">冷気波／近接大雪崩媒介</span><span class="badge">限定補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">「ヘオロットの休息」近接大雪崩トリガー型や冷気変換ショックウェーブ型を組む際、広範囲を殴りながら大雪崩を降らせる媒介として使えます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L20 4M15 4h5v5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/swipe" target="_blank" rel="noopener noreferrer">なぎ払い <span class="skill-en">(Swipe)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">0マナ近接（限定用途）</span><span class="badge">マナ/キル連動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">迫りくる嵐や嵐撃に比べると元素トリガー量は少ないものの、超高速な 0 マナ連打が欲しい近接大雪崩／ストームボルト媒介として選択可能です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.2L18.5 21 12 16.8 5.5 21l2-7.8L2 9h7l3-7z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_wolf" target="_blank" rel="noopener noreferrer">狼召喚 <span class="skill-en">(Summon Wolf)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">大嵐の結束起動＆咆哮バフ（限定用途）</span><span class="badge">コンパニオン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">パッシブ「大嵐の結束（ミニオン存在時 2 倍）」を満たす枠兼、咆哮による攻撃速度＆クリティカル率供給役として使われることがあります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c3 3 5 6 5 10a5 5 0 1 1-10 0c0-4 2-7 5-10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/serpent_strike" target="_blank" rel="noopener noreferrer">毒蛇の一撃 <span class="skill-en">(Serpent Strike)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">凍傷槍（限定用途）</span><span class="badge">近接 DoT</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">槍限定で冷気・凍傷軸へ切り替える際に選べますが、多くのシャーマン構成では迫りくる嵐または嵐撃が優先されます。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. パッシブツリー指針 -->
+    <section class="section" id="sec-passives" aria-labelledby="title-passives">
+      <h2 class="section-title" id="title-passives">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="6" r="3"></circle>
+          <circle cx="18" cy="18" r="3"></circle>
+          <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
+        </svg>
+        5. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist/tree" target="_blank" rel="noopener noreferrer">プライマリスト</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shaman/tree" target="_blank" rel="noopener noreferrer">シャーマン</a>）
+      </h2>
+      <p class="page-lead">プライマリスト前半で集中力・元素ダメ（大嵐の結束）・野生の知恵を押さえ、シャーマン側で「トーテム連動（守りの円陣・昇天の円陣・沈黙の守り手）」「集中力→マナ回復＆貫通（精霊の祠・呪術師の注入・雷の化身）」「ストームボルト連動」を積みます。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>ツリー区分</th>
+              <th>注目パッシブ（LE Tools 日本語版）</th>
+              <th>主な効果・役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist/tree" target="_blank" rel="noopener noreferrer">プライマリスト</a></td>
+              <td>自然の同調 / 野生の知恵 / 大嵐の結束</td>
+              <td>集中力＋冷気/雷耐性＋スペルダメ＋ミニオン維持時物理/冷気/雷ダメ2倍増。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist/tree" target="_blank" rel="noopener noreferrer">プライマリスト</a></td>
+              <td>原始の腕力 / 刃の調和 / 大樹の枝</td>
+              <td>ヘルス回復、二刀速度バフ、斧装備時スペル＆トーテムフラット加算3倍化。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shaman/tree" target="_blank" rel="noopener noreferrer">シャーマン</a></td>
+              <td>守りの円陣 / 昇天の円陣 / 沈黙の守り手 / トーテムの怒り</td>
+              <td>トーテム発動中の物理/元素耐性・スペル乗算・アーマー・マナ回復・攻/詠唱速度。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shaman/tree" target="_blank" rel="noopener noreferrer">シャーマン</a></td>
+              <td>精霊の祠 / 大地の優越 / 呪術師の注入 / 雷の化身</td>
+              <td>集中力増加＋集中力比例のマナ回復・スタン回避・元素/雷耐性貫通。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shaman/tree" target="_blank" rel="noopener noreferrer">シャーマン</a></td>
+              <td>サンダーストライク / ラゴンの返答 / 合同 / 大嵐の構え</td>
+              <td>近接/スペル連動「ストームボルト」大量召喚＆連詠唱、迫りくる嵐ヒット時マナ回復。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shaman/tree" target="_blank" rel="noopener noreferrer">シャーマン</a></td>
+              <td>ヘオロットの道 / 氷砕の天 / 嵐の長老 / 畏怖のルーン</td>
+              <td>冷気＆凍傷フラット加算・マナ再生、ミニオン元素ダメ＆スペル加算（精霊/クロウ軸）。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. シーズン 5 人気ビルド 3 選 -->
+    <section class="section" id="sec-builds" aria-labelledby="title-builds">
+      <h2 class="section-title" id="title-builds">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        </svg>
+        6. Season 5（Patch 1.5）人気ビルド 3 選
+      </h2>
+      <p class="page-lead">Season 5 で高評価を得ているシャーマンの代表 3 アーキタイプです。</p>
+
+      <div class="stack-list">
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/avalanche" target="_blank" rel="noopener noreferrer">
+                ① 大雪崩（Avalanche）マナ回復 / ヘオロットの休息型
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 新注目の元素豪雨</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: 集中力と「絡み合う伝説」等の圧倒的マナ回復力で重い <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/avalanche" target="_blank" rel="noopener noreferrer">大雪崩</a> を無限連打・チャネリングする型、または <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsBYHYCYg" target="_blank" rel="noopener noreferrer">ヘオロットの休息</a>＋<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/gathering_storm" target="_blank" rel="noopener noreferrer">迫りくる嵐</a> の近接殴りで無料雪崩とストームボルトを同時に落とすハイブリッド型です。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsBYHYCYg" target="_blank" rel="noopener noreferrer">ヘオロットの休息</a>（近接型）、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmBYCYGYg" target="_blank" rel="noopener noreferrer">絡み合う伝説</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcBZwViA" target="_blank" rel="noopener noreferrer">精霊の木脈</a> 等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/avalanche" target="_blank" rel="noopener noreferrer">大雪崩</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/gathering_storm" target="_blank" rel="noopener noreferrer">迫りくる嵐</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_thorn_totem" target="_blank" rel="noopener noreferrer">棘のトーテム召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer">雄叫び</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/fury_leap" target="_blank" rel="noopener noreferrer">憤怒の跳躍</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/tornado" target="_blank" rel="noopener noreferrer">
+                ② 大竜巻＆嵐のトーテム・雷嵐周回型（Tornado / Storm Bolt）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">快適エコー巡回 / 雷オート砲撃</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: 自身に纏わせた多重 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/tornado" target="_blank" rel="noopener noreferrer">大竜巻</a> と <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/maelstrom" target="_blank" rel="noopener noreferrer">大渦</a> で超高速移動しながら周囲にストームボルトを自動発射し、ボス前では <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_totem" target="_blank" rel="noopener noreferrer">嵐のトーテム</a> で集中砲火します。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVg7ATAjALEA" target="_blank" rel="noopener noreferrer">嵐が刻む遺言</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMEYFYBYg" target="_blank" rel="noopener noreferrer">嵐の目</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAw4FgZiA" target="_blank" rel="noopener noreferrer">嵐破り（Storm Breaker）</a>。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/tornado" target="_blank" rel="noopener noreferrer">大竜巻</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_totem" target="_blank" rel="noopener noreferrer">嵐のトーテム召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/maelstrom" target="_blank" rel="noopener noreferrer">大渦</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer">雄叫び</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/fury_leap" target="_blank" rel="noopener noreferrer">憤怒の跳躍</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/primalist_summon_elemental" target="_blank" rel="noopener noreferrer">
+                ③ 潮のエレメンタル＆ストームクロウ元素召喚型（S5 新機軸）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge">Season 5 新召喚＋元素トーテム</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: Season 5 追加の <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist_summon_elemental" target="_blank" rel="noopener noreferrer">潮のエレメンタル召喚</a> と <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_crow" target="_blank" rel="noopener noreferrer">ストームクロウ</a>・<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_totem" target="_blank" rel="noopener noreferrer">嵐のトーテム</a> を同時展開し、シャーマン固有パッシブの共有元素ダメ＆冷気/雷貫通で圧倒します。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYE5yA" target="_blank" rel="noopener noreferrer">凍光の遠地点</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBswZgRiA" target="_blank" rel="noopener noreferrer">呑みこむ嵐</a>（嵐精霊追加）、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer">アトラリアの赤い指輪</a>。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist_summon_elemental" target="_blank" rel="noopener noreferrer">潮のエレメンタル召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_crow" target="_blank" rel="noopener noreferrer">ストームクロウ召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_totem" target="_blank" rel="noopener noreferrer">嵐のトーテム召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer">雄叫び</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/fury_leap" target="_blank" rel="noopener noreferrer">憤怒の跳躍</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. 4大メカニズム -->
+    <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
+      <h2 class="section-title" id="title-mechanics">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.77 1 1.51 1H21a2 2 0 0 1 0 4h-.09c-.74 0-1.25.4-1.51 1z"></path>
+        </svg>
+        7. シャーマンの強さを支える 4 大メカニズム
+      </h2>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <h3>① 攻撃メカニズム：集中力貫通＋ストームボルト連鎖</h3>
+          <p>「集中力（Attunement）」を積むほど呪文フラットダメ・雷貫通（「雷の化身」）が同時に伸び、「大竜巻」「サンダーストライク」「迫りくる嵐」が自動誘発する大量のストームボルトでヒット数を稼ぎます。</p>
+        </div>
+        <div class="mech-card">
+          <h3>② 防御メカニズム：トーテム制御中の耐性＋高アーマー</h3>
+          <p>「マスタリー（元素耐性+50%）」＋「守りの円陣（物理/元素耐性）」「沈黙の守り手（アーマー）」「大地の優越（スタン回避）」「石の拳（耐久力）」が揃うため、トーテムを絶やさず置くだけで非常に硬くなります。</p>
+        </div>
+        <div class="mech-card">
+          <h3>③ マナメカニズム：集中力比例マナ回復と 0 マナ回収</h3>
+          <p>「大雪崩」「大地震」のような極大マナコストスキルを回す場合も、「精霊の祠（集中力比例マナ回復）」「沈黙の守り手」に加え、0 マナ技「迫りくる嵐（大嵐の構え）」での殴り回収ルートが機能します。</p>
+        </div>
+        <div class="mech-card">
+          <h3>④ 快適性：跳躍自動トーテムと俊足渦維持</h3>
+          <p>「憤怒の跳躍」着地時トーテム自動召喚＋「大渦」「大竜巻」の移動速度バフのおかげで、立ち止まってトーテムを連打する手間を最小限に抑えながら軽快に周回できます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 人気ユニーク装備・アフィックス表 -->
+    <section class="section" id="sec-gear" aria-labelledby="title-gear">
+      <h2 class="section-title" id="title-gear">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"></path>
+        </svg>
+        8. 主要ユニーク装備・部位別アフィックス優先度
+      </h2>
+      <p class="page-lead">Season 5 のシャーマン各軸で採用されるユニーク装備（名称クリックで LE Tools DB 詳細へ）とアフィックス指針です。</p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>ユニーク名</th>
+              <th>部位</th>
+              <th>主な採用理由・効果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsBYHYCYg" target="_blank" rel="noopener noreferrer"><strong>ヘオロットの休息</strong><br><span class="skill-en">Heorot's Repose</span></a></td>
+              <td>両手剣</td>
+              <td>加算近接ダメを大雪崩のスペルダメへ変換し、近接ヒットで無料の大雪崩落石を落とす S5 注目武器。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmBYCYGYg" target="_blank" rel="noopener noreferrer"><strong>絡み合う伝説</strong><br><span class="skill-en">Legends Entwined</span></a></td>
+              <td>指輪</td>
+              <td>高マナ再生や集中力・セットシナジーとの組み合わせで重い大雪崩連射のエンジンを支える注目リング。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcBZwViA" target="_blank" rel="noopener noreferrer"><strong>精霊の木脈</strong><br><span class="skill-en">Spirit Xylem</span></a></td>
+              <td>両手長杖</td>
+              <td>集中力や高コスト自然スペル（大雪崩等）の火力・運用をサポートするキャスター両手杖。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVg7ATAjALEA" target="_blank" rel="noopener noreferrer"><strong>嵐が刻む遺言</strong><br><span class="skill-en">Stormcarved Testament</span></a></td>
+              <td>レリック</td>
+              <td>トーテム・ストームボルト・雷スペルとの連動効果でトーテム/雷シャーマン全般を支えるレリック。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBswZgRiA" target="_blank" rel="noopener noreferrer"><strong>呑みこむ嵐</strong><br><span class="skill-en">Tempest Maw</span></a></td>
+              <td>片手斧</td>
+              <td>トーテム詠唱時の「嵐の精霊（Storm Sprite）」召喚＋トーテムコスト削減・集中力加算を備えた定番斧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMEYFYBYg" target="_blank" rel="noopener noreferrer"><strong>嵐の目</strong><br><span class="skill-en">Eye of Storms</span></a></td>
+              <td>アミュレット</td>
+              <td>常時「大渦（Maelstrom）」スタック自動維持と雷ダメージ強化をもたらすシャーマン快適性の要。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAw4FgZiA" target="_blank" rel="noopener noreferrer"><strong>嵐破り</strong><br><span class="skill-en">Storm Breaker</span></a></td>
+              <td>両手槌</td>
+              <td>迫りくる嵐や雷メレー構築で感電・雷スタック・近接火力を大きく引き上げる雷ハンマー。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYE5yA" target="_blank" rel="noopener noreferrer"><strong>凍光の遠地点</strong><br><span class="skill-en">Apogee of Frozen Light</span></a></td>
+              <td>片手剣</td>
+              <td>冷気＋ミニオン冷気スキル Lv+3 で潮のエレメンタル／ストームクロウ型でも強力な一振り。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
+              <td>指輪</td>
+              <td>全能力値＋条件達成による全耐性＆被ダメ軽減を備えたエンドゲーム最高峰リング。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 20px;">部位別おすすめアフィックス優先度</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>Prefix（集中力・元素スペル・マナ再生）</th>
+              <th>Suffix（ヘルス・アーマー・耐久・耐性）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器 / 盾・触媒</td>
+              <td>フラットスペル（冷気/雷）ダメ、詠唱速度、クリ倍率（近接型はフラット近接＋速度）</td>
+              <td>冷気/雷耐性寸断、アーマー寸断、虚弱付与</td>
+            </tr>
+            <tr>
+              <td>兜・鎧</td>
+              <td><strong>集中力（Attunement）</strong>、大雪崩/大竜巻/嵐トーテム Lv+</td>
+              <td>ハイブリッドヘルス、アーマー、クリ回避/軽減、物理/毒/虚無耐性</td>
+            </tr>
+            <tr>
+              <td>手袋・ベルト</td>
+              <td>詠唱/攻撃速度、元素ダメ、クリ倍率</td>
+              <td>ハイブリッドヘルス、マナ自動回復、実験的ポーション時庇護、耐久力</td>
+            </tr>
+            <tr>
+              <td>靴</td>
+              <td>移動速度（最優先）、集中力</td>
+              <td>ハイブリッドヘルス、アーマー、耐久力、不足耐性</td>
+            </tr>
+            <tr>
+              <td>アクセサリー</td>
+              <td><strong>マナ再生（大雪崩軸）</strong>、集中力、冷気/雷/スペルダメ、-3 スペルマナコスト</td>
+              <td>ヘルス、クリ倍率、毒/虚無/物理耐性（※元素耐性はトーテムで+50%補完可）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="page-footer-note">
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/build-guides/filter/cycle=rage-of-the-frostborn" target="_blank" rel="noopener noreferrer">Last Epoch Tools（Season 5 ビルドガイド）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+    </p>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html">Last Epoch ガイド</a></li>
+      <li><a class="nav-link" href="./falconer.html">ファルコナー（Season 5）</a></li>
+      <li><a class="nav-link" href="./bladedancer.html">ブレードダンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./marksman.html">マークスマン（Season 5）</a></li>
+      <li><a class="nav-link" href="./paladin.html">パラディン（Season 5）</a></li>
+      <li><a class="nav-link" href="./void-knight.html">ヴォイドナイト（Season 5）</a></li>
+      <li><a class="nav-link" href="./forge-guard.html">フォージガード（Season 5）</a></li>
+      <li><a class="nav-link" href="./sorcerer.html">ソーサラー（Season 5）</a></li>
+      <li><a class="nav-link" href="./spellblade.html">スペルブレード（Season 5）</a></li>
+      <li><a class="nav-link" href="./runemaster.html">ルーンマスター（Season 5）</a></li>
+      <li><a class="nav-link" href="./lich.html">リッチ（Season 5）</a></li>
+      <li><a class="nav-link" href="./necromancer.html">ネクロマンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./warlock.html">ウォーロック（Season 5）</a></li>
+      <li><a class="nav-link" href="./beastmaster.html">ビーストマスター（Season 5）</a></li>
+      <li><a class="nav-link" href="./shaman.html" aria-current="page">シャーマン（Season 5）</a></li>
+      <li><a class="nav-link" href="./druid.html">ドルイド（Season 5）</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

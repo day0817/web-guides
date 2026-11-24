@@ -63,4 +63,11 @@
 - [x] AC2: `site/last-epoch/lich.html` 制作
 - [x] AC3: `site/last-epoch/necromancer.html` 制作
 - [x] AC4: `site/last-epoch/warlock.html` 制作
-- [/] AC5: ハブ・全ページ導線更新・全リンク監査・スマホ検証・承認後 push ＆ 実 URL 確認
+- [x] AC5: ハブ・全ページ導線更新・全リンク監査・スマホ検証・承認後 push ＆ 実 URL 確認
+
+## プライマリスト 3 マスタリー制作フェーズ（`beastmaster.html`, `shaman.html`, `druid.html`）
+- [x] PR1: LE Tools 日本語版からプライマリスト＆3マスタリー全スキル・パッシブノード・Season 5 ビルド情報を収集
+- [x] PR2: `site/last-epoch/beastmaster.html` 制作
+- [x] PR3: `site/last-epoch/shaman.html` 制作
+- [x] PR4: `site/last-epoch/druid.html` 制作
+- [x] PR5: ハブ・全ページ導線更新・全リンク監査・スマホ検証・承認後 push ＆ 実 URL 確認

@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>ビーストマスター（Beastmaster）Season 5 ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <a href="./index.html">Last Epoch</a>
+      <span aria-hidden="true">/</span>
+      <span>ビーストマスター</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
+      <h1 class="page-title">ビーストマスター（Beastmaster）完全ガイド</h1>
+      <p class="page-lead">野獣コンパニオン上限を増やし、本体と仲間が同じ戦場で「神髄（Aspect）」バフを共有しながら近接＆召喚の同時猛攻を叩き込むプライマリスト上級職の Season 5 ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
+
+      <div class="callout">
+        <strong>Season 5 最新環境メモ：</strong> プライマリスト 3 職の中で最も安定感のある位置づけにあり、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/upheaval" target="_blank" rel="noopener noreferrer">地走り（Upheaval）</a> 近接軸、冷気変換した <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_sabertooth" target="_blank" rel="noopener noreferrer">サーベルタイガー（Cold Sabertooth）</a> や <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_crow" target="_blank" rel="noopener noreferrer">ストームクロウ（Storm Crows）</a> 軸、そして <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwFgjGDsBMQ" target="_blank" rel="noopener noreferrer">にわか雨の先触れ（Herald of the Scurry）</a> のリス大群軸まで幅広いビルドが快適かつ高火力に機能します。
+      </div>
+
+      <nav class="toc-pills" aria-label="ページ内目次">
+        <a class="toc-pill" href="#sec-overview">1. 特徴・差別化</a>
+        <a class="toc-pill" href="#sec-ranking">2. 採用スキル順位</a>
+        <a class="toc-pill" href="#sec-bm-skills">3. 固有スキル</a>
+        <a class="toc-pill" href="#sec-primal-skills">4. プライマリストスキル</a>
+        <a class="toc-pill" href="#sec-passives">5. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">6. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">7. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">8. 装備・アフィックス</a>
+      </nav>
+    </header>
+
+    <!-- 1. マスタリー特徴・差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l4 7-4 13-4-13 4-7z"></path>
+        </svg>
+        1. マスタリーの特徴・他職との差別化・固有パッシブ
+      </h2>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <h3 class="skill-title">ビーストマスター固有パッシブ＆マスタリーボーナス（コンパニオン枠+1＋近接共闘）</h3>
+          <p class="skill-desc">プライマリストの基本パッシブに 20pt 投資してビーストマスターを選択すると、固有スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_bear" target="_blank" rel="noopener noreferrer"><strong>熊召喚（Summon Bear）</strong></a> の解放ルートが開き、以下のマスタリー固有ボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス①</strong>: <strong>最大コンパニオン数 +1</strong> — 基本枠 2 体＋マスタリー +1＋パッシブ（「自然の抱擁」「模範」）等で多数の仲間を同時展開でき、逆に「アルトールの忠節」「自然の結束」で精鋭 1 体に特化する道も選べます。</li>
+            <li><strong>基礎ボーナス②</strong>: <strong>自身とミニオンの近接ダメージ +50%</strong> — プレイヤー自身と獣コンパニオンの近接打撃を最初から同時に強化します。</li>
+            <li><strong>「神髄（Aspect）」共有とダメージ肩代わり</strong>: 「イノシシ（被ダメ軽減）」「サメ（近接速度＋アーマー寸断）」「ヤマネコ（クリ率・倍率）」「毒蛇（毒・継続ダメ）」の 4 種バフを本体とコンパニオン双方へ掛け、パッシブ「原始の神髄」で被ダメージを最高ヘルスの仲間へ肩代わりさせることで前衛の硬さを誇ります。</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">プライマリスト 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・代表固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/beastmaster/tree" target="_blank" rel="noopener noreferrer"><strong>ビーストマスター</strong><br><span class="skill-en">(Beastmaster)</span></a></td>
+              <td>最大コンパニオン +1／本体＆ミニオン近接ダメ +50%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_bear" target="_blank" rel="noopener noreferrer">熊召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_sabertooth" target="_blank" rel="noopener noreferrer">サーベルタイガー召喚</a></td>
+              <td><strong>野獣コンパニオン軍団（または精鋭1体）＋本体近接共闘</strong>。安定した立ち回りと高耐久・バフ共有が強み。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./shaman.html"><strong>シャーマン</strong><br><span class="skill-en">(Shaman)</span></a></td>
+              <td>トーテムマナコスト -5／集中力 +10／トーテム中元素耐性 +50%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/avalanche" target="_blank" rel="noopener noreferrer">大雪崩</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/tornado" target="_blank" rel="noopener noreferrer">大竜巻</a></td>
+              <td><strong>元素スペル・トーテム設置・雷＆冷気嵐キャスター</strong>。トーテム＋大雪崩/竜巻の広範囲攻撃ならシャーマン、獣と殴るならビーストマスター。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./druid.html"><strong>ドルイド</strong><br><span class="skill-en">(Druid)</span></a></td>
+              <td>変身解除後 2 秒間被ダメ 70% 軽減／ヘルス＆マナ +20%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/werebear_form" target="_blank" rel="noopener noreferrer">ウェアベア形態</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swarmblade_form" target="_blank" rel="noopener noreferrer">スウォームブレード形態</a></td>
+              <td><strong>変身スキル＋レイジ管理の多形態戦術</strong>。熊や蟲に変身して戦いたいならドルイド、変身せず相棒と共闘するならビーストマスター。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Season 5 採用スキルランキング -->
+    <section class="section" id="sec-ranking" aria-labelledby="title-ranking">
+      <h2 class="section-title" id="title-ranking">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+          <path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"></path>
+        </svg>
+        2. Season 5 採用スキルランキング（必須スキル早見表）
+      </h2>
+      <p class="page-lead">Season 5 環境のビーストマスター主力構成（地走り近接軸 / 冷気サーベルタイガー＆クロウ軸 / リス＆熊・スコーピオン軸）での必須度整理です。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>順位 / 必須度</th>
+              <th>スキル名</th>
+              <th>区分</th>
+              <th>Season 5 環境での位置づけ・必須理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--accent">1位 / ほぼ必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer"><strong>雄叫び</strong><br><span class="skill-en">(Warcry)</span></a></td>
+              <td>プライマ</td>
+              <td><strong>狂乱（Frenzy）＋無敵＋状態異常解除＋近接クリ/トーテムバフ</strong>を 1 枠で担う最強の攻防シャウト。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">2位 / 必須級移動 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/fury_leap" target="_blank" rel="noopener noreferrer"><strong>憤怒の跳躍</strong><br><span class="skill-en">(Fury Leap)</span></a></td>
+              <td>プライマ</td>
+              <td><strong>高機動ジャンプ＋コンパニオン強制追従＋大渦/スタン連動枠</strong>。仲間を敵のど真ん中へ一気に運べる。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">3位 / 必須級バフ＆トリガー (S-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swipe" target="_blank" rel="noopener noreferrer"><strong>なぎ払い</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_frenzy_totem" target="_blank" rel="noopener noreferrer"><strong>激昂のトーテム召喚</strong></a></td>
+              <td>プ / ビ</td>
+              <td>サメ/ヤマネコ神髄＋味方攻撃/回復連動（なぎ払い）と、仲間に圧倒的攻撃速度・クリ倍率を与える定点トーテム（激昂のトーテム）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">4位 / S5 主力 (A+)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/upheaval" target="_blank" rel="noopener noreferrer"><strong>地走り</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_sabertooth" target="_blank" rel="noopener noreferrer"><strong>サーベルタイガー</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_crow" target="_blank" rel="noopener noreferrer"><strong>ストームクロウ</strong></a></td>
+              <td>プ / ビ / プ</td>
+              <td>本体主砲の物理衝撃波（地走り）、冷気特化で高単体DPSを誇るネコ（サーベルタイガー）、範囲＆電撃/冷気砲台（ストームクロウ）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">5位 / コンパニオン主力 (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_wolf" target="_blank" rel="noopener noreferrer"><strong>狼召喚（リス変換含）</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_scorpion" target="_blank" rel="noopener noreferrer"><strong>スコーピオン</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_bear" target="_blank" rel="noopener noreferrer"><strong>熊召喚</strong></a></td>
+              <td>プ / ビ / ビ</td>
+              <td>リス大群化の核（狼）、広範囲毒＆子サソリ軍団（スコーピオン）、堅牢な単体パートナー＆棘壁（熊）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">6位 / 補助・選択 (B〜C)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/maelstrom" target="_blank" rel="noopener noreferrer">大渦</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/eterras_blessing" target="_blank" rel="noopener noreferrer">エテラの祝福</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_raptor" target="_blank" rel="noopener noreferrer">ラプトル召喚</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/gathering_storm" target="_blank" rel="noopener noreferrer">迫りくる嵐</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/serpent_strike" target="_blank" rel="noopener noreferrer">毒蛇の一撃</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/tempest_strike" target="_blank" rel="noopener noreferrer">嵐撃</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_thorn_totem" target="_blank" rel="noopener noreferrer">棘のトーテム召喚</a>
+              </td>
+              <td>プ / ビ</td>
+              <td>跳躍連動の自動バフ・冷気/俊足源（大渦）、コンパニオン回復＆狂乱注入（エテラの祝福）、出血・突進恐竜（ラプトル）等。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. ビーストマスター固有スキル（5種） -->
+    <section class="section" id="sec-bm-skills" aria-labelledby="title-bm-skills">
+      <h2 class="section-title" id="title-bm-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2L4 7v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V7l-8-5z"></path>
+        </svg>
+        3. ビーストマスター固有スキル＆重要ノード（5種）
+      </h2>
+      <p class="page-lead">スキル名クリックで Last Epoch Tools 日本語版のスキル詳細・ノードツリーが開きます。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_sabertooth" target="_blank" rel="noopener noreferrer">サーベルタイガー召喚 <span class="skill-en">(Summon Sabertooth)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 人気相棒</span><span class="badge">冷気変換 / 跳躍連打（Infinicat）</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">圧倒的なクリティカル・瞬発範囲技「フラリースワイプ（Flurry Swipes）」を持つ攻撃特化の大型猫。Season 5 でも North Wind ノードによる冷気変換＋スキル Lv 特化や「地走り」との並走が極めて強力です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M7 12h10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_frenzy_totem" target="_blank" rel="noopener noreferrer">激昂のトーテム召喚 <span class="skill-en">(Summon Frenzy Totem)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">重要火力トーテム</span><span class="badge">狂乱＋クリ率・クリ倍率</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">範囲内の自身・味方コンパニオンに常時「狂乱（Frenzy）」と大量のクリティカル率・クリ倍率、さらにクールダウン短縮・治癒まで与える最強クラスの支援トーテムです。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c4 4 6 7 6 11a6 6 0 1 1-12 0c0-4 2-7 6-11z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_scorpion" target="_blank" rel="noopener noreferrer">スコーピオン召喚 <span class="skill-en">(Summon Scorpion)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">毒／毒沼範囲＋ベビー増援</span><span class="badge">コンパニオン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">巨大な毒サソリを召喚し、アビリティ発動で広範囲に毒ダメージ空間を展開しつつ、戦うほど子サソリ（Baby Scorpions）を生み出して単体＆集団を溶かします。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 10h6M9 14h6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_bear" target="_blank" rel="noopener noreferrer">熊召喚 <span class="skill-en">(Summon Bear)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">挑発タンク / 大地震連動</span><span class="badge">コンパニオン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">高い耐久・ヘルス回復と咆哮挑発を持つ守護熊。「雄叫びで熊のアビリティが連鎖発動」「反撃棘（Thorn Shield）」や「アルトールの忠節」単騎特化でも頑強な前衛を務めます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L20 4M15 4h5v5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_raptor" target="_blank" rel="noopener noreferrer">ラプトル召喚 <span class="skill-en">(Summon Raptor)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">出血 / 近接クリ突撃</span><span class="badge">コンパニオン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">高速移動と強烈な出血・噛みつきを持つ恐竜コンパニオン。複数召喚よりは、狼の群れや「アルトールの忠節 / 自然の結束」下での物理・出血相棒として活躍します。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. プライマリスト基本スキル（12種個別記載） -->
+    <section class="section" id="sec-primal-skills" aria-labelledby="title-primal-skills">
+      <h2 class="section-title" id="title-primal-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+          <path d="M9 9h6v6H9z"></path>
+        </svg>
+        4. 最終ビルドで採用されうるプライマリスト基本スキル（全12種個別解説）
+      </h2>
+      <p class="page-lead">プライマリストの基本スキル 12 種（＋共通回避 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist_evade" target="_blank" rel="noopener noreferrer">即時避け</a>）を、ビーストマスターでの実採用目線で 1 つずつ整理します。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer">雄叫び <span class="skill-en">(Warcry)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須シャウト</span><span class="badge">無敵 / 狂乱 / 脆弱 / 状態異常解除</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">発動時 1 秒無敵・状態異常クリア・味方全体への狂乱＋近接ダメ加算＋大渦スタック獲得を同時にこなす万能シャウト。全ビーストマスターでまず外れません。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/fury_leap" target="_blank" rel="noopener noreferrer">憤怒の跳躍 <span class="skill-en">(Fury Leap)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須移動枠</span><span class="badge">コンパニオン帯同＋大渦トリガー</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ジャンプ移動で崖越え・急接近すると同時に、周囲の全コンパニオンを自分の着地地点へ強制引き寄せ＋攻撃速度バフを撒くことができます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L20 4M15 4h5v5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/swipe" target="_blank" rel="noopener noreferrer">なぎ払い <span class="skill-en">(Swipe)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">0マナ必須級近接</span><span class="badge">神髄＆仲間連動 / 回復</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">0 マナで連打できる爪撃。ツリー内で「コンパニオンのクールダウン短縮・アビリティ自動発動・ヘルス回復」およびパッシブ「サメ/ヤマネコの神髄」常時維持ができるためコンパニオン型の要です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/upheaval" target="_blank" rel="noopener noreferrer">地走り <span class="skill-en">(Upheaval)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 本体主力近接</span><span class="badge">物理/冷気波・トーテム召喚可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">地面を叩き割って前方に巨大な岩棘と余震を走らせる主力スキル。Season 5 でも本体＋コンパニオンバフで高コラプションへ押し上げやすい安定の S/A ティア近接軸です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.2L18.5 21 12 16.8 5.5 21l2-7.8L2 9h7l3-7z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_wolf" target="_blank" rel="noopener noreferrer">狼召喚 <span class="skill-en">(Summon Wolf)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">群れ / リス大群軸</span><span class="badge">咆哮バフ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">基本上限を超えて多数並べられる狼の群れ。<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwFgjGDsBMQ" target="_blank" rel="noopener noreferrer">にわか雨の先触れ（Herald of the Scurry）</a> を装備すると狼すべてが凶暴なリス 2 倍の群れへ変貌し、出血とクリティカルの嵐を巻き起こします。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_crow" target="_blank" rel="noopener noreferrer">ストームクロウ召喚 <span class="skill-en">(Summon Storm Crow)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 大人気コンパニオン</span><span class="badge">電撃/冷気スペル砲台</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">空中を飛びながら遠距離電撃/冷気魔法を撃ちまくるカラス群。パッシブ「ウェザードエレメンツ（筋力→コンパニオンスペルダメ）」や解体包丁＋<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYE5yA" target="_blank" rel="noopener noreferrer">凍光の遠地点</a> と組み合わせた冷気カラス型が S5 で大暴れしています。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M12 7v5l3 3"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/maelstrom" target="_blank" rel="noopener noreferrer">大渦 <span class="skill-en">(Maelstrom)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">常時スタックバフ</span><span class="badge">俊足＋狂乱＋冷却オーラ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">自身周囲に水・冷気渦を纏うスキル。雄叫びや憤怒の跳躍に連動して自動生成し、6 スタック以上で「俊足＋狂乱（味方へも波及）」や継続回復・敵冷却をもたらします。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/eterras_blessing" target="_blank" rel="noopener noreferrer">エテラの祝福 <span class="skill-en">(Eterra's Blessing)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">コンパニオン超回復＆バフ</span><span class="badge">自動トリガー可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">コンパニオンのヘルスを一気に回復しつつ攻撃/防御バフを注ぎ込み、味方回復時に周囲へ大ダメージ衝撃波を起こすビルドでも使われます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M7 12h10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_thorn_totem" target="_blank" rel="noopener noreferrer">棘のトーテム召喚 <span class="skill-en">(Summon Thorn Totem)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">毒/出血トリガー・地走り連動</span><span class="badge">限定補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">地走りや跳躍から自動召喚してアーマー寸断・毒付与や味方回復オーラを肩代わりさせるサブトーテムとして採用できます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/gathering_storm" target="_blank" rel="noopener noreferrer">迫りくる嵐 <span class="skill-en">(Gathering Storm)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">嵐スタック→クロウ/スペル連動</span><span class="badge">元素近接</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ストームスタックを貯めてストームボルトを落とす 0 マナ技。クロウ軸でカラスと電撃シナジーを共有する変則近接ハイブリッドでも使われます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c3 3 5 6 5 10a5 5 0 1 1-10 0c0-4 2-7 5-10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/serpent_strike" target="_blank" rel="noopener noreferrer">毒蛇の一撃 <span class="skill-en">(Serpent Strike)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">毒/凍傷槍（専用軸）</span><span class="badge">サソリ連携</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">槍装備で毒や冷気（凍傷）スタックと回避率を爆発的に積むスキル。毒スコーピオンと併走する蛇×サソリ型で選択肢に入ります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M12 4v16"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/tempest_strike" target="_blank" rel="noopener noreferrer">嵐撃 <span class="skill-en">(Tempest Strike)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">3元素トリガー打撃（限定用途）</span><span class="badge">近接/スペル</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">追加の雷・氷柱・地震波を起こす近接攻撃。通常はシャーマン側で光りますが、二刀/武器トリガー軸で組む場合の候補です。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. パッシブツリー指針 -->
+    <section class="section" id="sec-passives" aria-labelledby="title-passives">
+      <h2 class="section-title" id="title-passives">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="6" r="3"></circle>
+          <circle cx="18" cy="18" r="3"></circle>
+          <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
+        </svg>
+        5. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist/tree" target="_blank" rel="noopener noreferrer">プライマリスト</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/beastmaster/tree" target="_blank" rel="noopener noreferrer">ビーストマスター</a>）
+      </h2>
+      <p class="page-lead">プライマリスト基本で筋力・集中力・二刀「刃の調和」・大嵐の結束を揃え、ビーストマスター側でコンパニオン上限（大群 vs 1体特化）・イノシシ/サメ/ヤマネコの神髄・原始の神髄肩代わりを固めます。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>ツリー区分</th>
+              <th>注目パッシブ（LE Tools 日本語版）</th>
+              <th>主な効果・役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist/tree" target="_blank" rel="noopener noreferrer">プライマリスト</a></td>
+              <td>原始の腕力 / 自然の同調 / 古代の呼び声</td>
+              <td>筋力・集中力・元素耐性・ヘルス＋コンパニオンヘルスを揃える序盤基盤。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist/tree" target="_blank" rel="noopener noreferrer">プライマリスト</a></td>
+              <td>刃の調和 / 大嵐の結束 / 群れの生存術</td>
+              <td>斧/剣二刀解禁（速度+20%）、ミニオン存在時物理/冷気/雷2倍増、近接ヘルス吸収。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/beastmaster/tree" target="_blank" rel="noopener noreferrer">ビーストマスター</a></td>
+              <td>イノシシの心 / イノシシ科の野性 / 原始の神髄</td>
+              <td>イノシシの神髄（被ダメ軽減）＋神髄効果強化＋ダメージ肩代わりの最強防御セット。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/beastmaster/tree" target="_blank" rel="noopener noreferrer">ビーストマスター</a></td>
+              <td>自然の抱擁 / 模範 vs アルトールの忠節 / 自然の結束</td>
+              <td>大群なら最大コンパニオン +2 路線、精鋭 1 体特化なら上限1＆乗算 +75〜85% 路線を選択。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/beastmaster/tree" target="_blank" rel="noopener noreferrer">ビーストマスター</a></td>
+              <td>ヤマネコの鳴き声 / 鋸刃の爪 / 古代の威力</td>
+              <td>プレイヤー＆コンパニオン両方のクリ率・クリ倍率・クリ時吸収＋ミニオンスキル Lv+1。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/beastmaster/tree" target="_blank" rel="noopener noreferrer">ビーストマスター</a></td>
+              <td>待ち伏せ / 引き裂く顎 / ウェザードエレメンツ / 熊の腕力</td>
+              <td>サメの神髄（速度＆アーマー寸断）、筋力→コンパニオンスペルダメ変換（クロウ軸）、近接被ダメ減。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. シーズン 5 人気ビルド 3 選 -->
+    <section class="section" id="sec-builds" aria-labelledby="title-builds">
+      <h2 class="section-title" id="title-builds">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        </svg>
+        6. Season 5（Patch 1.5）人気ビルド 3 選
+      </h2>
+      <p class="page-lead">Season 5 で高評価を得ているビーストマスターの代表 3 アーキタイプです。</p>
+
+      <div class="stack-list">
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_sabertooth" target="_blank" rel="noopener noreferrer">
+                ① 冷気サーベルタイガー / 氷ストームクロウ型（Cold Companion）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 人気筆頭コンパニオン</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: 冷気変換した <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_sabertooth" target="_blank" rel="noopener noreferrer">サーベルタイガー</a>（+20 Lv 超の極限フラリースワイプ）、または知力/筋力共有した <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_crow" target="_blank" rel="noopener noreferrer">ストームクロウ</a> 群へ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swipe" target="_blank" rel="noopener noreferrer">なぎ払い</a> と <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_frenzy_totem" target="_blank" rel="noopener noreferrer">激昂のトーテム</a> で狂乱バフを乗せ続けます。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYE5yA" target="_blank" rel="noopener noreferrer">凍光の遠地点（Apogee of Frozen Light）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMGYEYBYg" target="_blank" rel="noopener noreferrer">解体包丁（Cleaver Solution）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgzALATBQ" target="_blank" rel="noopener noreferrer">暴君の髑髏</a> 等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_sabertooth" target="_blank" rel="noopener noreferrer">サーベルタイガー</a>（or <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_crow" target="_blank" rel="noopener noreferrer">ストームクロウ</a>） / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swipe" target="_blank" rel="noopener noreferrer">なぎ払い</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_frenzy_totem" target="_blank" rel="noopener noreferrer">激昂のトーテム召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer">雄叫び</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/fury_leap" target="_blank" rel="noopener noreferrer">憤怒の跳躍</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/upheaval" target="_blank" rel="noopener noreferrer">
+                ② 地走り＆神髄狂戦士型（Upheaval Beastmaster）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 最安定本体主力</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: コンパニオンを壁＆バフ役（大嵐の結束 2 倍条件＋神髄共有）として連れ歩きつつ、プレイヤー自身の強化した <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/upheaval" target="_blank" rel="noopener noreferrer">地走り（Upheaval）</a> の多段衝撃波でエコーもボスも薙ぎ倒します。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCswRgZiA" target="_blank" rel="noopener noreferrer">巨人の心臓（Titan Heart）</a>（両手武器時被ダメ減）、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMoVgNiA" target="_blank" rel="noopener noreferrer">山の峰</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer">アトラリアの赤い指輪</a> 等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/upheaval" target="_blank" rel="noopener noreferrer">地走り</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swipe" target="_blank" rel="noopener noreferrer">なぎ払い</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_frenzy_totem" target="_blank" rel="noopener noreferrer">激昂のトーテム召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer">雄叫び</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/fury_leap" target="_blank" rel="noopener noreferrer">憤怒の跳躍</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/db/ja/items/UAwFgjGDsBMQ" target="_blank" rel="noopener noreferrer">
+                ③ リス大群出血（Squirrels）/ 毒スコーピオン型
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge">大群出血＆毒 DoT 特化</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwFgjGDsBMQ" target="_blank" rel="noopener noreferrer">にわか雨の先触れ</a> で大量のリス軍団を放って出血を 100 スタック超重ねるリス型、または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_scorpion" target="_blank" rel="noopener noreferrer">スコーピオン</a> ＆子サソリによる毒溶かしビルドです。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwFgjGDsBMQ" target="_blank" rel="noopener noreferrer">にわか雨の先触れ</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMwVgDiA" target="_blank" rel="noopener noreferrer">狼の爪</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDswNmI" target="_blank" rel="noopener noreferrer">狼の牙</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAswdgRiA" target="_blank" rel="noopener noreferrer">ヴァルディルの杯</a>。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_wolf" target="_blank" rel="noopener noreferrer">狼召喚</a>（or <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_scorpion" target="_blank" rel="noopener noreferrer">スコーピオン召喚</a>） / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swipe" target="_blank" rel="noopener noreferrer">なぎ払い</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_frenzy_totem" target="_blank" rel="noopener noreferrer">激昂のトーテム召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer">雄叫び</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/fury_leap" target="_blank" rel="noopener noreferrer">憤怒の跳躍</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. 4大メカニズム -->
+    <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
+      <h2 class="section-title" id="title-mechanics">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.77 1 1.51 1H21a2 2 0 0 1 0 4h-.09c-.74 0-1.25.4-1.51 1z"></path>
+        </svg>
+        7. ビーストマスターの強さを支える 4 大メカニズム
+      </h2>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <h3>① 攻撃メカニズム：4種「神髄」＋狂乱＋耐性寸断共有</h3>
+          <p>「なぎ払い」や「激昂のトーテム」でサメ/ヤマネコの神髄＋狂乱＋確定クリを自身と仲間同時に乗せ続け、さらにアーマー寸断・冷気/物理耐性寸断を一瞬で最大スタックまで積み上げます。</p>
+        </div>
+        <div class="mech-card">
+          <h3>② 防御メカニズム：イノシシの神髄＋被ダメ肩代わり＋耐久力</h3>
+          <p>「イノシシの心 / 野性（常時被ダメ減）」「熊の腕力（近接被ダメ減）」「原始の神髄（ミニオンへ被ダメ肩代わり）」に、高い最大ヘルス＋耐久 60%＋耐性上限が重なるため近接戦でも驚くほど倒れにくいです。</p>
+        </div>
+        <div class="mech-card">
+          <h3>③ マナ・回復メカニズム：0マナ回転＋双方向吸血</h3>
+          <p>「なぎ払い」を 0 マナで振りつつ「円形吸引歯」や「群れの生存術」で本体・コンパニオン双方が与ダメ吸血し続けます。仮に仲間が倒れても近寄れば自動で蘇生し、ポーションでも全回復できます。</p>
+        </div>
+        <div class="mech-card">
+          <h3>④ 快適性：跳躍によるコンパニオン強制帯同と無敵回避</h3>
+          <p>ミニオン AI の置き去りストレスは「憤怒の跳躍」の仲間引き寄せノードで完全に解消でき、ボスの大技も「雄叫び」の 1 秒無敵や跳躍回避で難なくやり過ごせます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 人気ユニーク装備・アフィックス表 -->
+    <section class="section" id="sec-gear" aria-labelledby="title-gear">
+      <h2 class="section-title" id="title-gear">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"></path>
+        </svg>
+        8. 主要ユニーク装備・部位別アフィックス優先度
+      </h2>
+      <p class="page-lead">Season 5 のビーストマスター各軸で採用されるユニーク装備（名称クリックで LE Tools DB 詳細へ）とアフィックス指針です。</p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>ユニーク名</th>
+              <th>部位</th>
+              <th>主な採用理由・効果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwFgjGDsBMQ" target="_blank" rel="noopener noreferrer"><strong>にわか雨の先触れ</strong><br><span class="skill-en">Herald of the Scurry</span></a></td>
+              <td>兜</td>
+              <td>「狼召喚」を最大上限 2 倍のリス群へ変換する、リス大群ビルド専用の必須級ヘルメット。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYE5yA" target="_blank" rel="noopener noreferrer"><strong>凍光の遠地点</strong><br><span class="skill-en">Apogee of Frozen Light</span></a></td>
+              <td>片手剣</td>
+              <td>冷気＋ミニオン冷気スキル Lv+3 ＆ミニオン冷気ダメを大幅強化。冷気サーベルタイガー・冷気クロウ二刀の神器。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMGYEYBYg" target="_blank" rel="noopener noreferrer"><strong>解体包丁</strong><br><span class="skill-en">Cleaver Solution</span></a></td>
+              <td>片手斧</td>
+              <td>知力（INT）＝筋力（STR）の数値になるため、筋力積みのまま知力依存コンパニオン（クロウ等）を極限強化可能。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgzALATBQ" target="_blank" rel="noopener noreferrer"><strong>暴君の髑髏</strong><br><span class="skill-en">Tyrant's Skull</span></a></td>
+              <td>レリック（Primordial）</td>
+              <td>ティラノサウルス召喚＋ミニオンスキル Lv+2〜3 ＋咆哮バフにより、冷気サーベルタイガー等コンパニオン軸を飛躍させる。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDswNmI" target="_blank" rel="noopener noreferrer"><strong>狼の牙</strong><br><span class="skill-en">The Fang</span></a></td>
+              <td>アミュレット</td>
+              <td>最大狼上限 +1 や狼出血付与・ミニオンヘルス・速度などを伸ばす狼／リス軍団向け定番首飾り。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMwVgDiA" target="_blank" rel="noopener noreferrer"><strong>狼の爪</strong><br><span class="skill-en">The Claw</span></a></td>
+              <td>アミュレット</td>
+              <td>コンパニオンの基礎クリティカル率とクリ倍率を底上げし、クリ軸ビーストマスター全般で強力な定番首飾り。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCswRgZiA" target="_blank" rel="noopener noreferrer"><strong>巨人の心臓</strong><br><span class="skill-en">Titan Heart</span></a></td>
+              <td>鎧</td>
+              <td>両手近接武器装備時に被ダメージ大幅軽減（15%）＋高ヘルスを得る、地走り（Upheaval）両手型の鉄板胴。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMoVgNiA" target="_blank" rel="noopener noreferrer"><strong>山の峰</strong><br><span class="skill-en">Peak of the Mountain</span></a></td>
+              <td>兜</td>
+              <td>クリティカル率・全能力値（筋力/敏捷力）を大きく稼ぎ、地走り等の本体クリティカルビルドを支える定番兜。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
+              <td>指輪</td>
+              <td>全能力値＋条件達成による全耐性＆被ダメ軽減で本体生存力を極めるエンドゲーム最高峰リング。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 20px;">部位別おすすめアフィックス優先度</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>Prefix（筋力・敏捷力・コンパニオン・近接）</th>
+              <th>Suffix（ヘルス・耐久・アーマー・耐性）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器</td>
+              <td>フラット近接ダメ＋攻撃速度（本体軸）／ミニオン近接・冷気ダメ（召喚軸）</td>
+              <td>アーマー寸断、虚弱付与、物理/冷気耐性寸断</td>
+            </tr>
+            <tr>
+              <td>兜・鎧</td>
+              <td><strong>筋力（Strength） / 敏捷力（Dexterity）</strong>、主力コンパニオン/地走り Lv+</td>
+              <td>ハイブリッドヘルス、アーマー、クリ回避/軽減、不足耐性</td>
+            </tr>
+            <tr>
+              <td>手袋・ベルト</td>
+              <td>近接攻撃速度、ミニオンダメ/速度、実験的移動時ミニオン追従</td>
+              <td>ハイブリッドヘルス、耐久力、ミニオンヘルス・吸収</td>
+            </tr>
+            <tr>
+              <td>靴</td>
+              <td>移動速度（最優先）、筋力 / 敏捷力</td>
+              <td>ハイブリッドヘルス、耐久力、アーマー、不足耐性</td>
+            </tr>
+            <tr>
+              <td>アクセサリー</td>
+              <td>ミニオンダメ / ミニオンクリ率・倍率（召喚軸）、近接/クリ倍率（本体軸）</td>
+              <td>ヘルス、耐久力（60%調整）、物理/虚無/冷気/毒耐性</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="page-footer-note">
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/build-guides/filter/cycle=rage-of-the-frostborn" target="_blank" rel="noopener noreferrer">Last Epoch Tools（Season 5 ビルドガイド）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+    </p>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html">Last Epoch ガイド</a></li>
+      <li><a class="nav-link" href="./falconer.html">ファルコナー（Season 5）</a></li>
+      <li><a class="nav-link" href="./bladedancer.html">ブレードダンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./marksman.html">マークスマン（Season 5）</a></li>
+      <li><a class="nav-link" href="./paladin.html">パラディン（Season 5）</a></li>
+      <li><a class="nav-link" href="./void-knight.html">ヴォイドナイト（Season 5）</a></li>
+      <li><a class="nav-link" href="./forge-guard.html">フォージガード（Season 5）</a></li>
+      <li><a class="nav-link" href="./sorcerer.html">ソーサラー（Season 5）</a></li>
+      <li><a class="nav-link" href="./spellblade.html">スペルブレード（Season 5）</a></li>
+      <li><a class="nav-link" href="./runemaster.html">ルーンマスター（Season 5）</a></li>
+      <li><a class="nav-link" href="./lich.html">リッチ（Season 5）</a></li>
+      <li><a class="nav-link" href="./necromancer.html">ネクロマンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./warlock.html">ウォーロック（Season 5）</a></li>
+      <li><a class="nav-link" href="./beastmaster.html" aria-current="page">ビーストマスター（Season 5）</a></li>
+      <li><a class="nav-link" href="./shaman.html">シャーマン（Season 5）</a></li>
+      <li><a class="nav-link" href="./druid.html">ドルイド（Season 5）</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

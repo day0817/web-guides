@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>ドルイド（Druid）Season 5 ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <a href="./index.html">Last Epoch</a>
+      <span aria-hidden="true">/</span>
+      <span>ドルイド</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
+      <h1 class="page-title">ドルイド（Druid）完全ガイド</h1>
+      <p class="page-lead">「ウェアベア」「スプリガン」「スウォームブレード」の 3 つの変身形態とレイジ（Rage）リソースを駆使し、人間時のスキルさえ変身中アクションへ自動連動させて戦うプライマリスト上級職の Season 5 ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
+
+      <div class="callout">
+        <strong>Season 5 最新環境メモ：</strong> Season 5 では、新セット品（<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwZgjALAHATEA" target="_blank" rel="noopener noreferrer">ケアテイカーの再生</a>／<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsBYA4EYg" target="_blank" rel="noopener noreferrer">ケアテイカーの憤怒</a>）とも相性が良い「ストームベア／津波ウェアベア型（Tsunami / Stormbear）」や、1,500 コラプション実績もある「冷気・絡みつく根スパム型」、高速斬撃の「スウォームブレード型」などが愛されています。
+      </div>
+
+      <nav class="toc-pills" aria-label="ページ内目次">
+        <a class="toc-pill" href="#sec-overview">1. 特徴・差別化</a>
+        <a class="toc-pill" href="#sec-ranking">2. 採用スキル順位</a>
+        <a class="toc-pill" href="#sec-druid-skills">3. 固有スキル</a>
+        <a class="toc-pill" href="#sec-primal-skills">4. プライマリストスキル</a>
+        <a class="toc-pill" href="#sec-passives">5. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">6. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">7. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">8. 装備・アフィックス</a>
+      </nav>
+    </header>
+
+    <!-- 1. マスタリー特徴・差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2L4 7v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V7l-8-5z"></path>
+        </svg>
+        1. マスタリーの特徴・他職との差別化・固有パッシブ
+      </h2>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <h3 class="skill-title">ドルイド固有パッシブ＆マスタリーボーナス（変身保護＋ヘルス/マナ+20%）</h3>
+          <p class="skill-desc">プライマリストの基本パッシブに 20pt 投資してドルイドを選択すると、固有スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/spriggan_form" target="_blank" rel="noopener noreferrer"><strong>スプリガン形態（Spriggan Form）</strong></a> の解放ルートが開き、以下のマスタリー固有ボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス①</strong>: <strong>変身解除後 2 秒間、被ダメージ 70% 軽減</strong> — レイジ切れで人間形態へ戻った瞬間の無防備な隙を完全にカバーします。</li>
+            <li><strong>基礎ボーナス②</strong>: <strong>最大ヘルス +20% ＆ 最大マナ +20%</strong> — 変身時の「レイジ上限（最大マナ準拠）」と本体耐久の両方を無条件で大きく押し上げます。</li>
+            <li><strong>多形態「変幻自在（Shapeshift）」連動</strong>: マナがレイジ（時間減衰あり）に置き換わり、人間時の「雄叫び」「なぎ払い」「大渦」「絡みつく根」「棘のトーテム」等が変身中の専用技に連動発動する独自仕様を持ちます。</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">プライマリスト 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・代表固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/druid/tree" target="_blank" rel="noopener noreferrer"><strong>ドルイド</strong><br><span class="skill-en">(Druid)</span></a></td>
+              <td>変身解除後 2 秒被ダメ -70%／ヘルス＆マナ +20%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/werebear_form" target="_blank" rel="noopener noreferrer">ウェアベア形態</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/spriggan_form" target="_blank" rel="noopener noreferrer">スプリガン形態</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swarmblade_form" target="_blank" rel="noopener noreferrer">スウォームブレード形態</a></td>
+              <td><strong>3種の変身形態とレイジ循環による多彩な近接＆スペル戦術</strong>。自己変身で強靭に戦うのがドルイドの醍醐味。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./beastmaster.html"><strong>ビーストマスター</strong><br><span class="skill-en">(Beastmaster)</span></a></td>
+              <td>最大コンパニオン +1／本体＆ミニオン近接ダメ +50%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_bear" target="_blank" rel="noopener noreferrer">熊召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_sabertooth" target="_blank" rel="noopener noreferrer">サーベルタイガー</a></td>
+              <td><strong>獣コンパニオン共闘指揮官</strong>。仲間を多数連れて戦うならビーストマスター、自分が熊・蟲・樹精へ変身するならドルイド。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./shaman.html"><strong>シャーマン</strong><br><span class="skill-en">(Shaman)</span></a></td>
+              <td>トーテムコスト -5／集中力 +10／トーテム中元素耐性 +50%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/avalanche" target="_blank" rel="noopener noreferrer">大雪崩</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/tornado" target="_blank" rel="noopener noreferrer">大竜巻</a></td>
+              <td><strong>トーテム支援＋元素嵐キャスター</strong>。変身せず大雪崩や竜巻を主砲にするならシャーマン、変身連携ならドルイド。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Season 5 採用スキルランキング -->
+    <section class="section" id="sec-ranking" aria-labelledby="title-ranking">
+      <h2 class="section-title" id="title-ranking">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+          <path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"></path>
+        </svg>
+        2. Season 5 採用スキルランキング（必須スキル早見表）
+      </h2>
+      <p class="page-lead">Season 5 環境のドルイド主力構成（ストームベア・津波ウェアベア型 / 冷気・絡みつく根スプリガン型 / スウォームブレード型）での必須度整理です。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>順位 / 必須度</th>
+              <th>スキル名</th>
+              <th>区分</th>
+              <th>Season 5 環境での位置づけ・必須理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--accent">1位 / ビルドの器 (S)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/werebear_form" target="_blank" rel="noopener noreferrer"><strong>ウェアベア形態</strong></a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/spriggan_form" target="_blank" rel="noopener noreferrer"><strong>スプリガン形態</strong></a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swarmblade_form" target="_blank" rel="noopener noreferrer"><strong>スウォームブレード形態</strong></a>
+              </td>
+              <td>ドルイド</td>
+              <td><strong>ほぼ全ドルイドの土台となる変身スキル（いずれか 1〜2 種）</strong>。攻撃・移動・耐久と人間スキル自動誘発を一手に引き受ける。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">2位 / 必須級シャウト＆渦 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer"><strong>雄叫び</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/maelstrom" target="_blank" rel="noopener noreferrer"><strong>大渦</strong></a></td>
+              <td>プライマ</td>
+              <td>ウェアベア Roar から自動発動する津波・大渦（Stormbear/Tsunami 型）、俊足＋狂乱＋状態異常クリアの要。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">3位 / 連携＆主砲 (S-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swipe" target="_blank" rel="noopener noreferrer"><strong>なぎ払い</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/entangling_roots" target="_blank" rel="noopener noreferrer"><strong>絡みつく根</strong></a></td>
+              <td>プ / ド</td>
+              <td>ウェアベア Maul／スウォームブレード連携先になる「なぎ払い」、およびスプリガンから連射する冷気/毒主力「絡みつく根」。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">4位 / 元素＆回復枠 (A+)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/gathering_storm" target="_blank" rel="noopener noreferrer"><strong>迫りくる嵐</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/eterras_blessing" target="_blank" rel="noopener noreferrer"><strong>エテラの祝福</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_thorn_totem" target="_blank" rel="noopener noreferrer"><strong>棘のトーテム</strong></a></td>
+              <td>プライマ</td>
+              <td>ストームベア用ストームボルト補強（迫りくる嵐）、治癒トーテム連動と大量回復＋バフ（エテラの祝福 / 棘のトーテム）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">5位 / バフ＆槍連携 (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_spriggan" target="_blank" rel="noopener noreferrer"><strong>スプリガン召喚</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/serpent_strike" target="_blank" rel="noopener noreferrer"><strong>毒蛇の一撃</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/fury_leap" target="_blank" rel="noopener noreferrer"><strong>憤怒の跳躍</strong></a></td>
+              <td>ド / プ</td>
+              <td>オーラで基礎クリ率＋回復を盛る（スプリガン召喚）、スウォームブレードへ毒/凍傷を継承する（毒蛇の一撃）、変身連携ジャンプ（憤怒の跳躍）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">6位 / 補助・選択枠 (B〜C)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/upheaval" target="_blank" rel="noopener noreferrer">地走り</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/tempest_strike" target="_blank" rel="noopener noreferrer">嵐撃</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_wolf" target="_blank" rel="noopener noreferrer">狼召喚</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_crow" target="_blank" rel="noopener noreferrer">ストームクロウ召喚</a>
+              </td>
+              <td>プライマ</td>
+              <td>ウェアベア Swipe/Maul の派生連動先、または非変身＆単体コンパニオン併用（「自然の二元性」）用パートナー枠。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. ドルイド固有スキル（5種） -->
+    <section class="section" id="sec-druid-skills" aria-labelledby="title-druid-skills">
+      <h2 class="section-title" id="title-druid-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2L4 7v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V7l-8-5z"></path>
+        </svg>
+        3. ドルイド固有スキル＆重要ノード（5種）
+      </h2>
+      <p class="page-lead">スキル名クリックで Last Epoch Tools 日本語版のスキル詳細・ノードツリーが開きます。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"></rect><path d="M9 12h6M12 9v6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/werebear_form" target="_blank" rel="noopener noreferrer">ウェアベア形態 <span class="skill-en">(Werebear Form)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 人気変身</span><span class="badge">大渦・雄叫び・地走り自動連動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">巨大な人熊へ変身し、突進（Rampage）、強撃（Maul）、咆哮（Roar）などの専用アクションを獲得します。Season 5 でも咆哮に「雄叫び」＆「大渦（津波）」や「迫りくる嵐」を連動させるストームベア／津波ベアが鉄板の快適さを誇ります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c4 4 6 7 6 11a6 6 0 1 1-12 0c0-4 2-7 6-11z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/spriggan_form" target="_blank" rel="noopener noreferrer">スプリガン形態 <span class="skill-en">(Spriggan Form)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">遠距離スペル＆トーテム変身</span><span class="badge">治癒トーテム / 絡みつく根連動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">古代樹の精霊へ変身し、レイジ減衰が極めて緩やかなまま遠距離スペル・治癒トーテム召喚・「絡みつく根」や「エテラの祝福」を自在に展開できるキャスター向け変身形態です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/swarmblade_form" target="_blank" rel="noopener noreferrer">スウォームブレード形態 <span class="skill-en">(Swarmblade Form)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">二刀虫形態 / 毒蛇・竜巻連携</span><span class="badge">近接高速斬撃＋ローカスト</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">高速斬撃とダイブ機動、そして無数のローカスト（蝗）や「毒蛇の一撃」ツリー・大渦・竜巻との連動により、物理スラッシュ／出血／凍傷／電撃まで幅広くこなす俊敏近接形態です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L10 10l4 4 6-10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/entangling_roots" target="_blank" rel="noopener noreferrer">絡みつく根 <span class="skill-en">(Entangling Roots)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 1500c実績スパムスペル</span><span class="badge">冷気/毒 AoE＋ツルバフ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">足元から広範囲の茨を伸ばし、物理・毒・冷気の大ダメージを与える範囲呪文です。Season 5 でもスプリガン形態内から冷気版として超高速スパムし、高コラプションを踏破する実績を持っています。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M7 12h10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_spriggan" target="_blank" rel="noopener noreferrer">スプリガン召喚 <span class="skill-en">(Summon Spriggan)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">基礎クリ率オーラ召喚</span><span class="badge">回避/治癒補助</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">味方周囲に治癒・回避・そして極めて希少な「基礎クリティカル率加算（最大+6〜9%級）」オーラを提供する森の精霊。パッシブ「自然の二元性（単体コンパニオン化）」とも噛み合います。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. プライマリスト基本スキル（12種個別記載） -->
+    <section class="section" id="sec-primal-skills" aria-labelledby="title-primal-skills">
+      <h2 class="section-title" id="title-primal-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+          <path d="M9 9h6v6H9z"></path>
+        </svg>
+        4. 最終ビルドで採用されうるプライマリスト基本スキル（全12種個別解説）
+      </h2>
+      <p class="page-lead">ドルイドでは変身中の専用技から人間形態スキル（全12種＋共通回避 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist_evade" target="_blank" rel="noopener noreferrer">即時避け</a>）のツリー効果をそのまま引き出せるため、特化優先度の高い順に整理します。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer">雄叫び <span class="skill-en">(Warcry)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">ウェアベア必須連動</span><span class="badge">大渦・凍結・無敵継承</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ウェアベア変身中の「Roar」使用時に自動でこのツリーの機能が発動するため、無敵・大渦スタック獲得・冷気変換・敵脆弱付与の要になります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M12 7v5l3 3"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/maelstrom" target="_blank" rel="noopener noreferrer">大渦 <span class="skill-en">(Maelstrom)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 津波ベア主砲</span><span class="badge">Tsunami / 俊足＆狂乱</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">Roar 等からの多重スタックとサブスキル「津波（Tsunami）」を活用する Season 5 の人気「Tsunami Werebear」の主砲。常時俊足＆狂乱維持装置としても万能です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L20 4M15 4h5v5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/swipe" target="_blank" rel="noopener noreferrer">なぎ払い <span class="skill-en">(Swipe)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">ベア Claw/Maul 連動</span><span class="badge">クリ率＋敵討伐加速</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ウェアベア形態の通常攻撃（Swipe）へツリー効果がそのまま適用されるため、キル時レイジ獲得・物理/冷気ダメ増・8% 処刑効果を一括で引き継げます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/gathering_storm" target="_blank" rel="noopener noreferrer">迫りくる嵐 <span class="skill-en">(Gathering Storm)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">ストームベア連動</span><span class="badge">ストームボルト発射</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ストームスタックや近接ヒットに応じた「ストームボルト」自動落下とレイジ/マナ回復により、ウェアベアを嵐の雷熊へ変貌させる重要連動パーツです。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/eterras_blessing" target="_blank" rel="noopener noreferrer">エテラの祝福 <span class="skill-en">(Eterra's Blessing)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">スプリガン変身時無料連打</span><span class="badge">超回復＋レイジ変換</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">スプリガン形態中の自動回復・治癒発動をトリガーにヘルス＆マナ（レイジ）維持力を飛躍的に高める支援呪文。パッシブ「精霊の番人」とも抜群に合います。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M7 12h10"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_thorn_totem" target="_blank" rel="noopener noreferrer">棘のトーテム召喚 <span class="skill-en">(Summon Thorn Totem)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">スプリガン・治癒トーテム継承</span><span class="badge">毒/呪文連携</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">スプリガン形態で呼び出す治癒トーテムを攻撃型へ化けさせたり、毒・凍傷スタックとアーマーバフを周囲へ撒く定番サポート枠です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c3 3 5 6 5 10a5 5 0 1 1-10 0c0-4 2-7 5-10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/serpent_strike" target="_blank" rel="noopener noreferrer">毒蛇の一撃 <span class="skill-en">(Serpent Strike)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">スウォームブレード継承</span><span class="badge">凍傷 / 毒 / 回避</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">スウォームブレード形態中の「Armblade Slash」に本スキルのツリー効果（凍傷変換や毒スタック・継続ダメ増加）を乗せられる重要連携パーツです。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/fury_leap" target="_blank" rel="noopener noreferrer">憤怒の跳躍 <span class="skill-en">(Fury Leap)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">変身間トランジション枠</span><span class="badge">移動/ツル連動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">変身が解けた直後に跳躍で位置取りを立て直しつつ、人間形態で一呼吸置いて再変身（変幻自在バフ起動）する多形態ビルドで光ります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/upheaval" target="_blank" rel="noopener noreferrer">地走り <span class="skill-en">(Upheaval)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">Maul 連動ショックウェーブ（限定）</span><span class="badge">冷気/物理波</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ウェアベアの強撃（Maul）から無料発動させるノードを取る場合、このツリーで冷気変換や範囲拡大を行って一撃の面制圧力を高められます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M12 4v16"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/tempest_strike" target="_blank" rel="noopener noreferrer">嵐撃 <span class="skill-en">(Tempest Strike)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">多形態レイジ再充電（限定）</span><span class="badge">元素トリガー</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">変身を一度解除するローテーション型において、人間時の 0 コスト殴りで瞬間的にマナを満タンへ戻してすぐ再変身するためのつなぎになります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.2L18.5 21 12 16.8 5.5 21l2-7.8L2 9h7l3-7z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_wolf" target="_blank" rel="noopener noreferrer">狼召喚 <span class="skill-en">(Summon Wolf)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">自然の二元性（単体バフ枠）</span><span class="badge">コンパニオン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ドルイド専用パッシブ「自然の二元性（単体コンパニオン化で本体ダメ+30%＆アーマー+75）」を発動させる伴侶候補として選択できます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/summon_storm_crow" target="_blank" rel="noopener noreferrer">ストームクロウ召喚 <span class="skill-en">(Summon Storm Crow)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">自然の二元性＋雷/冷気バフ枠</span><span class="badge">コンパニオン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ストームベア等の元素軸ドルイドで、「自然の二元性」を満たしつつ雷/冷気バフや補助攻撃を追加したい場合の相棒候補です。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. パッシブツリー指針 -->
+    <section class="section" id="sec-passives" aria-labelledby="title-passives">
+      <h2 class="section-title" id="title-passives">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="6" r="3"></circle>
+          <circle cx="18" cy="18" r="3"></circle>
+          <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
+        </svg>
+        5. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist/tree" target="_blank" rel="noopener noreferrer">プライマリスト</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/druid/tree" target="_blank" rel="noopener noreferrer">ドルイド</a>）
+      </h2>
+      <p class="page-lead">プライマリストで筋力・集中力・二刀/大嵐を押さえ、ドルイドツリーでは変身継続の要となる「憎悪」「収束する怒り」「激情の気質（クリ時レイジ+3）」と、耐久の「力の神髄」「皮革」「不浸透」「共生の知恵」を整えます。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>ツリー区分</th>
+              <th>注目パッシブ（LE Tools 日本語版）</th>
+              <th>主な効果・役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist/tree" target="_blank" rel="noopener noreferrer">プライマリスト</a></td>
+              <td>原始の腕力 / 自然の同調 / 野生の贈り物</td>
+              <td>筋力・集中力・冷気/雷耐性・ヘルスを伸ばす序盤 20pt 基盤。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/primalist/tree" target="_blank" rel="noopener noreferrer">プライマリスト</a></td>
+              <td>刃の調和 / 大嵐の結束 / 野生の知恵</td>
+              <td>スウォームブレード等の二刀速度強化、ミニオン/スペル軸の火力倍率確保。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/druid/tree" target="_blank" rel="noopener noreferrer">ドルイド</a></td>
+              <td>憎悪 / 収束する怒り / 激情の気質</td>
+              <td>非戦闘時レイジ減衰ゼロ化、減衰緩和＋変身ダメ増、クリティカル時レイジ +3 獲得。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/druid/tree" target="_blank" rel="noopener noreferrer">ドルイド</a></td>
+              <td>力の神髄 / 共生の知恵 / 皮革 / 不浸透</td>
+              <td>形態別アーマーor近接加算、集中力クリ回避、最大HP比例耐久しきい値、被ヒット軽減。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/druid/tree" target="_blank" rel="noopener noreferrer">ドルイド</a></td>
+              <td>原初の共鳴 / 原始の変節 / 自然の二元性</td>
+              <td>変身時元素貫通 +7%、変幻自在バフ強化、単体相棒時のダメ +30%＆アーマー。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/druid/tree" target="_blank" rel="noopener noreferrer">ドルイド</a></td>
+              <td>川の精霊 / 祝福の泉 / 精霊の番人 / 毒の魔手</td>
+              <td>冷気＆凍傷付与強化（冷気根・津波用）、消費レイジ→ヘルス回復変換、キル時ツル召喚。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. シーズン 5 人気ビルド 3 選 -->
+    <section class="section" id="sec-builds" aria-labelledby="title-builds">
+      <h2 class="section-title" id="title-builds">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        </svg>
+        6. Season 5（Patch 1.5）人気ビルド 3 選
+      </h2>
+      <p class="page-lead">Season 5 で高評価を得ているドルイドの代表 3 アーキタイプです。</p>
+
+      <div class="stack-list">
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/build-guides/tsunami-werebear-druid" target="_blank" rel="noopener noreferrer">
+                ① 津波 / ストームベア（Tsunami &amp; Stormbear Werebear Druid）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 最定番ベア・快適 1 ボタン周回</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/werebear_form" target="_blank" rel="noopener noreferrer">ウェアベア形態</a> の咆哮＆突進に連動させて <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/maelstrom" target="_blank" rel="noopener noreferrer">大渦（津波）</a> や <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/gathering_storm" target="_blank" rel="noopener noreferrer">迫りくる嵐</a>（ストームボルト）を同時誘発し、強靭な熊形態を保ったまま敵陣を押し潰します。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwZgjALAHATEA" target="_blank" rel="noopener noreferrer">ケアテイカーの再生</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsBYA4EYg" target="_blank" rel="noopener noreferrer">ケアテイカーの憤怒</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCsEZgZiA" target="_blank" rel="noopener noreferrer">沈黙の森の遺産</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAsCYHYA4g" target="_blank" rel="noopener noreferrer">森の涙</a> 等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/werebear_form" target="_blank" rel="noopener noreferrer">ウェアベア形態</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/maelstrom" target="_blank" rel="noopener noreferrer">大渦</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer">雄叫び</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swipe" target="_blank" rel="noopener noreferrer">なぎ払い</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/gathering_storm" target="_blank" rel="noopener noreferrer">迫りくる嵐</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/entangling_roots" target="_blank" rel="noopener noreferrer">
+                ② 冷気・絡みつく根スパム＆スプリガン形態（Cold Roots Druid）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 1500+ コラプション実績</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/spriggan_form" target="_blank" rel="noopener noreferrer">スプリガン形態</a> になり、治癒トーテムを並べてレイジ＋バフを確保しながら冷気変換した <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/entangling_roots" target="_blank" rel="noopener noreferrer">絡みつく根</a> を画面中へ連射し凍結＆大ダメージを与えます。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRhBYGYFYg" target="_blank" rel="noopener noreferrer">恒久不変の原始の知識</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMoRgZiA" target="_blank" rel="noopener noreferrer">霜の拘束</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCsCYEYA4g" target="_blank" rel="noopener noreferrer">ユリアの道</a> 等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/spriggan_form" target="_blank" rel="noopener noreferrer">スプリガン形態</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/entangling_roots" target="_blank" rel="noopener noreferrer">絡みつく根</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/eterras_blessing" target="_blank" rel="noopener noreferrer">エテラの祝福</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_thorn_totem" target="_blank" rel="noopener noreferrer">棘のトーテム召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/maelstrom" target="_blank" rel="noopener noreferrer">大渦</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/swarmblade_form" target="_blank" rel="noopener noreferrer">
+                ③ スウォームブレード高速斬撃 / 物理・出血スペル型（Swarmblade Druid）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge">高機動力・ローカスト群 / 毒蛇連動</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swarmblade_form" target="_blank" rel="noopener noreferrer">スウォームブレード形態</a> の高頻度スラッシュとダイブで敵を斬り刻みつつ、ローカスト群や <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/serpent_strike" target="_blank" rel="noopener noreferrer">毒蛇の一撃</a>／大渦連動スペルでダメージを積みます。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMoVgNiA" target="_blank" rel="noopener noreferrer">山の峰</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAswdgRiA" target="_blank" rel="noopener noreferrer">ヴァルディルの杯</a>（出血型）、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCsEYGYBYg" target="_blank" rel="noopener noreferrer">リラカの爪</a>（冷気・投擲連携）等。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/swarmblade_form" target="_blank" rel="noopener noreferrer">スウォームブレード形態</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/serpent_strike" target="_blank" rel="noopener noreferrer">毒蛇の一撃</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/maelstrom" target="_blank" rel="noopener noreferrer">大渦</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/summon_spriggan" target="_blank" rel="noopener noreferrer">スプリガン召喚</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warcry" target="_blank" rel="noopener noreferrer">雄叫び</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. 4大メカニズム -->
+    <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
+      <h2 class="section-title" id="title-mechanics">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.77 1 1.51 1H21a2 2 0 0 1 0 4h-.09c-.74 0-1.25.4-1.51 1z"></path>
+        </svg>
+        7. ドルイドの強さを支える 4 大メカニズム
+      </h2>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <h3>① 攻撃メカニズム：変身中の人間スキルツリー継承</h3>
+          <p>「ウェアベア＝なぎ払い/雄叫び/地走り」「スプリガン＝棘トーテム/絡みつく根」「スウォームブレード＝毒蛇の一撃」のように、専用技が人間側スキルツリーをそのまま引き継ぐため二重・三重のシナジーが生まれます。</p>
+        </div>
+        <div class="mech-card">
+          <h3>② 防御メカニズム：最大ヘルス+20%＋耐久＋変身保護</h3>
+          <p>マスタリー（ヘルス+20%・変身解除時 2 秒被ダメ 70% 減）に加え、「力の神髄（高アーマー）」「皮革（最大HP比例の耐久しきい値）」「不浸透（近接時スタック被ダメ減）」により極めて高い生存力を備えます。</p>
+        </div>
+        <div class="mech-card">
+          <h3>③ レイジ維持：激情の気質＋「憎悪」＋最大マナ拡張</h3>
+          <p>変身維持には、パッシブ「憎悪（非戦闘減衰ゼロ）」と「激情の気質（クリ時レイジ+3）」、さらにウェアベアでは「沈黙の森の遺産／森の涙」やキル/ヒット時レイジ獲得を組み合わせて永続変身を実現します。</p>
+        </div>
+        <div class="mech-card">
+          <h3>④ 快適性：変身中ノーコスト級の突進・ツル・自動詠唱</h3>
+          <p>ウェアベアの Rampage 突進やスウォームブレードのダイブ機動、スプリガンの移動しながら治癒＆根連射など、どの形態を選んでも変身中の取り回しが非常にスムーズです。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 人気ユニーク装備・アフィックス表 -->
+    <section class="section" id="sec-gear" aria-labelledby="title-gear">
+      <h2 class="section-title" id="title-gear">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"></path>
+        </svg>
+        8. 主要ユニーク装備・部位別アフィックス優先度
+      </h2>
+      <p class="page-lead">Season 5 のドルイド各軸で採用されるユニーク装備（名称クリックで LE Tools DB 詳細へ）とアフィックス指針です。</p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>ユニーク名</th>
+              <th>部位</th>
+              <th>主な採用理由・効果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwZgjALAHATEA" target="_blank" rel="noopener noreferrer"><strong>ケアテイカーの再生</strong><br><span class="skill-en">Caretaker's Regrowth</span></a></td>
+              <td>鎧（セット）</td>
+              <td>ケアテイカーの憤怒とセットで機能し、Season 5 の津波ウェアベア／冷気ベア構築を支える新注目鎧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsBYA4EYg" target="_blank" rel="noopener noreferrer"><strong>ケアテイカーの憤怒</strong><br><span class="skill-en">Caretaker's Wrath</span></a></td>
+              <td>両手斧（セット）</td>
+              <td>ケアテイカーセットの一角として体力・自然/冷気火力・ベア形態との噛み合いを提供する S5 セット両手斧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCsEZgZiA" target="_blank" rel="noopener noreferrer"><strong>沈黙の森の遺産</strong><br><span class="skill-en">Legacy of the Quiet Forest</span></a></td>
+              <td>ベルト</td>
+              <td>アーマー・耐性・変身/レイジ維持の安定感を大きく引き上げるドルイド伝統の定番ベルト。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAsCYHYA4g" target="_blank" rel="noopener noreferrer"><strong>森の涙</strong><br><span class="skill-en">Tears of the Forest</span></a></td>
+              <td>アミュレット</td>
+              <td>ツル召喚＋レイジ供給（低コストで変身維持）を両立するドルイド御用達の変身サポート首飾り。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRhBYGYFYg" target="_blank" rel="noopener noreferrer"><strong>恒久不変の原始の知識</strong><br><span class="skill-en">Permanence of Primal Knowledge</span></a></td>
+              <td>グローブ（Primordial）</td>
+              <td>レジェンダリー付与のスキル Lv+ 効果を 50% 強化（切り上げ）し、マナ・範囲拡大・速度を同時に底上げする籠手。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMoRgZiA" target="_blank" rel="noopener noreferrer"><strong>霜の拘束</strong><br><span class="skill-en">Frostbite Shackles</span></a></td>
+              <td>グローブ</td>
+              <td>冷気耐性に応じて大幅な庇護維持力と凍傷ダメを得る、冷気ドルイド（Cold Roots 等）向け定番手袋。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCsCYEYA4g" target="_blank" rel="noopener noreferrer"><strong>ユリアの道</strong><br><span class="skill-en">Yulia's Path</span></a></td>
+              <td>靴</td>
+              <td>冷気スキルや移動速度・生存力をバランス良く底上げする冷気キャスター定番ブーツ。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMoVgNiA" target="_blank" rel="noopener noreferrer"><strong>山の峰</strong><br><span class="skill-en">Peak of the Mountain</span></a></td>
+              <td>兜</td>
+              <td>圧倒的クリティカル率と全能力値を提供し、クリ系ウェアベア・スウォームブレードで鉄板の兜。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
+              <td>指輪</td>
+              <td>全能力値＋条件達成による全耐性＆被ダメ軽減を備えたエンドゲーム最高峰リング。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 20px;">部位別おすすめアフィックス優先度</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>Prefix（能力値・変身火力・最大マナ）</th>
+              <th>Suffix（ヘルス・アーマー・耐久・耐性）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器 / 盾・触媒</td>
+              <td>フラット近接/スペルダメ（形態に合わせる）、攻撃/詠唱速度、クリ倍率</td>
+              <td>冷気/物理耐性寸断、アーマー寸断、虚弱付与</td>
+            </tr>
+            <tr>
+              <td>兜・鎧</td>
+              <td><strong>筋力（熊/蟲） / 集中力（樹精）</strong>、各変身形態／大渦／絡みつく根 Lv+</td>
+              <td>ハイブリッドヘルス、アーマー、クリ回避/軽減、不足耐性</td>
+            </tr>
+            <tr>
+              <td>手袋・ベルト</td>
+              <td>攻撃/詠唱速度、物理/冷気ダメ、クリ倍率</td>
+              <td>ハイブリッドヘルス、実験的ポーション時庇護、耐久力</td>
+            </tr>
+            <tr>
+              <td>靴</td>
+              <td>移動速度（最優先）、筋力 / 集中力</td>
+              <td>ハイブリッドヘルス、アーマー、耐久力、不足耐性</td>
+            </tr>
+            <tr>
+              <td>アクセサリー</td>
+              <td><strong>最大マナ（レイジ上限＝変身持続直結）</strong>、クリ倍率、スペル/近接ダメ</td>
+              <td>ヘルス、耐久力（60%調整）、物理/虚無/毒/元素耐性</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="page-footer-note">
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/build-guides/filter/cycle=rage-of-the-frostborn" target="_blank" rel="noopener noreferrer">Last Epoch Tools（Season 5 ビルドガイド）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+    </p>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html">Last Epoch ガイド</a></li>
+      <li><a class="nav-link" href="./falconer.html">ファルコナー（Season 5）</a></li>
+      <li><a class="nav-link" href="./bladedancer.html">ブレードダンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./marksman.html">マークスマン（Season 5）</a></li>
+      <li><a class="nav-link" href="./paladin.html">パラディン（Season 5）</a></li>
+      <li><a class="nav-link" href="./void-knight.html">ヴォイドナイト（Season 5）</a></li>
+      <li><a class="nav-link" href="./forge-guard.html">フォージガード（Season 5）</a></li>
+      <li><a class="nav-link" href="./sorcerer.html">ソーサラー（Season 5）</a></li>
+      <li><a class="nav-link" href="./spellblade.html">スペルブレード（Season 5）</a></li>
+      <li><a class="nav-link" href="./runemaster.html">ルーンマスター（Season 5）</a></li>
+      <li><a class="nav-link" href="./lich.html">リッチ（Season 5）</a></li>
+      <li><a class="nav-link" href="./necromancer.html">ネクロマンサー（Season 5）</a></li>
+      <li><a class="nav-link" href="./warlock.html">ウォーロック（Season 5）</a></li>
+      <li><a class="nav-link" href="./beastmaster.html">ビーストマスター（Season 5）</a></li>
+      <li><a class="nav-link" href="./shaman.html">シャーマン（Season 5）</a></li>
+      <li><a class="nav-link" href="./druid.html" aria-current="page">ドルイド（Season 5）</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
