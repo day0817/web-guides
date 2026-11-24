@@ -40,4 +40,4 @@
 - [x] メイジ2: `site/last-epoch/sorcerer.html` 制作
 - [x] メイジ3: `site/last-epoch/spellblade.html` 制作
 - [x] メイジ4: `site/last-epoch/runemaster.html` 制作
-- [/] メイジ5: ハブ導線更新・全リンク監査・スマホ検証・承認後 push ＆ 実 URL 確認
+- [x] メイジ5: ハブ導線更新・全リンク監査・スマホ検証・承認後 push ＆ 実 URL 確認
