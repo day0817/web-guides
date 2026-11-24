@@ -9,11 +9,15 @@
 - [x] 初期ページ骨格（`site/index.html`, `site/last-epoch/index.html`）の作成
 - [x] 引継ぎドキュメント（`引継ぎ.md`）・`決定ログ.md` の作成
 - [x] GitHub Public リポジトリ（`https://github.com/day0817/web-guides`）の作成・公開前ファイル一覧／機密チェック承認
+- [x] GitHub Pages 初回公開設定（`GitHub Actions`）および公開 URL（`https://day0817.github.io/web-guides/`）HTTP 200 疎通確認
+- [x] ファルコナーガイド制作方針（Q1〜Q5）の合意・画像直リンク可否の実機検証
 
 ## 保留中の確認事項（ユーザー確認後に実施）
-- [ ] GitHub リポジトリ設定 `Settings > Pages > Source` を **`GitHub Actions`** へ変更（初回のみ必須）
+- なし（Round 1 合意済み。制作中に仕様分岐が出た場合はここに追加）
 
-## 次ステップ（環境整備完了後）
-- [ ] Last Epoch Season 5「ファルコナー」等の各マスタリー用 HTML ページの制作・移植（`site/last-epoch/falconer.html` 等）
-- [ ] ローカルサーバーでのスマホ幅（390x844 等）表示確認
-- [ ] GitHub Pages 公開および実URLでの表示確認
+## 次ステップ（ファルコナー制作・ルール標準化）
+- [x] ステップ1: Last Epoch Tools（日本語版 `/skills/ja/`, `/db/ja/`・Season 5 `/builds/`）からファルコナー＆ローグ前半の最新データ・正式日本語名を安全取得（`safe-web-crawler`）
+- [x] ステップ2: 他マスタリー展開用の設計ルール文書（`docs/マスタリーガイド作成ルール.md`）と `site/assets/base.css` 共通コンポーネント拡張の設計・実装
+- [x] ステップ3: `site/last-epoch/falconer.html` の制作および `site/last-epoch/index.html`・`site/index.html` 導線更新
+- [x] ステップ4: ローカルサーバーでのスマホ幅（390x844 等）表示確認・リンク疎通確認
+- [x] ステップ5: 公開前チェック・ユーザー承認後の GitHub push ＆ 実 URL 確認
