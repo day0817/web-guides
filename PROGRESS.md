@@ -28,3 +28,9 @@
 - [x] 改修3: `site/last-epoch/falconer.html` の全面改訂（冒頭差別化＋隼パッシブ、最終ビルド用ローグスキル個別掲載、名称直接リンク化）
 - [x] 改修4: 全リンク切れ監査・スマホ幅（390x844）検証・承認後 push ＆ 実 URL 確認
 - [x] 改修5: スキル紹介直前に Season 5 採用スキルランキング（必須度早見表）を追加・スマホ検証・承認後 push
+
+## パラディン制作フェーズ（`site/last-epoch/paladin.html`）
+- [x] パラ1: LE Tools 日本語版からセンチネル＆パラディン全スキル・他マスタリー（ヴォイドナイト/フォージガード）比較・Season 5 人気ビルド・パッシブ情報を取得
+- [x] パラ2: Season 5 パラディン採用スキルランキング・固有/基本スキル個別カード・メカニズム・装備DB ID選定
+- [x] パラ3: `site/last-epoch/paladin.html` 制作および `site/last-epoch/index.html`・`site/index.html`・`falconer.html` ドロワー導線更新
+- [/] パラ4: 全 DB・スキルリンク実機監査、スマホ幅（390x844）検証、承認後 push ＆ 実 URL 確認

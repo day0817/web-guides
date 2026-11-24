@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>パラディン（Paladin）Season 5 ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <a href="./index.html">Last Epoch</a>
+      <span aria-hidden="true">/</span>
+      <span>パラディン</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
+      <h1 class="page-title">パラディン（Paladin）完全ガイド</h1>
+      <p class="page-lead">高い耐久性能と回復効果（Healing Effectiveness）の攻撃変換、そして Season 5 で話題の「ラディアントランス」や反射型（Reflectadin）まで幅広くこなすセンチネル上級職の最新ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
+
+      <div class="callout">
+        <strong>アイコン・最新パッチ注記：</strong> Last Epoch Tools の画像アセットは保護仕様により外部サイトからの直リンク不可（HTTP 403）のため、本ガイドでは種別ごとの軽量 SVG アイコンを表示し、スキル名・装備名から直接 LE Tools 詳細ページを開ける構成としています。Season 5 では新スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/radiant_lance" target="_blank" rel="noopener noreferrer">ラディアントランス（Radiant Lance）</a> の登場により、聖遺物自動射撃型や反射（Reflectadin）型が特に高い注目を集めています。
+      </div>
+
+      <nav class="toc-pills" aria-label="ページ内目次">
+        <a class="toc-pill" href="#sec-overview">1. 特徴・差別化</a>
+        <a class="toc-pill" href="#sec-ranking">2. 採用スキル順位</a>
+        <a class="toc-pill" href="#sec-paladin-skills">3. 固有スキル</a>
+        <a class="toc-pill" href="#sec-sentinel-skills">4. センチネルスキル</a>
+        <a class="toc-pill" href="#sec-passives">5. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">6. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">7. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">8. 装備・アフィックス</a>
+      </nav>
+    </header>
+
+    <!-- 1. マスタリー特徴・他職との差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        1. マスタリーの特徴・他職との差別化・固有パッシブ
+      </h2>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <h3 class="skill-title">パラディン固有パッシブ＆マスタリーボーナス（攻防一体の光・回復変換）</h3>
+          <p class="skill-desc">センチネルの基本パッシブに 20pt 投資してパラディンを選択すると、固有スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/holy_aura" target="_blank" rel="noopener noreferrer"><strong>聖なるオーラ（Holy Aura）</strong></a> が解放され、以下のマスタリー固有パッシブボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス①</strong>: <strong>ヘルス割合に応じた増加ダメージ（最大 +100%）</strong> — 高いヘルス維持をそのまま火力ボーナスへ転換します。</li>
+            <li><strong>基礎ボーナス②</strong>: <strong>調和力（Attunement）1 ポイントにつき回復効果（Healing Effectiveness）+1%</strong> — 回復量とスキル威力の双方を伸ばします。</li>
+            <li><strong>攻防の独自メカニズム</strong>: パラディンはオーラやツリーで全耐性・ヘルス再生・ブロックを厚く確保できるだけでなく、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a> や <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/judgement" target="_blank" rel="noopener noreferrer">審判</a> を通じて「回復効果（Healing Effectiveness）」そのものをスペルダメージ・近接ダメージ・ワード生成へ変換できる点が最大の特徴です。</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">センチネル 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/paladin/tree" target="_blank" rel="noopener noreferrer"><strong>パラディン</strong><br><span class="skill-en">(Paladin)</span></a></td>
+              <td>残ヘルス割合ダメ最大 +100%／調和力 1 につき回復効果 +1%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/holy_aura" target="_blank" rel="noopener noreferrer">聖なるオーラ</a></td>
+              <td><strong>光・火・雷スペル／自動射撃・反射・鉄壁サポート型</strong>。装備の耐性枠をパッシブとオーラで補いやすく、Season 5 主役の <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/radiant_lance" target="_blank" rel="noopener noreferrer">ラディアントランス</a> や反射型で安定感が抜群。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_knight/tree" target="_blank" rel="noopener noreferrer"><strong>ヴォイドナイト</strong><br><span class="skill-en">(Void Knight)</span></a></td>
+              <td>近接虚無ダメ +75%／エコー発生率 10%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/erasing_strike" target="_blank" rel="noopener noreferrer">消滅波</a> 等</td>
+              <td><strong>虚無属性・時間操作・エコー複製アタッカー</strong>。発動スキルを影が追撃する瞬間火力が強み。回復や耐性支援の厚さはパラディンに軍配。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_guard/tree" target="_blank" rel="noopener noreferrer"><strong>フォージガード</strong><br><span class="skill-en">(Forge Guard)</span></a></td>
+              <td>火耐性 +35%／物理耐性 +35%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_strike" target="_blank" rel="noopener noreferrer">フォージストライク</a> 等</td>
+              <td><strong>重装甲・物理・鍛造武器ミニオン・盾防御特化</strong>。アーマー値や召喚武器・反射盾に特化する一方、スペル・回復シナジーや属性柔軟性はパラディンが得意。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Season 5 採用スキルランキング -->
+    <section class="section" id="sec-ranking" aria-labelledby="title-ranking">
+      <h2 class="section-title" id="title-ranking">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+          <path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"></path>
+        </svg>
+        2. Season 5 採用スキルランキング（必須スキル早見表）
+      </h2>
+      <p class="page-lead">Last Epoch Tools 掲載の Season 5 パラディン Build Guides（<a class="ext-inline-link" href="https://www.lastepochtools.com/build-guides/big-smite-little-smite---radiant-lance-paladin" target="_blank" rel="noopener noreferrer">Radiant Lance</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/build-guides/reflectadin---reflect-paladin" target="_blank" rel="noopener noreferrer">Reflectadin</a>）および主流メタ構成での採用頻度・必須度順に整理しています。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>順位 / 必須度</th>
+              <th>スキル名</th>
+              <th>区分</th>
+              <th>Season 5 環境での位置づけ・必須理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--accent">1位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/holy_aura" target="_blank" rel="noopener noreferrer"><strong>聖なるオーラ</strong><br><span class="skill-en">(Holy Aura)</span></a></td>
+              <td>パラディン</td>
+              <td><strong>ほぼ全パラディン必須の常駐＋瞬間バフ枠</strong>。元素耐性・ダメージ・攻撃/詠唱速度を常時底上げし、発動で倍増させる土台。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">2位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sigils_of_hope" target="_blank" rel="noopener noreferrer"><strong>希望の光印</strong><br><span class="skill-en">(Symbols of Hope)</span></a></td>
+              <td>パラディン</td>
+              <td><strong>ほぼ全ビルド必須の常時スタック防御/火力枠</strong>。自動生成ノードにより操作負担ゼロでヘルス再生・ブロック・耐性・火ダメを獲得。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">3位 / 準必須 (S-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer"><strong>癒しの手</strong><br><span class="skill-en">(Healing Hands)</span></a></td>
+              <td>パラディン</td>
+              <td><strong>回復・ワード・無敵移動を兼ねる万能枠</strong>。トラバーサル化による無敵移動、または他スキル命中時の自動発動で不死身級の耐久を支える。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">4位 / S5 主力 (A+)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/radiant_lance" target="_blank" rel="noopener noreferrer"><strong>ラディアントランス</strong><br><span class="skill-en">(Radiant Lance)</span></a></td>
+              <td>パラディン</td>
+              <td><strong>Season 5 パラディンの主役スキル</strong>。「黄金の聖遺物」で無敵タレット自動発射、または直接詠唱＋太陽光線で極大ビームを放つ。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">5位 / 主力相棒 (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer"><strong>聖なる炎</strong><br><span class="skill-en">(Smite)</span></a></td>
+              <td>センチネル</td>
+              <td><strong>スペル型・ハンマー型・ランス型の中核</strong>。Time and Faith のマナ回復兼単体火力、または自動トリガーでの広範囲殲滅を担当。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">6位 / 反射・DoT軸 (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rebuke" target="_blank" rel="noopener noreferrer"><strong>弾劾の護り</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/judgement" target="_blank" rel="noopener noreferrer"><strong>審判</strong></a></td>
+              <td>センチ / パラ</td>
+              <td><strong>Reflectadin の鉄壁チャネリング（弾劾の護り）</strong>、および回復効果で燃やす王道ボス火力（審判）の 2 大アーキタイプ核。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">7位 / 投擲・移動軸 (A-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/hammer_throw" target="_blank" rel="noopener noreferrer">ハンマースロー</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/javelin" target="_blank" rel="noopener noreferrer">ジャベリン</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lunge" target="_blank" rel="noopener noreferrer">突進</a></td>
+              <td>センチネル</td>
+              <td><strong>S5 ファイアハンマーディンの主力（ハンマースロー）</strong>、聖旗バフ＋聖なる炎自動発動（ジャベリン）、高速移動（突進）で採用。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">8位 / 近接・選択枠 (B〜C)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/vengeance" target="_blank" rel="noopener noreferrer">仇討ち</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warpath" target="_blank" rel="noopener noreferrer">旋風刃</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/multistrike" target="_blank" rel="noopener noreferrer">マルチストライク</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rive1" target="_blank" rel="noopener noreferrer">斬り捌き</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shield_rush" target="_blank" rel="noopener noreferrer">シールドチャージ</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shield_bash" target="_blank" rel="noopener noreferrer">シールドバッシュ</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_cleave" target="_blank" rel="noopener noreferrer">ヴォイドクリーヴ</a>
+              </td>
+              <td>センチネル</td>
+              <td><strong>近接・トリガー・移動の特化枠</strong>。Reflectadin の反撃トリガー（仇討ち）、聖なる炎発火母体（マルチストライク/旋風刃）、高速移動（シールドチャージ）等。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <strong>基本 5 スロットの組み方目安：</strong> ①<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/holy_aura" target="_blank" rel="noopener noreferrer">聖なるオーラ</a> ＋ ②<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sigils_of_hope" target="_blank" rel="noopener noreferrer">希望の光印</a> ＋ ③<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a> の鉄壁トリオを土台に、残り 2 枠へメイン火力＆相棒スキル（例: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/radiant_lance" target="_blank" rel="noopener noreferrer">ラディアントランス</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎</a>、または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rebuke" target="_blank" rel="noopener noreferrer">弾劾の護り</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/vengeance" target="_blank" rel="noopener noreferrer">仇討ち</a>）を入れるのが Season 5 の定番です。
+      </div>
+    </section>
+
+    <!-- 3. パラディン固有スキル＆重要ノード -->
+    <section class="section" id="sec-paladin-skills" aria-labelledby="title-paladin-skills">
+      <h2 class="section-title" id="title-paladin-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7l3-7z"></path>
+        </svg>
+        3. パラディン固有スキル＆重要ノード
+      </h2>
+      <p class="page-lead">パラディンで解放される 5 つの固有スキルです。スキル名から直接 Last Epoch Tools 日本語版へ移動できます。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/holy_aura" target="_blank" rel="noopener noreferrer">
+                  聖なるオーラ <span class="skill-en">(Holy Aura)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">必須オーラ</span><span class="badge">常時＋発動倍増</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">スロットに入れておくだけで自身と味方に攻撃力・元素耐性等のパッシブ恩恵を与え、発動すると短時間その効果を倍増させます。ほぼ全ビルドの耐久と火力の下支えです。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Shelter from the Storm / 耐性系ノード</strong>: 元素耐性を大量に稼ぎ、装備 Suffix をヘルスやアーマーへ回せます。</li>
+              <li><strong>Flame Burst / Fiery Inquisition</strong>: 攻撃ヒット時にスタックを貯めて炎爆発を誘発し、火型ビルドのサブ火力を稼ぎます。</li>
+              <li><strong>攻撃/詠唱速度・クリ率・再生強化ノード</strong>: ビルドの属性（スペル/近接/反射）に合わせて細かく調整可能です。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 19 9 12 22 5 9"></polygon></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/sigils_of_hope" target="_blank" rel="noopener noreferrer">
+                  希望の光印 <span class="skill-en">(Symbols of Hope)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">必須バフ</span><span class="badge">自動生成・火/防御</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">周囲を周回する光の印（シンボル）を纏い、印の数に応じてヘルス再生・ブロック率・元素耐性・火ダメージ等を得るバフスキル。自動生成ルートにより、押さずに常時最大維持する運用が主流です。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>自動生成＋最大スタック増加ノード</strong>: 手動詠唱の手間をなくし、常時最大数の光印を維持して安定耐久を確保。</li>
+              <li><strong>ブロック・耐性・耐久強化系</strong>: Reflectadin や盾型ではブロック率・物理/元素防御の底上げとして極めて優秀です。</li>
+              <li><strong>Divine Flare / 火属性付与系</strong>: 印を消費して大範囲火炎爆発を起こす攻撃運用への切り替えも可能です。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">
+                  癒しの手 <span class="skill-en">(Healing Hands)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">回復・ワード・無敵移動</span><span class="badge">回復効果スケール</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">範囲回復を降らせるスペルでありながら、ツリー次第で「無敵付きトラバーサル移動」「他スキル命中時の自動発動＋ワード変換」「近接火炎スマイト化（Seraph Blade / Cleric's Hammer）」へ化けるパラディン最強クラスの汎用スキルです。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>トラバーサル化（無敵移動ルート）</strong>: ボスの即死ギミック回避用の無敵移動スキルとして Radiant Lance 型等で採用。</li>
+              <li><strong>ワード生成ノード</strong>: 過剰回復や発動時回復を大量のワード（Ward）へ変換し、実質ヘルスを何倍にも押し上げます。</li>
+              <li><strong>Seraph Blade / Cleric's Hammer / Bane of Evil</strong>: 回復効果を攻撃ダメージへ変換し、近接やスペルのメイン火力にもなります。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/radiant_lance" target="_blank" rel="noopener noreferrer">
+                  ラディアントランス <span class="skill-en">(Radiant Lance)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">Season 5 主役スキル</span><span class="badge">追加効力 500%</span><span class="badge">ブロック / マナ変換</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">Season 5 で登場した聖なるビーム攻撃。標準では盾を要求し超過ブロック率（Uncapped Block Chance 1% ごとにダメージ 1% 乗算増加）で伸びますが、ノード次第で杖＋マナ軸・無敵聖遺物設置・火属性変換へ自在に変化します。</p>
+          <details class="node-details">
+            <summary>重要ノード一覧（LE Tools 日本語版準拠）</summary>
+            <ul class="node-list">
+              <li><strong>黄金の聖遺物（Golden Reliquary）</strong>: 直接詠唱できなくなる代わりに、ラディアントランスを自動発射する無敵の聖遺物を設置（調和力で設置上限増）。</li>
+              <li><strong>Cloudless Sky（盾不要・マナ変換）</strong>: 盾制限を解除して両手杖（<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcBZwViA" target="_blank" rel="noopener noreferrer">精霊の木脈</a> 等）を装備可能にし、ブロック率の代わりに最大マナでスケール。</li>
+              <li><strong>太陽光線（Sunbeam）</strong>: 基本ダメージを火属性へ変換し、帯電・雷耐性寸断をすべて発火・火耐性寸断へ変換。</li>
+              <li><strong>光のクレッシェンド / Eagle's Foot</strong>: 【神聖の霊威】を消費してダメージ・範囲を強化、または小型ランス 2 本を追加発射して雑魚殲滅力を大幅向上。</li>
+              <li><strong>まばゆいイージス / まばゆい審問</strong>: ブロック効力に応じた雷スペルダメ加算（まばゆいイージス）や、ボス/レア命中時の <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/judgement" target="_blank" rel="noopener noreferrer">審判</a> 自動発動（まばゆい審問）も選択可能。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v10M8 6h8M5 20h14M8 16l4-4 4 4"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/judgement" target="_blank" rel="noopener noreferrer">
+                  審判 <span class="skill-en">(Judgement)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">聖なる大地・火 DoT</span><span class="badge">回復効果スケール</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">地面を叩きつけて「聖なる大地（Consecrated Ground）」を生成し、範囲内の味方を回復しつつ敵へ火の持続ダメージを与えます。回復効果をフラットダメージへ変換するオーラ／DoT 型の定番です。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Path of Judgement / Holy Trail 関連</strong>: 回復効果（Healing Effectiveness）を火炎持続ダメージへ直結させ、調和力積みがそのまま高火力になります。</li>
+              <li><strong>Righteous Decree</strong>: 着弾時に <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎（Smite）</a> を複数自動発動させる連携が可能です。</li>
+            </ul>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. 最終ビルドで使用されうるセンチネル基本スキル（個別記載） -->
+    <section class="section" id="sec-sentinel-skills" aria-labelledby="title-sentinel-skills">
+      <h2 class="section-title" id="title-sentinel-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4"></path>
+        </svg>
+        4. 最終ビルドで使用されうるセンチネル基本スキル（個別解説）
+      </h2>
+      <p class="page-lead">パラディンの最終ビルドでメイン攻撃・トリガー・無敵防御・移動バフとして組み込まれる全 12 のセンチネル基本スキルを個別に整理しています（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel_evade" target="_blank" rel="noopener noreferrer">即時避け（Evade）</a> は共通回避枠のため省略）。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v12m-4-4l4 4 4-4M4 20h16"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎 <span class="skill-en">(Smite)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 必須級スペル</span><span class="badge">マナ循環・Devotion 連携</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">天から聖なる炎を落とし敵に火スペルダメ、周囲に回復を与えるスキル。Season 5 の Radiant Lance 型では「直接詠唱＋Time and Faith によるマナ回復＆<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcEYKA" target="_blank" rel="noopener noreferrer">献身のアミュレット（Devotion）</a> の欠損マナ変換火力」を担い、Hammerdin やジャベリン型では自動トリガー火力として活躍します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/rebuke" target="_blank" rel="noopener noreferrer">弾劾の護り <span class="skill-en">(Rebuke)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">Reflectadin 核心</span><span class="badge">被ダメ大幅軽減チャネリング</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">チャネリング中あらゆる被ダメージを劇的に軽減し、終了時や被弾時に反撃・回復・マナ回復を得る鉄壁防御スキル。Season 5 の <a class="ext-inline-link" href="https://www.lastepochtools.com/build-guides/reflectadin---reflect-paladin" target="_blank" rel="noopener noreferrer">Reflectadin</a> ではボス攻撃を棒立ちで耐えながら反射ダメージで倒す軸になります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v8M8 12h8"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/hammer_throw" target="_blank" rel="noopener noreferrer">ハンマースロー <span class="skill-en">(Hammer Throw)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">Hammerdin 主力</span><span class="badge">投擲・周回/発火</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">回転するハンマーを投擲する伝統主力スキル。自身の周囲を周回する螺旋ハンマー化や、火属性変換（Season 5 の <a class="ext-inline-link" href="https://www.lastepochtools.com/planner/ja/BrXpwPYk" target="_blank" rel="noopener noreferrer">Fire Hammerdin</a>）、アイドル「投擲ヒット時スマイト発動」とのコンボで画面全体を制圧します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L20 4M14 4h6v6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/javelin" target="_blank" rel="noopener noreferrer">ジャベリン <span class="skill-en">(Javelin)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">Battle Standard / 聖なる炎トリガー</span><span class="badge">雷/火変換</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">槍を投擲するスキル。最終ビルドでは地面に旗を立てて自身と味方を強化する「Battle Standard（戦旗）」＋周囲へ自動 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎</a>／雷槍を落とす運用や、<em>Holy Trail</em>（聖なる軌跡）の火 DoT 主力として使われます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/lunge" target="_blank" rel="noopener noreferrer">突進 <span class="skill-en">(Lunge)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">高速トラバーサル</span><span class="badge">無敵・マナ回復・聖なる炎連動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵へ一瞬で飛び込む移動攻撃スキル。癒しの手を攻撃・回復用に温存したい構成や、聖遺物を設置しながら高速移動したい Radiant Lance 電撃型で移動枠として採用されます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/vengeance" target="_blank" rel="noopener noreferrer">仇討ち <span class="skill-en">(Vengeance)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">被ダメ軽減・反撃</span><span class="badge">Reflectadin 採用</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">命中後に被ダメージ軽減バフ（Bolster）と反撃（Riposte）を得る 0 マナ近接スキル。<a class="ext-inline-link" href="https://www.lastepochtools.com/build-guides/reflectadin---reflect-paladin" target="_blank" rel="noopener noreferrer">Reflectadin</a> でさらに被ダメを抑えつつ追加の装甲粉砕・回復・反撃を稼ぐ枠として採用されます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/warpath" target="_blank" rel="noopener noreferrer">旋風刃 <span class="skill-en">(Warpath)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">チャネリング移動攻撃</span><span class="badge">聖なる炎トリガー可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">回転しながら移動し続ける伝統のチャネリングスキル。パラディンでは火変換ルートや、回転中に「聖なる炎（Smite）」や「癒しの手」を自動トリガーし続ける快適周回ビルドの軸として使えます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6M12 17l6-6-6-6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/multistrike" target="_blank" rel="noopener noreferrer">マルチストライク <span class="skill-en">(Multistrike)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">聖なる炎・発火トリガー</span><span class="badge">0マナ近接</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">周辺の複数体へ追撃剣を飛ばす近接スキル。直接の剣撃と同時に <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎</a> を自動発射するノード（Smite on hit）と、<em>Time and Faith</em> のマナ/ヘルス回収を組み合わせる型で優秀です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/rive1" target="_blank" rel="noopener noreferrer">斬り捌き <span class="skill-en">(Rive)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">3段コンボ・癒しの手連動</span><span class="badge">0マナ近接</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">3 撃目に確定クリティカルや引き寄せを乗せられる 0 マナの近接連撃。火属性・Ignite 型や、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手（Seraph Blade）</a> を近接攻撃ごとに自動発火させる近接パラディンの起点として機能します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M8 12h8"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shield_rush" target="_blank" rel="noopener noreferrer">シールドチャージ <span class="skill-en">(Shield Rush)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">長距離高速移動</span><span class="badge">盾要求</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">盾を構えて直線状に長距離を高速突進する移動スキル。敵のターゲットを必要としないため、マップを最速で駆け抜けたい高速ファーム型で「突進（Lunge）」の代わりに採用されます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="4" width="14" height="16" rx="4"></rect><path d="M9 12h6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shield_bash" target="_blank" rel="noopener noreferrer">シールドバッシュ <span class="skill-en">(Shield Bash)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">スタン・ブロック関連</span><span class="badge">盾要求</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">盾で敵を強打してスタンや装甲粉砕を与える近接スキル。ブロック率・ブロック効力を大量に確保する盾型パラディンで、敵の行動阻害や追加の近接発火・防御バフ枠として選択肢に入ります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M5 10l7-7 7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/void_cleave" target="_blank" rel="noopener noreferrer">ヴォイドクリーヴ <span class="skill-en">(Void Cleave)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">確定クリ・トラバーサル</span><span class="badge">両手武器/火変換</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">広範囲を斬り裂くトラバーサル近接スキル。火属性への変換や「次の攻撃を確定クリティカル化＋火ダメ加算」するノードを活かし、両手武器型パラディンの移動兼バースト補助として使われます。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. パッシブツリー指針 -->
+    <section class="section" id="sec-passives" aria-labelledby="title-passives">
+      <h2 class="section-title" id="title-passives">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="6" r="3"></circle>
+          <circle cx="18" cy="18" r="3"></circle>
+          <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
+        </svg>
+        5. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel/tree" target="_blank" rel="noopener noreferrer">センチネル</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/paladin/tree" target="_blank" rel="noopener noreferrer">パラディン</a>）
+      </h2>
+      <p class="page-lead">センチネル基本ツリーへ 20pt 投資して耐久・マナ循環の要を押さえ、残りをパラディン中心に配分します（反射型やブロック特化ではフォージガード前半へも少し伸ばします）。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>ツリー区分</th>
+              <th>注目パッシブ（英語原名）</th>
+              <th>主な効果・役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel/tree" target="_blank" rel="noopener noreferrer">センチネル</a></td>
+              <td>Juggernaut</td>
+              <td>STR（筋力）とアーマー％を確保する序盤の定番ノード。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel/tree" target="_blank" rel="noopener noreferrer">センチネル</a></td>
+              <td>Fearless</td>
+              <td>ヘルスと耐性をまとめて底上げし、序盤〜終盤の耐久基盤を作る。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel/tree" target="_blank" rel="noopener noreferrer">センチネル</a></td>
+              <td>Armour Clad</td>
+              <td>固定アーマー＋アーマー％＋<strong>周囲の敵からの被ダメ軽減</strong>を得る最重要防御ノード。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel/tree" target="_blank" rel="noopener noreferrer">センチネル</a></td>
+              <td>Time and Faith</td>
+              <td>対象スキルの直接詠唱／近接命中時にヘルスとマナを回復するマナ維持エンジン。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/paladin/tree" target="_blank" rel="noopener noreferrer">パラディン</a></td>
+              <td>Defiance</td>
+              <td><strong>調和力（Attunement）</strong>と元素耐性を伸ばす攻防一体ノード。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/paladin/tree" target="_blank" rel="noopener noreferrer">パラディン</a></td>
+              <td>Conviction</td>
+              <td>火ダメージと火耐性貫通（および物理系）を伸ばす火軸パラディンの主力ノード。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/paladin/tree" target="_blank" rel="noopener noreferrer">パラディン</a></td>
+              <td>Holy Precision</td>
+              <td>スペル・投擲のクリティカル率とクリティカル倍率を大きく引き上げる。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/paladin/tree" target="_blank" rel="noopener noreferrer">パラディン</a></td>
+              <td>Holy Symbol / Prayer Aegis</td>
+              <td>回復効果（最大 +49%）や耐久閾値・クリ回避を補強。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/paladin/tree" target="_blank" rel="noopener noreferrer">パラディン</a></td>
+              <td>Reverence of Duality</td>
+              <td>ヘルス・ダメージ・回復効果・マナのすべてを％上昇させる最重要の大型パッシブ。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. シーズン 5 人気ビルド紹介 -->
+    <section class="section" id="sec-builds" aria-labelledby="title-builds">
+      <h2 class="section-title" id="title-builds">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        </svg>
+        6. Season 5（Patch 1.5）人気ビルド 3 選
+      </h2>
+      <p class="page-lead">Last Epoch Tools に掲載されている Season 5（Rage of the Frostborn）対応の公式ビルドガイドおよびプランナーに基づく代表 3 構成です。</p>
+
+      <div class="stack-list">
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/build-guides/big-smite-little-smite---radiant-lance-paladin" target="_blank" rel="noopener noreferrer">
+                ① ラディアントランス・パラディン（Big Smite Little Smite）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">S5 主役 / ボス＆マップ両立</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/radiant_lance" target="_blank" rel="noopener noreferrer">ラディアントランス</a>（Eagle's Foot / 黄金の聖遺物）で広範囲を掃討し、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎</a> で単体火力を叩き込みつつ <em>Time and Faith</em> でマナを回収します（<a class="ext-inline-link" href="https://www.lastepochtools.com/planner/ja/oYEPE6kJ" target="_blank" rel="noopener noreferrer">BlueBeyond 版プランナー</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/planner/ja/AVakYr9v" target="_blank" rel="noopener noreferrer">Fire Radiant Lance プランナー</a>）。</li>
+            <li><strong>S5 注目点</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcEYKA" target="_blank" rel="noopener noreferrer">献身のアミュレット（Devotion）</a> で欠損マナをスマイト基礎ダメへ変換し、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcBZwViA" target="_blank" rel="noopener noreferrer">精霊の木脈（Spirit Xylem）</a> や <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCswRgZiA" target="_blank" rel="noopener noreferrer">巨人の心臓（Titan Heart）</a> で高い被ダメ軽減を得ます。</li>
+            <li><strong>採用スキル</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/radiant_lance" target="_blank" rel="noopener noreferrer">ラディアントランス</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sigils_of_hope" target="_blank" rel="noopener noreferrer">希望の光印</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/holy_aura" target="_blank" rel="noopener noreferrer">聖なるオーラ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/build-guides/reflectadin---reflect-paladin" target="_blank" rel="noopener noreferrer">
+                ② リフレクタディン（Reflectadin / 反射パラディン）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 ガイド掲載 / ハードコア対応</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsBYCYDYg" target="_blank" rel="noopener noreferrer">目くらましの光の茂み（Thicket of Blinding Light）</a> と <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmCYGYHYg" target="_blank" rel="noopener noreferrer">棘貝（Thornshell）</a> を核に、敵が視認・攻撃するだけで反射ダメージが発生。ボス戦では <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rebuke" target="_blank" rel="noopener noreferrer">弾劾の護り</a> を構えて棒立ちで耐え抜きます（<a class="ext-inline-link" href="https://www.lastepochtools.com/planner/ja/oYEPR1KJ" target="_blank" rel="noopener noreferrer">LE プランナー</a>）。</li>
+            <li><strong>強み</strong>: 調和力・物理耐性・反射ダメージを積むほど攻防が同時に伸び、操作が極めて楽でハードコア適性も非常に高いのが特徴です。</li>
+            <li><strong>採用スキル</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rebuke" target="_blank" rel="noopener noreferrer">弾劾の護り</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sigils_of_hope" target="_blank" rel="noopener noreferrer">希望の光印</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/holy_aura" target="_blank" rel="noopener noreferrer">聖なるオーラ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/vengeance" target="_blank" rel="noopener noreferrer">仇討ち</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/planner/ja/BrXpwPYk" target="_blank" rel="noopener noreferrer">
+                ③ ファイア・ハンマーディン（S5: Fire Hammerdin）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 プランナー / 快適周回</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: 火属性に変換した <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/hammer_throw" target="_blank" rel="noopener noreferrer">ハンマースロー</a> を投擲しながら走り、投擲命中時アイドル等で <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎</a> を多段降下させる伝統の高回転ビルド。</li>
+            <li><strong>強み</strong>: 盾装備による高いブロック率と移動中の自動攻撃範囲が噛み合い、低予算からエンドゲームまで安定して伸びます。</li>
+            <li><strong>採用スキル</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/hammer_throw" target="_blank" rel="noopener noreferrer">ハンマースロー</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/holy_aura" target="_blank" rel="noopener noreferrer">聖なるオーラ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sigils_of_hope" target="_blank" rel="noopener noreferrer">希望の光印</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lunge" target="_blank" rel="noopener noreferrer">突進</a>）</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. 4 大メカニズム -->
+    <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
+      <h2 class="section-title" id="title-mechanics">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.85 1 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        7. 攻撃・防御・マナ・快適性のメカニズム
+      </h2>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <h3 class="mech-card-title">攻撃スケーリング</h3>
+          <ul>
+            <li><strong>調和力（Attunement）＋回復効果変換</strong>: 調和力 1 ごとに回復効果 +1% が付き、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/judgement" target="_blank" rel="noopener noreferrer">審判</a> や <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a> の基礎ダメへ直結。</li>
+            <li><strong>超過ブロック / 最大マナ変換</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/radiant_lance" target="_blank" rel="noopener noreferrer">ラディアントランス</a> は超過ブロック率 1% ごとに 1% 乗算、または <em>Cloudless Sky</em> 採用時は最大マナでスケールします。</li>
+            <li><strong>反射スケーリング</strong>: Reflectadin は調和力・物理耐性・攻撃者への反射ダメージ（Flat Reflect）を積み上げて全敵を自動処理します。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">防御レイヤー</h3>
+          <ul>
+            <li><strong>耐性確保の容易さ</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/holy_aura" target="_blank" rel="noopener noreferrer">聖なるオーラ</a> と <em>Defiance</em> で元素耐性を大幅に稼げるため、装備の自由度が全職トップクラスです。</li>
+            <li><strong>ブロック＋アーマー＋回復/ワード</strong>: 高いブロック率＆ブロック効力、<em>Armour Clad</em> の近接被ダメ軽減、さらに <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a> や <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVgHATAjAbEA" target="_blank" rel="noopener noreferrer">アーケイロスのねじれた心臓</a> によるワード生成で二重三重の守りを作ります。</li>
+            <li><strong>直接カット手段</strong>: <em>Rebuke</em> の超高倍率軽減や、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCswRgZiA" target="_blank" rel="noopener noreferrer">巨人の心臓</a>／<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcBZwViA" target="_blank" rel="noopener noreferrer">精霊の木脈</a> の被ダメ軽減を重ねます。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">マナ維持の仕組み</h3>
+          <ul>
+            <li><strong>Time and Faith サイクル</strong>: センチネル基本パッシブ <em>Time and Faith</em> により、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎</a> 等の直接詠唱／近接ヒットでマナとヘルスを継続回復します。</li>
+            <li><strong>意図的な欠損マナ制御</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcEYKA" target="_blank" rel="noopener noreferrer">献身のアミュレット（Devotion）</a> 型では「ラディアントランスでマナを削り→スマイトの欠損マナ火力を最大化しつつマナを戻す」循環を行います。</li>
+            <li><strong>無消費トリガー活用</strong>: 0 マナの近接や <em>Hammer Throw</em>＋自動 <em>Smite</em> でマナ枯渇を防げます。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">快適性（QoL）・周回テンポ</h3>
+          <ul>
+            <li><strong>自動照準・自動設置</strong>: 「黄金の聖遺物」の聖遺物タレットや、Reflectadin の視認/被弾反射により、細かいエイムなしで高速クリア可能です。</li>
+            <li><strong>手動バフ管理が不要</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sigils_of_hope" target="_blank" rel="noopener noreferrer">希望の光印</a>（自動維持）＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/holy_aura" target="_blank" rel="noopener noreferrer">聖なるオーラ</a>（常駐）のおかげで操作が極めてシンプルです。</li>
+            <li><strong>無敵移動による安定感</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a> のトラバーサル化で安全にギミックを抜けられます。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 人気の装備・アフィックス -->
+    <section class="section" id="sec-gear" aria-labelledby="title-gear">
+      <h2 class="section-title" id="title-gear">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20 7l-8-4-8 4v10l8 4 8-4V7z"></path>
+          <path d="M12 21V11M12 11l8-4M12 11L4 7"></path>
+        </svg>
+        8. 人気ユニーク装備＆部位別アフィックス
+      </h2>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 12px;">主要ユニーク装備一覧（装備名から直接 LE Tools DB へ移動可能）</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>装備名（日 / 英）</th>
+              <th>部位</th>
+              <th>主な採用理由・効果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcBZwViA" target="_blank" rel="noopener noreferrer"><strong>精霊の木脈</strong><br><span class="skill-en">Spirit Xylem</span></a></td>
+              <td>両手杖</td>
+              <td>Radiant Lance（Cloudless Sky 型）で人気の杖。最大マナ・詠唱速度・耐久を大きく補強。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcEYKA" target="_blank" rel="noopener noreferrer"><strong>献身のアミュレット</strong><br><span class="skill-en">Devotion</span></a></td>
+              <td>アミュレット</td>
+              <td>欠損マナ量に応じて「聖なる炎（Smite）」の雷/基礎ダメージが大幅に加算される主力アミュレット。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsCYA5SA" target="_blank" rel="noopener noreferrer"><strong>裁きの手</strong><br><span class="skill-en">Hand of Judgement</span></a></td>
+              <td>グローブ</td>
+              <td>調和力＋火耐性貫通＋「審判」シナジーを強化する火・調和型パラディンの定番手袋。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCswRgZiA" target="_blank" rel="noopener noreferrer"><strong>巨人の心臓</strong><br><span class="skill-en">Titan Heart</span></a></td>
+              <td>胴鎧</td>
+              <td>両手武器装備時に被ダメージ軽減（15%）と最大ヘルス％を大きく得る堅牢アーマー。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVgHATAjAbEA" target="_blank" rel="noopener noreferrer"><strong>アーケイロスのねじれた心臓</strong><br><span class="skill-en">Twisted Heart of Uhkeiros</span></a></td>
+              <td>レリック</td>
+              <td>元素スペル詠唱ごとに現在ヘルスの一部を消費して大量のワード（Ward）を生成する定番レリック。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsBYCYDYg" target="_blank" rel="noopener noreferrer"><strong>目くらましの光の茂み</strong><br><span class="skill-en">Thicket of Blinding Light</span></a></td>
+              <td>胴鎧</td>
+              <td>Reflectadin の必須ユニーク胴鎧。0.5 秒ごとに相対する敵へ盲目と距離に応じた反射ダメージを与え、上限適用前の物理耐性でも反射が伸びる。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmCYGYHYg" target="_blank" rel="noopener noreferrer"><strong>棘貝</strong><br><span class="skill-en">Thornshell</span></a></td>
+              <td>盾</td>
+              <td>Reflectadin で極めて高いフラット反射ダメージとブロック性能を提供する定番盾。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgLAzAbBQ" target="_blank" rel="noopener noreferrer"><strong>守護のモニュメント</strong><br><span class="skill-en">Monument of Protection</span></a></td>
+              <td>片手斧</td>
+              <td>ブロック効力増加・ブロック時ヘルス回復・耐久力を備える盾型/反射型パラディン向け片手斧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAsCZQRiA" target="_blank" rel="noopener noreferrer"><strong>闘争の器</strong><br><span class="skill-en">Vessel of Strife</span></a></td>
+              <td>レリック</td>
+              <td>ヘルス再生をワード維持・回復へ転換し、Reflectadin 等の超高再生ビルドと相性抜群。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwjMBYA4g" target="_blank" rel="noopener noreferrer"><strong>幻影の一握</strong><br><span class="skill-en">Phantom Grip</span></a></td>
+              <td>指輪</td>
+              <td>フラットクリティカル率とミニオン/スキル補正を同時に稼げるクリ型向け指輪。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRhGYHYCYg" target="_blank" rel="noopener noreferrer"><strong>ブラッドメイジの支配</strong><br><span class="skill-en">Grasp of the Blood Mage</span></a></td>
+              <td>グローブ</td>
+              <td>スペルクリ倍率やヘルス・リーチ関連を補強するスペル型向けグローブ。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
+              <td>指輪</td>
+              <td>全能力値＋合計ステータス条件で全耐性・被ダメ軽減を得る終盤最高峰の汎用防御リング。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 20px;">部位別おすすめアフィックス優先度</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>Prefix（攻撃・コア能力）</th>
+              <th>Suffix（耐久・ユーティリティ）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器・盾</td>
+              <td>スペルダメ / スペルクリ率 / 投擲ダメ（Hammerdin）、ブロック率（盾）</td>
+              <td>アーマー粉砕（Armor Shred）、ブロック効力、物理耐性（反射型）</td>
+            </tr>
+            <tr>
+              <td>兜・鎧</td>
+              <td><strong>調和力（Attunement）</strong>、主力スキル Lv+、マナ（ランス型）</td>
+              <td>ハイブリッドヘルス、アーマー、各種耐性、反射ダメ（Reflectadin）</td>
+            </tr>
+            <tr>
+              <td>手袋・ベルト</td>
+              <td>詠唱/攻撃速度、回復効果、調和力、クールダウン回復</td>
+              <td>ハイブリッドヘルス、ポーション使用時ワード/ヘルス、ヘルス再生</td>
+            </tr>
+            <tr>
+              <td>靴</td>
+              <td>移動速度（最優先）、調和力、クールダウン回復速度</td>
+              <td>ハイブリッドヘルス、アーマー、クリ回避 / 不足耐性</td>
+            </tr>
+            <tr>
+              <td>アクセサリー</td>
+              <td>クリ倍率、スペル/属性ダメ、回復効果、マナ（最大値/再生）</td>
+              <td>ヘルス、物理/虚無/毒耐性（元素耐性は聖なるオーラで十分補えるため他耐性優先）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="page-footer-note">
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/build-guides/filter/cycle=rage-of-the-frostborn" target="_blank" rel="noopener noreferrer">Last Epoch Tools（Season 5 ビルドガイド）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+    </p>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html">Last Epoch ガイド</a></li>
+      <li><a class="nav-link" href="./falconer.html">ファルコナー（Season 5）</a></li>
+      <li><a class="nav-link" href="./paladin.html" aria-current="page">パラディン（Season 5）</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
