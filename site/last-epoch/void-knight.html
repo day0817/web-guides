@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>ヴォイドナイト（Void Knight）Season 5 ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <a href="./index.html">Last Epoch</a>
+      <span aria-hidden="true">/</span>
+      <span>ヴォイドナイト</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
+      <h1 class="page-title">ヴォイドナイト（Void Knight）完全ガイド</h1>
+      <p class="page-lead">0.5 秒後に攻撃やスペルを複製する「エコー（Echo）」と状態異常「老廃（タイムロット / Time Rot）」、さらに最大マナ積みの <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/erasing_strike" target="_blank" rel="noopener noreferrer">消滅波（Erasing Strike）</a> で画面ごと敵を消し飛ばすセンチネル上級職の Season 5 ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
+
+      <div class="callout">
+        <strong>Season 5 最新環境メモ：</strong> Season 5（Patch 1.5系）では「ただひとつの目的（Singular Purpose）」の仕様刷新やマナ積み環境の後押しにより、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmGYDYFYg" target="_blank" rel="noopener noreferrer">四海裂き（World Splitter）</a> 軸の消滅波型や、<a class="ext-inline-link" href="https://www.lastepochtools.com/build-guides/guide-zh-827" target="_blank" rel="noopener noreferrer">クリティカル深淵のエコー型</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/build-guides/guide-zh-845" target="_blank" rel="noopener noreferrer">老廃（Time Rot）軸</a> が高コラプション・ボス攻略の両面で高い評価を得ています。
+      </div>
+
+      <nav class="toc-pills" aria-label="ページ内目次">
+        <a class="toc-pill" href="#sec-overview">1. 特徴・差別化</a>
+        <a class="toc-pill" href="#sec-ranking">2. 採用スキル順位</a>
+        <a class="toc-pill" href="#sec-vk-skills">3. 固有スキル</a>
+        <a class="toc-pill" href="#sec-sentinel-skills">4. センチネルスキル</a>
+        <a class="toc-pill" href="#sec-passives">5. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">6. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">7. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">8. 装備・アフィックス</a>
+      </nav>
+    </header>
+
+    <!-- 1. マスタリー特徴・差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M12 7v5l3 3"></path>
+        </svg>
+        1. マスタリーの特徴・他職との差別化・固有パッシブ
+      </h2>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <h3 class="skill-title">ヴォイドナイト固有パッシブ＆マスタリーボーナス（エコー複製＋虚無特化）</h3>
+          <p class="skill-desc">センチネルの基本パッシブに 20pt 投資してヴォイドナイトを選択すると、固有スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/erasing_strike" target="_blank" rel="noopener noreferrer"><strong>消滅波（Erasing Strike）</strong></a> の解放ルートが開き、以下のマスタリー固有ボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス①</strong>: <strong>近接虚無ダメージ +75%</strong> — 物理ベースの武器攻撃へ虚無属性を乗せる下地を作ります。</li>
+            <li><strong>基礎ボーナス②</strong>: <strong>エコー発生率 10%</strong> — 近接・投擲・虚無スペルの攻撃が 0.5 秒後に影（エコー）として追加マナ消費なしで再発動します（一部移動スキルや特異点を除く）。</li>
+            <li><strong>虚無＆時間メカニズム</strong>: パッシブ「反響する攻撃」「時の軍勢」「後悔の権化」でエコー率を大幅に上乗せし、さらに「未来の心」でエコー発生ごとにマナ回収、状態異常「老廃（Time Rot）」で継続ダメージと敵への被ダメ増加を重ねるのが最大の特徴です。</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">センチネル 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・代表固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_knight/tree" target="_blank" rel="noopener noreferrer"><strong>ヴォイドナイト</strong><br><span class="skill-en">(Void Knight)</span></a></td>
+              <td>近接虚無ダメ +75%／エコー発生率 10%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/erasing_strike" target="_blank" rel="noopener noreferrer">消滅波</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/devouring_orb" target="_blank" rel="noopener noreferrer">貪りのオーブ</a> 等</td>
+              <td><strong>虚無属性・エコー複製・瞬間バースト＆老廃 DoT アタッカー</strong>。一撃の爆発力と虚無吸収＋高ヘルスによる殴り合いが強み。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./paladin.html"><strong>パラディン</strong><br><span class="skill-en">(Paladin)</span></a></td>
+              <td>残ヘルス割合ダメ最大 +100%／調和力 1 につき回復効果 +1%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/holy_aura" target="_blank" rel="noopener noreferrer">聖なるオーラ</a> 等</td>
+              <td><strong>光・火・雷スペル／耐性サポート・反射型</strong>。装備耐性の組みやすさと鉄壁防御ならパラディン、純粋な虚無バースト火力ならヴォイドナイト。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_guard/tree" target="_blank" rel="noopener noreferrer"><strong>フォージガード</strong><br><span class="skill-en">(Forge Guard)</span></a></td>
+              <td>火耐性 +35%／物理耐性 +35%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/forge_strike" target="_blank" rel="noopener noreferrer">フォージストライク</a> 等</td>
+              <td><strong>重装甲・物理・召喚武器ミニオン・盾防御特化</strong>。盾やアーマー値で耐える型がフォージガード、両手武器「ただひとつの目的」＋エコー連打がヴォイドナイト。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Season 5 採用スキルランキング -->
+    <section class="section" id="sec-ranking" aria-labelledby="title-ranking">
+      <h2 class="section-title" id="title-ranking">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+          <path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"></path>
+        </svg>
+        2. Season 5 採用スキルランキング（必須スキル早見表）
+      </h2>
+      <p class="page-lead">Season 5 のヴォイドナイト主力構成（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/erasing_strike" target="_blank" rel="noopener noreferrer">消滅波</a>・<a class="ext-inline-link" href="https://www.lastepochtools.com/build-guides/guide-zh-827" target="_blank" rel="noopener noreferrer">クリ深淵のエコー</a>・<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warpath" target="_blank" rel="noopener noreferrer">旋風刃</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/build-guides/guide-zh-845" target="_blank" rel="noopener noreferrer">老廃型</a>）での採用順・必須度整理です。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>順位 / 必須度</th>
+              <th>スキル名</th>
+              <th>区分</th>
+              <th>Season 5 環境での位置づけ・必須理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--accent">1位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/devouring_orb" target="_blank" rel="noopener noreferrer"><strong>貪りのオーブ</strong><br><span class="skill-en">(Devouring Orb)</span></a></td>
+              <td>ヴォイド</td>
+              <td><strong>ほぼ全ビルド必須の自動周回・バフ機関</strong>。自周囲を周回するオーブ＋虚無の裂け目により虚無ダメ上昇・老廃付与・装甲粉砕を無操作で撒く。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">2位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/anomaly" target="_blank" rel="noopener noreferrer"><strong>特異点</strong><br><span class="skill-en">(Anomaly)</span></a></td>
+              <td>ヴォイド</td>
+              <td><strong>瞬間火力増幅＋確定バフの万能枠</strong>。バブル内の敵をスロー/老廃にしつつ、自身のクリ率・攻撃/詠唱速度・虚無ダメを一気に跳ね上げる。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">3位 / 準必須 (S-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/abyssal_echoes" target="_blank" rel="noopener noreferrer"><strong>深淵のエコー</strong><br><span class="skill-en">(Abyssal Echoes)</span></a></td>
+              <td>ヴォイド</td>
+              <td><strong>連鎖デバフ枠兼 S5 クリティカルスペル軸主砲</strong>。周囲へ連鎖拡散し、近接型では被ダメ上昇デバフや自動誘発枠、スペル型では主力範囲火力になる。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">4位 / 筆頭主砲 (A+)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/erasing_strike" target="_blank" rel="noopener noreferrer"><strong>消滅波</strong><br><span class="skill-en">(Erasing Strike)</span></a></td>
+              <td>ヴォイド</td>
+              <td><strong>Season 5 S〜A+ ティア筆頭近接エース</strong>。<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmGYDYFYg" target="_blank" rel="noopener noreferrer">四海裂き</a> とマナ積みを組み合わせた一撃＋エコー追撃は Uber ボス級を瞬殺する威力。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">5位 / 移動＆連携 (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_cleave" target="_blank" rel="noopener noreferrer"><strong>ヴォイドクリーヴ</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/volatile_reversal" target="_blank" rel="noopener noreferrer"><strong>ヴォイドリバース</strong></a></td>
+              <td>セ / ヴォイド</td>
+              <td><strong>消滅波へ確定クリ・火/虚無倍率を繋ぐ移動斬り（ヴォイドクリーヴ）</strong>、および時間巻き戻し＋敵被ダメ増（ヴォイドリバース）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">6位 / 回転・回復枠 (A-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warpath" target="_blank" rel="noopener noreferrer"><strong>旋風刃</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lunge" target="_blank" rel="noopener noreferrer"><strong>突進</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer"><strong>聖なる炎</strong></a></td>
+              <td>センチネル</td>
+              <td><strong>快適周回チャネリング（旋風刃）</strong>、高速移動＆クールダウンリセット（突進）、虚無変換＋自動発動スペル（聖なる炎）など構成ごとに選択。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">7位 / 選択・他枠 (B〜C)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shield_rush" target="_blank" rel="noopener noreferrer">シールドチャージ</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rive1" target="_blank" rel="noopener noreferrer">斬り捌き</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/vengeance" target="_blank" rel="noopener noreferrer">仇討ち</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/multistrike" target="_blank" rel="noopener noreferrer">マルチストライク</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/hammer_throw" target="_blank" rel="noopener noreferrer">ハンマースロー</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/javelin" target="_blank" rel="noopener noreferrer">ジャベリン</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/rebuke" target="_blank" rel="noopener noreferrer">弾劾の護り</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shield_bash" target="_blank" rel="noopener noreferrer">シールドバッシュ</a>
+              </td>
+              <td>センチネル</td>
+              <td>高速移動（シールドチャージ）、0 マナ近接＆エコー母体（斬り捌き/仇討ち）、投擲虚無型（ハンマースロー）、緊急防御（弾劾の護り）等の選択肢。（※パッシブ前半で <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a> や <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/radiant_lance" target="_blank" rel="noopener noreferrer">ラディアントランス</a> を取り込む S5 変則型も存在）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <strong>基本 5 スロットの組み方目安：</strong> ①<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/devouring_orb" target="_blank" rel="noopener noreferrer">貪りのオーブ</a> ＋ ②<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/anomaly" target="_blank" rel="noopener noreferrer">特異点</a> ＋ ③<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/abyssal_echoes" target="_blank" rel="noopener noreferrer">深淵のエコー</a> の支援 3 本柱を基本に、残り 2 枠へ「<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/erasing_strike" target="_blank" rel="noopener noreferrer">消滅波</a>＋<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_cleave" target="_blank" rel="noopener noreferrer">ヴォイドクリーヴ</a>」または「<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warpath" target="_blank" rel="noopener noreferrer">旋風刃</a>＋<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/volatile_reversal" target="_blank" rel="noopener noreferrer">ヴォイドリバース</a>」を組むのが定番です。
+      </div>
+    </section>
+
+    <!-- 3. ヴォイドナイト固有スキル＆重要ノード -->
+    <section class="section" id="sec-vk-skills" aria-labelledby="title-vk-skills">
+      <h2 class="section-title" id="title-vk-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7l3-7z"></path>
+        </svg>
+        3. ヴォイドナイト固有スキル＆重要ノード
+      </h2>
+      <p class="page-lead">ヴォイドナイトで解放される 5 つの固有スキルです。エコー発生・時間歪曲・虚無デバフと直結しています。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v12m-4-4l4 4 4-4M4 20h16"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/erasing_strike" target="_blank" rel="noopener noreferrer">
+                  消滅波 <span class="skill-en">(Erasing Strike)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">解放スキル / S5 主力エース</span><span class="badge">高威力近接・虚無ビーム連鎖</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">巨大な武器を振り下ろして敵を抹消し、撃破時やスキル内の亀裂（Rift）効果で広範囲へ連鎖爆発やヴォイドビームを発生させるヴォイドナイトの象徴スキル。マナを大量に積むほど本領を発揮します。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Essence of the End（マナ回収）/ 亀裂展開ノード</strong>: 重いマナ消費を補いつつ、着弾地点から遅れて再爆発する Void Rift を複数生成します。</li>
+              <li><strong><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmGYDYFYg" target="_blank" rel="noopener noreferrer">四海裂き（World Splitter）</a> 連携</strong>: 最大マナ量と消滅波スキル補正・確定クリ倍率により、単発数百万〜億単位のバーストを出します。</li>
+              <li><strong>ヴォイドクリーヴ連動</strong>: クリーヴで移動直後に消滅波を撃つことで、強制クリティカル＆追加ダメージを乗せられます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/devouring_orb" target="_blank" rel="noopener noreferrer">
+                  貪りのオーブ <span class="skill-en">(Devouring Orb)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">全構成必須エンジン</span><span class="badge">自周囲周回・裂け目誘発</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">自身を追従・周回しながら一定間隔で虚無ボルトと裂け目（Void Rift）を発生させるオーブを召喚します。周囲の敵へ自動攻撃・老廃付与・装甲粉砕を続け、近接型からスペル型まで必須級の 1 枠です。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Hollow Orb（自周囲周回化）</strong>: 地面設置ではなく自キャラにくっついて回るため、移動中ずっと周囲を自動攻撃・バフし続けます。</li>
+              <li><strong>Abyssal Emission / Void Rift 強化</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/abyssal_echoes" target="_blank" rel="noopener noreferrer">深淵のエコー</a> 連動や虚無ダメージ増・移動速度バフ等をまとめて稼げます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v3M12 20v3M1 12h3M20 12h3"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/abyssal_echoes" target="_blank" rel="noopener noreferrer">
+                  深淵のエコー <span class="skill-en">(Abyssal Echoes)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 クリティカル主砲 / 連鎖デバフ</span><span class="badge">老廃・被ダメ増</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">自身から虚無の衝撃波を放ち、命中した敵がさらに周囲へ次々とエコーを連鎖爆発させます。他スキル（ヴォイドクリーヴ等）からの自動トリガー枠だけでなく、Season 5 ではスペルクリティカル型メイン火力としても人気です。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Voracious / Screaming Rifts</strong>: エコー連鎖範囲・老廃（Time Rot）確率・敵の被クリ/被ダメ増加を広範囲にばら撒きます。</li>
+              <li><strong>クリティカル直接詠唱ルート</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/build-guides/guide-zh-827" target="_blank" rel="noopener noreferrer">S5 ガイド</a> では高い詠唱速度とクリ率・「混沌の残響」を積んで直接連打する主砲として使われます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/anomaly" target="_blank" rel="noopener noreferrer">
+                  特異点 <span class="skill-en">(Anomaly)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">必須級バフ・時間停止</span><span class="badge">クリ率・攻撃/詠唱速度増</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">時間泡（Time Bubble）を展開して敵を時間停止させ、同時に自身へ大幅なクリティカル率・攻撃/詠唱速度・ヘルス/シールド・虚無ダメージバフを付与する超強力サポートスキルです。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Time Bubble 即時化（Time Lord 等）</strong>: 時間停止を省いて即座に自身の周囲へバフ泡を展開し、ボス戦での瞬間火力を最大化します。</li>
+              <li><strong>マーク（Mark of Rot）＋吸命</strong>: バブル範囲内の敵へ継続ダメージ・虚無耐性低下を与え、近接/スペル両方の火力を底上げ。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/volatile_reversal" target="_blank" rel="noopener noreferrer">
+                  ヴォイドリバース <span class="skill-en">(Volatile Reversal)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">時間巻き戻し・瞬間移動</span><span class="badge">攻防リセット・デバフ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">数秒前の自分の位置・ヘルス・マナへ時間を巻き戻し、同時に通過地点・出現地点へ虚無の裂け目と攻撃/詠唱速度・敵被ダメージ増加デバフを発生させる時間操作スキルです。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>敵への虚無・継続被ダメ増加</strong>: ボス戦での最大バースト直前に使うことでダメージ効率を大きく引き上げられます。</li>
+              <li><strong>引き戻し制御 / クールダウン管理</strong>: 立ち位置を変えすぎたくない構成では、位置巻き戻しを抑えつつ速度バフと裂け目だけを得る調整も可能です。</li>
+            </ul>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. 最終ビルドで使用されうるセンチネル基本スキル（個別記載） -->
+    <section class="section" id="sec-sentinel-skills" aria-labelledby="title-sentinel-skills">
+      <h2 class="section-title" id="title-sentinel-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4"></path>
+        </svg>
+        4. 最終ビルドで使用されうるセンチネル基本スキル（個別解説）
+      </h2>
+      <p class="page-lead">ヴォイドナイトの最終ビルドで主力攻撃・移動連携・エコー母体として採用されうる全 12 のセンチネル基本スキルを個別に解説しています（共通回避 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel_evade" target="_blank" rel="noopener noreferrer">即時避け（Evade）</a> は除く）。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M5 10l7-7 7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/void_cleave" target="_blank" rel="noopener noreferrer">ヴォイドクリーヴ <span class="skill-en">(Void Cleave)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">消滅波型の必須相棒</span><span class="badge">トラバーサル・確定クリ連動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">前方へ踏み込んで大きく斬り払う移動近接スキル。消滅波（Erasing Strike）型では次の消滅波を確定クリティカル＋高倍率化するノードや、斬撃後に自動で「深淵のエコー」を発動するノードにより攻防移動の要になります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/warpath" target="_blank" rel="noopener noreferrer">旋風刃 <span class="skill-en">(Warpath)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 虚無スピン主力</span><span class="badge">老廃・エコー・0マナ可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">回転移動し続ける定番チャネリング。ヴォイドナイトでは虚無属性への変換（Echoing / Void Spiral）＋ 0 マナ維持＋高速エコー発生により、走りながら画面中の敵を老廃（Time Rot）や虚無斬撃で切り刻めます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v12m-4-4l4 4 4-4M4 20h16"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/smite" target="_blank" rel="noopener noreferrer">聖なる炎 <span class="skill-en">(Smite)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">虚無変換スペル化</span><span class="badge">エコー / 旋風刃・投擲連動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">本来は火スペルですが、ツリー内で虚無属性（Atonement / Void 変換）へ変換でき、ヴォイドナイトのエコー発生やパッシブ「自制」と噛み合います。投擲型・スピン型の自動追撃としても優秀です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/lunge" target="_blank" rel="noopener noreferrer">突進 <span class="skill-en">(Lunge)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">敵指定高速移動</span><span class="badge">無敵・マナ回復</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵への高速接近手段。移動時の無敵フレームやキル時のクールダウンリセット、ヘルス/マナ回復を得られ、両手武器型以外で機動力と安定感を両立したい際に採用されます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M8 12h8"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shield_rush" target="_blank" rel="noopener noreferrer">シールドチャージ <span class="skill-en">(Shield Rush)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">高速周回移動</span><span class="badge">盾型向け</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">盾を構えた無ターゲット突進スキル。深淵のエコー型や老廃型など片手武器＋盾を装備するヴォイドナイトで、マップ踏破速度を最速にする移動枠として活躍します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/rive1" target="_blank" rel="noopener noreferrer">斬り捌き <span class="skill-en">(Rive)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">0マナ虚無連撃</span><span class="badge">エコー / 時と信仰</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">3 撃目に確定クリ・虚無変換・引き寄せを持つ 0 マナ連撃。エコーとの組み合わせで 3 撃目連打や、パッシブ「時と信仰」によるヘルス/マナ回復用として扱いやすい基本攻撃です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/vengeance" target="_blank" rel="noopener noreferrer">仇討ち <span class="skill-en">(Vengeance)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">被ダメ軽減・虚無対応</span><span class="badge">0マナ近接</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">被ダメージ軽減バフ（Bolster）を得ながら戦える 0 マナ近接スキル。近接殴りの耐久底上げと「時と信仰」でのマナ戻しを両立したい堅実な型で採用されます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6M12 17l6-6-6-6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/multistrike" target="_blank" rel="noopener noreferrer">マルチストライク <span class="skill-en">(Multistrike)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">多段近接・虚無変換スマイト連動</span><span class="badge">0マナ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">追撃剣による手数と「聖なる炎（虚無変換）」自動誘発に優れた近接スキル。エコー発生と合わせた多段トリガーで老廃やヒット時効果を大量にばら撒けます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v8M8 12h8"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/hammer_throw" target="_blank" rel="noopener noreferrer">ハンマースロー <span class="skill-en">(Hammer Throw)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">投擲エコー・虚無変換</span><span class="badge">遠距離周回</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ヴォイドナイトの「投擲攻撃もエコー発生する」「時の軍勢（投擲速度増）」を活かせる投擲主力。虚無変換ルートやスマイト（虚無変換）発動型で安全に戦えます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L20 4M14 4h6v6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/javelin" target="_blank" rel="noopener noreferrer">ジャベリン <span class="skill-en">(Javelin)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">投擲・移動・旗バフ</span><span class="badge">老廃付与候補</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">槍投げによる遠距離投擲やトラバーサル移動、戦旗設置を行えるスキル。投擲型ヴォイドナイトの補助やエコーと合わせた手数稼ぎに使えます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/rebuke" target="_blank" rel="noopener noreferrer">弾劾の護り <span class="skill-en">(Rebuke)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">緊急ダメージカット</span><span class="badge">マナ/ヘルス回復</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">チャネリング中の圧倒的被ダメ軽減スキル。ボスの大技を耐えつつマナとヘルスを一気に戻したい防御重視のビルドで差し込むことができます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="4" width="14" height="16" rx="4"></rect><path d="M9 12h6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/shield_bash" target="_blank" rel="noopener noreferrer">シールドバッシュ <span class="skill-en">(Shield Bash)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">スタン・ブロック型向け</span><span class="badge">盾要求</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">盾装備時のスタン＆アーマー粉砕近接スキル。パッシブ「ただひとつの目的」はブロック率 30% 未満で効果倍増するため通常は両手武器か低ブロック盾を好みますが、ブロック特化構成では候補になります。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. パッシブツリー指針 -->
+    <section class="section" id="sec-passives" aria-labelledby="title-passives">
+      <h2 class="section-title" id="title-passives">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="6" r="3"></circle>
+          <circle cx="18" cy="18" r="3"></circle>
+          <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
+        </svg>
+        5. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel/tree" target="_blank" rel="noopener noreferrer">センチネル</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_knight/tree" target="_blank" rel="noopener noreferrer">ヴォイドナイト</a>）
+      </h2>
+      <p class="page-lead">センチネル前半に 20pt 振って耐久基盤を固め、ヴォイドナイト側で生命力（Vitality）・虚無吸収・エコー確率・マナ回復・老廃（Time Rot）を伸ばします。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>ツリー区分</th>
+              <th>注目パッシブ（LE Tools 日本語版）</th>
+              <th>主な効果・役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel/tree" target="_blank" rel="noopener noreferrer">センチネル</a></td>
+              <td>巨大な力 / 大胆不敵 / 装甲硬化</td>
+              <td>筋力・生命力・耐性・アーマー・周囲からの被ダメ軽減を押さえる基本 20pt ライン。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sentinel/tree" target="_blank" rel="noopener noreferrer">センチネル</a></td>
+              <td>時と信仰 / 剣豪 / 剣闘士</td>
+              <td>0 マナ攻撃のマナ回収（時と信仰）、剣/斧速度や二刀流（剣闘士）を必要に応じて取得。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_knight/tree" target="_blank" rel="noopener noreferrer">ヴォイドナイト</a></td>
+              <td>ただひとつの目的 / 宿命の騎士 / 永遠なる姿</td>
+              <td>ブロック率 30% 未満で効果 2 倍になる虚無ダメ上昇（ただひとつの目的）と、生命力・ヘルス・アーマーの大幅底上げ。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_knight/tree" target="_blank" rel="noopener noreferrer">ヴォイドナイト</a></td>
+              <td>世界を喰らうもの / 終わりなき飢え / 深淵の耐久力</td>
+              <td>近接＆虚無ダメージによる高いヘルス吸収と物理/虚無耐性・ヘルスで殴り合いを支える。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_knight/tree" target="_blank" rel="noopener noreferrer">ヴォイドナイト</a></td>
+              <td>反響する攻撃 / 時の軍勢 / 後悔の権化 / 混沌の残響</td>
+              <td>エコー発生率と老廃付与率・攻撃速度・範囲スペル火力を伸ばすヴォイドナイトの要。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_knight/tree" target="_blank" rel="noopener noreferrer">ヴォイドナイト</a></td>
+              <td>未来の心 / 終焉の霊威 / 虚無のイージス</td>
+              <td>エコー時のマナ回復（未来の心）や、被大ダメ時に軽減バリアを展開する防御機構。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_knight/tree" target="_blank" rel="noopener noreferrer">ヴォイドナイト</a></td>
+              <td>老廃のさざ波 / 老廃の支配 / 一時的速度</td>
+              <td>老廃（Time Rot）拡散＆DoT 倍増、CD 回復速度＆貪りのオーブ時の虚無の裂け目追加。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. シーズン 5 人気ビルド 3 選 -->
+    <section class="section" id="sec-builds" aria-labelledby="title-builds">
+      <h2 class="section-title" id="title-builds">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        </svg>
+        6. Season 5（Patch 1.5）人気ビルド 3 選
+      </h2>
+      <p class="page-lead">Season 5 で主力を張るヴォイドナイト代表 3 アーキタイプ（コミュニティ定番の消滅波型＋ LE Tools 掲載公式ガイド 2 本）です。</p>
+
+      <div class="stack-list">
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/erasing_strike" target="_blank" rel="noopener noreferrer">
+                ① マナ積み・消滅波 ヴォイドナイト（Erasing Strike）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 最上位帯 / ボスキラー</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmGYDYFYg" target="_blank" rel="noopener noreferrer">四海裂き（World Splitter）</a> と装備全体での最大マナ積みを完成させ、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_cleave" target="_blank" rel="noopener noreferrer">ヴォイドクリーヴ</a> の踏み込みから確定クリティカルの <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/erasing_strike" target="_blank" rel="noopener noreferrer">消滅波</a>＋エコー追撃を叩き込みます。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmGYDYFYg" target="_blank" rel="noopener noreferrer">四海裂き（World Splitter）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCswRgZiA" target="_blank" rel="noopener noreferrer">巨人の心臓（Titan Heart）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgTALAjAzEA" target="_blank" rel="noopener noreferrer">打ち砕かれた世界</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer">アトラリアの赤い指輪</a>。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/erasing_strike" target="_blank" rel="noopener noreferrer">消滅波</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/void_cleave" target="_blank" rel="noopener noreferrer">ヴォイドクリーヴ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/devouring_orb" target="_blank" rel="noopener noreferrer">貪りのオーブ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/anomaly" target="_blank" rel="noopener noreferrer">特異点</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/abyssal_echoes" target="_blank" rel="noopener noreferrer">深淵のエコー</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/volatile_reversal" target="_blank" rel="noopener noreferrer">ヴォイドリバース</a>）</li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/build-guides/guide-zh-827" target="_blank" rel="noopener noreferrer">
+                ② クリティカル・深淵のエコー（Crit Abyssal Echoes / S5 ガイド）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 ビルドガイド掲載 / 広範囲キャスター</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/abyssal_echoes" target="_blank" rel="noopener noreferrer">深淵のエコー</a> を直接高回転で詠唱して連鎖クリティカルを連発し、周回中の <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/devouring_orb" target="_blank" rel="noopener noreferrer">貪りのオーブ</a> と <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/anomaly" target="_blank" rel="noopener noreferrer">特異点</a> で攻防バフを回します（<a class="ext-inline-link" href="https://www.lastepochtools.com/planner/ja/AKg0j6KG" target="_blank" rel="noopener noreferrer">LE プランナー</a>）。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgzCIJxA" target="_blank" rel="noopener noreferrer">最後の深淵の堡塁</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGYCYEYg" target="_blank" rel="noopener noreferrer">狂える錬金術師の柄杓</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRhGYHYCYg" target="_blank" rel="noopener noreferrer">ブラッドメイジの支配</a>。</li>
+            <li><strong>採用スキル</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/abyssal_echoes" target="_blank" rel="noopener noreferrer">深淵のエコー</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/devouring_orb" target="_blank" rel="noopener noreferrer">貪りのオーブ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/anomaly" target="_blank" rel="noopener noreferrer">特異点</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/volatile_reversal" target="_blank" rel="noopener noreferrer">ヴォイドリバース</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/build-guides/guide-zh-845" target="_blank" rel="noopener noreferrer">
+                ③ 老廃（Time Rot）特化・旋風刃 / ラディアントランス型
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 ガイド掲載 / 快適 DoT 周回</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: 移動しながら自動で <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warpath" target="_blank" rel="noopener noreferrer">旋風刃</a>（虚無スピン型）またはパラディン前半ツリー経由の <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/radiant_lance" target="_blank" rel="noopener noreferrer">ラディアントランス</a>（<a class="ext-inline-link" href="https://www.lastepochtools.com/planner/ja/Av9y5bjO" target="_blank" rel="noopener noreferrer">S5 ガイド版プランナー</a>）と貪りのオーブから状態異常「老廃（Time Rot）」を高スタック付与し、歩きながら敵を溶かします。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMBYHYDYg" target="_blank" rel="noopener noreferrer">デスダンス（Death Dance）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYA5SA" target="_blank" rel="noopener noreferrer">腐れの心（Rotmind）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmBYHZKA" target="_blank" rel="noopener noreferrer">満たされぬ憤怒</a> 等。</li>
+            <li><strong>採用スキル</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/warpath" target="_blank" rel="noopener noreferrer">旋風刃</a>（またはラディアントランス） / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/devouring_orb" target="_blank" rel="noopener noreferrer">貪りのオーブ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/abyssal_echoes" target="_blank" rel="noopener noreferrer">深淵のエコー</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/anomaly" target="_blank" rel="noopener noreferrer">特異点</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/healing_hands" target="_blank" rel="noopener noreferrer">癒しの手</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. 4 大メカニズム -->
+    <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
+      <h2 class="section-title" id="title-mechanics">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.85 1 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        7. 攻撃・防御・マナ・快適性のメカニズム
+      </h2>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <h3 class="mech-card-title">攻撃スケーリング</h3>
+          <ul>
+            <li><strong>エコー発生率＝実効火力の倍増</strong>: マスタリー 10% に加えパッシブでエコー率を盛ることで、ほぼすべての攻撃が 0.5 秒後に無料複製されます。</li>
+            <li><strong>「ただひとつの目的」＋老廃（Time Rot）</strong>: ブロック率 30% 未満維持で高倍率虚無ダメージを得つつ、老廃スタックによる継続ダメ＆敵被ダメ増を重ねます。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">防御レイヤー（高ヘルス＋虚無吸収）</h3>
+          <ul>
+            <li><strong>生命力（Vitality）特化の高ヘルス＋吸収</strong>: 生命力ノード（「永遠なる姿」等）と「世界を喰らうもの」「終わりなき飢え」の虚無ダメージヘルス吸収により、1 ヒットで全快級のリカバリーを持ちます。</li>
+            <li><strong>両手軽減＋虚無のイージス</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCswRgZiA" target="_blank" rel="noopener noreferrer">巨人の心臓</a>（被ダメ15%減）、<em>装甲硬化</em>、「虚無のイージス」や <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcCYyA" target="_blank" rel="noopener noreferrer">貪欲なる虚無</a> で大ダメージを耐えます。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">マナ維持の仕組み</h3>
+          <ul>
+            <li><strong>未来の心＋Void Well（周期回復）</strong>: エコー発動時のマナ回復や、最大マナを増やすほど周期回復量が増えるパッシブ機構により、消滅波の高コストを支えます。</li>
+            <li><strong>0マナ移動＆時間巻き戻し</strong>: ヴォイドリバースによるマナ巻き戻しや、消滅波ツリー内のマナ回収ノード（Essence of the End）を組み合わせます。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">快適性（QoL）・周回テンポ</h3>
+          <ul>
+            <li><strong>貪りのオーブ自動展開</strong>: 1 度回せば周囲を自動で叩き続け、移動速度バフまで乗ります。</li>
+            <li><strong>1〜2 スキル主体の明快な操作</strong>: 旋風刃スピン型やヴォイドクリーヴ→消滅波ループは、スマホから見返しても操作手順が非常にシンプルです。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 人気の装備・アフィックス -->
+    <section class="section" id="sec-gear" aria-labelledby="title-gear">
+      <h2 class="section-title" id="title-gear">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20 7l-8-4-8 4v10l8 4 8-4V7z"></path>
+          <path d="M12 21V11M12 11l8-4M12 11L4 7"></path>
+        </svg>
+        8. 人気ユニーク装備＆部位別アフィックス
+      </h2>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 12px;">主要ユニーク装備一覧（装備名から直接 LE Tools DB へ移動可能）</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>装備名（日 / 英）</th>
+              <th>部位</th>
+              <th>主な採用理由・効果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRmGYDYFYg" target="_blank" rel="noopener noreferrer"><strong>四海裂き</strong><br><span class="skill-en">World Splitter</span></a></td>
+              <td>両手斧</td>
+              <td>最大マナ比例の基礎虚無ダメージと「消滅波」超強化を持つ S5 消滅波型の最強核武器。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcEYHYE4g" target="_blank" rel="noopener noreferrer"><strong>冷淡なる一呑み</strong><br><span class="skill-en">Apathy's Maw</span></a></td>
+              <td>両手斧</td>
+              <td>四海裂き入手前の繋ぎから旋風刃／老廃近接型まで幅広く使える定番虚無両手斧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCswRgZiA" target="_blank" rel="noopener noreferrer"><strong>巨人の心臓</strong><br><span class="skill-en">Titan Heart</span></a></td>
+              <td>胴鎧</td>
+              <td>両手武器装備時に被ダメージ軽減（15%）と最大ヘルス％を大きく得る堅牢アーマー。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwNgTALAjAzEA" target="_blank" rel="noopener noreferrer"><strong>打ち砕かれた世界</strong><br><span class="skill-en">Shattered Worlds</span></a></td>
+              <td>レリック</td>
+              <td>移動速度・全ステータス・スキル加速等を底上げする高難度エンドゲーム級レリック。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgTAzArBQ" target="_blank" rel="noopener noreferrer"><strong>無の境地</strong><br><span class="skill-en">Nihilis</span></a></td>
+              <td>アミュレット</td>
+              <td>全スキルレベル +2 と高い耐性・ヘルス・フレイル系恩恵を得るエンドゲーム最高峰首飾り。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAsEYHZKA" target="_blank" rel="noopener noreferrer"><strong>苦痛の水管</strong><br><span class="skill-en">Siphon of Anguish</span></a></td>
+              <td>指輪</td>
+              <td>移動速度・各種ダメージ吸収・ドゥーム（Doom）付与を得られる序盤〜終盤の定番リング。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMuBmI" target="_blank" rel="noopener noreferrer"><strong>闇の歩み</strong><br><span class="skill-en">Darkstride</span></a></td>
+              <td>靴</td>
+              <td>高い移動速度と近接虚無ダメージを備えた高速周回向けの定番ブーツ。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwRgzCIJxA" target="_blank" rel="noopener noreferrer"><strong>最後の深淵の堡塁</strong><br><span class="skill-en">Bulwark of the Last Abyss</span></a></td>
+              <td>盾</td>
+              <td>S5 深淵のエコー型等で採用される高ブロック性能＆虚無/スキルシナジー盾。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCMBYHYDYg" target="_blank" rel="noopener noreferrer"><strong>デスダンス</strong><br><span class="skill-en">Death Dance</span></a></td>
+              <td>靴</td>
+              <td>S5 老廃（Time Rot）ビルド等で採用される状態異常・回避/耐久向けユニーク靴。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYA5SA" target="_blank" rel="noopener noreferrer"><strong>腐れの心</strong><br><span class="skill-en">Rotmind</span></a></td>
+              <td>触媒</td>
+              <td>「老廃（Time Rot）」付与確率や虚無継続ダメを伸ばし、「ただひとつの目的」の非ブロック条件とも両立できる専用オフハンド触媒。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzAcCYyA" target="_blank" rel="noopener noreferrer"><strong>貪欲なる虚無</strong><br><span class="skill-en">Ravenous Void</span></a></td>
+              <td>グローブ</td>
+              <td>虚無の防壁スタックで被ダメージを大幅カットする最高峰の汎用防御ガントレット。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
+              <td>指輪</td>
+              <td>全能力値＋ステータス条件で全耐性・被ダメ軽減を得るエンドゲーム最終リング。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 20px;">部位別おすすめアフィックス優先度</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>Prefix（火力・マナ・コア能力）</th>
+              <th>Suffix（耐久・ユーティリティ）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器（両手斧等）</td>
+              <td>近接虚無ダメ / 攻撃速度 / クリ率（または老廃確率・DoT）</td>
+              <td>アーマー寸断、虚弱付与（Frail on hit）、スタン回避</td>
+            </tr>
+            <tr>
+              <td>兜・鎧</td>
+              <td><strong>最大マナ（消滅波型最優先）</strong>、主力スキル Lv+、生命力（Vitality）</td>
+              <td>ハイブリッドヘルス、増加ヘルス、アーマー、不足耐性</td>
+            </tr>
+            <tr>
+              <td>手袋・ベルト</td>
+              <td>攻撃/詠唱速度、クリ倍率、虚無/DoTダメ、クールダウン回復</td>
+              <td>ハイブリッドヘルス、ポーション使用時ワード/ヘルス、クリ軽減</td>
+            </tr>
+            <tr>
+              <td>靴</td>
+              <td>移動速度（最優先）、生命力、クールダウン回復速度</td>
+              <td>ハイブリッドヘルス、アーマー、各種不足耐性</td>
+            </tr>
+            <tr>
+              <td>アクセサリー</td>
+              <td>最大マナ（消滅波型）、クリ倍率、虚無ダメ、生命力</td>
+              <td>不足耐性（物理・冷気・雷・毒等）、ヘルス、クリダメ軽減</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="page-footer-note">
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/build-guides/filter/cycle=rage-of-the-frostborn" target="_blank" rel="noopener noreferrer">Last Epoch Tools（Season 5 ビルドガイド）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+    </p>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html">Last Epoch ガイド</a></li>
+      <li><a class="nav-link" href="./falconer.html">ファルコナー（Season 5）</a></li>
+      <li><a class="nav-link" href="./paladin.html">パラディン（Season 5）</a></li>
+      <li><a class="nav-link" href="./void-knight.html" aria-current="page">ヴォイドナイト（Season 5）</a></li>
+      <li><a class="nav-link" href="./sorcerer.html">ソーサラー（Season 5）</a></li>
+      <li><a class="nav-link" href="./spellblade.html">スペルブレード（Season 5）</a></li>
+      <li><a class="nav-link" href="./runemaster.html">ルーンマスター（Season 5）</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

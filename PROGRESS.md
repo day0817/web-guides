@@ -41,3 +41,8 @@
 - [x] メイジ3: `site/last-epoch/spellblade.html` 制作
 - [x] メイジ4: `site/last-epoch/runemaster.html` 制作
 - [x] メイジ5: ハブ導線更新・全リンク監査・スマホ検証・承認後 push ＆ 実 URL 確認
+
+## ヴォイドナイト制作フェーズ（`site/last-epoch/void-knight.html`）
+- [x] VK1: LE Tools 日本語版からヴォイドナイト＆センチネル全スキル・パッシブノード・Season 5 ビルド情報を収集
+- [x] VK2: `site/last-epoch/void-knight.html` 制作およびハブ・全ページ導線更新
+- [/] VK3: 全外部リンク監査・スマホ検証・公開前機密チェック・承認後 push ＆ 実 URL 確認
