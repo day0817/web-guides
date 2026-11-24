@@ -33,4 +33,4 @@
 - [x] パラ1: LE Tools 日本語版からセンチネル＆パラディン全スキル・他マスタリー（ヴォイドナイト/フォージガード）比較・Season 5 人気ビルド・パッシブ情報を取得
 - [x] パラ2: Season 5 パラディン採用スキルランキング・固有/基本スキル個別カード・メカニズム・装備DB ID選定
 - [x] パラ3: `site/last-epoch/paladin.html` 制作および `site/last-epoch/index.html`・`site/index.html`・`falconer.html` ドロワー導線更新
-- [/] パラ4: 全 DB・スキルリンク実機監査、スマホ幅（390x844）検証、承認後 push ＆ 実 URL 確認
+- [x] パラ4: 全 DB・スキルリンク実機監査、スマホ幅（390x844）検証、承認後 push ＆ 実 URL 確認
