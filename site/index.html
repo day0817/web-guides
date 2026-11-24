@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>WebGuides | モバイル向けガイド集</title>
+  <link rel="stylesheet" href="./assets/base.css">
+  <script src="./assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header">
+      <span class="page-eyebrow">MOBILE GUIDE HUB</span>
+      <h1 class="page-title">WebGuides</h1>
+      <p class="page-lead">スマホ閲覧に最適化したゲーム攻略・ビルドガイド用の静的サイト基盤です。</p>
+    </header>
+
+    <section class="section" aria-labelledby="section-guides">
+      <h2 class="section-title" id="section-guides">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        公開ガイド一覧
+      </h2>
+
+      <div class="card-grid">
+        <a class="card" href="./last-epoch/index.html">
+          <div class="card-header">
+            <h3 class="card-title">Last Epoch ガイド</h3>
+            <span class="card-meta">Season 5</span>
+          </div>
+          <p class="card-desc">マスタリー別のビルド・育成・装備方針ページをまとめたハブ。</p>
+        </a>
+
+        <div class="card card--muted">
+          <div class="card-header">
+            <h3 class="card-title">追加予定エリア</h3>
+            <span class="card-meta">準備中</span>
+          </div>
+          <p class="card-desc">今後作成する別ゲームやメモ用の HTML ページをここに追加できます。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="./index.html" aria-current="page">トップページ</a></li>
+      <li><a class="nav-link" href="./last-epoch/index.html">Last Epoch ガイド</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+
+# Secrets / Environment
+.env
+.env.*
+*.pem
+*.key
+
+# Local-only scratch (never committed)
+drafts/local/
+tmp/
+node_modules/
+dist/

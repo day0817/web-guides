@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>Last Epoch ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <span>Last Epoch</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">LAST EPOCH / SEASON 5</span>
+      <h1 class="page-title">Last Epoch マスタリー別ガイド</h1>
+      <p class="page-lead">マスタリーごとに独立した HTML ページを配置し、スマホから直接読み返せる構成にします。</p>
+    </header>
+
+    <section class="section" aria-labelledby="section-mastery">
+      <h2 class="section-title" id="section-mastery">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+        マスタリー一覧（追加枠）
+      </h2>
+
+      <div class="card-grid">
+        <div class="card card--muted">
+          <div class="card-header">
+            <h3 class="card-title">ファルコナー（Falconer）</h3>
+            <span class="card-meta">次工程で移植</span>
+          </div>
+          <p class="card-desc">Season 5 ファルコナー完全ガイド用のページ配置枠（<code>falconer.html</code> 予定）。</p>
+        </div>
+
+        <div class="card card--muted">
+          <div class="card-header">
+            <h3 class="card-title">ヴォイドナイト（Void Knight）</h3>
+            <span class="card-meta">追加候補</span>
+          </div>
+          <p class="card-desc">マスタリーごとの専用ページ（<code>void-knight.html</code> 等）を順次追加可能。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html" aria-current="page">Last Epoch ガイド</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
