@@ -34,3 +34,10 @@
 - [x] パラ2: Season 5 パラディン採用スキルランキング・固有/基本スキル個別カード・メカニズム・装備DB ID選定
 - [x] パラ3: `site/last-epoch/paladin.html` 制作および `site/last-epoch/index.html`・`site/index.html`・`falconer.html` ドロワー導線更新
 - [x] パラ4: 全 DB・スキルリンク実機監査、スマホ幅（390x844）検証、承認後 push ＆ 実 URL 確認
+
+## メイジ 3 マスタリー制作フェーズ（`sorcerer.html`, `spellblade.html`, `runemaster.html`）
+- [x] メイジ1: 既存ページの画像403注記削除、LE Tools 日本語版からメイジ＆3マスタリー全スキル・マスタリーボーナス・Season 5 ビルド情報を収集
+- [x] メイジ2: `site/last-epoch/sorcerer.html` 制作
+- [x] メイジ3: `site/last-epoch/spellblade.html` 制作
+- [x] メイジ4: `site/last-epoch/runemaster.html` 制作
+- [/] メイジ5: ハブ導線更新・全リンク監査・スマホ検証・承認後 push ＆ 実 URL 確認

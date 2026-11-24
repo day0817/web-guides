@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>ソーサラー（Sorcerer）Season 5 ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <a href="./index.html">Last Epoch</a>
+      <span aria-hidden="true">/</span>
+      <span>ソーサラー</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
+      <h1 class="page-title">ソーサラー（Sorcerer）完全ガイド</h1>
+      <p class="page-lead">最大マナとマナ消費量をそのまま火力と庇護（ワード / Ward）へ変換し、圧倒的な広範囲殲滅力と高単体バーストを両立するメイジ上級職の Season 5 ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
+
+      <div class="callout">
+        <strong>Season 5 最新環境メモ：</strong> Season 5 でも「最大マナ積み × マナ殻/防壁による庇護（ワード）確保」というソーサラーの強みは健在です。<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/static_orb" target="_blank" rel="noopener noreferrer">静電のオーブ（Static Orb）</a> や <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glacier" target="_blank" rel="noopener noreferrer">氷河（Glacier）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/black_hole" target="_blank" rel="noopener noreferrer">ブラックホール（Black Hole）</a> 炎上軸などがエンドゲームおよび超高コラプション周回で活躍しています。
+      </div>
+
+      <nav class="toc-pills" aria-label="ページ内目次">
+        <a class="toc-pill" href="#sec-overview">1. 特徴・差別化</a>
+        <a class="toc-pill" href="#sec-ranking">2. 採用スキル順位</a>
+        <a class="toc-pill" href="#sec-sorcerer-skills">3. 固有スキル</a>
+        <a class="toc-pill" href="#sec-mage-skills">4. メイジスキル</a>
+        <a class="toc-pill" href="#sec-passives">5. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">6. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">7. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">8. 装備・アフィックス</a>
+      </nav>
+    </header>
+
+    <!-- 1. マスタリー特徴・差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path>
+        </svg>
+        1. マスタリーの特徴・他職との差別化・固有パッシブ
+      </h2>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <h3 class="skill-title">ソーサラー固有パッシブ＆マスタリーボーナス（マナ規模＝攻防直結）</h3>
+          <p class="skill-desc">メイジ基本パッシブに 20pt 投資してソーサラーを選択すると、最終固有スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/meteor" target="_blank" rel="noopener noreferrer"><strong>メテオ（Meteor）</strong></a> の解放ルートが開き、以下のマスタリー固有ボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス①</strong>: <strong>最大マナ +50</strong> — 高コストスペルの連打やマナ上限スケーリングの土台を無条件で底上げします。</li>
+            <li><strong>基礎ボーナス②</strong>: <strong>スペルのマナコストに応じた増加ダメージ（Spells deal increased damage equal to their mana cost）</strong> — 重いスペルほど火力が伸びるソーサラー独自の設計です。</li>
+            <li><strong>攻防のマナ統合</strong>: 「アークメイジ」「知恵」「失われた知識」「マナの殻」「マナの防壁」などの専用パッシブにより、<strong>最大マナ 1,000 超えの構築が火力・マナ回復・毎秒庇護（ワード）・被ダメ肩代わりのすべてを同時に強化</strong>します。</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">メイジ 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・代表固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sorcerer/tree" target="_blank" rel="noopener noreferrer"><strong>ソーサラー</strong><br><span class="skill-en">(Sorcerer)</span></a></td>
+              <td>最大マナ +50／マナコスト比例のスペルダメ増加<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/meteor" target="_blank" rel="noopener noreferrer">メテオ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/static_orb" target="_blank" rel="noopener noreferrer">静電のオーブ</a> 等</td>
+              <td><strong>純遠距離高火力キャスター＆最大マナ軸</strong>。重いスペル・広範囲 AoE・マナ先行防御（MoM 相当）による一撃破壊力と周回速度が持ち味。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./spellblade.html"><strong>スペルブレード</strong><br><span class="skill-en">(Spellblade)</span></a></td>
+              <td>近接ヒット時庇護 +4／近接消費マナを庇護変換<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shatter_strike" target="_blank" rel="noopener noreferrer">シャッターストライク</a> 等</td>
+              <td><strong>近接＋元素スペル連動の魔法剣士</strong>。近接殴りで大量の庇護を稼ぎつつ、エンチャントウェポンや武器連撃で斬り伏せる。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./runemaster.html"><strong>ルーンマスター</strong><br><span class="skill-en">(Runemaster)</span></a></td>
+              <td>元素ダメージ +30%／元素スペル詠唱速度 +10%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation" target="_blank" rel="noopener noreferrer">ルーン招来</a> 等</td>
+              <td><strong>3属性ルーンの組み合わせ魔法＆トリガー砲台型</strong>。ルーン順に応じた多彩な固有呪文や高い庇護維持力で万能に対応する。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Season 5 採用スキルランキング -->
+    <section class="section" id="sec-ranking" aria-labelledby="title-ranking">
+      <h2 class="section-title" id="title-ranking">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+          <path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"></path>
+        </svg>
+        2. Season 5 採用スキルランキング（必須スキル早見表）
+      </h2>
+      <p class="page-lead">Season 5 のソーサラー主力ビルド（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/static_orb" target="_blank" rel="noopener noreferrer">静電のオーブ</a>・<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glacier" target="_blank" rel="noopener noreferrer">氷河</a>・<a class="ext-inline-link" href="https://www.lastepochtools.com/build-guides/guide-zh-854" target="_blank" rel="noopener noreferrer">炎上ブラックホール</a>・メテオ）における必須度・採用順の整理です。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>順位 / 必須度</th>
+              <th>スキル名</th>
+              <th>区分</th>
+              <th>Season 5 環境での位置づけ・必須理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--accent">1位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_ward" target="_blank" rel="noopener noreferrer"><strong>烈火の庇護</strong><br><span class="skill-en">(Flame Ward)</span></a></td>
+              <td>メイジ</td>
+              <td><strong>ほぼ全ビルド固定の最強防御バフ</strong>。被ダメージ大幅軽減・庇護（ワード）獲得・ヒット反撃・属性ダメ上昇を 1 枠で担う。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">2位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/teleport" target="_blank" rel="noopener noreferrer"><strong>テレポート</strong><br><span class="skill-en">(Teleport)</span></a></td>
+              <td>メイジ</td>
+              <td><strong>瞬間移動＋全耐性・庇護・エレメンタルノヴァ連動枠</strong>。敵の即死攻撃回避と高速ファームのテンポを作る定番枠。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">3位 / 準必須 (S-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/static_orb" target="_blank" rel="noopener noreferrer"><strong>静電のオーブ</strong><br><span class="skill-en">(Static Orb)</span></a></td>
+              <td>ソーサラー</td>
+              <td><strong>Season 5 S ティア筆頭火力</strong>。最大マナ比例の Manacharged ノードにより、マップ一掃からボス瞬間火力まで高水準でこなす。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">4位 / 主力軸 (A+)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glacier" target="_blank" rel="noopener noreferrer"><strong>氷河</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/frost_claw" target="_blank" rel="noopener noreferrer"><strong>凍気の爪</strong></a></td>
+              <td>メイジ</td>
+              <td><strong>冷気バースト・マナ回復・スパークチャージ起爆の双璧</strong>。氷河は高範囲＋マナ戻し、凍気の爪は手数によるクリ／状態異常トリガーに優秀。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">5位 / 炎上・隕石軸 (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/black_hole" target="_blank" rel="noopener noreferrer"><strong>ブラックホール</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/meteor" target="_blank" rel="noopener noreferrer"><strong>メテオ</strong></a></td>
+              <td>ソーサラー</td>
+              <td><strong>集敵＋S5 炎上特化軸（ブラックホール）</strong>および<strong>超大火力降下（メテオ）</strong>。メテオは <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA5KA" target="_blank" rel="noopener noreferrer">星々の先触れ</a> での自動落下とも好相性。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">6位 / 補助・マナ枠 (A-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/arcane_ascendance" target="_blank" rel="noopener noreferrer">Arcane Ascendance</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/focus" target="_blank" rel="noopener noreferrer">フォーカス</a></td>
+              <td>ソ / メイジ</td>
+              <td><strong>瞬間火力トグル（Arcane Ascendance）</strong>と、緊急マナ全回復＋庇護チャージ（フォーカス）。ボス前の仕込みやマナ維持で採用。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">7位 / 選択枠 (B〜C)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lightning_blast" target="_blank" rel="noopener noreferrer">ライトニングブラスト</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/nova" target="_blank" rel="noopener noreferrer">エレメンタルノヴァ</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/snap_freeze" target="_blank" rel="noopener noreferrer">瞬間凍結</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/fireball" target="_blank" rel="noopener noreferrer">ファイアボール</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/mana_strike" target="_blank" rel="noopener noreferrer">マナストライク</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/static_spell" target="_blank" rel="noopener noreferrer">静電</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/volcanic_orb" target="_blank" rel="noopener noreferrer">噴火のオーブ</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/disintegrate" target="_blank" rel="noopener noreferrer">崩壊光線</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/ice_barrage" target="_blank" rel="noopener noreferrer">アイスバラージ</a>
+              </td>
+              <td>メイジ / ソ</td>
+              <td>テレポート連動の自動詠唱（エレメンタルノヴァ）、トリガー連鎖（ライトニングブラスト）、凍結補助（瞬間凍結）など構成に応じて選択。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <strong>基本 5 スロットの組み方目安：</strong> ①<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_ward" target="_blank" rel="noopener noreferrer">烈火の庇護</a> ＋ ②<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/teleport" target="_blank" rel="noopener noreferrer">テレポート</a> を防御・移動の固定 2 枠にし、残り 3 枠へメイン火力 1〜2 種＋補助バフ／マナ回復枠（例: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/static_orb" target="_blank" rel="noopener noreferrer">静電のオーブ</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glacier" target="_blank" rel="noopener noreferrer">氷河</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/focus" target="_blank" rel="noopener noreferrer">フォーカス</a> または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/arcane_ascendance" target="_blank" rel="noopener noreferrer">Arcane Ascendance</a>）を組むのが王道です。
+      </div>
+    </section>
+
+    <!-- 3. ソーサラー固有スキル＆重要ノード -->
+    <section class="section" id="sec-sorcerer-skills" aria-labelledby="title-sorcerer-skills">
+      <h2 class="section-title" id="title-sorcerer-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7l3-7z"></path>
+        </svg>
+        3. ソーサラー固有スキル＆重要ノード
+      </h2>
+      <p class="page-lead">ソーサラーで解放される 5 つの固有スキルです。高マナコストやマナ上限と連動して爆発的な威力を発揮します。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="6"></circle><path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/static_orb" target="_blank" rel="noopener noreferrer">
+                  静電のオーブ <span class="skill-en">(Static Orb)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">Season 5 主役</span><span class="badge">最大マナ比例・雷/冷気</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">電撃を周囲に撒きながら進み、最後に爆発する雷オーブを発射します。最大マナ量に応じて威力が大幅に伸びるため、マナ積みソーサラーの主力として最上位に評価されています。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Manacharged / Overcharged Detonation</strong>: 最大マナに比例してオーブ爆発ダメージを大きく乗算し、ボス戦の決定打になります。</li>
+              <li><strong>オービット / 貫通・停止ノード</strong>: 自周囲回型にして高速周回用に使う型と、着弾地点で即爆発させる単体集中型の切り替えが可能。</li>
+              <li><strong>スパークチャージ連携</strong>: パッシブ「アルケインカレント（ソーサラー側）」と合わせてスパークチャージ付与率を大幅に高められます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M4 7l16 10M20 7L4 17"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/ice_barrage" target="_blank" rel="noopener noreferrer">
+                  アイスバラージ <span class="skill-en">(Ice Barrage)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">連続投射・冷気</span><span class="badge">ヒットトリガー相性</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">指定方向へ氷の矢を連射し続ける設置型の冷気タレット／バラージ。移動しながら自動で多段ヒットを稼げるため、冷気貫通・凍結・ヒット時発動系の補助に優れます。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Numbing Cold / 持続時間＆弾数増加</strong>: ボスに対して冷却・凍結値・アーマー寸断を継続的に与え続けます。</li>
+              <li><strong>手数トリガー媒体</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA5KA" target="_blank" rel="noopener noreferrer">星々の先触れ</a> 等のクリティカル／ヒット系効果を重ねる補助砲台として機能します。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l4 8h-3v10h-2V11H8l4-8z"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/arcane_ascendance" target="_blank" rel="noopener noreferrer">
+                  Arcane Ascendance <span class="skill-en">(Arcane Ascendance)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">瞬間スペル超強化</span><span class="badge">ボスバースト枠</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">発動中その場に固定（または移動制限付き）になる代わりに、スペルダメージ・詠唱速度・ライトニングブラスト自動連射等を大幅に引き上げる強化スタンススキルです（LE Tools 日本語版表記も英語名表記）。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>テレポート併用運用</strong>: 展開中もテレポートで位置調整できる構成が多く、ボスフェーズのバースト窓で絶大な威力を発揮します。</li>
+              <li><strong>マナ消費調整ノード</strong>: 持続中のマナドレインを抑えたり、逆に消費量に応じて追加恩恵を得たりできます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/black_hole" target="_blank" rel="noopener noreferrer">
+                  ブラックホール <span class="skill-en">(Black Hole)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 炎上軸主力 / 集敵</span><span class="badge">冷気/火変換可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">周囲の敵を一点へ強烈に引き寄せて継続ダメージと状態異常を与える制御＆火力スキル。Season 5 の LE Tools ガイドでは火変換・炎上（Ignite）軸のメイン火力としても注目されています。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>火属性・炎上ルート（Armageddon / Blazing 等）</strong>: 多段ヒットをすべて炎上に変換し、高耐久ボスも一気に焼き切ります。</li>
+              <li><strong>Binary Star / メテオ連動ノード</strong>: 中心へ集敵した敵へメテオや氷河を叩き込むコンボが強力です。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 3L9 13l-2 6 6-2L21 5z"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/meteor" target="_blank" rel="noopener noreferrer">
+                  メテオ <span class="skill-en">(Meteor)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">解放スキル・極大火力</span><span class="badge">追加効力 / 雷変換</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">上空から巨大な隕石を落とし、極めて高いスペル追加ダメージ効力を持つソーサラーの象徴スキル。マナコストの重さ自体がマスタリーボーナスで火力へ変換されます。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Meteor Shower（複数落下）</strong>: 一度に複数個のメテオを降らせて画面制圧力とヒット数を高めます。</li>
+              <li><strong><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsEYA4DYg" target="_blank" rel="noopener noreferrer">ヴィラトリアの凋落</a> / 雷変換</strong>: 雷属性へ変換して雷貫通や感電と一本化する定番コンボがあります。</li>
+              <li><strong><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA5KA" target="_blank" rel="noopener noreferrer">星々の先触れ</a> トリガー</strong>: 他スキルのクリティカル命中時にメテオを自動落下させるビルドも人気です。</li>
+            </ul>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. 最終ビルドで使用されうるメイジ基本スキル（個別記載） -->
+    <section class="section" id="sec-mage-skills" aria-labelledby="title-mage-skills">
+      <h2 class="section-title" id="title-mage-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4"></path>
+        </svg>
+        4. 最終ビルドで使用されうるメイジ基本スキル（個別解説）
+      </h2>
+      <p class="page-lead">ソーサラーのエンドゲーム構成で防御・移動・火力・マナ循環として採用されうる全 13 のメイジ基本スキルを個別に解説しています（共通回避 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/mage_evade" target="_blank" rel="noopener noreferrer">即時避け（Evade）</a> は除く）。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/flame_ward" target="_blank" rel="noopener noreferrer">烈火の庇護 <span class="skill-en">(Flame Ward)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">全構成必須防御</span><span class="badge">被ダメ大幅軽減・庇護</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">発動時に庇護（ワード）を得て、数秒間ヒット被ダメージを大幅に軽減するメイジ最強の防御スキル。被弾時の自動発動ノードや、雷・冷気へのダメージバフ変換ノード（Infusion 系）により攻防両面で外せない 1 枠です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/teleport" target="_blank" rel="noopener noreferrer">テレポート <span class="skill-en">(Teleport)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">必須トラバーサル</span><span class="badge">耐性・庇護・自動ノヴァ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">障害物を飛び越えて瞬間移動するトラバーサルスキル。ソーサラーでは移動後数秒の全元素耐性＋30% 以上や庇護獲得、さらに移動先への自動 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/nova" target="_blank" rel="noopener noreferrer">エレメンタルノヴァ</a> 発動やクローン残置によるデコイ運用も定番です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l8-16 8 16-8-4-8 4z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/glacier" target="_blank" rel="noopener noreferrer">氷河 <span class="skill-en">(Glacier)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 冷気主力・マナ循環</span><span class="badge">3段階爆発</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">手前から奥へ向けて小・中・大の 3 連続氷爆を起こすスキル。大爆発部分の非常に高い追加ダメ効力と、クリティカル／キル時にマナを回収できるノードのおかげで、高マナ型ソーサラーの主力兼マナエンジンとして活躍します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6M12 17l6-6-6-6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/frost_claw" target="_blank" rel="noopener noreferrer">凍気の爪 <span class="skill-en">(Frost Claw)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">高頻度ヒット主力</span><span class="badge">スパークチャージ / エレメンタルノヴァ連動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">扇状に冷気の爪弾を放ち、単体に対して全弾集中ヒット（ショットガン）させられるスキル。ソーサラーでは雷変換＋スパークチャージ連打、または凍気の爪からの自動 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/nova" target="_blank" rel="noopener noreferrer">エレメンタルノヴァ</a> 連鎖により超高速マップ周回を実現します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/lightning_blast" target="_blank" rel="noopener noreferrer">ライトニングブラスト <span class="skill-en">(Lightning Blast)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">連鎖電撃・自動発動</span><span class="badge">スパークチャージ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">敵の間を連鎖する電撃ボルト。ソーサラーでは <em>静電のオーブ</em> の相棒、<em>Arcane Ascendance</em> 中の追加電撃、またはメイジパッシブ「アルケインカレント」「冬のルーン（冷気変換）」経由の自動追撃として広く組み込まれます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"></circle><path d="M8 12h8M12 8v8"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/focus" target="_blank" rel="noopener noreferrer">フォーカス <span class="skill-en">(Focus)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">高速マナ全回復</span><span class="badge">庇護獲得・耐性バフ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">チャネリングしてマナと庇護を急回復する補助スキル。メテオや静電のオーブなど消費マナが重いビルドにおいて、マナ切れを数秒で立て直すほか、終了時のアーマー／耐性／クールダウン回復短縮で快適に回せます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/nova" target="_blank" rel="noopener noreferrer">エレメンタルノヴァ <span class="skill-en">(Elemental Nova)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">自動発動ノヴァ</span><span class="badge">テレポート / 凍気の爪連動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">自身周囲へ元素衝撃波を放つ範囲スペル。特化ツリーにより火・冷気・雷のいずれかに固定したり、敵指定キャストへ変更したりでき、テレポートや凍気の爪からの連鎖トリガーとして優秀です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v10M8 6h8M5 20h14"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/static_spell" target="_blank" rel="noopener noreferrer">静電 <span class="skill-en">(Static)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">移動時自動チャージ</span><span class="badge">無消費雷放電</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">移動するだけでチャージが貯まり、周囲の敵へ自動電撃を放つ雷スキル。高速周回型で走り抜けるだけで雑魚処理や「ライトニングブラスト自動誘発」を回したい場合に採用候補になります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"></polygon></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/snap_freeze" target="_blank" rel="noopener noreferrer">瞬間凍結 <span class="skill-en">(Snap Freeze)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">確定凍結・アーマー強化</span><span class="badge">ボス拘束</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">周囲の敵を即座に凍結させ、凍結した敵の数に応じたアーマーや庇護維持力を得る制御スキル。高コラプションの危険なレア敵を足止めしたい冷気ビルドで差し込まれます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="7"></circle></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/fireball" target="_blank" rel="noopener noreferrer">ファイアボール <span class="skill-en">(Fireball)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">チャネリング / 多段炎上</span><span class="badge">育成〜火軸</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">高速連射やチャネリング化・貫通爆発化が可能な火の定番スペル。炎上スタック稼ぎや <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsEYDYBYg" target="_blank" rel="noopener noreferrer">ロギの飢え</a> 等の炎上系ユニークと組み合わせた火ソーサラーの選択肢です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M9 12l6-4v8l-6-4z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/volcanic_orb" target="_blank" rel="noopener noreferrer">噴火のオーブ <span class="skill-en">(Volcanic Orb)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">破片撒き・炎上 / 冷気変換</span><span class="badge">多段ヒット</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">転がりながら破片（シュラプネル）を四方に噴出する火のオーブ。炎上スタックを大量に稼げるほか、メイジパッシブ「冬のルーン」で冷気変換して冷却・凍結支援にも使えます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M8 6l-4 6 4 6M16 6l4 6-4 6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/mana_strike" target="_blank" rel="noopener noreferrer">マナストライク <span class="skill-en">(Mana Strike)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">0マナ遠距離化可</span><span class="badge">即時マナ回復</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">通常は近接攻撃ですが、ツリーで遠距離打撃（Spark Charges / Ranged）へ変更でき、攻撃速度を積むことでフォーカスなしでも一瞬でマナを満タンへ戻せる実用枠です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M17 7l4 5-4 5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/disintegrate" target="_blank" rel="noopener noreferrer">崩壊光線 <span class="skill-en">(Disintegrate)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">チャネリングビーム</span><span class="badge">持続ダメージ / 炎上</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">直線状に属性レーザーを照射し続けるチャネリングスキル。照射段階に応じて威力が上昇し、火特化・雷変換・炎上型など照射主体で戦いたい場合の選択肢になります。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. パッシブツリー指針 -->
+    <section class="section" id="sec-passives" aria-labelledby="title-passives">
+      <h2 class="section-title" id="title-passives">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="6" r="3"></circle>
+          <circle cx="18" cy="18" r="3"></circle>
+          <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
+        </svg>
+        5. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/mage/tree" target="_blank" rel="noopener noreferrer">メイジ</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sorcerer/tree" target="_blank" rel="noopener noreferrer">ソーサラー</a>）
+      </h2>
+      <p class="page-lead">メイジ基本ツリーへ 20pt 振って知力・元素ダメ・クリ率・庇護維持力を押さえ、ソーサラー側で最大マナとマナ連動防御・火力を徹底的に伸ばします（他職前半へ少し回す型もあります）。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>ツリー区分</th>
+              <th>注目パッシブ（LE Tools 日本語版）</th>
+              <th>主な効果・役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/mage/tree" target="_blank" rel="noopener noreferrer">メイジ</a></td>
+              <td>元素使い / 魔術師 / 学者</td>
+              <td>元素ダメージ・知力・火/雷耐性・ヘルス・マナをバランスよく確保する基本ノード。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/mage/tree" target="_blank" rel="noopener noreferrer">メイジ</a></td>
+              <td>破壊の知識 / 護り人</td>
+              <td>クリティカル率＋倍率、および庇護（ワード）維持力を高める中核。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sorcerer/tree" target="_blank" rel="noopener noreferrer">ソーサラー</a></td>
+              <td>計算された破壊 / 火花散る狙い / 抹消の秘術</td>
+              <td>知力・スペルクリ率（雷スキル 2 倍）・スペルクリ倍率をまとめて引き上げる火力基盤。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sorcerer/tree" target="_blank" rel="noopener noreferrer">ソーサラー</a></td>
+              <td>知恵 / 失われた知識 / ミラーブレス</td>
+              <td>最大マナ 100 ごとのマナ自動回復増加と、消費マナに応じた大量の庇護獲得を両立。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sorcerer/tree" target="_blank" rel="noopener noreferrer">ソーサラー</a></td>
+              <td>マナの殻 / マナの防壁</td>
+              <td>最大マナに応じた毎秒庇護獲得と、被ダメージのマナ肩代わりで耐久を飛躍させる最重要枠。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/sorcerer/tree" target="_blank" rel="noopener noreferrer">ソーサラー</a></td>
+              <td>アークメイジ / 残光 / ドラゴンの吐息</td>
+              <td>最大マナ 1,000 で効果 3 倍になるスペル強化＋マナ返還、高コスト後の 2 倍バフ、範囲拡大。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. シーズン 5 人気ビルド 3 選 -->
+    <section class="section" id="sec-builds" aria-labelledby="title-builds">
+      <h2 class="section-title" id="title-builds">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        </svg>
+        6. Season 5（Patch 1.5）人気ビルド 3 選
+      </h2>
+      <p class="page-lead">Season 5 環境で評価の高いソーサラー代表 3 アーキタイプです（LE Tools 掲載ビルドガイドおよびコミュニティ主流構成）。</p>
+
+      <div class="stack-list">
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/static_orb" target="_blank" rel="noopener noreferrer">
+                ① マナ積み・静電のオーブ ソーサラー（Static Orb）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 最上位帯 / ボス・周回両立</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: 最大マナを 1,000 以上へ積み上げ、Manacharged ノードを積んだ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/static_orb" target="_blank" rel="noopener noreferrer">静電のオーブ</a> と <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glacier" target="_blank" rel="noopener noreferrer">氷河</a>（マナ回収）を交互に回して雑魚もボスも瞬殺します。</li>
+            <li><strong>強み</strong>: マナを積むほど「アークメイジ」「知恵」「マナの殻」により火力・マナ回復・庇護耐久が同時に跳ね上がります。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/static_orb" target="_blank" rel="noopener noreferrer">静電のオーブ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glacier" target="_blank" rel="noopener noreferrer">氷河</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_ward" target="_blank" rel="noopener noreferrer">烈火の庇護</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/teleport" target="_blank" rel="noopener noreferrer">テレポート</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/focus" target="_blank" rel="noopener noreferrer">フォーカス</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/arcane_ascendance" target="_blank" rel="noopener noreferrer">Arcane Ascendance</a>）</li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/build-guides/guide-zh-854" target="_blank" rel="noopener noreferrer">
+                ② 炎上ブラックホール・ソーサラー（S5 ガイド掲載）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 ビルドガイド掲載 / Uber 対応</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/black_hole" target="_blank" rel="noopener noreferrer">ブラックホール</a> で敵を集めて大量の炎上（Ignite）を付与し、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/enchant_weapon" target="_blank" rel="noopener noreferrer">エンチャントウェポン</a> の清算効果や高回転 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/meteor" target="_blank" rel="noopener noreferrer">メテオ</a> で焼き切る構成（<a class="ext-inline-link" href="https://www.lastepochtools.com/planner/ja/BZ38VjyP" target="_blank" rel="noopener noreferrer">LE プランナー</a>）。</li>
+            <li><strong>核装備</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGZ2I" target="_blank" rel="noopener noreferrer">マラトロスの背骨（Spine of Malatros）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVgHATA7CQ" target="_blank" rel="noopener noreferrer">不安定な核（Unstable Core）</a>、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwJgzGCMBsQ" target="_blank" rel="noopener noreferrer">思索の絶頂（Apex of Thought）</a> 等。</li>
+            <li><strong>採用スキル</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/black_hole" target="_blank" rel="noopener noreferrer">ブラックホール</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/meteor" target="_blank" rel="noopener noreferrer">メテオ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_ward" target="_blank" rel="noopener noreferrer">烈火の庇護</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/teleport" target="_blank" rel="noopener noreferrer">テレポート</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/arcane_ascendance" target="_blank" rel="noopener noreferrer">Arcane Ascendance</a>（またはフロストウォール等）</li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/frost_claw" target="_blank" rel="noopener noreferrer">
+                ③ 凍気の爪＆スパークチャージ／氷河 ソーサラー
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge">超高速マップ周回</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/frost_claw" target="_blank" rel="noopener noreferrer">凍気の爪</a> の多段ショットガンと <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/nova" target="_blank" rel="noopener noreferrer">エレメンタルノヴァ</a> 連鎖またはスパークチャージ付与で画面外まで瞬時に殲滅し、重厚な敵へ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glacier" target="_blank" rel="noopener noreferrer">氷河</a> や <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/meteor" target="_blank" rel="noopener noreferrer">メテオ</a> を落とします。</li>
+            <li><strong>強み</strong>: テレポート移動＋高射程ショットガンによりモノリス周回の快適さが抜群です。</li>
+            <li><strong>採用スキル</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/frost_claw" target="_blank" rel="noopener noreferrer">凍気の爪</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/nova" target="_blank" rel="noopener noreferrer">エレメンタルノヴァ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_ward" target="_blank" rel="noopener noreferrer">烈火の庇護</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/teleport" target="_blank" rel="noopener noreferrer">テレポート</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/focus" target="_blank" rel="noopener noreferrer">フォーカス</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. 4 大メカニズム -->
+    <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
+      <h2 class="section-title" id="title-mechanics">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.85 1 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        7. 攻撃・防御・マナ・快適性のメカニズム
+      </h2>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <h3 class="mech-card-title">攻撃スケーリング</h3>
+          <ul>
+            <li><strong>高マナ消費＋最大マナ比例乗算</strong>: マスタリーボーナスでスペルのマナコスト分だけダメージが伸び、さらに「アークメイジ」や <em>静電のオーブ</em> で最大マナ 1,000 到達時に大幅強化されます。</li>
+            <li><strong>属性耐性寸断＆貫通</strong>: 知力積み＋感電（Shock）や炎上（Ignite）スタック、さらに貫通パッシブでボス耐性を貫きます。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">防御レイヤー（庇護＋マナ防壁）</h3>
+          <ul>
+            <li><strong>烈火の庇護の大幅軽減</strong>: 即死級の一撃を被ダメ大幅カット＋瞬間庇護獲得で受け切ります。</li>
+            <li><strong>マナ変換庇護＋マナ防壁</strong>: 「失われた知識」「ミラーブレス」「マナの殻」に加え、<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVgHATAjAbEA" target="_blank" rel="noopener noreferrer">アーケイロスのねじれた心臓</a> 等で数千〜数万規模の庇護を維持します。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">マナ維持の仕組み</h3>
+          <ul>
+            <li><strong>氷河＋知恵＋アークメイジ</strong>: 最大マナ 100 ごとに自動回復を伸ばしつつ、氷河のクリ/キル時マナ回収や「アークメイジ」のコスト返還で減らさず回します。</li>
+            <li><strong>フォーカス / マナストライク</strong>: 連続詠唱で枯れた場合も即座に全快できます。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">快適性（QoL）・周回テンポ</h3>
+          <ul>
+            <li><strong>遠距離から画面一掃</strong>: テレポートで壁越えしつつ静電のオーブや凍気の爪を放つため、近接リスクを負わずに高速ファームできます。</li>
+            <li><strong>知力＝耐久＋火力の一元化</strong>: 知力がそのままスペル威力と庇護維持力を伸ばすため、装備厳選の方向性が非常に明確です。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 人気の装備・アフィックス -->
+    <section class="section" id="sec-gear" aria-labelledby="title-gear">
+      <h2 class="section-title" id="title-gear">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20 7l-8-4-8 4v10l8 4 8-4V7z"></path>
+          <path d="M12 21V11M12 11l8-4M12 11L4 7"></path>
+        </svg>
+        8. 人気ユニーク装備＆部位別アフィックス
+      </h2>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 12px;">主要ユニーク装備一覧（装備名から直接 LE Tools DB へ移動可能）</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>装備名（日 / 英）</th>
+              <th>部位</th>
+              <th>主な採用理由・効果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVgHATA7CQ" target="_blank" rel="noopener noreferrer"><strong>不安定な核</strong><br><span class="skill-en">Unstable Core</span></a></td>
+              <td>鎧</td>
+              <td>最大マナ・マナ回復・元素系補正を大きく伸ばすマナ積みソーサラーの定番胴鎧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcGYEZiA" target="_blank" rel="noopener noreferrer"><strong>誤ったワープ</strong><br><span class="skill-en">Wrongwarp</span></a></td>
+              <td>ワンド</td>
+              <td>テレポート後に高い移動速度とスペルダメージ倍率を得るキャスター用最上位ワンド。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA5KA" target="_blank" rel="noopener noreferrer"><strong>星々の先触れ</strong><br><span class="skill-en">Harbinger of Stars</span></a></td>
+              <td>ベルト</td>
+              <td>クリティカル発動時に「メテオ」を自動降下させるメテオ・クリ型必須ベルト。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsEYA4DYg" target="_blank" rel="noopener noreferrer"><strong>ヴィラトリアの凋落</strong><br><span class="skill-en">Vilatria's Downfall</span></a></td>
+              <td>両手長杖</td>
+              <td>メテオの雷変換や知力比例スペルダメージ加算で雷メテオ・雷キャスターを支える定番杖。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVg7AjAHCQ" target="_blank" rel="noopener noreferrer"><strong>ヴィラトリアの嵐冠</strong><br><span class="skill-en">Vilatria's Storm Crown</span></a></td>
+              <td>兜</td>
+              <td>雷ダメージ・マナ自動回復・セット効果で知力や雷メテオ構成を強化する兜。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGZ2I" target="_blank" rel="noopener noreferrer"><strong>マラトロスの背骨</strong><br><span class="skill-en">Spine of Malatros</span></a></td>
+              <td>両手剣</td>
+              <td>炎上ブラックホール型や炎上型キャスターで絶大な火炎継続・スキル強化を与える両手武器。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVgHATAjAbEA" target="_blank" rel="noopener noreferrer"><strong>アーケイロスのねじれた心臓</strong><br><span class="skill-en">Twisted Heart of Uhkeiros</span></a></td>
+              <td>レリック</td>
+              <td>元素スペル詠唱ごとに大量の庇護（ワード）を獲得するメイジ全職共通の強固レリック。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwJgzGCMBsQ" target="_blank" rel="noopener noreferrer"><strong>思索の絶頂</strong><br><span class="skill-en">Apex of Thought</span></a></td>
+              <td>兜</td>
+              <td>S5 ブラックホール炎上ガイド等で採用される知力・マナ・スキル補正に優れた兜。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
+              <td>指輪</td>
+              <td>高ステータス到達で全耐性と被ダメージ軽減を得るエンドゲーム最高峰リング。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 20px;">部位別おすすめアフィックス優先度</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>Prefix（攻撃・マナ・コア能力）</th>
+              <th>Suffix（耐久・ユーティリティ）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器・オフハンド</td>
+              <td>スペルダメ / スペルクリ率 / 詠唱速度、基礎スペルクリ率</td>
+              <td>スタン回避 / 凍結値乗数 / ショック付与、耐性貫通系</td>
+            </tr>
+            <tr>
+              <td>兜・鎧</td>
+              <td><strong>最大マナ</strong>、主力スキル Lv+、知力（Intelligence）、マナ回復</td>
+              <td>ハイブリッドヘルス、アーマー、不足耐性、クリ回避/軽減</td>
+            </tr>
+            <tr>
+              <td>手袋・ベルト</td>
+              <td>詠唱速度、クリ倍率、知力、属性/継続ダメージ</td>
+              <td><strong>最大マナ / マナ回復</strong>、ポーション使用時庇護獲得、ヘルス</td>
+            </tr>
+            <tr>
+              <td>靴</td>
+              <td>移動速度（最優先）、知力、クールダウン回復速度</td>
+              <td>ハイブリッドヘルス、アーマー、不足耐性</td>
+            </tr>
+            <tr>
+              <td>アクセサリー</td>
+              <td>スペルクリ倍率、詠唱速度、マナ自動回復、最大マナ</td>
+              <td>不足耐性、クリダメ軽減、ヘルス / 庇護維持力</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="page-footer-note">
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/build-guides/filter/cycle=rage-of-the-frostborn" target="_blank" rel="noopener noreferrer">Last Epoch Tools（Season 5 ビルドガイド）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+    </p>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html">Last Epoch ガイド</a></li>
+      <li><a class="nav-link" href="./falconer.html">ファルコナー（Season 5）</a></li>
+      <li><a class="nav-link" href="./paladin.html">パラディン（Season 5）</a></li>
+      <li><a class="nav-link" href="./sorcerer.html" aria-current="page">ソーサラー（Season 5）</a></li>
+      <li><a class="nav-link" href="./spellblade.html">スペルブレード（Season 5）</a></li>
+      <li><a class="nav-link" href="./runemaster.html">ルーンマスター（Season 5）</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

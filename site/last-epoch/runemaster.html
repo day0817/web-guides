@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e3">
+  <title>ルーンマスター（Runemaster）Season 5 ガイド | WebGuides</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <script src="../assets/nav.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">WebGuides</a>
+      <span aria-hidden="true">/</span>
+      <a href="./index.html">Last Epoch</a>
+      <span aria-hidden="true">/</span>
+      <span>ルーンマスター</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-eyebrow">SEASON 5: RAGE OF THE FROSTBORN (PATCH 1.5 / 1.5.2)</span>
+      <h1 class="page-title">ルーンマスター（Runemaster）完全ガイド</h1>
+      <p class="page-lead">火（Rah）・冷（Heo）・雷（Gon）の 3 属性ルーンの組み合わせで固有呪文を発動する <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation" target="_blank" rel="noopener noreferrer">ルーン招来（Runic Invocation）</a> と圧倒的な庇護（ワード / Ward）耐久を操るメイジ上級職の Season 5 ガイドです。スキル名・装備名は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools 日本語版</a> への直接リンクになっています。</p>
+
+      <div class="callout">
+        <strong>Season 5 最新環境メモ：</strong> Season 5 では、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lightning_blast" target="_blank" rel="noopener noreferrer">ライトニングブラスト</a> × <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA5SA" target="_blank" rel="noopener noreferrer">エニグマの断片</a> のスパークチャージ型、自動発動砲台 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation27_repeating_fire_mortars" target="_blank" rel="noopener noreferrer">ヒドラヒドロン</a> 型、および <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/frost_claw" target="_blank" rel="noopener noreferrer">凍気の爪</a> 連動型が高い汎用性と安定感で引き続き愛用されています。
+      </div>
+
+      <nav class="toc-pills" aria-label="ページ内目次">
+        <a class="toc-pill" href="#sec-overview">1. 特徴・差別化</a>
+        <a class="toc-pill" href="#sec-ranking">2. 採用スキル順位</a>
+        <a class="toc-pill" href="#sec-runemaster-skills">3. 固有スキル</a>
+        <a class="toc-pill" href="#sec-mage-skills">4. メイジスキル</a>
+        <a class="toc-pill" href="#sec-passives">5. パッシブ指針</a>
+        <a class="toc-pill" href="#sec-builds">6. S5 人気ビルド</a>
+        <a class="toc-pill" href="#sec-mechanics">7. 4大メカニズム</a>
+        <a class="toc-pill" href="#sec-gear">8. 装備・アフィックス</a>
+      </nav>
+    </header>
+
+    <!-- 1. マスタリー特徴・差別化・固有パッシブ -->
+    <section class="section" id="sec-overview" aria-labelledby="title-overview">
+      <h2 class="section-title" id="title-overview">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polygon points="12 2 19 9 12 22 5 9"></polygon>
+        </svg>
+        1. マスタリーの特徴・他職との差別化・固有パッシブ
+      </h2>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <h3 class="skill-title">ルーンマスター固有パッシブ＆マスタリーボーナス（3 属性ルーン＋庇護要塞）</h3>
+          <p class="skill-desc">メイジ基本パッシブに 20pt 投資してルーンマスターを選択すると、固有スキル <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation" target="_blank" rel="noopener noreferrer"><strong>ルーン招来（Runic Invocation）</strong></a> が解放され、以下のマスタリー固有ボーナスを獲得します。</p>
+          <ul class="node-list" style="margin-top: 8px;">
+            <li><strong>基礎ボーナス①</strong>: <strong>元素ダメージ +30%（30% increased Elemental Damage）</strong> — 火・冷気・雷の 3 属性すべてを最初から底上げします。</li>
+            <li><strong>基礎ボーナス②</strong>: <strong>元素スペルの詠唱速度 +10%（10% increased Cast Speed with Elemental Spells）</strong> — ルーン生成と詠唱テンポを快適にします。</li>
+            <li><strong>固有ルーン機構</strong>: 対応属性のスペルを直接詠唱すると頭上へ最大 3 つのルーン（Rah=火 / Heo=冷 / Gon=雷）が蓄積し、<em>ルーン招来</em> を発動すると「順番・組み合わせ」に応じた 40 種の専用効果（砲台設置、広範囲バフ、強固な庇護バリア等）を呼び出せます。</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 18px;">メイジ 3 マスタリーの差別化比較</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>マスタリー</th>
+              <th>マスタリーボーナス・代表固有スキル</th>
+              <th>戦闘スタイルと強み（差別化）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runemaster/tree" target="_blank" rel="noopener noreferrer"><strong>ルーンマスター</strong><br><span class="skill-en">(Runemaster)</span></a></td>
+              <td>元素ダメ +30%／元素スペル詠唱速度 +10%<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation" target="_blank" rel="noopener noreferrer">ルーン招来</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_rush" target="_blank" rel="noopener noreferrer">フレイムラッシュ</a></td>
+              <td><strong>3 属性コンボ・設置砲台・圧倒的庇護耐久</strong>。パッシブの多様な「ルーンワード」と武器種補正（「刻字された楽器」）でどんな構築も高水準にまとまる。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./sorcerer.html"><strong>ソーサラー</strong><br><span class="skill-en">(Sorcerer)</span></a></td>
+              <td>最大マナ +50／マナコスト比例のスペルダメ増加<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/static_orb" target="_blank" rel="noopener noreferrer">静電のオーブ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/meteor" target="_blank" rel="noopener noreferrer">メテオ</a></td>
+              <td><strong>最大マナ特化の一撃破壊キャスター</strong>。マナ上限を極限まで伸ばすのがソーサラー、ルーン循環と多彩な防御/自動発動ギミックを操るのがルーンマスター。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="./spellblade.html"><strong>スペルブレード</strong><br><span class="skill-en">(Spellblade)</span></a></td>
+              <td>近接ヒット時庇護 +4／近接消費マナを庇護変換<br>固有: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/shatter_strike" target="_blank" rel="noopener noreferrer">シャッターストライク</a> 等</td>
+              <td><strong>近接＋元素スペル連動の魔法剣士</strong>。近接攻撃主体ならスペルブレード、中〜遠距離スペル・設置主体ならルーンマスター。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Season 5 採用スキルランキング -->
+    <section class="section" id="sec-ranking" aria-labelledby="title-ranking">
+      <h2 class="section-title" id="title-ranking">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+          <path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"></path>
+        </svg>
+        2. Season 5 採用スキルランキング（必須スキル早見表）
+      </h2>
+      <p class="page-lead">Season 5 環境のルーンマスター主流ビルド（スパークチャージ / ヒドラヒドロン / 凍気の爪連動）での採用優先度早見表です。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>順位 / 必須度</th>
+              <th>スキル名</th>
+              <th>区分</th>
+              <th>Season 5 環境での位置づけ・必須理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--accent">1位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation" target="_blank" rel="noopener noreferrer"><strong>ルーン招来</strong><br><span class="skill-en">(Runic Invocation)</span></a></td>
+              <td>ルーン</td>
+              <td><strong>ほぼ全ルーンマスター必須の代名詞枠</strong>。<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation18_ice_shield" target="_blank" rel="noopener noreferrer">レオウィンのフロストガード</a> で常時被ダメ減＋庇護を張るか、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation27_repeating_fire_mortars" target="_blank" rel="noopener noreferrer">ヒドラヒドロン</a> 等の主力呪文を発動。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">2位 / 必須 (S)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_ward" target="_blank" rel="noopener noreferrer"><strong>烈火の庇護</strong><br><span class="skill-en">(Flame Ward)</span></a></td>
+              <td>メイジ</td>
+              <td><strong>全ビルド固定の最強防御バフ</strong>。被ダメ軽減・庇護生成に加え、ルーン生成（火）のトリガーも兼ねる。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">3位 / 移動軸 (S-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_rush" target="_blank" rel="noopener noreferrer"><strong>フレイムラッシュ</strong><br><span class="skill-en">(Flame Rush)</span></a></td>
+              <td>ルーン</td>
+              <td><strong>トラバーサル兼ルーン招来自動発動エンジン</strong>。突進終了時にルーン招来や <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glyph_of_dominion" target="_blank" rel="noopener noreferrer">虐げのグリフ</a> を自動展開するコンボの要。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">4位 / 攻撃主力 (A+)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lightning_blast" target="_blank" rel="noopener noreferrer"><strong>ライトニングブラスト</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/frost_claw" target="_blank" rel="noopener noreferrer"><strong>凍気の爪</strong></a></td>
+              <td>メイジ</td>
+              <td><strong>スパークチャージ＆多段トリガーの 2 大メイン火力</strong>。前者は <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA5SA" target="_blank" rel="noopener noreferrer">エニグマの断片</a> で超火力化し、後者は元素ノヴァ連鎖も狙える。</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--accent">5位 / 設置補助 (A)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/frost_wall" target="_blank" rel="noopener noreferrer"><strong>フロストウォール</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glyph_of_dominion" target="_blank" rel="noopener noreferrer"><strong>虐げのグリフ</strong></a></td>
+              <td>ルーン</td>
+              <td><strong>ヒドラヒドロン等の必須パーツ（フロストウォール）</strong>および、移動/庇護/元素爆発の陣（虐げのグリフ）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">6位 / ルーン調整 (A-)</span></td>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/fire_runebolt" target="_blank" rel="noopener noreferrer"><strong>ルーンボルト</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/teleport" target="_blank" rel="noopener noreferrer"><strong>テレポート</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/nova" target="_blank" rel="noopener noreferrer"><strong>エレメンタルノヴァ</strong></a></td>
+              <td>ル / メイジ</td>
+              <td>マナ回復＋3 属性ルーン生成の 0 マナ弾（ルーンボルト）、壁越え枠（テレポート）、凍気の爪連動（エレメンタルノヴァ）。</td>
+            </tr>
+            <tr>
+              <td><span class="badge">7位 / 選択枠 (B〜C)</span></td>
+              <td>
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/static_spell" target="_blank" rel="noopener noreferrer">静電</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/snap_freeze" target="_blank" rel="noopener noreferrer">瞬間凍結</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glacier" target="_blank" rel="noopener noreferrer">氷河</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/focus" target="_blank" rel="noopener noreferrer">フォーカス</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/fireball" target="_blank" rel="noopener noreferrer">ファイアボール</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/volcanic_orb" target="_blank" rel="noopener noreferrer">噴火のオーブ</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/mana_strike" target="_blank" rel="noopener noreferrer">マナストライク</a> /
+                <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/disintegrate" target="_blank" rel="noopener noreferrer">崩壊光線</a>
+              </td>
+              <td>メイジ</td>
+              <td>雷追加（静電）、凍結拘束（瞬間凍結）、マナ補助（フォーカス/氷河）、レーザー型（崩壊光線）など構成に合わせて選択。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <strong>基本 5 スロットの組み方目安：</strong> ①<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation" target="_blank" rel="noopener noreferrer">ルーン招来</a> ＋ ②<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_ward" target="_blank" rel="noopener noreferrer">烈火の庇護</a> ＋ ③<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_rush" target="_blank" rel="noopener noreferrer">フレイムラッシュ</a> を軸に、残り 2 枠へ「<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/frost_wall" target="_blank" rel="noopener noreferrer">フロストウォール</a>＋<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glyph_of_dominion" target="_blank" rel="noopener noreferrer">虐げのグリフ</a>（ヒドラヒドロン型）」または「<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lightning_blast" target="_blank" rel="noopener noreferrer">ライトニングブラスト</a>＋<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/frost_claw" target="_blank" rel="noopener noreferrer">凍気の爪</a>（スパークチャージ型）」を組み合わせるのが定番です。
+      </div>
+    </section>
+
+    <!-- 3. ルーンマスター固有スキル＆重要ノード -->
+    <section class="section" id="sec-runemaster-skills" aria-labelledby="title-runemaster-skills">
+      <h2 class="section-title" id="title-runemaster-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7l3-7z"></path>
+        </svg>
+        3. ルーンマスター固有スキル＆重要ノード
+      </h2>
+      <p class="page-lead">ルーンマスターで解放される 5 つの固有スキルです。各スキルが持つルーン属性（火/冷/雷）の制御がビルド構築の核になります。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 19 9 12 22 5 9"></polygon></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation" target="_blank" rel="noopener noreferrer">
+                  ルーン招来 <span class="skill-en">(Runic Invocation)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">解放スキル・全40種呪文</span><span class="badge">火/冷/雷の配列で変化</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">蓄積した 3 つのルーン（Rah=火 / Heo=冷 / Gon=雷）の順番に応じて専用呪文を発動するルーンマスターの核スキル。攻撃砲台から超強力防御バフまでビルドに合わせて選びます。</p>
+          <details class="node-details">
+            <summary>代表的な発動呪文（LE Tools 日本語版）と重要ノード</summary>
+            <ul class="node-list">
+              <li><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation27_repeating_fire_mortars" target="_blank" rel="noopener noreferrer"><strong>ヒドラヒドロン（Rah-Rah-Heo / 火・火・冷）</strong></a>: 火弾を連射する巨大砲台を設置し、ボス戦・マップ双方で圧倒的 DPS を出します。</li>
+              <li><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation18_ice_shield" target="_blank" rel="noopener noreferrer"><strong>レオウィンのフロストガード（Heo-Rah-Heo / 冷・火・冷）</strong></a>: 持続型の庇護獲得＋被ダメージ大幅軽減バリアを展開する防御ビルドの定番呪文。</li>
+              <li><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation34_fire_orbiter" target="_blank" rel="noopener noreferrer"><strong>プラズマオーブ</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation43_static_field" target="_blank" rel="noopener noreferrer"><strong>エコーオブサンダー</strong></a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation19_mega_elemental_nova" target="_blank" rel="noopener noreferrer"><strong>グランドプリズムノヴァ</strong></a>: 周回・自動追撃・3属性大爆発など多彩な派生先を持ちます。</li>
+              <li><strong>Immutable Order</strong>: ルーン配列をスキルバー上の順序へ固定でき、狙った呪文をミスなく連発可能になります。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/flame_rush" target="_blank" rel="noopener noreferrer">
+                  フレイムラッシュ <span class="skill-en">(Flame Rush)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">必須級トラバーサル</span><span class="badge">終了時ルーン招来発動</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">炎の流線となって高速チャネリング突進し、終了地点で炎爆発を起こすトラバーサルスキル。突進中に被ダメ軽減を得られ、終了時の自動スキル連動が非常に強力です。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>Runic Energy / ルーン招来自動発動</strong>: フレイムラッシュ終了時に貯まったルーン招来（ヒドラヒドロンやフロストガード）を自動発動でき、快適性が劇的に向上します。</li>
+              <li><strong>Glyphic Dominion 連携</strong>: 突進の終了点に <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glyph_of_dominion" target="_blank" rel="noopener noreferrer">虐げのグリフ</a> を自動展開するコンボが可能です。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/frost_wall" target="_blank" rel="noopener noreferrer">
+                  フロストウォール <span class="skill-en">(Frost Wall)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge badge--accent">設置バフ＆冷気ルーン</span><span class="badge">ファイアブランド/火変換可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">氷の壁を召喚し、敵へ凍結・貫通ダメージを与える一方、自キャラが壁を通過するとヘイスト（迅速）や大量の庇護を獲得できる攻防兼備の設置スキルです。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>火属性変換（Pyromancer's Wall）</strong>: ヒドラヒドロン型では火変換しつつ冷気ルーンやブランド付与・庇護獲得を両立する要になります。</li>
+              <li><strong>パッシブ「燃える風の勅令」連動</strong>: フロストウォール展開中に対レア・ボス火力を 2 倍化させる必須シナジーを持ちます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v12m-4-4l4 4 4-4M4 20h16"></path></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/fire_runebolt" target="_blank" rel="noopener noreferrer">
+                  ルーンボルト <span class="skill-en">(Runebolt)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">0マナ主力 / マナ回復</span><span class="badge">3属性順切り替え</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">詠唱するたびに火・冷気・雷（またはノード設定順）へ変化しながら飛ぶ基本スペル。消費マナ 0・ヒット時マナ回復に加え、狙った順のルーンを一瞬で揃える潤滑油になります。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>属性順カスタマイズ</strong>: 火のみ連射・火→火→冷・3属性ローテーション等、発動したいルーン招来に合わせてルーン生成順を組めます。</li>
+              <li><strong>マナ回復＆多弾化</strong>: 高詠唱速度で撃つだけでマナ維持とトリガー火力を両立できます。</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"></circle><polygon points="12 7 16 14 8 14"></polygon></svg>
+            </div>
+            <div class="skill-head-body">
+              <h3 class="skill-title">
+                <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/glyph_of_dominion" target="_blank" rel="noopener noreferrer">
+                  虐げのグリフ <span class="skill-en">(Glyph of Dominion)</span>
+                  <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+                </a>
+              </h3>
+              <div class="badge-row"><span class="badge">魔方陣エリア・庇護強化</span><span class="badge">範囲バフ / 起爆</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">地面に魔方陣を描き、範囲内の味方へ庇護・詠唱速度・移動速度を与えつつ、範囲終了時に敵へ大爆発を起こす領域スキル。パッシブ「永遠のツンドラの布告」で庇護生成量も倍増します。</p>
+          <details class="node-details">
+            <summary>重要ノードとシナジー</summary>
+            <ul class="node-list">
+              <li><strong>フレイムラッシュ自動配置</strong>: 手動詠唱を省き、移動のたびに着地点へグリフを敷いて攻防バフを途切れさせない運用が主流です。</li>
+              <li><strong>永遠のツンドラの布告連動</strong>: グリフ使用中に毎秒庇護生成が 2 倍になり、防御面が大きく安定します。</li>
+            </ul>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. 最終ビルドで使用されうるメイジ基本スキル（個別記載） -->
+    <section class="section" id="sec-mage-skills" aria-labelledby="title-mage-skills">
+      <h2 class="section-title" id="title-mage-skills">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4"></path>
+        </svg>
+        4. 最終ビルドで使用されうるメイジ基本スキル（個別解説）
+      </h2>
+      <p class="page-lead">ルーンマスターの最終ビルドでルーン供給・トリガー・防御・高速移動として採用される全 13 のメイジ基本スキルを個別に解説しています（共通回避 <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/mage_evade" target="_blank" rel="noopener noreferrer">即時避け（Evade）</a> は除く）。</p>
+
+      <div class="stack-list">
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/flame_ward" target="_blank" rel="noopener noreferrer">烈火の庇護 <span class="skill-en">(Flame Ward)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">全構成必須防御</span><span class="badge">被ダメ軽減・火ルーン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ルーンマスターの膨大な庇護（ワード）と合わさることで不死身級の固さを実現する防御枠。自動発動ノードを取るとルーン順が変わる点に注意しつつ、手動または他ルーンと調整して運用します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/lightning_blast" target="_blank" rel="noopener noreferrer">ライトニングブラスト <span class="skill-en">(Lightning Blast)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 スパークチャージ主力</span><span class="badge">エニグマ連動・雷ルーン</span></div>
+            </div>
+          </div>
+          <p class="skill-desc"><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA5SA" target="_blank" rel="noopener noreferrer">エニグマの断片（Fragment of the Enigma）</a> とスパークチャージ型ルーンマスターの主砲。高速詠唱＋連鎖ショットガンにより 1 秒間に大量のスパークチャージを起爆し、同時に雷（Gon）ルーンも供給します。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6M12 17l6-6-6-6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/frost_claw" target="_blank" rel="noopener noreferrer">凍気の爪 <span class="skill-en">(Frost Claw)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge badge--accent">S5 主力トリガー</span><span class="badge">エレメンタルノヴァ/スパーク</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">高頻度ヒットでエレメンタルノヴァやスパークチャージ、さらには冷気ルーンを大量供給する優秀スキル。属性変換ノードを使って火・雷・冷気いずれのルーン軸にも適応できます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v3M12 20v3M1 12h3M20 12h3"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/nova" target="_blank" rel="noopener noreferrer">エレメンタルノヴァ <span class="skill-en">(Elemental Nova)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">凍気の爪連動・チャネリング</span><span class="badge">3属性ルーン生成可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">凍気の爪やテレポートから自動発火させて範囲火力を補うほか、手撃ちやチャネリングで 3 属性ルーンを回す用途でも使用されます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/teleport" target="_blank" rel="noopener noreferrer">テレポート <span class="skill-en">(Teleport)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">壁越え移動・滑り込み起動</span><span class="badge">ニンバスウォーク対応</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">フレイムラッシュと並ぶ移動選択肢。ルーンマスターパッシブ「ニンバスウォーク」＋「滑り込み」により、テレポート直後の非チャネリングスペルのダメージとクリ率を大きく跳ね上げます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v10M8 6h8M5 20h14"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/static_spell" target="_blank" rel="noopener noreferrer">静電 <span class="skill-en">(Static)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">雷ルーン・移動放電</span><span class="badge">ライトニングブラスト誘発</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">移動時に自動充電し、雷の追撃やライトニングブラスト誘発を行うスキル。ライトニングブラスト／スパークチャージ軸で追加のバースト源として採用されます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"></polygon></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/snap_freeze" target="_blank" rel="noopener noreferrer">瞬間凍結 <span class="skill-en">(Snap Freeze)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">冷気ルーン・完全凍結</span><span class="badge">アーマー強化</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">即座の敵凍結とアーマー上昇を与え、同時に冷気（Heo）ルーンを供給できるユーティリティ枠です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"></circle><path d="M8 12h8M12 8v8"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/focus" target="_blank" rel="noopener noreferrer">フォーカス <span class="skill-en">(Focus)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">チャネリング庇護＋マナ回復</span><span class="badge">ルーンの砦連携</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">マナ回復に加え、パッシブ「ルーンの砦」によるチャネリング中のアーマー＆庇護獲得と合わせて安全に態勢を立て直すことができます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l8-16 8 16-8-4-8 4z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/glacier" target="_blank" rel="noopener noreferrer">氷河 <span class="skill-en">(Glacier)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">冷気ルーン・マナ回収</span><span class="badge">高範囲爆発</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">冷気（Heo）ルーン生成＋マナ回収を兼ねたサブ爆発スペルとして、冷気寄りのルーンマスター構成で採用可能です。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="7"></circle></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/fireball" target="_blank" rel="noopener noreferrer">ファイアボール <span class="skill-en">(Fireball)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">火ルーン高速供給</span><span class="badge">ヒドラ補助・炎上</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">高速連射により火（Rah）ルーンを素早く供給でき、炎上や「ルーンワード:インフェルノ」の維持にも使える火の定番スペルです。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M9 12l6-4v8l-6-4z"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/volcanic_orb" target="_blank" rel="noopener noreferrer">噴火のオーブ <span class="skill-en">(Volcanic Orb)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">火/冷気変換オーブ</span><span class="badge">ヒット数稼ぎ</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">火ルーンまたは「冬のルーン」経由で冷気ルーンを生成しながら多段ヒットを出せるため、状態異常スタック型で検討余地があります。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M8 6l-4 6 4 6M16 6l4 6-4 6"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/mana_strike" target="_blank" rel="noopener noreferrer">マナストライク <span class="skill-en">(Mana Strike)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">0マナ回復枠</span><span class="badge">遠距離化可</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">ルーンマスターでは同役割を「ルーンボルト」が担うことが多いものの、高コスト招来のマナ循環を補いたい場合に遠距離化マナストライクが使えます。</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card-head">
+            <div class="skill-icon-box" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M17 7l4 5-4 5"></path></svg></div>
+            <div class="skill-head-body">
+              <h3 class="skill-title"><a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/disintegrate" target="_blank" rel="noopener noreferrer">崩壊光線 <span class="skill-en">(Disintegrate)</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg></a></h3>
+              <div class="badge-row"><span class="badge">チャネリング＋ルーンの砦</span><span class="badge">継続ダメ軸</span></div>
+            </div>
+          </div>
+          <p class="skill-desc">チャネリング中の「ルーンの砦」による追加アーマー＆庇護獲得と噛み合う照射スペル。継続ダメージ（欺きの烙印）軸と組み合わせて運用できます。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. パッシブツリー指針 -->
+    <section class="section" id="sec-passives" aria-labelledby="title-passives">
+      <h2 class="section-title" id="title-passives">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="6" r="3"></circle>
+          <circle cx="18" cy="18" r="3"></circle>
+          <path d="M8.5 16.5L15.5 7.5M9 18h6"></path>
+        </svg>
+        5. パッシブツリー指針（<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/mage/tree" target="_blank" rel="noopener noreferrer">メイジ</a> ＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runemaster/tree" target="_blank" rel="noopener noreferrer">ルーンマスター</a>）
+      </h2>
+      <p class="page-lead">メイジ基本ツリーへ 20pt 振った後、ルーンマスター側で知力・武器別強化（刻字された楽器）・庇護維持・トラバーサル後バフ・各種ルーンワードを取るのが鉄板です。</p>
+
+      <div class="table-scroll" style="margin-top: 12px;">
+        <table>
+          <thead>
+            <tr>
+              <th>ツリー区分</th>
+              <th>注目パッシブ（LE Tools 日本語版）</th>
+              <th>主な効果・役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/mage/tree" target="_blank" rel="noopener noreferrer">メイジ</a></td>
+              <td>元素使い / 魔術師 / 破壊の知識 / 護り人</td>
+              <td>元素ダメ・知力・火/雷耐性・クリ率・庇護維持力 +50% の基礎セット。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runemaster/tree" target="_blank" rel="noopener noreferrer">ルーンマスター</a></td>
+              <td>刻字された楽器 / 精神の触媒化</td>
+              <td>杖でクリ倍率・王笏で庇護維持・長杖で詠唱速度上昇、触媒装備時に知力＋被クリ軽減。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runemaster/tree" target="_blank" rel="noopener noreferrer">ルーンマスター</a></td>
+              <td>古代の碑文 / 更新のルーン / 血紅のルーンストーン</td>
+              <td>知力・知力6ごとのCD回復速度、知力50以上で2倍のマナ/ヘルス再生、リジェネの庇護適用。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runemaster/tree" target="_blank" rel="noopener noreferrer">ルーンマスター</a></td>
+              <td>永遠のツンドラの布告 / 燃える風の勅令 / ギザギザのベール</td>
+              <td>虐げのグリフで毎秒庇護2倍、フロストウォールで対ボスダメ2倍、100庇護ごとにクリ倍率加算。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runemaster/tree" target="_blank" rel="noopener noreferrer">ルーンマスター</a></td>
+              <td>滑り込み / ニンバスウォーク / 膨張のルーン</td>
+              <td>移動スキル使用直後に非チャネリングスペル火力・クリ率・詠唱速度・庇護を一気に引き上げる要。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runemaster/tree" target="_blank" rel="noopener noreferrer">ルーンマスター</a></td>
+              <td>ルーンワード（インフェルノ/ハリケーン/大雪崩/大厄災）＋ロゴクラシー</td>
+              <td>各属性直接スペル使用で発動する強力な攻防バフ群。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. シーズン 5 人気ビルド 3 選 -->
+    <section class="section" id="sec-builds" aria-labelledby="title-builds">
+      <h2 class="section-title" id="title-builds">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        </svg>
+        6. Season 5（Patch 1.5）人気ビルド 3 選
+      </h2>
+      <p class="page-lead">Season 5 で安定して高評価を得ているルーンマスターの代表 3 アーキタイプです。</p>
+
+      <div class="stack-list">
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/lightning_blast" target="_blank" rel="noopener noreferrer">
+                ① スパークチャージ・ライトニングブラスト（Lightning Blast）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">Season 5 王道主力 / 知力スケール</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA5SA" target="_blank" rel="noopener noreferrer">エニグマの断片</a> と高知力（INT）で強化されたスパークチャージを <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lightning_blast" target="_blank" rel="noopener noreferrer">ライトニングブラスト</a> で連発し、防御面は <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation18_ice_shield" target="_blank" rel="noopener noreferrer">レオウィンのフロストガード</a> で常時維持します。</li>
+            <li><strong>強み</strong>: 知力を積むだけでスパークチャージ火力・庇護維持力・CD回復（古代の碑文）が同時に伸びます。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/lightning_blast" target="_blank" rel="noopener noreferrer">ライトニングブラスト</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation" target="_blank" rel="noopener noreferrer">ルーン招来</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_ward" target="_blank" rel="noopener noreferrer">烈火の庇護</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_rush" target="_blank" rel="noopener noreferrer">フレイムラッシュ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/frost_wall" target="_blank" rel="noopener noreferrer">フロストウォール</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/static_spell" target="_blank" rel="noopener noreferrer">静電</a>）</li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation27_repeating_fire_mortars" target="_blank" rel="noopener noreferrer">
+                ② ヒドラヒドロン砲台・ルーンマスター（Hydrahedron）
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge badge--accent">自動砲台設置 / ボス＆マップ両立</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_rush" target="_blank" rel="noopener noreferrer">フレイムラッシュ</a> で走り抜けながら自動で <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glyph_of_dominion" target="_blank" rel="noopener noreferrer">虐げのグリフ</a> と <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation27_repeating_fire_mortars" target="_blank" rel="noopener noreferrer">ヒドラヒドロン</a>（Rah-Rah-Heo）を設置し、<a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/frost_wall" target="_blank" rel="noopener noreferrer">フロストウォール</a> で火力を倍加させます。</li>
+            <li><strong>強み</strong>: 砲台が自動で追尾射撃し続けるため、ボス戦では回避に専念しながらダメージを稼げます。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation" target="_blank" rel="noopener noreferrer">ルーン招来</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_rush" target="_blank" rel="noopener noreferrer">フレイムラッシュ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/frost_wall" target="_blank" rel="noopener noreferrer">フロストウォール</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/glyph_of_dominion" target="_blank" rel="noopener noreferrer">虐げのグリフ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_ward" target="_blank" rel="noopener noreferrer">烈火の庇護</a></li>
+          </ul>
+        </article>
+
+        <article class="build-card">
+          <div class="build-card-header">
+            <h3 class="build-title">
+              <a class="ext-title-link" href="https://www.lastepochtools.com/skills/ja/frost_claw" target="_blank" rel="noopener noreferrer">
+                ③ 凍気の爪＆エレメンタルノヴァ トリガー型
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>
+              </a>
+            </h3>
+            <span class="badge">広範囲連鎖 / 高クリティカル</span>
+          </div>
+          <ul class="build-points">
+            <li><strong>戦い方</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/frost_claw" target="_blank" rel="noopener noreferrer">凍気の爪</a> の多弾発射から <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/nova" target="_blank" rel="noopener noreferrer">エレメンタルノヴァ</a> やスパークチャージを連続起爆し、広範囲を一気に制圧します。</li>
+            <li><strong>強み</strong>: クリティカル時の「ギザギザのベール」「ルーンワード:大厄災」と相性が抜群です。</li>
+            <li><strong>代表構成</strong>: <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/frost_claw" target="_blank" rel="noopener noreferrer">凍気の爪</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/nova" target="_blank" rel="noopener noreferrer">エレメンタルノヴァ</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/runic_invocation" target="_blank" rel="noopener noreferrer">ルーン招来</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_ward" target="_blank" rel="noopener noreferrer">烈火の庇護</a> / <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/flame_rush" target="_blank" rel="noopener noreferrer">フレイムラッシュ</a>（または <a class="ext-inline-link" href="https://www.lastepochtools.com/skills/ja/teleport" target="_blank" rel="noopener noreferrer">テレポート</a>）</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. 4 大メカニズム -->
+    <section class="section" id="sec-mechanics" aria-labelledby="title-mechanics">
+      <h2 class="section-title" id="title-mechanics">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.85 1 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        7. 攻撃・防御・マナ・快適性のメカニズム
+      </h2>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <h3 class="mech-card-title">攻撃スケーリング</h3>
+          <ul>
+            <li><strong>多段バフ＆設置相乗</strong>: 「燃える風の勅令」「滑り込み」「ルーンワード」により、移動＋壁/グリフ展開だけで乗算倍率が何重にも掛かります。</li>
+            <li><strong>武器別最適化</strong>: 「刻字された楽器」＋「精神の触媒化」により、ワンド/王笏＋触媒（Catalyst）装備で知力・クリ倍率・庇護維持を一挙に盛れます。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">防御レイヤー（多層庇護要塞）</h3>
+          <ul>
+            <li><strong>庇護生成の多層化</strong>: 「レオウィンのフロストガード」＋「永遠のツンドラの布告」＋「血紅のルーンストーン」＋ <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVgHATAjAbEA" target="_blank" rel="noopener noreferrer">アーケイロスのねじれた心臓</a>（または低ヘルス型 <a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMwRgo" target="_blank" rel="noopener noreferrer">血が足りぬ</a>）で全職屈指の庇護値を維持します。</li>
+            <li><strong>被ダメ軽減の重複</strong>: 烈火の庇護＋フロストガード＋保護の球体により実質耐久が極めて高いです。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">マナ維持の仕組み</h3>
+          <ul>
+            <li><strong>更新のルーン（知力50以上で2倍）</strong>: パッシブだけで高いマナ自動回復を確保でき、詠唱回転を支えます。</li>
+            <li><strong>0マナトリガー/ルーンボルト</strong>: フレイムラッシュ自動招来や 0 マナのルーンボルト・ライトニングブラストにより消費負担を抑えられます。</li>
+          </ul>
+        </div>
+
+        <div class="mech-card">
+          <h3 class="mech-card-title">快適性（QoL）・周回テンポ</h3>
+          <ul>
+            <li><strong>フレイムラッシュ一括コンボ</strong>: 突進するだけで移動・グリフ展開・ルーン招来発動を同時にこなせます。</li>
+            <li><strong>Immutable Order による操作簡略化</strong>: 複雑なルーン入力を意識せず、常に決まった最強呪文を撃ち続けられます。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 人気の装備・アフィックス -->
+    <section class="section" id="sec-gear" aria-labelledby="title-gear">
+      <h2 class="section-title" id="title-gear">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20 7l-8-4-8 4v10l8 4 8-4V7z"></path>
+          <path d="M12 21V11M12 11l8-4M12 11L4 7"></path>
+        </svg>
+        8. 人気ユニーク装備＆部位別アフィックス
+      </h2>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 12px;">主要ユニーク装備一覧（装備名から直接 LE Tools DB へ移動可能）</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>装備名（日 / 英）</th>
+              <th>部位</th>
+              <th>主な採用理由・効果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBsCYA5SA" target="_blank" rel="noopener noreferrer"><strong>エニグマの断片</strong><br><span class="skill-en">Fragment of the Enigma</span></a></td>
+              <td>触媒</td>
+              <td>知力に応じて「スパークチャージ」の雷基礎ダメージを大きく加算する雷型の必須オフハンド。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDsGYCYEYg" target="_blank" rel="noopener noreferrer"><strong>狂える錬金術師の柄杓</strong><br><span class="skill-en">Mad Alchemist's Ladle</span></a></td>
+              <td>ワンド</td>
+              <td>敵の状態異常数に応じて乗算スペルダメ＋高詠唱速度を得る、スパークチャージ/状態異常軸の定番ワンド。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwJgzGCMZA" target="_blank" rel="noopener noreferrer"><strong>全能の試金石</strong><br><span class="skill-en">Fundamental Criterion</span></a></td>
+              <td>鎧</td>
+              <td>知力などのステータス比率から耐性・ルーン招来レベル・防御恩恵を引き出すルーンマスター定番胴鎧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAwVgHATAjAbEA" target="_blank" rel="noopener noreferrer"><strong>アーケイロスのねじれた心臓</strong><br><span class="skill-en">Twisted Heart of Uhkeiros</span></a></td>
+              <td>レリック</td>
+              <td>元素スペル連打で爆発的に庇護（ワード）を生成し、ルーンマスターの要塞化を決定づけるレリック。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMwRgo" target="_blank" rel="noopener noreferrer"><strong>血が足りぬ</strong><br><span class="skill-en">Exsanguinous</span></a></td>
+              <td>鎧</td>
+              <td>減少ヘルス割合に応じて毎秒大量の庇護を獲得する「低ヘルス（Low-Life）型」の定番鎧。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcEZwViA" target="_blank" rel="noopener noreferrer"><strong>生者の最期の歩み</strong><br><span class="skill-en">Last Steps of the Living</span></a></td>
+              <td>靴</td>
+              <td>低ヘルス型の庇護生成と凍傷・耐性を補う定番ユニーク靴（<a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzBMoRgZiA" target="_blank" rel="noopener noreferrer">霜の拘束</a> と併用）。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzCcGYEZiA" target="_blank" rel="noopener noreferrer"><strong>誤ったワープ</strong><br><span class="skill-en">Wrongwarp</span></a></td>
+              <td>ワンド</td>
+              <td>トラバーサル移動直後の移動速度とスペルダメ倍率を引き上げる高速周回用ワンド。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAw4NgdiA" target="_blank" rel="noopener noreferrer"><strong>元素の書</strong><br><span class="skill-en">Tome of Elements</span></a></td>
+              <td>レリック</td>
+              <td>3 属性ダメージや元素状態異常の付与・耐性まわりを底上げする元素ハイブリッド用レリック。</td>
+            </tr>
+            <tr>
+              <td><a class="ext-inline-link" href="https://www.lastepochtools.com/db/ja/items/UAzDMCYHZKA" target="_blank" rel="noopener noreferrer"><strong>アトラリアの赤い指輪</strong><br><span class="skill-en">Red Ring of Atlaria</span></a></td>
+              <td>指輪</td>
+              <td>高ステータス到達で全耐性と被ダメージ軽減を得るエンドゲーム最高峰の汎用防御リング。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1rem; margin-top: 20px;">部位別おすすめアフィックス優先度</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>Prefix（知力・詠唱・コア能力）</th>
+              <th>Suffix（庇護維持・耐久・ユーティリティ）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器・触媒</td>
+              <td>詠唱速度、基礎スペルクリ率、スペル/属性ダメージ</td>
+              <td>感電/冷却/炎上付与（状態異常数稼ぎ）、凍結値、クリ回避</td>
+            </tr>
+            <tr>
+              <td>兜・鎧</td>
+              <td><strong>知力（Intelligence）</strong>、主力スキル/ルーン招来 Lv+</td>
+              <td><strong>庇護維持力 / 減少ヘルス時庇護獲得（低ヘルス時）</strong>、ヘルス、耐性</td>
+            </tr>
+            <tr>
+              <td>手袋・ベルト</td>
+              <td>詠唱速度、クリ倍率、知力、クールダウン回復速度</td>
+              <td>ポーション使用時庇護獲得、ハイブリッドヘルス、不足耐性</td>
+            </tr>
+            <tr>
+              <td>靴</td>
+              <td>移動速度（最優先）、知力、クールダウン回復速度</td>
+              <td>ハイブリッドヘルス、アーマー、不足耐性</td>
+            </tr>
+            <tr>
+              <td>アクセサリー</td>
+              <td>知力、クリ倍率、詠唱速度、元素/雷/火ダメージ</td>
+              <td>不足耐性、クリダメ軽減、庇護維持力 / マナ自動回復</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="page-footer-note">
+      参照元: <a href="https://www.lastepochtools.com/skills/ja/" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語スキル）</a> / <a href="https://www.lastepochtools.com/build-guides/filter/cycle=rage-of-the-frostborn" target="_blank" rel="noopener noreferrer">Last Epoch Tools（Season 5 ビルドガイド）</a> / <a href="https://www.lastepochtools.com/db/ja/items/unique" target="_blank" rel="noopener noreferrer">Last Epoch Tools（日本語ユニーク DB）</a> — Season 5: Rage of the Frostborn（Patch 1.5 / 1.5.2）時点の確認データに基づいて作成。
+    </p>
+  </main>
+
+  <button type="button" id="nav-toggle" class="fab-nav" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+    <span>メニュー</span>
+  </button>
+
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+  <nav id="nav-drawer" class="nav-drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <h2 class="nav-drawer-title">ページ移動</h2>
+      <button type="button" id="theme-toggle" class="nav-theme-btn">明暗切替</button>
+    </div>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="../index.html">トップページ</a></li>
+      <li><a class="nav-link" href="./index.html">Last Epoch ガイド</a></li>
+      <li><a class="nav-link" href="./falconer.html">ファルコナー（Season 5）</a></li>
+      <li><a class="nav-link" href="./paladin.html">パラディン（Season 5）</a></li>
+      <li><a class="nav-link" href="./sorcerer.html">ソーサラー（Season 5）</a></li>
+      <li><a class="nav-link" href="./spellblade.html">スペルブレード（Season 5）</a></li>
+      <li><a class="nav-link" href="./runemaster.html" aria-current="page">ルーンマスター（Season 5）</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
